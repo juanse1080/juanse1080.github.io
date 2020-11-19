@@ -22,12 +22,12 @@ const themes = {
 
 const useStyles = makeStyles(theme => ({
    root: props => ({
-      padding: theme.spacing(4),
       backgroundColor: theme.palette[themes[props.theme].theme].dark,
       color: theme.palette[themes[props.theme].theme].subtitle,
       // height: theme.shape.viewHeight,
    }),
    paddings: {
+      padding: theme.spacing(4),
       [theme.breakpoints.only("sm")]: {
          padding: theme.spacing(3),
       },
@@ -73,28 +73,30 @@ const Home = forwardRef(
             <div className={classes.root}>
                {fullWidth ? (
                   <>
-                     <Container>
-                        <Grid container spacing={3} justify="flex-start">
-                           <Grid item lg={3} md={3} sm={4} xs={12}>
-                              <div className={classes.header}>
-                                 <Typography
-                                    className={classes.title}
-                                    color="inherit"
-                                    variant="h2"
-                                 >
-                                    {title}
-                                 </Typography>
-                                 <Typography
-                                    className={classes.subtitle}
-                                    color="inherit"
-                                    variant="subtitle1"
-                                 >
-                                    {subtitle}
-                                 </Typography>
-                              </div>
+                     <div className={classes.paddings}>
+                        <Container>
+                           <Grid container spacing={3} justify="flex-start">
+                              <Grid item lg={3} md={3} sm={4} xs={12}>
+                                 <div className={classes.header}>
+                                    <Typography
+                                       className={classes.title}
+                                       color="inherit"
+                                       variant="h2"
+                                    >
+                                       {title}
+                                    </Typography>
+                                    <Typography
+                                       className={classes.subtitle}
+                                       color="inherit"
+                                       variant="subtitle1"
+                                    >
+                                       {subtitle}
+                                    </Typography>
+                                 </div>
+                              </Grid>
                            </Grid>
-                        </Grid>
-                     </Container>
+                        </Container>
+                     </div>
                      {children}
                   </>
                ) : (

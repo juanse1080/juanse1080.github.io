@@ -122,8 +122,9 @@ const useStyles = makeStyles(theme => ({
    },
 }));
 
-const Portfolio = ({ theme, photo, projects, kind, ...other }) => {
+const Portfolio = ({ theme, ...other }) => {
    const classes = useStyles();
+   const [kind, setKind] = useState(0);
 
    return (
       <div className={classes.root}>
@@ -134,7 +135,7 @@ const Portfolio = ({ theme, photo, projects, kind, ...other }) => {
             cols={3}
          >
             {images.map(tile => (
-               <Grow in={kind === 0 || kind === tile.kind} key={tile.img}>
+               <Grow in={tile.kind.includes(kind)} key={tile.img}>
                   <GridListTile>
                      <img src={tile.img} alt={tile.title} />
                      <GridListTileBar
