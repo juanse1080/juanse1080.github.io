@@ -8,6 +8,7 @@ import Header from "Sections/Header";
 import Home from "Sections/Home";
 import About from "Sections/About";
 import Portfolio from "Sections/Portfolio";
+import Education from "Sections/Education";
 import Footer from "Sections/Footer";
 
 // Import local components
@@ -31,8 +32,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const sections = {
-   "Acerca de mi": {
-      ref: null,
+   "Sobre mí": {
       component: About,
       props: {
          photo,
@@ -42,12 +42,18 @@ const sections = {
       },
    },
    Portafolio: {
-      ref: null,
       component: Portfolio,
       props: {},
       section: {
          subtitle: "Ruta",
          fullWidth: true,
+      },
+   },
+   Educación: {
+      component: Education,
+      props: {},
+      section: {
+         subtitle: "Ruta",
       },
    },
 };

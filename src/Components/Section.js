@@ -26,13 +26,13 @@ const useStyles = makeStyles(theme => ({
       color: theme.palette[themes[props.theme].theme].subtitle,
       // height: theme.shape.viewHeight,
    }),
-   paddings: {
-      padding: theme.spacing(4),
+   paddingBottom: {
+      paddingBottom: theme.spacing(4),
       [theme.breakpoints.only("sm")]: {
-         padding: theme.spacing(3),
+         paddingBottom: theme.spacing(3),
       },
       [theme.breakpoints.only("xs")]: {
-         padding: theme.spacing(2.5),
+         paddingBottom: theme.spacing(2.5),
       },
    },
    paddings: {
@@ -107,6 +107,7 @@ const Home = forwardRef(
                         </Container>
                      </div>
                      {children}
+                     <div className={classes.paddingBottom} />
                   </>
                ) : (
                   <div className={classes.paddings}>

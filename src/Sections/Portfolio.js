@@ -2,16 +2,20 @@ import React, { useState } from "react";
 
 // Import Material UI components
 import { makeStyles } from "@material-ui/core/styles";
+import { useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
 import IconButton from "@material-ui/core/IconButton";
-import InfoIcon from "@material-ui/icons/Info";
 import Container from "@material-ui/core/Container";
 import Grow from "@material-ui/core/Grow";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
+
+import InfoIcon from "@material-ui/icons/Info";
 
 const images = [
    {
@@ -20,6 +24,8 @@ const images = [
       author: "Author",
       featured: false,
       kind: [0, 1],
+      timeout: 0,
+      show: true,
    },
    {
       img: "https://material-ui.com/static/images/grid-list/breakfast.jpg",
@@ -27,6 +33,8 @@ const images = [
       author: "Author",
       featured: false,
       kind: [0, 2],
+      timeout: 0,
+      show: true,
    },
    {
       img: "https://material-ui.com/static/images/grid-list/burgers.jpg",
@@ -34,6 +42,8 @@ const images = [
       author: "Author",
       featured: false,
       kind: [0, 3],
+      timeout: 0,
+      show: true,
    },
    {
       img: "https://material-ui.com/static/images/grid-list/camera.jpg",
@@ -41,6 +51,8 @@ const images = [
       author: "Author",
       featured: false,
       kind: [0, 4],
+      timeout: 0,
+      show: true,
    },
    {
       img: "https://material-ui.com/static/images/grid-list/hats.jpg",
@@ -48,6 +60,8 @@ const images = [
       author: "Author",
       featured: false,
       kind: [0, 1],
+      timeout: 0,
+      show: true,
    },
    {
       img: "https://material-ui.com/static/images/grid-list/morning.jpg",
@@ -55,6 +69,8 @@ const images = [
       author: "Author",
       featured: true,
       kind: [0, 2],
+      timeout: 0,
+      show: true,
    },
    {
       img: "https://material-ui.com/static/images/grid-list/mushroom.jpg",
@@ -62,6 +78,8 @@ const images = [
       author: "Author",
       featured: true,
       kind: [0, 2],
+      timeout: 0,
+      show: true,
    },
    {
       img: "https://material-ui.com/static/images/grid-list/olive.jpg",
@@ -69,6 +87,8 @@ const images = [
       author: "Author",
       featured: false,
       kind: [0, 4],
+      timeout: 0,
+      show: true,
    },
    {
       img: "https://material-ui.com/static/images/grid-list/plant.jpg",
@@ -76,6 +96,8 @@ const images = [
       author: "Author",
       featured: false,
       kind: [0, 1],
+      timeout: 0,
+      show: true,
    },
    {
       img: "https://material-ui.com/static/images/grid-list/star.jpg",
@@ -83,6 +105,8 @@ const images = [
       author: "Author",
       featured: false,
       kind: [0, 2],
+      timeout: 0,
+      show: true,
    },
    {
       img: "https://material-ui.com/static/images/grid-list/vegetables.jpg",
@@ -90,6 +114,8 @@ const images = [
       author: "Author",
       featured: false,
       kind: [0, 3],
+      timeout: 0,
+      show: true,
    },
 ];
 
@@ -102,19 +128,6 @@ const kinds = {
 };
 
 const useStyles = makeStyles(theme => ({
-   root: {
-      // display: "flex",
-      // flexWrap: "wrap",
-      // justifyContent: "space-around",
-      // width: theme.shape.viewWidth,
-      // backgroundColor: theme.palette.background.paper,
-   },
-   gridList: {
-      width: theme.shape.viewWidth,
-      // height: 450,
-      // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
-      // transform: "translateZ(0)",
-   },
    paddings: {
       padding: theme.spacing(0, 4, 3, 4),
       [theme.breakpoints.only("sm")]: {
@@ -136,14 +149,57 @@ const useStyles = makeStyles(theme => ({
 
 const Portfolio = ({ theme, ...other }) => {
    const classes = useStyles();
+
+   const themeProvider = useTheme();
+   const xl = useMediaQuery(themeProvider.breakpoints.only("xl"));
+   const lg = useMediaQuery(themeProvider.breakpoints.only("lg"));
+   const md = useMediaQuery(themeProvider.breakpoints.only("md"));
+   const sm = useMediaQuery(themeProvider.breakpoints.only("sm"));
+   const xs = useMediaQuery(themeProvider.breakpoints.only("xs"));
+
    const [kind, setKind] = useState(0);
    const [filter, setFilter] = useState(images);
 
-   const handleKind = kind => () => {
-      setKind(kind);
-      setTimeout(() => {
-         setFilter(_ => images.filter(image => image.kind.includes(kind)));
-      }, 300);
+   const getColumns = () => {
+      if (xl) return 5;
+      else if (lg) return 4;
+      else if (md) return 3;
+      else if (sm) return 2;
+      else if (xs) return 1;
+   };
+
+   const handleKind = newKind => () => {
+      const timeout = 0,
+         diff = 100;
+
+      let cont_changing =
+         images.reduce((accumulator, item) => {
+            if (
+               (item.show && !item.kind.includes(newKind)) ||
+               (!item.show && item.kind.includes(newKind))
+            )
+               return accumulator + 1;
+            else return accumulator + 0;
+         }, 0) + 1;
+
+      setFilter(_ =>
+         images
+            .sort((a, b) => a.show - b.show)
+            .map(image => {
+               if (
+                  (image.show && !image.kind.includes(newKind)) ||
+                  (!image.show && image.kind.includes(newKind))
+               ) {
+                  cont_changing--;
+                  return {
+                     ...image,
+                     timeout: timeout + cont_changing * diff,
+                     show: !image.show,
+                  };
+               } else return image;
+            })
+      );
+      setKind(newKind);
    };
 
    return (
@@ -159,7 +215,7 @@ const Portfolio = ({ theme, ...other }) => {
                               variant="contained"
                               color={kindId === kind ? "secondary" : "default"}
                               onClick={
-                                 kindId == kind ? null : handleKind(kindId)
+                                 kindId === kind ? null : handleKind(kindId)
                               }
                            >
                               {kinds[kindId]}
@@ -172,13 +228,22 @@ const Portfolio = ({ theme, ...other }) => {
          </div>
          <div className={classes.root}>
             <GridList
-               cellHeight={200}
+               cellHeight={300}
                spacing={0}
                className={classes.gridList}
-               cols={3}
+               cols={getColumns()}
             >
                {filter.map(image => (
-                  <Grow in={image.kind.includes(kind)} key={image.img}>
+                  <Grow
+                     key={image.img}
+                     in={image.kind.includes(kind)}
+                     appear={image.kind.includes(kind)}
+                     unmountOnExit
+                     timeout={{
+                        enter: image.timeout,
+                        exit: image.timeout - 200,
+                     }}
+                  >
                      <GridListTile>
                         <img src={image.img} alt={image.title} />
                         <GridListTileBar
