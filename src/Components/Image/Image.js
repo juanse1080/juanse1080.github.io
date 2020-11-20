@@ -5,48 +5,14 @@ import IconButton from "@material-ui/core/IconButton";
 import Paper from "@material-ui/core/Paper";
 import Slide from "@material-ui/core/Slide";
 import Zoom from "@material-ui/core/Zoom";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
 import { Visibility } from "@material-ui/icons";
+
+// import styles
+import useStyles from "./styles";
 
 const Transition = forwardRef(function Transition(props, ref) {
    return <Slide direction="up" ref={ref} {...props} />;
 });
-
-const useStyles = makeStyles(theme => ({
-   media: props => ({
-      height: 0,
-      width: "100%",
-      display: "block",
-      paddingTop: "100%",
-      backgroundImage: `url(${props.photo})`,
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "center",
-      borderRadius: "50%",
-      position: "relative",
-   }),
-   viewPreview: {
-      width: "auto",
-      height: "auto",
-      maxWidth: "100%",
-      maxHeight: `calc( ${theme.shape.viewHeight} - 69px )`,
-   },
-   rootDialog: {
-      lineHeight: 0,
-   },
-   icon: {
-      display: "flex",
-      position: "absolute",
-      right: "6.75%",
-      borderRadius: "50%",
-      zIndex: 1,
-      bottom: "6.75%",
-   },
-   paperScrollBody: {
-      overflowY: "hidden",
-   },
-}));
 
 export default function Image({ photo, ...others }) {
    const classes = useStyles({ photo });
@@ -92,7 +58,7 @@ export default function Image({ photo, ...others }) {
             onClose={handleCloseView}
             aria-labelledby="customized-dialog-title"
             open={open}
-            TransitionComponent={Transition}
+            // TransitionComponent={Transition}
          >
             <img className={classes.viewPreview} src={photo} alt={photo} />
          </Dialog>

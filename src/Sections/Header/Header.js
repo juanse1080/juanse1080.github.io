@@ -4,28 +4,11 @@ import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
-import Slide from '@material-ui/core/Slide';
-import { makeStyles } from "@material-ui/core/styles";
+import Slide from "@material-ui/core/Slide";
 import clsx from "clsx";
 
-const useStyles = makeStyles(theme => ({
-   floatRight: {
-      flexGrow: 1,
-   },
-   appBar: {
-      color: theme.palette.black,
-      backgroundColor: theme.palette.white,
-      width: "100%",
-   },
-   buttonScroll: {
-      position: "fixed",
-      bottom: theme.spacing(2),
-      right: theme.spacing(2),
-   },
-   activeButton: {
-      fontWeight: 600,
-   },
-}));
+// import styles
+import useStyles from "./styles";
 
 export default function Header({ page, sections, onChangePage, ...other }) {
    const classes = useStyles();

@@ -1,7 +1,7 @@
 import React from "react";
 
 // Import Material UI components
-import { makeStyles } from "@material-ui/core/styles";
+
 import Grid from "@material-ui/core/Grid";
 import Hidden from "@material-ui/core/Hidden";
 import Timeline from "@material-ui/lab/Timeline";
@@ -15,43 +15,11 @@ import Box from "@material-ui/core/Box";
 
 // Import local components
 
-const themes = {
-   dark: {
-      theme: "primary",
-      icons: "secondary",
-   },
-   light: {
-      theme: "tertiary",
-      icons: "primary",
-   },
-};
-const useStyles = makeStyles(theme => ({
-   avatar: {},
-   title: props => ({
-      color: theme.palette[themes[props.theme].theme].title,
-   }),
-   missingOppositeContent: {
-      "&::before": {
-         flex: "none",
-         content: "none",
-      },
-   },
-}));
+// Import local const
+import studies from "const/studies";
 
-const studies = [
-   {
-      title: "INGENIERO DE SISTEMAS",
-      date: "2015",
-      institution: "Universidad Industrial de Santander",
-      description: "",
-   },
-   {
-      title: "BACHILLER ACADÉMICO CON PROFUNDIZACIÓN EN PEDAGOGÍA",
-      date: "2003 - 2014",
-      institution: "Escuela Normal Superior de Piedecuesta",
-      description: "",
-   },
-];
+// import styles
+import useStyles from "./styles";
 
 const About = ({ theme, photo, ...other }) => {
    const classes = useStyles({ theme });

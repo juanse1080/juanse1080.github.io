@@ -1,7 +1,7 @@
 import React from "react";
 
 // Import Material UI components
-import { makeStyles } from "@material-ui/core/styles";
+
 import Grid from "@material-ui/core/Grid";
 import Hidden from "@material-ui/core/Hidden";
 import Typography from "@material-ui/core/Typography";
@@ -10,20 +10,8 @@ import Box from "@material-ui/core/Box";
 // Import local components
 import Image from "Components/Image";
 
-const themes = {
-   dark: "primary",
-   light: "secondary",
-};
-
-const useStyles = makeStyles(theme => ({
-   avatar: {},
-   content: {
-      paddingRight: theme.spacing(3),
-      [theme.breakpoints.down("sm")]: {
-         padding: theme.spacing(0),
-      },
-   },
-}));
+// import styles
+import useStyles from "./styles";
 
 const About = ({ theme, photo, ...other }) => {
    const classes = useStyles();
@@ -72,26 +60,6 @@ const About = ({ theme, photo, ...other }) => {
                   proyectos de desarrollo web durante el transcurso de mi
                   carrera profesional.
                </Typography>
-               {/* <Box color={`${themes[theme]}.title`}>
-                  <Typography
-                     color="inherit"
-                     align="justify"
-                     paragraph
-                     variant="h3"
-                  >
-                     Contacto
-                  </Typography>
-               </Box>
-               <Typography
-                  color="inherit"
-                  align="justify"
-                  paragraph
-                  variant="body1"
-               >
-                  Por mi cuenta he participado en el desarrollo de multiples
-                  proyectos de desarrollo web durante el transcurso de mi
-                  carrera profesional.
-               </Typography> */}
             </div>
          </Grid>
          <Hidden smDown>

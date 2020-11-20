@@ -1,62 +1,21 @@
-import React, { useRef, createRef, useState, useEffect } from "react";
-
-// Import Material UI components
-import { makeStyles } from "@material-ui/core/styles";
-
-// Import local sections
-import Header from "Sections/Header";
-import Home from "Sections/Home";
-import About from "Sections/About";
-import Portfolio from "Sections/Portfolio";
-import Education from "Sections/Education";
-import Footer from "Sections/Footer";
+import React, { createRef, useEffect, useRef, useState } from "react";
 
 // Import local components
 import Section from "Components/Section";
 
+// Import local const
+import sections from "const/sections";
+
 // Import other modules
 import { Scrollbars } from "react-custom-scrollbars";
 
-// Import assets
-import photo from "assets/img/Foto.jpg";
+// Import local sections
+import Header from "Sections/Header";
+import Home from "Sections/Home";
+import Footer from "Sections/Footer";
 
-const useStyles = makeStyles(theme => ({
-   root: {
-      height: theme.shape.viewHeight,
-   },
-   buttonScroll: {
-      position: "fixed",
-      bottom: theme.spacing(2),
-      right: theme.spacing(2),
-   },
-}));
-
-const sections = {
-   "Sobre mí": {
-      component: About,
-      props: {
-         photo,
-      },
-      section: {
-         subtitle: "Ruta",
-      },
-   },
-   Portafolio: {
-      component: Portfolio,
-      props: {},
-      section: {
-         subtitle: "Ruta",
-         fullWidth: true,
-      },
-   },
-   Educación: {
-      component: Education,
-      props: {},
-      section: {
-         subtitle: "Ruta",
-      },
-   },
-};
+// import styles
+import useStyles from "./styles";
 
 const keys = Object.keys(sections);
 

@@ -1,77 +1,12 @@
 import React, { forwardRef } from "react";
 
 // Import Material UI components
-import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
-import clsx from "clsx";
 
-// Import local components
-
-const themes = {
-   dark: {
-      theme: "primary",
-      icons: "secondary",
-   },
-   light: {
-      theme: "tertiary",
-      icons: "primary",
-   },
-};
-
-const useStyles = makeStyles(theme => ({
-   root: props => ({
-      backgroundColor: theme.palette[themes[props.theme].theme].dark,
-      color: theme.palette[themes[props.theme].theme].subtitle,
-      // height: theme.shape.viewHeight,
-   }),
-   paddingBottom: {
-      paddingBottom: theme.spacing(4),
-      [theme.breakpoints.only("sm")]: {
-         paddingBottom: theme.spacing(3),
-      },
-      [theme.breakpoints.only("xs")]: {
-         paddingBottom: theme.spacing(2.5),
-      },
-   },
-   paddings: {
-      padding: theme.spacing(4),
-      [theme.breakpoints.only("sm")]: {
-         padding: theme.spacing(3),
-      },
-      [theme.breakpoints.only("xs")]: {
-         padding: theme.spacing(2.5),
-      },
-   },
-   header: {
-      margin: theme.spacing(2),
-      [theme.breakpoints.only("sm")]: {
-         margin: theme.spacing(1.5),
-      },
-      [theme.breakpoints.only("xs")]: {
-         margin: theme.spacing(1),
-      },
-   },
-   content: {
-      padding: theme.spacing(3),
-      [theme.breakpoints.only("sm")]: {
-         padding: theme.spacing(1),
-      },
-      [theme.breakpoints.only("xs")]: {
-         padding: theme.spacing(0),
-      },
-   },
-   title: props => ({
-      paddingTop: theme.spacing(1),
-      borderTop: `2px solid ${theme.palette[themes[props.theme].icons].main}`,
-      display: "inline-block",
-      color: theme.palette[themes[props.theme].theme].title,
-   }),
-   subtitle: props => ({
-      color: theme.palette[themes[props.theme].theme].subtitle,
-   }),
-}));
+// import styles
+import useStyles from "./styles";
 
 const Home = forwardRef(
    ({ title, subtitle, theme, children, fullWidth, ...other }, ref) => {

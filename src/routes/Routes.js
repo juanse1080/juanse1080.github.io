@@ -4,7 +4,7 @@ import React from "react";
 import { Switch } from "react-router-dom";
 
 // Import local components
-import Landing from "layout/landing";
+import Landing from "layout/landing/landing";
 
 const Routes = () => {
    return (

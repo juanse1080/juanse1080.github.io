@@ -7,56 +7,13 @@ import Fab from "@material-ui/core/Fab";
 import Zoom from "@material-ui/core/Zoom";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
-import { makeStyles } from "@material-ui/core/styles";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
 // Import local components
 import ParticlesBackground from "Components/ParticlesBackground";
 
-const useStyles = makeStyles(theme => ({
-   root: {
-      height: theme.shape.viewHeight,
-      position: "relative",
-   },
-   header: {
-      display: "flex",
-      justifyContent: "center",
-   },
-   container: {
-      height: "100%",
-      display: "flex",
-      justifyContent: "center",
-      zIndex: 1,
-   },
-   content: {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      height: "calc(100% - 128px)",
-   },
-   scrollIcon: {
-      position: "absolute",
-      bottom: 20,
-      left: "calc(50% - 20px)",
-   },
-   particlesBackground: {
-      position: "absolute",
-      background: theme.palette.tertiary.main,
-      zIndex: 0,
-      top: 0,
-      bottom: 0,
-      left: 0,
-      right: 0,
-   },
-   contentBox: {
-      // backgroundColor: "rgba(0,0,0, 0.1)",
-      padding: theme.spacing(3),
-      borderRadius: theme.shape.borderRadius,
-      textAlign: "center",
-      color: theme.palette.black,
-      zIndex: 1,
-   },
-}));
+// import styles
+import useStyles from "./styles";
 
 const Home = forwardRef(({ nextPage, page, ...other }, ref) => {
    const classes = useStyles();
