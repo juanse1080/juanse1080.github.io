@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
          paddingBottom: theme.spacing(3),
       },
       [theme.breakpoints.only("xs")]: {
-         paddingBottom: theme.spacing(2.5),
+         paddingBottom: theme.spacing(0),
       },
    },
    paddings: {
@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
          padding: theme.spacing(3),
       },
       [theme.breakpoints.only("xs")]: {
-         padding: theme.spacing(2.5),
+         padding: theme.spacing(2.5, 1, 2.5, 1),
       },
    },
    header: {

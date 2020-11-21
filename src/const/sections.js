@@ -13,14 +13,14 @@ const sections = {
          photo,
       },
       section: {
-         subtitle: "Ruta",
+         // subtitle: "Ruta",
       },
    },
    Portafolio: {
       component: Portfolio,
       props: {},
       section: {
-         subtitle: "Ruta",
+         // subtitle: "Ruta",
          fullWidth: true,
       },
    },
@@ -28,7 +28,7 @@ const sections = {
       component: Education,
       props: {},
       section: {
-         subtitle: "Ruta",
+         // subtitle: "Ruta",
       },
    },
 };
