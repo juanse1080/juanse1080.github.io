@@ -5,28 +5,42 @@ const useStyles = makeStyles(theme => ({
       height: theme.shape.viewHeight,
       position: "relative",
    },
-   header: {
+   sectionIcons: {
       display: "flex",
-      justifyContent: "center",
+      fontSize: theme.spacing(4),
+      paddingTop: theme.spacing(3),
+      cursor: "pointer",
+   },
+   icon: {
+      cursor: "pointer",
+      zIndex: 1,
+      marginRight: theme.spacing(1),
    },
    container: {
       height: "100%",
       display: "flex",
       justifyContent: "center",
-      // zIndex: 1,
+   },
+   paddings: {
+      height: "100%",
+      padding: theme.spacing(0, 4),
+      [theme.breakpoints.only("sm")]: {
+         padding: theme.spacing(0, 3),
+      },
+      [theme.breakpoints.only("xs")]: {
+         padding: theme.spacing(0, 1),
+      },
    },
    content: {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
       height: "calc(100% - 128px)",
-      // zIndex: 1,
    },
    scrollIcon: {
       position: "absolute",
       bottom: 20,
       left: "calc(50% - 20px)",
-      // zIndex: 1,
    },
    particlesBackground: {
       position: "absolute",
@@ -38,12 +52,13 @@ const useStyles = makeStyles(theme => ({
       right: 0,
    },
    contentBox: {
-      // backgroundColor: "rgba(0,0,0, 0.1)",
-      padding: theme.spacing(3),
       borderRadius: theme.shape.borderRadius,
       textAlign: "center",
       color: theme.palette.black,
-      // zIndex: 1,
+      padding: theme.spacing(3, 3, 7, 3),
+      [theme.breakpoints.only("xs")]: {
+         padding: theme.spacing(1),
+      },
    },
 }));
 
