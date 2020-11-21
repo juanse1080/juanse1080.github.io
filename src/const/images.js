@@ -100,7 +100,7 @@ const images = [
    },
 ];
 
-const kinds = {
+const images_kinds = {
    0: "Todas",
    1: "PHP",
    2: "Python",
@@ -108,4 +108,4 @@ const kinds = {
    4: "Django",
 };
 
-export { images, kinds };
+export { images, images_kinds };

@@ -19,7 +19,7 @@ import InfoIcon from "@material-ui/icons/Info";
 import useStyles from "./styles";
 
 // Import local const
-import { images, kinds } from "const/images";
+import { images, images_kinds } from "const/images";
 
 const Portfolio = ({ theme, ...other }) => {
    const classes = useStyles();
@@ -81,7 +81,7 @@ const Portfolio = ({ theme, ...other }) => {
          <div className={classes.paddings}>
             <Container>
                <Grid container spacing={1} justify="flex-end">
-                  {Object.keys(kinds).map(kindStr => {
+                  {Object.keys(images_kinds).map(kindStr => {
                      const kindId = parseInt(kindStr, 10);
                      return (
                         <Grid key={kindId} item>
@@ -92,7 +92,7 @@ const Portfolio = ({ theme, ...other }) => {
                                  kindId === kind ? null : handleKind(kindId)
                               }
                            >
-                              {kinds[kindId]}
+                              {images_kinds[kindId]}
                            </Button>
                         </Grid>
                      );
