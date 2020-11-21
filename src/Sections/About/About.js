@@ -5,7 +5,6 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Hidden from "@material-ui/core/Hidden";
 import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
 
 // Import local components
 import Image from "Components/Image";
