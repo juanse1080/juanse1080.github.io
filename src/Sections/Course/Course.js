@@ -9,7 +9,6 @@ import TimelineContent from "@material-ui/lab/TimelineContent";
 import TimelineDot from "@material-ui/lab/TimelineDot";
 import Typography from "@material-ui/core/Typography";
 import Tooltip from "@material-ui/core/Tooltip";
-import IconButton from "@material-ui/core/IconButton";
 import GetAppIcon from "@material-ui/icons/GetApp";
 
 // Import local const
@@ -49,7 +48,25 @@ const Course = ({ theme, photo, ...other }) => {
                      <TimelineDot
                         color={study.ended ? "secondary" : "grey"}
                         className={classes.dot}
-                     />
+                        component="a"
+                     >
+                        <Tooltip
+                           title="Descargue el certificado"
+                           placement="left"
+                        >
+                           <a
+                              download="certify.pdf"
+                              href={study.certify}
+                              className={classes.link}
+                           >
+                              <GetAppIcon
+                                 color="inherit"
+                                 className={classes.buttonDownload}
+                                 fontSize="small"
+                              />
+                           </a>
+                        </Tooltip>
+                     </TimelineDot>
                   </Tooltip>
                   {index === courses.length - 1 ? null : <TimelineConnector />}
                </TimelineSeparator>
@@ -64,29 +81,10 @@ const Course = ({ theme, photo, ...other }) => {
                   >
                      {study.title}
                   </Typography>
-                  <div className={classes.certify}>
-                     <Typography color="inherit" variant="caption">
-                        {study.institution}
-                        {study.date ? ` | ${study.date}` : null}
-                     </Typography>
-                     <Tooltip
-                        className={classes.buttonDownload}
-                        title="Descargue el certificado"
-                        placement="right"
-                     >
-                        <IconButton
-                           size="small"
-                           component="a"
-                           download="certify.pdf"
-                           href={study.certify}
-                           onMouseEnter={handleTooltip(false)}
-                           onMouseLeave={handleTooltip(index)}
-                           onMouseOver={handleTooltip(false)}
-                        >
-                           <GetAppIcon fontSize="small" />
-                        </IconButton>
-                     </Tooltip>
-                  </div>
+                  <Typography color="inherit" variant="caption" paragraph>
+                     {study.institution}
+                     {study.date ? ` | ${study.date}` : null}
+                  </Typography>
                   {study.description.map((description, key) => (
                      <Typography
                         key={key}

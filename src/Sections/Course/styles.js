@@ -9,13 +9,15 @@ const useStyles = makeStyles(theme => ({
          padding: theme.spacing(1),
       },
    },
-   certify: {
-      display: "flex",
-      alignContent: "center",
-      paddingBottom: theme.spacing(1),
-   },
    buttonDownload: {
-      marginLeft: theme.spacing(1),
+      fontSize: theme.spacing(2),
+      cursor: "pointer",
+   },
+   link: {
+      textDecoration: "none",
+      color: "inherit",
+      height: 16,
+      width: 16,
    },
    title: props => ({
       color: theme.palette[themes[props.theme].theme].title,
