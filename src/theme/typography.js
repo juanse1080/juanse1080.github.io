@@ -52,7 +52,7 @@ export default {
    subtitle2: {
       color: palette.text.secondary,
       fontWeight: 400,
-      fontSize: "0.9em",
+      fontSize: "1.1em",
       letterSpacing: "-0.05px",
       lineHeight: "21px",
    },
@@ -74,9 +74,9 @@ export default {
    },
    caption: {
       color: palette.text.secondary,
-      fontSize: "11px",
-      letterSpacing: "0.33px",
-      lineHeight: "13px",
+      fontSize: "0.9em;",
+      letterSpacing: "-0.33px",
+      lineHeight: "17px",
    },
    overline: {
       color: palette.text.secondary,
