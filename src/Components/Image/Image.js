@@ -58,7 +58,7 @@ export default function Image({ photo, ...others }) {
             onClose={handleCloseView}
             aria-labelledby="customized-dialog-title"
             open={open}
-            // TransitionComponent={Transition}
+            TransitionComponent={Transition}
          >
             <img className={classes.viewPreview} src={photo} alt={photo} />
          </Dialog>
