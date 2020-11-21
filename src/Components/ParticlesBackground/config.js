@@ -78,9 +78,6 @@ const config = {
             enable: true,
             mode: "repulse",
          },
-         onclick: {
-            enable: false,
-         },
          resize: true,
       },
       modes: {
