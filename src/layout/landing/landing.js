@@ -4,7 +4,7 @@ import React, { createRef, useEffect, useRef, useState } from "react";
 import Section from "Components/Section";
 
 // Import local const
-import sections from "const/sections";
+import { sections } from "const/sections";
 
 // Import other modules
 import { Scrollbars } from "react-custom-scrollbars";
@@ -58,11 +58,6 @@ export default function Landing(props) {
       if (sections[name]) return sections[name].ref.current.offsetTop - 46;
       else return home_ref.current.offsetTop;
    };
-
-   // const heightElement = name => {
-   //    if (sections[name]) return sections[name].ref.current.offsetHeight;
-   //    else return home_ref.current.offsetHeight;
-   // };
 
    useEffect(() => {
       keys.forEach((name, index) => {

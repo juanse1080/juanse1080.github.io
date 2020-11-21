@@ -9,9 +9,6 @@ const useStyles = makeStyles(theme => ({
          padding: theme.spacing(1),
       },
    },
-   dot: {
-      cursor: "pointer",
-   },
    title: props => ({
       color: theme.palette[themes[props.theme].theme].title,
       paddingBottom: theme.spacing(1),

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Import Material UI components
 import Timeline from "@material-ui/lab/Timeline";
@@ -10,8 +10,6 @@ import TimelineDot from "@material-ui/lab/TimelineDot";
 import Typography from "@material-ui/core/Typography";
 import Tooltip from "@material-ui/core/Tooltip";
 
-// Import local components
-
 // Import local const
 import studies from "const/studies";
 
@@ -20,6 +18,12 @@ import useStyles from "./styles";
 
 const About = ({ theme, photo, ...other }) => {
    const classes = useStyles({ theme });
+
+   const [tooltip, setTooltip] = useState(false);
+
+   const handleTooltip = (newState = false) => () => {
+      if (newState !== tooltip) setTooltip(newState);
+   };
 
    return (
       <Timeline
@@ -36,14 +40,22 @@ const About = ({ theme, photo, ...other }) => {
             >
                <TimelineSeparator>
                   <Tooltip
+                     open={tooltip === index}
                      title={study.ended ? "Finalizado" : "Transcurriendo"}
                      placement="left"
                   >
-                     <TimelineDot color={study.color} className={classes.dot} />
+                     <TimelineDot
+                        color={study.ended ? "secondary" : "grey"}
+                        className={classes.dot}
+                     />
                   </Tooltip>
                   {index === studies.length - 1 ? null : <TimelineConnector />}
                </TimelineSeparator>
-               <TimelineContent>
+               <TimelineContent
+                  onMouseEnter={handleTooltip(index)}
+                  onMouseLeave={handleTooltip(false)}
+                  onMouseOver={handleTooltip(index)}
+               >
                   <Typography
                      className={classes.title}
                      color="inherit"
@@ -51,12 +63,20 @@ const About = ({ theme, photo, ...other }) => {
                   >
                      {study.title}
                   </Typography>
-                  <Typography paragraph variant="caption">
-                     {study.institution} | {study.date}
+                  <Typography color="inherit" paragraph variant="caption">
+                     {study.institution}
+                     {study.date ? ` | ${study.date}` : null}
                   </Typography>
-                  <Typography color="inherit" paragraph variant="body1">
-                     {study.description}
-                  </Typography>
+                  {study.description.map((description, key) => (
+                     <Typography
+                        key={key}
+                        color="inherit"
+                        paragraph
+                        variant="body1"
+                     >
+                        {description}
+                     </Typography>
+                  ))}
                </TimelineContent>
             </TimelineItem>
          ))}
