@@ -7,6 +7,8 @@ import Fab from "@material-ui/core/Fab";
 import Zoom from "@material-ui/core/Zoom";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
+import Tooltip from "@material-ui/core/Tooltip";
+
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
 // Import local components
@@ -46,15 +48,17 @@ const Home = forwardRef(({ nextPage, page, ...other }, ref) => {
             </Grid>
          </Container>
          <Zoom in={page === "Home"}>
-            <Fab
-               color="secondary"
-               aria-label="Next section"
-               className={classes.scrollIcon}
-               size="small"
-               onClick={nextPage}
-            >
-               <KeyboardArrowDownIcon />
-            </Fab>
+            <Tooltip title="Next section" placement="top">
+               <Fab
+                  color="secondary"
+                  aria-label="Next section"
+                  className={classes.scrollIcon}
+                  size="small"
+                  onClick={nextPage}
+               >
+                  <KeyboardArrowDownIcon />
+               </Fab>
+            </Tooltip>
          </Zoom>
       </div>
    );
