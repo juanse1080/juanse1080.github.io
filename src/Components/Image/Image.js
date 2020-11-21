@@ -40,7 +40,7 @@ export default function Image({ photo, ...others }) {
             onMouseLeave={handleEye(false)}
             onMouseOver={handleEye(true)}
          >
-            <Zoom in={eye}>
+            <Zoom in={true}>
                <Paper className={classes.icon}>
                   <IconButton size="small" onClick={handleShowView}>
                      <Visibility fontSize="small" />

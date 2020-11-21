@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
       width: "auto",
       height: "auto",
       maxWidth: "100%",
-      maxHeight: `calc( ${theme.shape.viewHeight} - 69px )`,
+      maxHeight: `calc(${theme.shape.viewHeight} - 69px)`,
    },
    rootDialog: {
       lineHeight: 0,
@@ -25,10 +25,10 @@ const useStyles = makeStyles(theme => ({
    icon: {
       display: "flex",
       position: "absolute",
-      right: "6.75%",
+      right: "calc(15% - 13px)",
       borderRadius: "50%",
       zIndex: 1,
-      bottom: "6.75%",
+      bottom: "calc(15% - 13px)",
    },
    paperScrollBody: {
       overflowY: "hidden",
