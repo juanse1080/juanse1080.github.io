@@ -2,6 +2,7 @@
 import About from "Sections/About";
 import Portfolio from "Sections/Portfolio";
 import Education from "Sections/Education";
+import Course from "Sections/Course";
 
 // Import local assets
 import photo from "assets/img/Foto.jpg";
@@ -20,7 +21,7 @@ const sections = {
       component: Portfolio,
       props: {},
       section: {
-         // subtitle: "Ruta",
+         subtitle: "Mis trabajos",
          fullWidth: true,
       },
    },
@@ -28,9 +29,18 @@ const sections = {
       component: Education,
       props: {},
       section: {
-         // subtitle: "Ruta",
+         subtitle: "Educación formal",
+      },
+   },
+   Cursos: {
+      component: Course,
+      props: {},
+      section: {
+         subtitle: "Cursos virtuales",
       },
    },
 };
 
-export default sections;
+const section_keys = Object.keys(sections);
+
+export { sections, section_keys };
