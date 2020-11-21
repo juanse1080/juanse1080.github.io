@@ -9,7 +9,14 @@ const useStyles = makeStyles(theme => ({
       display: "flex",
       fontSize: theme.spacing(4),
       paddingTop: theme.spacing(3),
-      cursor: "pointer",
+   },
+   socialIcons: {
+      display: "flex",
+      fontSize: theme.spacing(4),
+      paddingTop: theme.spacing(3),
+      position: "absolute",
+      top: theme.spacing(1),
+      right: theme.spacing(3),
    },
    icon: {
       cursor: "pointer",
@@ -19,6 +26,7 @@ const useStyles = makeStyles(theme => ({
    container: {
       height: "100%",
       display: "flex",
+      flexDirection: "column",
       justifyContent: "center",
    },
    paddings: {

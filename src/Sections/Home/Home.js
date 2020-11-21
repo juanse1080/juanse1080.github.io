@@ -8,6 +8,8 @@ import Zoom from "@material-ui/core/Zoom";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Tooltip from "@material-ui/core/Tooltip";
+import Button from "@material-ui/core/Button";
+import Hidden from "@material-ui/core/Hidden";
 
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
@@ -34,9 +36,9 @@ const Home = forwardRef(({ nextPage, page, ...other }, ref) => {
                   container
                   direction="row"
                   justify="space-around"
-                  alignItems="center"
+                  alignItems="flex-start"
                >
-                  <Grid item lg={6} sm={10}>
+                  <Grid item lg={6} md={6} sm={10} xs={12}>
                      <Box className={classes.contentBox}>
                         <Typography
                            variant="h1"
@@ -59,26 +61,45 @@ const Home = forwardRef(({ nextPage, page, ...other }, ref) => {
                            ayudado mucho en mi crecimiento profesional.
                         </Typography>
                         <Box className={classes.sectionIcons}>
-                           {socials.map(social => {
-                              const Icon = social.icon;
-                              return (
-                                 <Icon
-                                    {...social.props}
-                                    key={social.name}
-                                    fontSize="inherit"
-                                    className={classes.icon}
-                                 />
-                              );
-                           })}
+                           <Button
+                              variant="contained"
+                              color="secondary"
+                              onClick={nextPage}
+                           >
+                              Empecemos
+                           </Button>
                         </Box>
                      </Box>
                   </Grid>
-                  <Grid item lg={5} sm={4}>
-                     <img src={Img} alt="" style={{ zIndex: 2 }} />
-                  </Grid>
+                  <Hidden smDown>
+                     <Grid item lg={5} md={5} sm={4}>
+                        <img
+                           src={Img}
+                           alt=""
+                           style={{
+                              zIndex: 2,
+                              width: "100%",
+                              backgroundColor: "white",
+                           }}
+                        />
+                     </Grid>
+                  </Hidden>
                </Grid>
             </Container>
          </div>
+         <Box className={classes.socialIcons}>
+            {socials.map(social => {
+               const Icon = social.icon;
+               return (
+                  <Icon
+                     {...social.props}
+                     key={social.name}
+                     fontSize="inherit"
+                     className={classes.icon}
+                  />
+               );
+            })}
+         </Box>
          <Zoom in={page === "Home"}>
             <Tooltip title="Next section" placement="top">
                <Fab
