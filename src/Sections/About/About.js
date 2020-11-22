@@ -72,7 +72,7 @@ const About = ({ theme, photo, ...other }) => {
                <Grid
                   container
                   justify="space-between"
-                  alignItems="start"
+                  alignItems="flex-start"
                   spacing={3}
                >
                   <Grid item>
