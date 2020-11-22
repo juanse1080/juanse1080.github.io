@@ -18,6 +18,12 @@ const useStyles = makeStyles(theme => ({
       top: theme.spacing(1),
       right: theme.spacing(3),
    },
+   link: {
+      textDecoration: "none",
+      color: "inherit",
+      // height: 16,
+      // width: 16,
+   },
    icon: {
       cursor: "pointer",
       zIndex: 1,

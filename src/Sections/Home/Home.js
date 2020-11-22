@@ -91,12 +91,17 @@ const Home = forwardRef(({ nextPage, page, ...other }, ref) => {
             {socials.map(social => {
                const Icon = social.icon;
                return (
-                  <Icon
-                     {...social.props}
+                  <a
+                     {...social.propsLink}
                      key={social.name}
-                     fontSize="inherit"
-                     className={classes.icon}
-                  />
+                     className={classes.link}
+                  >
+                     <Icon
+                        {...social.props}
+                        fontSize="inherit"
+                        className={classes.icon}
+                     />
+                  </a>
                );
             })}
          </Box>
