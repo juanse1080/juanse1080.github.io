@@ -71,8 +71,8 @@ const Course = ({ theme, photo, ...other }) => {
                   {index === courses.length - 1 ? null : <TimelineConnector />}
                </TimelineSeparator>
                <TimelineContent
-                  onMouseEnter={handleTooltip(index)}
-                  onMouseLeave={handleTooltip(false)}
+                  onMouseOver={handleTooltip(index)}
+                  onMouseOut={handleTooltip(false)}                  
                >
                   <Typography
                      className={classes.title}
