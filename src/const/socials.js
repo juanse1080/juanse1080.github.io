@@ -5,14 +5,19 @@ import MailIcon from "@material-ui/icons/Mail";
 const socials = [
    {
       name: "LinkedIn",
-      url: "",
       icon: LinkedInIcon,
-      props: {},
+      propsLink: {
+         target: "_blank",
+         href: "https://www.linkedin.com/in/juanse1080/",
+      },
    },
    {
       name: "GitHub",
-      url: "",
       icon: GitHubIcon,
+      propsLink: {
+         target: "_blank",
+         href: "https://github.com/juanse1080",
+      },
       props: {
          style: {
             transform: "scale(0.81)",
@@ -21,9 +26,12 @@ const socials = [
    },
    {
       name: "Gmail",
-      url: "",
       icon: MailIcon,
-      props: {},
+      propsLink: {
+         target: "_blank",
+         href:
+            "mailto:juanmarcon1080@gmail.com?Subject=Github%20page:%20&body=Prueba",
+      },
    },
 ];
 
