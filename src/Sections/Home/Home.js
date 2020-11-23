@@ -14,7 +14,7 @@ import Hidden from "@material-ui/core/Hidden";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
 //import local assets
-import Img from "assets/img/Home/undraw_building_websites_i78t.svg";
+import Img from "assets/img/Home/develop_page.svg";
 
 // Import local components
 import ParticlesBackground from "Components/ParticlesBackground";
