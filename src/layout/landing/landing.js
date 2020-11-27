@@ -97,16 +97,33 @@ export default function Landing(props) {
                <Home nextPage={scrollTo(keys[0])} ref={home_ref} page={page} />
 
                {Object.keys(sections).map((section_name, section_index) => {
-                  const Component = sections[section_name].component;
+                  const {
+                     component: Component,
+                     title,
+                     props,
+                     section: {
+                        leftPart: LeftPart = null,
+                        ...propsSection
+                     } = {},
+                  } = sections[section_name];
                   return (
                      <Section
-                        {...sections[section_name].section}
+                        {...propsSection}
                         page={page}
                         loads={shows}
                         key={section_name}
                         section_name={section_name}
                         ref={refs.current[section_index]}
-                        title={sections[section_name].title}
+                        title={title}
+                        leftPart={
+                           LeftPart ? (
+                              <LeftPart
+                                 theme={
+                                    section_index % 2 === 0 ? "dark" : "light"
+                                 }
+                              />
+                           ) : null
+                        }
                         theme={section_index % 2 === 0 ? "dark" : "light"}
                         nextPage={scrollTo(
                            section_index !== Object.keys(sections).length
@@ -115,7 +132,7 @@ export default function Landing(props) {
                         )}
                      >
                         <Component
-                           {...sections[section_name].props}
+                           {...props}
                            page={page}
                            theme={section_index % 2 === 0 ? "dark" : "light"}
                         />

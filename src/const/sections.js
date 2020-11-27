@@ -4,6 +4,7 @@ import Portfolio from "Sections/Portfolio";
 import Education from "Sections/Education";
 import Course from "Sections/Course";
 import Tech from "Sections/Tech";
+import Legend from "Components/Legend";
 
 // Import local assets
 import photo from "assets/img/Foto.jpg";
@@ -42,6 +43,7 @@ const sections = {
       props: {},
       section: {
          subtitle: "Educación formal",
+         leftPart: Legend,
       },
    },
    curse: {
@@ -50,6 +52,7 @@ const sections = {
       props: {},
       section: {
          subtitle: "Cursos virtuales",
+         leftPart: Legend,
       },
    },
 };

@@ -8,7 +8,11 @@ import TimelineConnector from "@material-ui/lab/TimelineConnector";
 import TimelineContent from "@material-ui/lab/TimelineContent";
 import TimelineDot from "@material-ui/lab/TimelineDot";
 import Typography from "@material-ui/core/Typography";
-import Tooltip from "@material-ui/core/Tooltip";
+import Chip from "@material-ui/core/Chip";
+
+// Import others libs
+import { isMobile } from "react-device-detect";
+import Legend from "Components/Legend";
 
 // Import local const
 import studies from "const/studies";
@@ -26,60 +30,58 @@ const About = ({ theme, photo, ...other }) => {
    };
 
    return (
-      <Timeline
-         classes={{
-            root: classes.root,
-         }}
-      >
-         {studies.map((study, index) => (
-            <TimelineItem
-               key={study.title}
-               classes={{
-                  missingOppositeContent: classes.missingOppositeContent,
-               }}
-            >
-               <TimelineSeparator>
-                  <Tooltip
-                     open={tooltip === index}
-                     title={study.ended ? "Finalizado" : "Transcurriendo"}
-                     placement="left"
-                  >
+      <>
+         <Timeline
+            classes={{
+               root: classes.root,
+            }}
+         >
+            {studies.map((study, index) => (
+               <TimelineItem
+                  key={study.title}
+                  classes={{
+                     missingOppositeContent: classes.missingOppositeContent,
+                  }}
+               >
+                  <TimelineSeparator>
                      <TimelineDot
                         color={study.ended ? "secondary" : "grey"}
                         className={classes.dot}
                      />
-                  </Tooltip>
-                  {index === studies.length - 1 ? null : <TimelineConnector />}
-               </TimelineSeparator>
-               <TimelineContent
-                  onMouseOver={handleTooltip(index)}
-                  onMouseOut={handleTooltip(false)}
-               >
-                  <Typography
-                     className={classes.title}
-                     color="inherit"
-                     variant="subtitle2"
+                     {index === studies.length - 1 ? null : (
+                        <TimelineConnector />
+                     )}
+                  </TimelineSeparator>
+                  <TimelineContent
+                     onMouseOver={handleTooltip(index)}
+                     onMouseOut={handleTooltip(false)}
                   >
-                     {study.title}
-                  </Typography>
-                  <Typography color="inherit" paragraph variant="caption">
-                     {study.institution}
-                     {study.date ? ` | ${study.date}` : null}
-                  </Typography>
-                  {study.description.map((description, key) => (
                      <Typography
-                        key={key}
+                        className={classes.title}
                         color="inherit"
-                        paragraph
-                        variant="body1"
+                        variant="subtitle2"
                      >
-                        {description}
+                        {study.title}
                      </Typography>
-                  ))}
-               </TimelineContent>
-            </TimelineItem>
-         ))}
-      </Timeline>
+                     <Typography color="inherit" paragraph variant="caption">
+                        {study.institution}
+                        {study.date ? ` | ${study.date}` : null}
+                     </Typography>
+                     {study.description.map((description, key) => (
+                        <Typography
+                           key={key}
+                           color="inherit"
+                           paragraph
+                           variant="body1"
+                        >
+                           {description}
+                        </Typography>
+                     ))}
+                  </TimelineContent>
+               </TimelineItem>
+            ))}
+         </Timeline>
+      </>
    );
 };
 
