@@ -1,9 +1,12 @@
 import palette from "theme/palette";
+import image from "assets/img/Tech/git.svg";
+console.log(image);
 
 const config = {
+   fps_limit: 28,
    particles: {
       number: {
-         value: 100,
+         value: 60,
          density: {
             enable: true,
             value_area: 800,
@@ -78,13 +81,24 @@ const config = {
             enable: true,
             mode: "repulse",
          },
+         onclick: { enable: true, mode: "push" },
          resize: true,
       },
       modes: {
          repulse: {
-            distance: 40,
+            distance: 100,
             duration: 0.4,
          },
+         grab: { distance: 400, line_linked: { opacity: 1 } },
+         bubble: {
+            distance: 100,
+            size: 4,
+            duration: 1,
+            opacity: 0.8951048951048951,
+            speed: 3,
+         },
+         push: { particles_nb: 1 },
+         remove: { particles_nb: 10 },
       },
    },
    retina_detect: true,
