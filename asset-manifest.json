@@ -1,27 +1,36 @@
 {
   "files": {
     "main.css": "/static/css/main.f8f224fb.chunk.css",
-    "main.js": "/static/js/main.6deb82c4.chunk.js",
-    "main.js.map": "/static/js/main.6deb82c4.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.73ca83df.js",
-    "runtime-main.js.map": "/static/js/runtime-main.73ca83df.js.map",
-    "static/js/2.596613a9.chunk.js": "/static/js/2.596613a9.chunk.js",
-    "static/js/2.596613a9.chunk.js.map": "/static/js/2.596613a9.chunk.js.map",
-    "static/js/3.6070ffd9.chunk.js": "/static/js/3.6070ffd9.chunk.js",
-    "static/js/3.6070ffd9.chunk.js.map": "/static/js/3.6070ffd9.chunk.js.map",
+    "main.js": "/static/js/main.2094a161.chunk.js",
+    "main.js.map": "/static/js/main.2094a161.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b2c38bc9.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b2c38bc9.js.map",
+    "static/js/2.403fc1ca.chunk.js": "/static/js/2.403fc1ca.chunk.js",
+    "static/js/2.403fc1ca.chunk.js.map": "/static/js/2.403fc1ca.chunk.js.map",
+    "static/js/3.51952ef4.chunk.js": "/static/js/3.51952ef4.chunk.js",
+    "static/js/3.51952ef4.chunk.js.map": "/static/js/3.51952ef4.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.f8f224fb.chunk.css.map": "/static/css/main.f8f224fb.chunk.css.map",
-    "static/js/2.596613a9.chunk.js.LICENSE.txt": "/static/js/2.596613a9.chunk.js.LICENSE.txt",
+    "static/js/2.403fc1ca.chunk.js.LICENSE.txt": "/static/js/2.403fc1ca.chunk.js.LICENSE.txt",
     "static/media/Django.0eae4d81.pdf": "/static/media/Django.0eae4d81.pdf",
     "static/media/Foto.f430683c.jpg": "/static/media/Foto.f430683c.jpg",
     "static/media/JuanMarconCV.81ce0f18.pdf": "/static/media/JuanMarconCV.81ce0f18.pdf",
     "static/media/React.a7947efa.pdf": "/static/media/React.a7947efa.pdf",
-    "static/media/undraw_building_websites_i78t.e7649bca.svg": "/static/media/undraw_building_websites_i78t.e7649bca.svg"
+    "static/media/asana.1c817937.svg": "/static/media/asana.1c817937.svg",
+    "static/media/bootstrap.7ebbb003.svg": "/static/media/bootstrap.7ebbb003.svg",
+    "static/media/develop_page.e7649bca.svg": "/static/media/develop_page.e7649bca.svg",
+    "static/media/django.03d5cf41.svg": "/static/media/django.03d5cf41.svg",
+    "static/media/git.dd8f1dca.svg": "/static/media/git.dd8f1dca.svg",
+    "static/media/laravel.50db3a8d.svg": "/static/media/laravel.50db3a8d.svg",
+    "static/media/material.c0958f97.svg": "/static/media/material.c0958f97.svg",
+    "static/media/node.a7a6b50a.svg": "/static/media/node.a7a6b50a.svg",
+    "static/media/react.8c332f57.svg": "/static/media/react.8c332f57.svg",
+    "static/media/trello.24f5b3c0.svg": "/static/media/trello.24f5b3c0.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.73ca83df.js",
-    "static/js/2.596613a9.chunk.js",
+    "static/js/runtime-main.b2c38bc9.js",
+    "static/js/2.403fc1ca.chunk.js",
     "static/css/main.f8f224fb.chunk.css",
-    "static/js/main.6deb82c4.chunk.js"
+    "static/js/main.2094a161.chunk.js"
   ]
 }
