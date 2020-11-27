@@ -7,7 +7,7 @@ import MuiTypography from "./MuiTypography";
 import MuiLink from "./MuiLink";
 import MuiAlert from "./MuiAlert";
 
-export default {
+const custom = {
    MuiLink,
    MuiButton,
    MuiIconButton,
@@ -30,3 +30,5 @@ export default {
       },
    },
 };
+
+export default custom;

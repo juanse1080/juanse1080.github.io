@@ -1,6 +1,6 @@
 import palette from "../palette";
 
-export default {
+const custom = {
    root: {
       // color: `${palette.primary.main} !important`,
       "&:not([href])": {
@@ -12,3 +12,5 @@ export default {
       },
    },
 };
+
+export default custom;

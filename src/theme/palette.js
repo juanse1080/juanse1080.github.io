@@ -3,7 +3,7 @@ import { colors } from "@material-ui/core";
 const white = "#FFFFFF";
 const black = "#000000";
 
-export default {
+const custom = {
    black,
    white,
    transparent: "transparent",
@@ -65,3 +65,5 @@ export default {
    icon: colors.blueGrey[600],
    divider: colors.grey[200],
 };
+
+export default custom;

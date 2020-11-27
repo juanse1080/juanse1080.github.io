@@ -1,7 +1,9 @@
-import { colors } from '@material-ui/core';
+import { colors } from "@material-ui/core";
 
-export default {
-  root: {
-    backgroundColor: colors.grey[50]
-  }
+const custom = {
+   root: {
+      backgroundColor: colors.grey[50],
+   },
 };
+
+export default custom;

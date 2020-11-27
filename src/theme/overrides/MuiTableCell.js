@@ -1,9 +1,11 @@
-import palette from '../palette';
-import typography from '../typography';
+import palette from "../palette";
+import typography from "../typography";
 
-export default {
-  root: {
-    ...typography.body1,
-    borderBottom: `1px solid ${palette.divider}`
-  }
+const custom = {
+   root: {
+      ...typography.body1,
+      borderBottom: `1px solid ${palette.divider}`,
+   },
 };
+
+export default custom;

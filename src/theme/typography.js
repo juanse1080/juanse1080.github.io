@@ -1,6 +1,6 @@
 import palette from "./palette";
 
-export default {
+const custom = {
    h1: {
       color: palette.text.primary,
       fontWeight: 700,
@@ -87,3 +87,5 @@ export default {
       textTransform: "uppercase",
    },
 };
+
+export default custom;
