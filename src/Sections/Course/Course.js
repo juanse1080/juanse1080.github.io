@@ -40,39 +40,30 @@ const Course = ({ theme, photo, ...other }) => {
                }}
             >
                <TimelineSeparator>
-                  <Tooltip
-                     open={tooltip === index}
-                     title={study.ended ? "Finalizado" : "Transcurriendo"}
-                     placement="left"
+                  <TimelineDot
+                     color={study.ended ? "secondary" : "grey"}
+                     className={classes.dot}
+                     component="a"
                   >
-                     <TimelineDot
-                        color={study.ended ? "secondary" : "grey"}
-                        className={classes.dot}
-                        component="a"
-                     >
-                        <Tooltip
-                           title="Descargue el certificado"
-                           placement="left"
+                     <Tooltip title="Descargue el certificado" placement="left">
+                        <a
+                           download="certify.pdf"
+                           href={study.certify}
+                           className={classes.link}
                         >
-                           <a
-                              download="certify.pdf"
-                              href={study.certify}
-                              className={classes.link}
-                           >
-                              <GetAppIcon
-                                 color="inherit"
-                                 className={classes.buttonDownload}
-                                 fontSize="small"
-                              />
-                           </a>
-                        </Tooltip>
-                     </TimelineDot>
-                  </Tooltip>
+                           <GetAppIcon
+                              color="inherit"
+                              className={classes.buttonDownload}
+                              fontSize="small"
+                           />
+                        </a>
+                     </Tooltip>
+                  </TimelineDot>
                   {index === courses.length - 1 ? null : <TimelineConnector />}
                </TimelineSeparator>
                <TimelineContent
                   onMouseOver={handleTooltip(index)}
-                  onMouseOut={handleTooltip(false)}                  
+                  onMouseOut={handleTooltip(false)}
                >
                   <Typography
                      className={classes.title}
