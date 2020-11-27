@@ -98,7 +98,7 @@ const tools = [
       icon: trello,
       props: {
          style: {
-            width: "60%",
+            width: "70%",
          },
       },
       propsPercentage: {
@@ -110,7 +110,7 @@ const tools = [
       icon: asana,
       props: {
          style: {
-            width: "60%",
+            width: "80%",
          },
       },
       propsPercentage: {
