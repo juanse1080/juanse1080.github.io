@@ -1,82 +1,54 @@
-import React, { forwardRef } from "react";
+import React from "react";
 
 // Import Material UI components
-import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
+import Typography from "@material-ui/core/Typography";
+import Zoom from "@material-ui/core/Zoom";
+import SvgIcon from "@material-ui/core/SvgIcon";
+
+import { Spring } from "react-spring/renderprops";
+
+// Import local const
+import tools from "const/tools";
 
 // import styles
 import useStyles from "./styles";
 
-const Home = forwardRef(
-   ({ title, subtitle, theme, children, fullWidth, ...other }, ref) => {
-      const classes = useStyles({ theme });
+const Percentage = ({ percentage }) => {
+   return (
+      <Spring from={{ number: 0 }} to={{ number: percentage || 100 }}>
+         {props => <div>{parseInt(props.number)}%</div>}
+      </Spring>
+   );
+};
 
-      return (
-         <div ref={ref}>
-            <div className={classes.root}>
-               {fullWidth ? (
-                  <>
-                     <div className={classes.paddings}>
-                        <Container>
-                           <Grid container spacing={3} justify="flex-start">
-                              <Grid item lg={3} md={3} sm={4} xs={12}>
-                                 <div className={classes.header}>
-                                    <Typography
-                                       className={classes.title}
-                                       color="inherit"
-                                       variant="h2"
-                                    >
-                                       {title}
-                                    </Typography>
-                                    <Typography
-                                       className={classes.subtitle}
-                                       color="inherit"
-                                       variant="subtitle1"
-                                    >
-                                       {subtitle}
-                                    </Typography>
-                                 </div>
-                              </Grid>
-                           </Grid>
-                        </Container>
+const Tech = ({ theme, page, ...other }) => {
+   const classes = useStyles({ theme });
+
+   return (
+      <Container>
+         <Grid container justify="space-between" alignItems="center">
+            {tools.map((tool, index) => (
+               <Grid key={tool.name} item lg={4} md={4} sm={5} xs={6}>
+                  <Zoom in={page === "tech"} timeout={index * 100}>
+                     <div className={classes.contentIcon}>
+                        <Typography
+                           className={classes.title}
+                           color="inherit"
+                           variant="subtitle2"
+                           align="center"
+                        >
+                           {tool.name}
+                        </Typography>
+                        <img {...tool.props} src={tool.icon} alt={tool.name} />
                      </div>
-                     {children}
-                     <div className={classes.paddingBottom} />
-                  </>
-               ) : (
-                  <div className={classes.paddings}>
-                     <Container>
-                        <Grid container spacing={3} justify="center">
-                           <Grid item lg={3} md={3} sm={4} xs={12}>
-                              <div className={classes.header}>
-                                 <Typography
-                                    className={classes.title}
-                                    color="inherit"
-                                    variant="h2"
-                                 >
-                                    {title}
-                                 </Typography>
-                                 <Typography
-                                    className={classes.subtitle}
-                                    color="inherit"
-                                    variant="subtitle1"
-                                 >
-                                    {subtitle}
-                                 </Typography>
-                              </div>
-                           </Grid>
-                           <Grid item lg={9} md={9} sm={8} xs={12}>
-                              <div className={classes.content}>{children}</div>
-                           </Grid>
-                        </Grid>
-                     </Container>
-                  </div>
-               )}
-            </div>
-         </div>
-      );
-   }
-);
+                  </Zoom>
+               </Grid>
+            ))}
+         </Grid>
+      </Container>
+   );
+};
 
-export default Home;
+export default Tech;

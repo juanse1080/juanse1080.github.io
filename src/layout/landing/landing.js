@@ -4,7 +4,7 @@ import React, { createRef, useEffect, useRef, useState } from "react";
 import Section from "Components/Section";
 
 // Import local const
-import { sections } from "const/sections";
+import { sections, section_keys as keys } from "const/sections";
 
 // Import other modules
 import { Scrollbars } from "react-custom-scrollbars";
@@ -17,13 +17,11 @@ import Footer from "Sections/Footer";
 // import styles
 import useStyles from "./styles";
 
-const keys = Object.keys(sections);
-
 export default function Landing(props) {
    const classes = useStyles();
 
    const scrollbar = useRef();
-   const [page, setPage] = useState("Home");
+   const [page, setPage] = useState("home");
 
    const refs = useRef(
       Array.apply(null, Array(keys.length)).map(_ => createRef())
@@ -44,7 +42,7 @@ export default function Landing(props) {
 
    const onScroll = e => {
       const currentPosition = scrollbar.current.getScrollTop();
-      [...keys, "Home"].forEach(section_name => {
+      [...keys, "home"].forEach(section_name => {
          const itemTop = topPosition(section_name);
          // const itemBottom = itemTop + heightElement(section_name);
          // if (itemTop <= currentPosition && itemBottom > currentPosition)
@@ -63,6 +61,7 @@ export default function Landing(props) {
       keys.forEach((name, index) => {
          sections[name].ref = refs.current[index];
       });
+      scrollTo(page)();
    }, []);
 
    return (
@@ -91,16 +90,16 @@ export default function Landing(props) {
                         {...sections[section_name].section}
                         key={section_name}
                         ref={refs.current[section_index]}
-                        title={section_name}
+                        title={sections[section_name].title}
                         theme={section_index % 2 === 0 ? "dark" : "light"}
                         nextPage={scrollTo(
                            section_index !== Object.keys(sections).length
                               ? Object.keys(sections)[section_index + 1]
-                              : false
                         )}
                      >
                         <Component
                            {...sections[section_name].props}
+                           page={page}
                            theme={section_index % 2 === 0 ? "dark" : "light"}
                         />
                      </Section>

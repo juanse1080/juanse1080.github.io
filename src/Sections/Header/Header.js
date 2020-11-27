@@ -15,14 +15,14 @@ export default function Header({ page, sections, onChangePage, ...other }) {
 
    return (
       <>
-         <Slide in={page !== "Home"}>
+         <Slide in={page !== "home"}>
             <AppBar className={classes.appBar} color="transparent">
                <Toolbar>
                   <div className={classes.floatRight} />
                   <Button
                      color="inherit"
                      className={clsx({
-                        [classes.activeButton]: page === "Home",
+                        [classes.activeButton]: page === "home",
                      })}
                      onClick={onChangePage()}
                   >
@@ -33,11 +33,12 @@ export default function Header({ page, sections, onChangePage, ...other }) {
                         key={section_name}
                         color="inherit"
                         className={clsx({
-                           [classes.activeButton]: page === section_name,
+                           [classes.activeButton]:
+                              page === section_name,
                         })}
                         onClick={onChangePage(section_name)}
                      >
-                        {section_name}
+                        {sections[section_name].title}
                      </Button>
                   ))}
                </Toolbar>

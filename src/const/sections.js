@@ -3,12 +3,14 @@ import About from "Sections/About";
 import Portfolio from "Sections/Portfolio";
 import Education from "Sections/Education";
 import Course from "Sections/Course";
+import Tech from "Sections/Tech";
 
 // Import local assets
 import photo from "assets/img/Foto.jpg";
 
 const sections = {
-   "Sobre mí": {
+   about: {
+      title: "Sobre mí",
       component: About,
       props: {
          photo,
@@ -17,7 +19,8 @@ const sections = {
          // subtitle: "Ruta",
       },
    },
-   Portafolio: {
+   portfolio: {
+      title: "Portafolio",
       component: Portfolio,
       props: {},
       section: {
@@ -25,14 +28,24 @@ const sections = {
          fullWidth: true,
       },
    },
-   Educación: {
+   tech: {
+      title: "Tecnologías",
+      component: Tech,
+      props: {},
+      section: {
+         subtitle: "Tecnologías favoritas",
+      },
+   },
+   education: {
+      title: "Educación",
       component: Education,
       props: {},
       section: {
          subtitle: "Educación formal",
       },
    },
-   Cursos: {
+   curse: {
+      title: "Cursos",
       component: Course,
       props: {},
       section: {

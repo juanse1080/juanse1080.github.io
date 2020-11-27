@@ -59,7 +59,7 @@ const useStyles = makeStyles(theme => ({
    particlesBackground: {
       position: "absolute",
       background: "transparent",
-      zIndex: 0,
+      zIndex: -1,
       top: 0,
       bottom: 0,
       left: 0,
