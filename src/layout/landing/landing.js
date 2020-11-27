@@ -22,6 +22,7 @@ export default function Landing(props) {
 
    const scrollbar = useRef();
    const [page, setPage] = useState("home");
+   const [shows, setShows] = useState([]);
 
    const refs = useRef(
       Array.apply(null, Array(keys.length)).map(_ => createRef())
@@ -41,15 +42,27 @@ export default function Landing(props) {
    };
 
    const onScroll = e => {
+      let newPage,
+         _shows = [];
       const currentPosition = scrollbar.current.getScrollTop();
-      [...keys, "home"].forEach(section_name => {
+      const currentTopPosition =
+         currentPosition + scrollbar.current.getClientHeight() / 3;
+      const currentBottomPosition =
+         currentPosition + (scrollbar.current.getClientHeight() * 2) / 3;
+      ["home", ...keys].forEach(section_name => {
          const itemTop = topPosition(section_name);
-         // const itemBottom = itemTop + heightElement(section_name);
-         // if (itemTop <= currentPosition && itemBottom > currentPosition)
-         //    handlePage(section_name);
+         if (
+            currentTopPosition <= itemTop &&
+            currentBottomPosition > itemTop &&
+            !_shows.includes(section_name) &&
+            !shows.includes(section_name)
+         )
+            _shows.push(section_name);
          if (itemTop <= currentPosition && itemTop + 92 > currentPosition)
-            handlePage(section_name);
+            newPage = section_name;
       });
+      if (newPage) handlePage(newPage);
+      if (_shows.length > 0) setShows(_ => [..._, ..._shows]);
    };
 
    const topPosition = name => {
@@ -88,13 +101,17 @@ export default function Landing(props) {
                   return (
                      <Section
                         {...sections[section_name].section}
+                        page={page}
+                        loads={shows}
                         key={section_name}
+                        section_name={section_name}
                         ref={refs.current[section_index]}
                         title={sections[section_name].title}
                         theme={section_index % 2 === 0 ? "dark" : "light"}
                         nextPage={scrollTo(
                            section_index !== Object.keys(sections).length
                               ? Object.keys(sections)[section_index + 1]
+                              : null
                         )}
                      >
                         <Component
@@ -105,7 +122,7 @@ export default function Landing(props) {
                      </Section>
                   );
                })}
-               <Footer hidden={page !== "Home"} scrollToTop={scrollTo()} />
+               <Footer hidden={page !== "home"} scrollToTop={scrollTo()} />
             </Scrollbars>
          </div>
       </>
