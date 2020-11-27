@@ -27,8 +27,6 @@ const Section = forwardRef(
    ) => {
       const classes = useStyles({ theme });
 
-      console.log(title, leftPart);
-
       const [initSection, setInitSection] = useState(false);
 
       useMemo(() => {
