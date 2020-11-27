@@ -1,5 +1,4 @@
 import palette from "theme/palette";
-import image from "assets/img/Tech/git.svg";
 
 const config = {
    fps_limit: 28,
