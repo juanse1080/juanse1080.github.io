@@ -5,7 +5,10 @@ import IconButton from "@material-ui/core/IconButton";
 import Paper from "@material-ui/core/Paper";
 import Slide from "@material-ui/core/Slide";
 import Zoom from "@material-ui/core/Zoom";
-import { Visibility } from "@material-ui/icons";
+import Visibility from "@material-ui/icons/Visibility";
+
+// Import others libs
+import { isMobile } from "react-device-detect";
 
 // import styles
 import useStyles from "./styles";
@@ -15,9 +18,10 @@ const Transition = forwardRef(function Transition(props, ref) {
 });
 
 export default function Image({ photo, ...others }) {
-   const classes = useStyles({ photo });
    const [open, setOpen] = useState(false);
    const [eye, setEye] = useState(false);
+
+   const classes = useStyles({ photo, eye });
 
    const handleCloseView = () => {
       setOpen(false);
@@ -36,11 +40,12 @@ export default function Image({ photo, ...others }) {
       <div {...others}>
          <div
             className={classes.media}
-            onMouseEnter={handleEye(true)}
-            onMouseLeave={handleEye(false)}
-            onMouseOver={handleEye(true)}
+            onMouseEnter={isMobile ? handleEye(true) : null}
+            onMouseLeave={isMobile ? handleEye(false) : null}
+            onMouseOver={isMobile ? handleEye(true) : null}
+            onClick={handleShowView}
          >
-            <Zoom in={true}>
+            <Zoom in={isMobile || eye}>
                <Paper className={classes.icon}>
                   <IconButton size="small" onClick={handleShowView}>
                      <Visibility fontSize="small" />
@@ -56,7 +61,7 @@ export default function Image({ photo, ...others }) {
             }}
             scroll="body"
             onClose={handleCloseView}
-            aria-labelledby="customized-dialog-title"
+            aria-labelledby="Image"
             open={open}
             TransitionComponent={Transition}
          >

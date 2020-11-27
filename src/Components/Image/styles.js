@@ -7,6 +7,8 @@ const useStyles = makeStyles(theme => ({
       display: "block",
       paddingTop: "100%",
       backgroundImage: `url(${props.photo})`,
+      filter: props.eye ? "brightness(0.8)" : "brightness(1)",
+      cursor: "pointer",
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center",
