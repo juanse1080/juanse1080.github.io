@@ -16,6 +16,7 @@ const Section = forwardRef(
          page,
          loads,
          section_name,
+         leftPart,
          subtitle,
          theme,
          children,
@@ -26,11 +27,13 @@ const Section = forwardRef(
    ) => {
       const classes = useStyles({ theme });
 
+      console.log(title, leftPart);
+
       const [initSection, setInitSection] = useState(false);
 
       useMemo(() => {
-         if (loads.includes(section_name)) setInitSection(true)
-      }, [loads])
+         if (loads.includes(section_name)) setInitSection(true);
+      }, [loads]);
 
       return (
          <div ref={ref}>
@@ -86,6 +89,7 @@ const Section = forwardRef(
                                        {subtitle}
                                     </Typography>
                                  </div>
+                                 {leftPart}
                               </Grid>
                               <Grid item lg={9} md={9} sm={8} xs={12}>
                                  <div className={classes.content}>
