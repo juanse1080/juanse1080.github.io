@@ -15,14 +15,6 @@ import tools from "const/tools";
 // import styles
 import useStyles from "./styles";
 
-const Percentage = ({ percentage }) => {
-   return (
-      <Spring from={{ number: 0 }} to={{ number: percentage || 100 }}>
-         {props => <div>{parseInt(props.number)}%</div>}
-      </Spring>
-   );
-};
-
 const Tech = ({ theme, page, ...other }) => {
    const classes = useStyles({ theme });
 
@@ -31,19 +23,17 @@ const Tech = ({ theme, page, ...other }) => {
          <Grid container justify="space-between" alignItems="center">
             {tools.map((tool, index) => (
                <Grid key={tool.name} item lg={4} md={4} sm={5} xs={6}>
-                  <Zoom in={page === "tech"} timeout={index * 100}>
-                     <div className={classes.contentIcon}>
-                        <Typography
-                           className={classes.title}
-                           color="inherit"
-                           variant="subtitle2"
-                           align="center"
-                        >
-                           {tool.name}
-                        </Typography>
-                        <img {...tool.props} src={tool.icon} alt={tool.name} />
-                     </div>
-                  </Zoom>
+                  <div className={classes.contentIcon}>
+                     <Typography
+                        className={classes.title}
+                        color="inherit"
+                        variant="subtitle2"
+                        align="center"
+                     >
+                        {tool.name}
+                     </Typography>
+                     <img {...tool.props} src={tool.icon} alt={tool.name} />
+                  </div>
                </Grid>
             ))}
          </Grid>

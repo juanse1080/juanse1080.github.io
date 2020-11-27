@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
       fontWeight: 1000,
    },
    title: {
-      marginBottom: theme.spacing(1),
+      marginBottom: theme.spacing(2),
    },
 }));
 
