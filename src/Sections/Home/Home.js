@@ -18,7 +18,6 @@ import Img from "assets/img/Home/develop_page.svg";
 
 // Import local components
 import ParticlesBackground from "Components/ParticlesBackground";
-import SvgLoading from "Components/SvgLoading";
 
 // import styles
 import useStyles from "./styles";
