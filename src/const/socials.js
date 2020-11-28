@@ -2,7 +2,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import MailIcon from "@material-ui/icons/Mail";
 
-const socials = [
+const socials = state => [
    {
       name: "LinkedIn",
       icon: LinkedInIcon,
@@ -29,8 +29,7 @@ const socials = [
       icon: MailIcon,
       propsLink: {
          target: "_blank",
-         href:
-            "mailto:juanmarcon1080@gmail.com?Subject=Github%20page:%20&body=Prueba",
+         href: `mailto:juanmarcon1080@gmail.com?Subject=Github%20page:%20${state.subject}&body=${state.body}`,
       },
    },
 ];

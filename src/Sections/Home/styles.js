@@ -9,6 +9,12 @@ const useStyles = makeStyles(theme => ({
       display: "flex",
       fontSize: theme.spacing(4),
       paddingTop: theme.spacing(3),
+   },   
+   container: {
+      height: "100%",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
    },
    socialIcons: {
       display: "flex",
@@ -17,23 +23,6 @@ const useStyles = makeStyles(theme => ({
       position: "absolute",
       top: theme.spacing(1),
       right: theme.spacing(3),
-   },
-   link: {
-      textDecoration: "none",
-      color: "inherit",
-      // height: 16,
-      // width: 16,
-   },
-   icon: {
-      cursor: "pointer",
-      zIndex: 1,
-      marginRight: theme.spacing(1),
-   },
-   container: {
-      height: "100%",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
    },
    paddings: {
       height: "100%",

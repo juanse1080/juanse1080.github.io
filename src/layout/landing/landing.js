@@ -23,12 +23,21 @@ export default function Landing(props) {
    const scrollbar = useRef();
    const [page, setPage] = useState("home");
    const [shows, setShows] = useState([]);
+   const [state, setState] = useState({
+      subject: "",
+      body: "",
+   });
 
    const refs = useRef(
       Array.apply(null, Array(keys.length)).map(_ => createRef())
    );
 
    const home_ref = useRef(createRef());
+
+   const handleState = e => {
+      const { name, value } = e.target;
+      setState(_state => ({ ..._state, [name]: value }));
+   };
 
    const scrollTo = name => () => {
       scrollbar.current.view.scroll({
@@ -94,7 +103,12 @@ export default function Landing(props) {
                   sections={sections}
                />
 
-               <Home nextPage={scrollTo(keys[0])} ref={home_ref} page={page} />
+               <Home
+                  nextPage={scrollTo(keys[0])}
+                  ref={home_ref}
+                  page={page}
+                  state={state}
+               />
 
                {Object.keys(sections).map((section_name, section_index) => {
                   const {
@@ -133,13 +147,20 @@ export default function Landing(props) {
                      >
                         <Component
                            {...props}
+                           state={state}
                            page={page}
                            theme={section_index % 2 === 0 ? "dark" : "light"}
                         />
                      </Section>
                   );
                })}
-               <Footer hidden={page !== "home"} scrollToTop={scrollTo()} />
+               <Footer
+                  hidden={page !== "home"}
+                  theme="light"
+                  scrollToTop={scrollTo()}
+                  state={state}
+                  handleState={handleState}
+               />
             </Scrollbars>
          </div>
       </>

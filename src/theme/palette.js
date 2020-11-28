@@ -54,7 +54,7 @@ const custom = {
       light: colors.red[400],
    },
    text: {
-      primary: white,
+      // primary: "#105989",
       secondary: white,
       link: colors.blue[600],
    },

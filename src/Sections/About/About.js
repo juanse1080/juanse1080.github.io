@@ -19,7 +19,7 @@ import cv from "assets/docs/CV/JuanMarconCV.pdf";
 // import styles
 import useStyles from "./styles";
 
-const About = ({ theme, photo, ...other }) => {
+const About = ({ theme, state, photo, ...other }) => {
    const classes = useStyles();
 
    return (
@@ -83,7 +83,7 @@ const About = ({ theme, photo, ...other }) => {
                         paragraph
                      >
                         <Link
-                           href="mailto:juanmarcon1080@gmail.com?Subject=Github%20page:%20"
+                           href={`mailto:juanmarcon1080@gmail.com?Subject=Github%20page:%20${state.subject}&body=${state.subject}`}
                            target="_blank"
                            color="inherit"
                            rel="noreferrer"

@@ -18,14 +18,14 @@ import Img from "assets/img/Home/develop_page.svg";
 
 // Import local components
 import ParticlesBackground from "Components/ParticlesBackground";
+import Social from "Components/Social";
 
 // import styles
 import useStyles from "./styles";
 
 // import const
-import socials from "const/socials";
 
-const Home = forwardRef(({ nextPage, page, ...other }, ref) => {
+const Home = forwardRef(({ nextPage, state, page, ...other }, ref) => {
    const classes = useStyles();
    return (
       <div className={classes.root} ref={ref}>
@@ -88,22 +88,7 @@ const Home = forwardRef(({ nextPage, page, ...other }, ref) => {
             </Container>
          </div>
          <Box className={classes.socialIcons}>
-            {socials.map(social => {
-               const Icon = social.icon;
-               return (
-                  <a
-                     {...social.propsLink}
-                     key={social.name}
-                     className={classes.link}
-                  >
-                     <Icon
-                        {...social.props}
-                        fontSize="inherit"
-                        className={classes.icon}
-                     />
-                  </a>
-               );
-            })}
+            <Social state={state} />
          </Box>
          <Zoom in={page === "home"}>
             <Tooltip title="Next section" placement="top">
