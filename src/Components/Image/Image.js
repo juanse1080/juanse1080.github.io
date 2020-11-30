@@ -40,9 +40,9 @@ export default function Image({ photo, ...others }) {
       <div {...others}>
          <div
             className={classes.media}
-            onMouseEnter={isMobile ? handleEye(true) : null}
-            onMouseLeave={isMobile ? handleEye(false) : null}
-            onMouseOver={isMobile ? handleEye(true) : null}
+            onMouseEnter={isMobile ? null : handleEye(true)}
+            onMouseLeave={isMobile ? null : handleEye(false)}
+            onMouseOver={isMobile ? null : handleEye(true)}
             onClick={handleShowView}
          >
             <Zoom in={isMobile || eye}>
