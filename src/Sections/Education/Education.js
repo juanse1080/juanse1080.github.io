@@ -8,11 +8,6 @@ import TimelineConnector from "@material-ui/lab/TimelineConnector";
 import TimelineContent from "@material-ui/lab/TimelineContent";
 import TimelineDot from "@material-ui/lab/TimelineDot";
 import Typography from "@material-ui/core/Typography";
-import Chip from "@material-ui/core/Chip";
-
-// Import others libs
-import { isMobile } from "react-device-detect";
-import Legend from "Components/Legend";
 
 // Import local const
 import studies from "const/studies";
