@@ -25,7 +25,7 @@ import useStyles from "./styles";
 
 // import const
 
-const Home = forwardRef(({ nextPage, state, page, ...other }, ref) => {
+const Home = forwardRef(({ toPage, nextPage, state, page, ...other }, ref) => {
    const classes = useStyles();
    return (
       <div className={classes.root} ref={ref}>
@@ -64,9 +64,17 @@ const Home = forwardRef(({ nextPage, state, page, ...other }, ref) => {
                            <Button
                               variant="contained"
                               color="secondary"
+                              className="mr-3"
                               onClick={nextPage}
                            >
                               Empecemos
+                           </Button>
+                           <Button
+                              variant="contained"
+                              color="secondary"
+                              onClick={toPage()}
+                           >
+                              Contacto
                            </Button>
                         </Box>
                      </Box>
@@ -88,7 +96,7 @@ const Home = forwardRef(({ nextPage, state, page, ...other }, ref) => {
             </Container>
          </div>
          <Box className={classes.socialIcons}>
-            <Social state={state} />
+            <Social mailAction={toPage()} />
          </Box>
          <Zoom in={page === "home"}>
             <Tooltip title="Next section" placement="top">
