@@ -1,23 +1,31 @@
 import React from "react";
 
-// Import Material UI components
-import Box from "@material-ui/core/Box";
-
 // import const
 import socials from "const/socials";
 
 // import styles
 import useStyles from "./styles";
 
-export default function Legend({ theme, state, ...others }) {
+export default function Legend({ theme, mailAction, ...others }) {
    const classes = useStyles({ theme });
    return (
       <div {...others}>
-         {socials(state).map(({ icon: Icon, propsLink, name, props }) => (
-            <a {...propsLink} key={name} className={classes.link}>
-               <Icon {...props} fontSize="inherit" className={classes.icon} />
-            </a>
-         ))}
+         {socials({ mailAction }).map(
+            ({
+               icon: Icon,
+               children: { component: Component = null, ...propsChildren },
+               name,
+               props,
+            }) => (
+               <Component {...propsChildren}>
+                  <Icon
+                     {...props}
+                     fontSize="inherit"
+                     className={classes.icon}
+                  />
+               </Component>
+            )
+         )}
       </div>
    );
 }
