@@ -32,7 +32,6 @@ const Portfolio = ({ theme, ...other }) => {
    const xs = useMediaQuery(themeProvider.breakpoints.only("xs"));
 
    const [kind, setKind] = useState(0);
-   const [filter, setFilter] = useState(images);
 
    const getColumns = () => {
       if (xl) return 5;
@@ -43,36 +42,6 @@ const Portfolio = ({ theme, ...other }) => {
    };
 
    const handleKind = newKind => () => {
-      // const timeout = 0,
-      //    diff = 100;
-
-      // let cont_changing =
-      //    images.reduce((accumulator, item) => {
-      //       if (
-      //          (item.show && !item.kind.includes(newKind)) ||
-      //          (!item.show && item.kind.includes(newKind))
-      //       )
-      //          return accumulator + 1;
-      //       else return accumulator + 0;
-      //    }, 0) + 1;
-
-      // setFilter(_ =>
-      //    images
-      //       .sort((a, b) => a.show - b.show)
-      //       .map(image => {
-      //          if (
-      //             (image.show && !image.kind.includes(newKind)) ||
-      //             (!image.show && image.kind.includes(newKind))
-      //          ) {
-      //             cont_changing--;
-      //             return {
-      //                ...image,
-      //                timeout: timeout + cont_changing * diff,
-      //                show: !image.show,
-      //             };
-      //          } else return image;
-      //       })
-      // );
       setKind(newKind);
    };
 
@@ -107,7 +76,7 @@ const Portfolio = ({ theme, ...other }) => {
                className={classes.gridList}
                cols={getColumns()}
             >
-               {filter.map(image => (
+               {images.map(image => (
                   <Grow
                      key={image.img}
                      in={image.kind.includes(kind)}
