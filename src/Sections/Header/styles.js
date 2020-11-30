@@ -17,6 +17,12 @@ const useStyles = makeStyles(theme => ({
    activeButton: {
       fontWeight: 600,
    },
+   buttonBar: {
+      position: "fixed",
+      top: theme.spacing(2),
+      right: theme.spacing(2),
+      zIndex: 1200,
+   },
 }));
 
 export default useStyles;

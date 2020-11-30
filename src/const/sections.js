@@ -6,13 +6,19 @@ import Course from "Sections/Course";
 import Tech from "Sections/Tech";
 import Legend from "Components/Legend";
 
+import Face from "@material-ui/icons/Face";
+import Work from "@material-ui/icons/Work";
+import Build from "@material-ui/icons/Build";
+
 // Import local assets
 import photo from "assets/img/Foto.jpg";
 
 const sections = {
    about: {
+      key: "about",
       title: "Sobre mí",
       component: About,
+      icon: Face,
       props: {
          photo,
       },
@@ -21,8 +27,10 @@ const sections = {
       },
    },
    portfolio: {
+      key: "portfolio",
       title: "Portafolio",
       component: Portfolio,
+      icon: Work,
       props: {},
       section: {
          subtitle: "Mis trabajos",
@@ -30,16 +38,20 @@ const sections = {
       },
    },
    tech: {
+      key: "tech",
       title: "Tecnologías",
       component: Tech,
+      icon: Build,
       props: {},
       section: {
          subtitle: "Tecnologías favoritas",
       },
    },
    education: {
+      key: "education",
       title: "Educación",
       component: Education,
+      icon: () => <i className="fas fa-graduation-cap"></i>,
       props: {},
       section: {
          subtitle: "Educación formal",
@@ -47,8 +59,10 @@ const sections = {
       },
    },
    curse: {
+      key: "curse",
       title: "Cursos",
       component: Course,
+      icon: () => <i className="fas fa-chalkboard"></i>,
       props: {},
       section: {
          subtitle: "Cursos virtuales",

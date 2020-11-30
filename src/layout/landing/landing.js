@@ -1,5 +1,9 @@
 import React, { createRef, useEffect, useRef, useState } from "react";
 
+// Import Material UI components
+import { useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+
 // Import local components
 import Section from "Components/Section";
 
@@ -20,6 +24,9 @@ import useStyles from "./styles";
 export default function Landing(props) {
    const classes = useStyles();
 
+   const themeProvider = useTheme();
+   const smDown = useMediaQuery(themeProvider.breakpoints.down("sm"));
+
    const scrollbar = useRef();
    const [page, setPage] = useState("home");
    const [shows, setShows] = useState([]);
@@ -28,7 +35,7 @@ export default function Landing(props) {
       body: "",
    });
 
-   const offset = 46;
+   const offset = smDown ? 0 : 46;
 
    const refs = useRef(
       Array.apply(null, Array(keys.length)).map(_ => createRef())
@@ -110,6 +117,7 @@ export default function Landing(props) {
                   onChangePage={scrollTo}
                   page={page}
                   sections={sections}
+                  isMobile={smDown}
                />
 
                <Home
