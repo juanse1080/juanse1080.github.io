@@ -24,7 +24,7 @@ export default function Header({ page, sections, onChangePage, ...other }) {
                      className={clsx({
                         [classes.activeButton]: page === "home",
                      })}
-                     onClick={onChangePage()}
+                     onClick={onChangePage("home")}
                   >
                      Home
                   </Button>
@@ -33,8 +33,7 @@ export default function Header({ page, sections, onChangePage, ...other }) {
                         key={section_name}
                         color="inherit"
                         className={clsx({
-                           [classes.activeButton]:
-                              page === section_name,
+                           [classes.activeButton]: page === section_name,
                         })}
                         onClick={onChangePage(section_name)}
                      >

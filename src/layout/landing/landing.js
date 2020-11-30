@@ -28,11 +28,14 @@ export default function Landing(props) {
       body: "",
    });
 
+   const offset = 46;
+
    const refs = useRef(
       Array.apply(null, Array(keys.length)).map(_ => createRef())
    );
 
    const home_ref = useRef(createRef());
+   const footer_ref = useRef();
 
    const handleState = e => {
       const { name, value } = e.target;
@@ -40,10 +43,16 @@ export default function Landing(props) {
    };
 
    const scrollTo = name => () => {
-      scrollbar.current.view.scroll({
-         top: name ? topPosition(name) : 0,
-         behavior: "smooth",
-      });
+      if (name)
+         scrollbar.current.view.scroll({
+            top: topPosition(name),
+            behavior: "smooth",
+         });
+      else
+         scrollbar.current.view.scroll({
+            top: footer_ref.current.offsetTop - offset,
+            behavior: "smooth",
+         });
    };
 
    const handlePage = _page => {
@@ -75,7 +84,7 @@ export default function Landing(props) {
    };
 
    const topPosition = name => {
-      if (sections[name]) return sections[name].ref.current.offsetTop - 46;
+      if (sections[name]) return sections[name].ref.current.offsetTop - offset;
       else return home_ref.current.offsetTop;
    };
 
@@ -104,6 +113,7 @@ export default function Landing(props) {
                />
 
                <Home
+                  toPage={scrollTo}
                   nextPage={scrollTo(keys[0])}
                   ref={home_ref}
                   page={page}
@@ -139,25 +149,23 @@ export default function Landing(props) {
                            ) : null
                         }
                         theme={section_index % 2 === 0 ? "dark" : "light"}
-                        nextPage={scrollTo(
-                           section_index !== Object.keys(sections).length
-                              ? Object.keys(sections)[section_index + 1]
-                              : null
-                        )}
                      >
                         <Component
                            {...props}
                            state={state}
                            page={page}
+                           toPage={scrollTo}
                            theme={section_index % 2 === 0 ? "dark" : "light"}
                         />
                      </Section>
                   );
                })}
                <Footer
+                  ref={footer_ref}
                   hidden={page !== "home"}
                   theme="light"
-                  scrollToTop={scrollTo()}
+                  scrollToTop={scrollTo("home")}
+                  toPage={scrollTo}
                   state={state}
                   handleState={handleState}
                />
