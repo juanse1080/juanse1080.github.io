@@ -19,6 +19,8 @@ const useStyles = makeStyles(theme => ({
    },
    buttonBar: {
       position: "fixed",
+      display: "flex",
+      flexDirection: "column",
       top: theme.spacing(2),
       right: theme.spacing(2),
       zIndex: 1200,

@@ -6,9 +6,17 @@ import Course from "Sections/Course";
 import Tech from "Sections/Tech";
 import Legend from "Components/Legend";
 
+import Icon from "@material-ui/core/Icon";
 import Face from "@material-ui/icons/Face";
 import Work from "@material-ui/icons/Work";
 import Build from "@material-ui/icons/Build";
+
+// Import Font Awesome Icons components
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+   faGraduationCap,
+   faChalkboard,
+} from "@fortawesome/free-solid-svg-icons";
 
 // Import local assets
 import photo from "assets/img/Foto.jpg";
@@ -51,7 +59,7 @@ const sections = {
       key: "education",
       title: "Educación",
       component: Education,
-      icon: () => <i className="fas fa-graduation-cap"></i>,
+      icon: () => <FontAwesomeIcon icon={faGraduationCap} />,
       props: {},
       section: {
          subtitle: "Educación formal",
@@ -62,7 +70,7 @@ const sections = {
       key: "curse",
       title: "Cursos",
       component: Course,
-      icon: () => <i className="fas fa-chalkboard"></i>,
+      icon: () => <FontAwesomeIcon icon={faChalkboard} />,
       props: {},
       section: {
          subtitle: "Cursos virtuales",
