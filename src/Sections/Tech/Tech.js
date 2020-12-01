@@ -4,10 +4,6 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
-import Zoom from "@material-ui/core/Zoom";
-import SvgIcon from "@material-ui/core/SvgIcon";
-
-import { Spring } from "react-spring/renderprops";
 
 // Import local const
 import tools from "const/tools";
