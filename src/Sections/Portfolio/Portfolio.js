@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Import Material UI components
 import { useTheme } from "@material-ui/core/styles";
@@ -8,17 +8,34 @@ import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
 import IconButton from "@material-ui/core/IconButton";
+import Slide from "@material-ui/core/Slide";
+import Dialog from "@material-ui/core/Dialog";
 
-import InfoIcon from "@material-ui/icons/Info";
+import Visibility from "@material-ui/icons/Visibility";
+
+// Import others libs
+import { isMobile } from "react-device-detect";
 
 // import styles
 import useStyles from "./styles";
 
 // Import local const
-import { images } from "const/images";
+import images from "const/images";
 
 const Portfolio = ({ theme, ...other }) => {
    const classes = useStyles();
+
+   const [over, setOver] = useState(false);
+   const [open, setOpen] = useState(false);
+
+   const handleCloseView = () => {
+      setOpen(false);
+   };
+
+   const handleShowView = key => () => {
+      console.log(key);
+      if (key !== open) setOpen(key || false);
+   };
 
    const themeProvider = useTheme();
    const xl = useMediaQuery(themeProvider.breakpoints.only("xl"));
@@ -35,6 +52,10 @@ const Portfolio = ({ theme, ...other }) => {
       else if (xs) return 1;
    };
 
+   const handleOver = key => () => {
+      if (key !== over) setOver(key ? key : false);
+   };
+
    return (
       <>
          <div className={classes.root}>
@@ -44,23 +65,65 @@ const Portfolio = ({ theme, ...other }) => {
                className={classes.gridList}
                cols={getColumns()}
             >
-               {images.map(image => (
-                  <GridListTile>
-                     <img src={image.img} alt={image.title} />
-                     <GridListTileBar
-                        title={image.title}
-                        titlePosition="top"
-                        actionIcon={
-                           <IconButton
-                              aria-label={`star ${image.title}`}
-                              className={classes.icon}
-                           >
-                              <InfoIcon />
-                           </IconButton>
-                        }
-                        actionPosition="left"
-                        className={classes.titleBar}
-                     />
+               {images.map(({ key: _key, img: _img, title: _title }) => (
+                  <GridListTile
+                     key={_key}
+                     onMouseEnter={isMobile ? null : handleOver(_key)}
+                     onMouseLeave={isMobile ? null : handleOver()}
+                     onMouseOver={isMobile ? null : handleOver(_key)}
+                  >
+                     <img src={_img} alt={_title} />
+                     <Slide direction="down" in={isMobile || _key === over}>
+                        <GridListTileBar
+                           title={_title}
+                           titlePosition="top"
+                           actionIcon={
+                              <IconButton
+                                 aria-label={`eye ${_title}`}
+                                 className={classes.icon}
+                                 onClick={handleShowView(_key)}
+                              >
+                                 <Visibility />
+                              </IconButton>
+                           }
+                           actionPosition="left"
+                           className={classes.titleBar}
+                        />
+                     </Slide>
+                     {/* <Slide direction="up" in={isMobile || _key === over}>
+                        <GridListTileBar
+                           title={""}
+                           titlePosition="bottom"
+                           actionIcon={
+                              <IconButton
+                                 aria-label={`eye ${_title}`}
+                                 className={classes.icon}
+                                 onClick={handleShowView(_key)}
+                              >
+                                 <Visibility />
+                              </IconButton>
+                           }
+                           actionPosition="left"
+                           className={classes.titleFooter}
+                        />
+                     </Slide> */}
+                     <Dialog
+                        classes={{
+                           root: classes.rootDialog,
+                           paperScrollBody: classes.paperScrollBody,
+                        }}
+                        scroll="body"
+                        onClose={handleCloseView}
+                        aria-labelledby="Image"
+                        open={open === _key}
+                        // TransitionComponent={Transition}
+                     >
+                        <img
+                           className={classes.viewPreview}
+                           src={_img}
+                           alt={_title}
+                        />
+                     </Dialog>
                   </GridListTile>
                ))}
             </GridList>

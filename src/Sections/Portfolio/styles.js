@@ -15,8 +15,25 @@ const useStyles = makeStyles(theme => ({
          "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, " +
          "rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)",
    },
+   titleFooter: {
+      background:
+         "linear-gradient(to top, rgba(0,0,0,0.7) 0%, " +
+         "rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)",
+   },
    icon: {
       color: "white",
+   },
+   rootDialog: {
+      lineHeight: 0,
+   },
+   paperScrollBody: {
+      overflowY: "hidden",
+   },
+   viewPreview: {
+      width: "auto",
+      height: "auto",
+      maxWidth: "100%",
+      maxHeight: `calc(${theme.shape.viewHeight} - 69px)`,
    },
 }));
 
