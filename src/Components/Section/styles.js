@@ -9,15 +9,6 @@ const useStyles = makeStyles(theme => ({
       color: theme.palette[themes[props.theme].theme].subtitle,
       // height: theme.shape.viewHeight,
    }),
-   paddingBottom: {
-      paddingBottom: theme.spacing(4),
-      [theme.breakpoints.only("sm")]: {
-         paddingBottom: theme.spacing(3),
-      },
-      [theme.breakpoints.only("xs")]: {
-         paddingBottom: theme.spacing(0),
-      },
-   },
    paddings: {
       padding: theme.spacing(4),
       [theme.breakpoints.only("sm")]: {

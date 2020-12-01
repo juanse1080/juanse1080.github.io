@@ -57,7 +57,6 @@ const Section = forwardRef(
                         </Container>
                      </div>
                      {children}
-                     <div className={classes.paddingBottom} />
                   </>
                ) : (
                   <div className={classes.paddings}>
