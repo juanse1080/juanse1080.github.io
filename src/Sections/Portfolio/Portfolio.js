@@ -9,7 +9,6 @@ import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
 import IconButton from "@material-ui/core/IconButton";
 import Slide from "@material-ui/core/Slide";
-import Dialog from "@material-ui/core/Dialog";
 
 import Visibility from "@material-ui/icons/Visibility";
 
@@ -26,16 +25,6 @@ const Portfolio = ({ theme, ...other }) => {
    const classes = useStyles();
 
    const [over, setOver] = useState(false);
-   const [open, setOpen] = useState(false);
-
-   const handleCloseView = () => {
-      setOpen(false);
-   };
-
-   const handleShowView = key => () => {
-      console.log(key);
-      if (key !== open) setOpen(key || false);
-   };
 
    const themeProvider = useTheme();
    const xl = useMediaQuery(themeProvider.breakpoints.only("xl"));
@@ -81,7 +70,6 @@ const Portfolio = ({ theme, ...other }) => {
                               <IconButton
                                  aria-label={`eye ${_title}`}
                                  className={classes.icon}
-                                 onClick={handleShowView(_key)}
                               >
                                  <Visibility />
                               </IconButton>
@@ -90,40 +78,6 @@ const Portfolio = ({ theme, ...other }) => {
                            className={classes.titleBar}
                         />
                      </Slide>
-                     {/* <Slide direction="up" in={isMobile || _key === over}>
-                        <GridListTileBar
-                           title={""}
-                           titlePosition="bottom"
-                           actionIcon={
-                              <IconButton
-                                 aria-label={`eye ${_title}`}
-                                 className={classes.icon}
-                                 onClick={handleShowView(_key)}
-                              >
-                                 <Visibility />
-                              </IconButton>
-                           }
-                           actionPosition="left"
-                           className={classes.titleFooter}
-                        />
-                     </Slide> */}
-                     <Dialog
-                        classes={{
-                           root: classes.rootDialog,
-                           paperScrollBody: classes.paperScrollBody,
-                        }}
-                        scroll="body"
-                        onClose={handleCloseView}
-                        aria-labelledby="Image"
-                        open={open === _key}
-                        // TransitionComponent={Transition}
-                     >
-                        <img
-                           className={classes.viewPreview}
-                           src={_img}
-                           alt={_title}
-                        />
-                     </Dialog>
                   </GridListTile>
                ))}
             </GridList>
