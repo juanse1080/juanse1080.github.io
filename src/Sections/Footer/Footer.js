@@ -123,7 +123,7 @@ const Footer = forwardRef(
             </div>
             <div className={classes.bottom}>
                <Typography variant="subtitle2" color="inherit" align="center">
-                  Juan Sebastian Marcon Caballero
+                  Juan Sebastian Marcon Caballero - Desarrollado con React JS
                </Typography>
             </div>
             <Zoom in={hidden}>

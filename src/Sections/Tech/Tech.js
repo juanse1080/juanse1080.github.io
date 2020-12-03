@@ -16,20 +16,22 @@ const Tech = ({ theme, page, ...other }) => {
 
    return (
       <Container>
-         <Grid container justify="space-between" alignItems="center">
-            {tools.map((tool, index) => (
-               <Grid key={tool.name} item lg={4} md={4} sm={5} xs={6}>
-                  <div className={classes.contentIcon}>
-                     <Typography
-                        className={classes.title}
-                        color="inherit"
-                        variant="subtitle2"
-                        align="center"
-                     >
-                        {tool.name}
-                     </Typography>
-                     <img {...tool.props} src={tool.icon} alt={tool.name} />
-                  </div>
+         <Grid
+            container
+            justify="space-between"
+            alignItems="center"
+            spacing={3}
+         >
+            {tools.map(({ name, icon, props, ...others }, index) => (
+               <Grid key={name} item lg={4} md={4} sm={5} xs={6}>
+                  <a {...others} className={classes.contentIcon}>
+                     <img
+                        {...props}
+                        className={classes.icon}
+                        src={icon}
+                        alt={name}
+                     />
+                  </a>
                </Grid>
             ))}
          </Grid>

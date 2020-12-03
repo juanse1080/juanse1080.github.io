@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
       display: "flex",
       fontSize: theme.spacing(4),
       paddingTop: theme.spacing(3),
-   },   
+   },
    container: {
       height: "100%",
       display: "flex",
@@ -44,6 +44,24 @@ const useStyles = makeStyles(theme => ({
       position: "absolute",
       bottom: 20,
       left: "calc(50% - 20px)",
+      boxShadow: "0 0 0 0 rgba(255, 82, 82, 1)",
+      animation: `$pulse 3000ms ${theme.transitions.easing.easeInOut}`,
+   },
+   "@keyframes pulse": {
+      "0%": {
+         transform: "scale(0.95)",
+         boxShadow: "0 0 0 0 rgba(255, 82, 82, 0.7)",
+      },
+
+      "70%": {
+         transform: "scale(1)",
+         boxShadow: "0 0 0 10px rgba(255, 82, 82, 0)",
+      },
+
+      "100%": {
+         transform: "scale(0.95)",
+         boxShadow: "0 0 0 0 rgba(255, 82, 82, 0)",
+      },
    },
    particlesBackground: {
       position: "absolute",

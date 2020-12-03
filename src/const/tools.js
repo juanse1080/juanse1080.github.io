@@ -17,9 +17,9 @@ const tools = [
             width: "40%",
          },
       },
-      propsPercentage: {
-         percentage: 40,
-      },
+      target: "_blank",
+      href: "https://es.reactjs.org",
+      rel: "noreferrer",
    },
    {
       name: "Bootstrap",
@@ -29,9 +29,9 @@ const tools = [
             width: "40%",
          },
       },
-      propsPercentage: {
-         percentage: 40,
-      },
+      target: "_blank",
+      href: "https://getbootstrap.com",
+      rel: "noreferrer",
    },
    {
       name: "Material UI",
@@ -41,9 +41,9 @@ const tools = [
             width: "40%",
          },
       },
-      propsPercentage: {
-         percentage: 40,
-      },
+      target: "_blank",
+      href: "https://material-ui.com",
+      rel: "noreferrer",
    },
    {
       name: "Node JS",
@@ -53,9 +53,9 @@ const tools = [
             width: "50%",
          },
       },
-      propsPercentage: {
-         percentage: 50,
-      },
+      target: "_blank",
+      href: "https://nodejs.org/",
+      rel: "noreferrer",
    },
    {
       name: "Django",
@@ -65,9 +65,9 @@ const tools = [
             width: "60%",
          },
       },
-      propsPercentage: {
-         percentage: 60,
-      },
+      target: "_blank",
+      href: "https://www.djangoproject.com",
+      rel: "noreferrer",
    },
    {
       name: "Laravel",
@@ -77,9 +77,9 @@ const tools = [
             width: "75%",
          },
       },
-      propsPercentage: {
-         percentage: 75,
-      },
+      target: "_blank",
+      href: "https://laravel.com",
+      rel: "noreferrer",
    },
    {
       name: "Git",
@@ -89,9 +89,9 @@ const tools = [
             width: "40%",
          },
       },
-      propsPercentage: {
-         percentage: 40,
-      },
+      target: "_blank",
+      href: "https://git-scm.com",
+      rel: "noreferrer",
    },
    {
       name: "Trello",
@@ -101,9 +101,9 @@ const tools = [
             width: "70%",
          },
       },
-      propsPercentage: {
-         percentage: 60,
-      },
+      target: "_blank",
+      href: "https://trello.com",
+      rel: "noreferrer",
    },
    {
       name: "Asana",
@@ -113,9 +113,9 @@ const tools = [
             width: "80%",
          },
       },
-      propsPercentage: {
-         percentage: 60,
-      },
+      target: "_blank",
+      href: "https://asana.com",
+      rel: "noreferrer",
    },
 ];
 

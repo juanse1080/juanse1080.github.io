@@ -41,7 +41,7 @@ const sections = {
       icon: Work,
       props: {},
       section: {
-         subtitle: "Mis trabajos",
+         subtitle: "Mis trabajos (en construcción)",
          fullWidth: true,
       },
    },

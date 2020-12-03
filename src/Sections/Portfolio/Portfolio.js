@@ -67,12 +67,13 @@ const Portfolio = ({ theme, ...other }) => {
                            title={_title}
                            titlePosition="top"
                            actionIcon={
-                              <IconButton
-                                 aria-label={`eye ${_title}`}
-                                 className={classes.icon}
-                              >
-                                 <Visibility />
-                              </IconButton>
+                              // <IconButton
+                              //    aria-label={`eye ${_title}`}
+                              //    className={classes.icon}
+                              // >
+                              //    <Visibility />
+                              // </IconButton>
+                              null
                            }
                            actionPosition="left"
                            className={classes.titleBar}
