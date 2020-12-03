@@ -35,7 +35,7 @@ const Portfolio = ({ theme, ...other }) => {
 
    const getColumns = () => {
       if (xl) return 5;
-      else if (lg) return 4;
+      else if (lg) return 3;
       else if (md) return 3;
       else if (sm) return 2;
       else if (xs) return 1;
