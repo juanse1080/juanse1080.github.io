@@ -1,4 +1,4 @@
-import React, { createRef, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 // Import Material UI components
 import { useTheme } from "@material-ui/core/styles";
@@ -29,20 +29,13 @@ export default function Landing(props) {
 
    const scrollbar = useRef();
    const [page, setPage] = useState("home");
-   const [shows, setShows] = useState([]);
+   const [positions, setPositions] = useState([]);
    const [state, setState] = useState({
       subject: "",
       body: "",
    });
 
    const offset = smDown ? 0 : 46;
-
-   const refs = useRef(
-      Array.apply(null, Array(keys.length)).map(_ => createRef())
-   );
-
-   const home_ref = useRef(createRef());
-   const footer_ref = useRef();
 
    const handleState = e => {
       const { name, value } = e.target;
@@ -57,7 +50,7 @@ export default function Landing(props) {
          });
       else
          scrollbar.current.view.scroll({
-            top: footer_ref.current.offsetTop - offset,
+            top: topPosition("footer"),
             behavior: "smooth",
          });
    };
@@ -67,39 +60,41 @@ export default function Landing(props) {
    };
 
    const onScroll = e => {
-      let newPage,
-         _shows = [];
+      let newPage;
       const currentPosition = scrollbar.current.getScrollTop();
-      const currentTopPosition =
-         currentPosition + scrollbar.current.getClientHeight() / 3;
-      const currentBottomPosition =
-         currentPosition + (scrollbar.current.getClientHeight() * 2) / 3;
       ["home", ...keys].forEach(section_name => {
          const itemTop = topPosition(section_name);
-         if (
-            currentTopPosition <= itemTop &&
-            currentBottomPosition > itemTop &&
-            !_shows.includes(section_name) &&
-            !shows.includes(section_name)
-         )
-            _shows.push(section_name);
          if (itemTop <= currentPosition && itemTop + 92 > currentPosition)
             newPage = section_name;
       });
       if (newPage) handlePage(newPage);
-      if (_shows.length > 0) setShows(_ => [..._, ..._shows]);
    };
 
    const topPosition = name => {
-      if (sections[name]) return sections[name].ref.current.offsetTop - offset;
-      else return home_ref.current.offsetTop;
+      const _element = positions.find(item => item.key === name);
+      if (_element) return _element.position;
+      else return getByID(name).offsetTop - offset;
+   };
+
+   const getByID = name => {
+      const _element = document.getElementById(name);
+      if (_element) return _element;
+      else return false;
    };
 
    useEffect(() => {
-      keys.forEach((name, index) => {
-         sections[name].ref = refs.current[index];
-      });
-      scrollTo(page)();
+      setTimeout(() => {
+         setPositions(() =>
+            [
+               { key: "home" },
+               { key: "footer" },
+               ...Object.values(sections),
+            ].map(({ key }) => ({
+               key,
+               position: topPosition(key),
+            }))
+         );
+      }, 3000);
    }, []);
 
    return (
@@ -121,9 +116,9 @@ export default function Landing(props) {
                />
 
                <Home
+                  id="home"
                   toPage={scrollTo}
                   nextPage={scrollTo(keys[0])}
-                  ref={home_ref}
                   page={page}
                   state={state}
                />
@@ -141,11 +136,10 @@ export default function Landing(props) {
                   return (
                      <Section
                         {...propsSection}
+                        id={section_name}
                         page={page}
-                        loads={shows}
                         key={section_name}
                         section_name={section_name}
-                        ref={refs.current[section_index]}
                         title={title}
                         leftPart={
                            LeftPart ? (
@@ -169,7 +163,7 @@ export default function Landing(props) {
                   );
                })}
                <Footer
-                  ref={footer_ref}
+                  id="footer"
                   hidden={page !== "home"}
                   theme="light"
                   scrollToTop={scrollTo("home")}

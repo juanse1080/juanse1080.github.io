@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React from "react";
 
 // Import Material UI components
 import Typography from "@material-ui/core/Typography";
@@ -25,10 +25,10 @@ import useStyles from "./styles";
 
 // import const
 
-const Home = forwardRef(({ toPage, nextPage, state, page, ...other }, ref) => {
+const Home = ({ toPage, nextPage, state, page, ...other }) => {
    const classes = useStyles();
    return (
-      <div className={classes.root} ref={ref}>
+      <div className={classes.root} {...other}>
          <ParticlesBackground className={classes.particlesBackground} />
          <div className={classes.paddings}>
             <Container className={classes.container}>
@@ -113,6 +113,6 @@ const Home = forwardRef(({ toPage, nextPage, state, page, ...other }, ref) => {
          </Zoom>
       </div>
    );
-});
+};
 
 export default Home;
