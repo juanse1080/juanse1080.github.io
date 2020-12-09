@@ -1,21 +1,14 @@
-import React, { useState, useMemo } from "react";
-
-// Import Material UI components
-import AppBar from "@material-ui/core/AppBar";
+import Button from "@material-ui/core/Button";
+import Fab from "@material-ui/core/Fab";
 import Paper from "@material-ui/core/Paper";
 import Toolbar from "@material-ui/core/Toolbar";
-import Button from "@material-ui/core/Button";
-import Slide from "@material-ui/core/Slide";
-import Zoom from "@material-ui/core/Zoom";
 import Tooltip from "@material-ui/core/Tooltip";
-import Fab from "@material-ui/core/Fab";
-
-import HomeIcon from "@material-ui/icons/Home";
+import Zoom from "@material-ui/core/Zoom";
 import CloseIcon from "@material-ui/icons/Close";
+import HomeIcon from "@material-ui/icons/Home";
 import MenuIcon from "@material-ui/icons/Menu";
-
 import clsx from "clsx";
-
+import React, { useMemo, useState } from "react";
 // import styles
 import useStyles from "./styles";
 
