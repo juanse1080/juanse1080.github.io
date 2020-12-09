@@ -13,7 +13,6 @@ const Section = ({
    id,
    title,
    page,
-   section_name,
    leftPart,
    subtitle,
    theme,

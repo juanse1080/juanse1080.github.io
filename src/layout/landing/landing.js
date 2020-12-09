@@ -17,6 +17,7 @@ import { Scrollbars } from "react-custom-scrollbars";
 import Header from "Sections/Header";
 import Home from "Sections/Home";
 import Footer from "Sections/Footer";
+import Project from "Sections/Project";
 
 // import styles
 import useStyles from "./styles";
@@ -139,7 +140,6 @@ export default function Landing(props) {
                         id={section_name}
                         page={page}
                         key={section_name}
-                        section_name={section_name}
                         title={title}
                         leftPart={
                            LeftPart ? (
@@ -162,6 +162,9 @@ export default function Landing(props) {
                      </Section>
                   );
                })}
+
+               <Project page={page} />
+
                <Footer
                   id="footer"
                   hidden={page !== "home"}
