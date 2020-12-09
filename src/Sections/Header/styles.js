@@ -4,11 +4,15 @@ const useStyles = makeStyles(theme => ({
    floatRight: {
       flexGrow: 1,
    },
-   appBar: {
+   appBar: props => ({
+      position: props.home ? "relative" : "fixed",
+      top: 0,
+      left: 0,
       color: theme.palette.black,
       backgroundColor: theme.palette.white,
       width: "100%",
-   },
+      zIndex: theme.zIndex.appBar,
+   }),
    buttonScroll: {
       position: "fixed",
       bottom: theme.spacing(2),

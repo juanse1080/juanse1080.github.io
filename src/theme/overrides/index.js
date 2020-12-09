@@ -23,12 +23,12 @@ const custom = {
       },
    },
    MuiAppBar: {},
-   MuiToolbar: {
-      regular: {
-         maxHeight: "46px !important",
-         minHeight: "46px !important",
-      },
-   },
+   // MuiToolbar: {
+   //    regular: {
+   //       maxHeight: "46px !important",
+   //       minHeight: "46px !important",
+   //    },
+   // },
 };
 
 export default custom;
