@@ -21,7 +21,7 @@ import useStyles from "./styles";
 // Import local const
 import images from "const/images";
 
-const Portfolio = ({ theme, ...other }) => {
+const Portfolio = ({ theme, toPage, ...other }) => {
    const classes = useStyles();
 
    const [over, setOver] = useState(false);
@@ -67,13 +67,13 @@ const Portfolio = ({ theme, ...other }) => {
                            title={_title}
                            titlePosition="top"
                            actionIcon={
-                              // <IconButton
-                              //    aria-label={`eye ${_title}`}
-                              //    className={classes.icon}
-                              // >
-                              //    <Visibility />
-                              // </IconButton>
-                              null
+                              <IconButton
+                                 aria-label={`eye ${_title}`}
+                                 className={classes.icon}
+                                 onClick={toPage(_key)}
+                              >
+                                 <Visibility />
+                              </IconButton>
                            }
                            actionPosition="left"
                            className={classes.titleBar}
