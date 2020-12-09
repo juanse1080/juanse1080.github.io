@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 
 // Import Material UI components
 import { useTheme } from "@material-ui/core/styles";
@@ -30,18 +30,18 @@ export default function Landing(props) {
 
    const scrollbar = useRef();
    const [page, setPage] = useState("home");
-   const [positions, setPositions] = useState([]);
+
    const [state, setState] = useState({
       subject: "",
       body: "",
    });
 
-   const offset = smDown ? 0 : 46;
+   const offset = smDown ? -2 : 62;
 
    const handleState = e => {
       const { name, value } = e.target;
       setState(_state => ({ ..._state, [name]: value }));
-   };
+   };   
 
    const scrollTo = name => () => {
       if (name)
@@ -60,21 +60,8 @@ export default function Landing(props) {
       if (_page !== page) setPage(_page);
    };
 
-   const onScroll = e => {
-      let newPage;
-      const currentPosition = scrollbar.current.getScrollTop();
-      ["home", ...keys].forEach(section_name => {
-         const itemTop = topPosition(section_name);
-         if (itemTop <= currentPosition && itemTop + 92 > currentPosition)
-            newPage = section_name;
-      });
-      if (newPage) handlePage(newPage);
-   };
-
    const topPosition = name => {
-      const _element = positions.find(item => item.key === name);
-      if (_element) return _element.position;
-      else return getByID(name).offsetTop - offset;
+      return getByID(name).offsetTop - offset;
    };
 
    const getByID = name => {
@@ -83,32 +70,26 @@ export default function Landing(props) {
       else return false;
    };
 
-   useEffect(() => {
-      setTimeout(() => {
-         setPositions(() =>
-            [
-               { key: "home" },
-               { key: "footer" },
-               ...Object.values(sections),
-            ].map(({ key }) => ({
-               key,
-               position: topPosition(key),
-            }))
-         );
-      }, 3000);
-   }, []);
-
    return (
       <>
          <div className={classes.root}>
             <Scrollbars
                className="custom-scrollbars"
                ref={scrollbar}
-               onScrollFrame={onScroll}
                autoHide
                autoHideTimeout={1000}
                autoHideDuration={200}
             >
+               <Home
+                  id="home"
+                  handlePage={handlePage}
+                  after={Object.values(sections)[0].key}
+                  toPage={scrollTo}
+                  nextPage={scrollTo(keys[0])}
+                  page={page}
+                  state={state}
+               />
+
                <Header
                   onChangePage={scrollTo}
                   page={page}
@@ -116,60 +97,70 @@ export default function Landing(props) {
                   isMobile={smDown}
                />
 
-               <Home
-                  id="home"
-                  toPage={scrollTo}
-                  nextPage={scrollTo(keys[0])}
-                  page={page}
-                  state={state}
-               />
-
-               {Object.keys(sections).map((section_name, section_index) => {
-                  const {
-                     component: Component,
-                     title,
-                     props,
-                     section: {
-                        leftPart: LeftPart = null,
-                        ...propsSection
-                     } = {},
-                  } = sections[section_name];
-                  return (
-                     <Section
-                        {...propsSection}
-                        id={section_name}
-                        page={page}
-                        key={section_name}
-                        title={title}
-                        leftPart={
-                           LeftPart ? (
-                              <LeftPart
-                                 theme={
-                                    section_index % 2 === 0 ? "dark" : "light"
-                                 }
-                              />
-                           ) : null
-                        }
-                        theme={section_index % 2 === 0 ? "dark" : "light"}
-                     >
-                        <Component
-                           {...props}
-                           state={state}
+               {Object.values(sections).map(
+                  (
+                     {
+                        component: Component,
+                        key,
+                        title,
+                        props,
+                        section: {
+                           leftPart: LeftPart = null,
+                           ...propsSection
+                        } = {},
+                     },
+                     section_index,
+                     array
+                  ) => {
+                     return (
+                        <Section
+                           {...propsSection}
+                           id={key}
                            page={page}
-                           toPage={scrollTo}
+                           key={key}
+                           handlePage={handlePage}
+                           before={
+                              array[section_index - 1]
+                                 ? array[section_index - 1].key
+                                 : null
+                           }
+                           after={
+                              array[section_index + 1]
+                                 ? array[section_index + 1].key
+                                 : null
+                           }
+                           title={title}
+                           leftPart={
+                              LeftPart ? (
+                                 <LeftPart
+                                    theme={
+                                       section_index % 2 === 0
+                                          ? "dark"
+                                          : "light"
+                                    }
+                                 />
+                              ) : null
+                           }
                            theme={section_index % 2 === 0 ? "dark" : "light"}
-                        />
-                     </Section>
-                  );
-               })}
+                        >
+                           <Component
+                              {...props}
+                              state={state}
+                              page={page}
+                              toPage={scrollTo}
+                              theme={section_index % 2 === 0 ? "dark" : "light"}
+                           />
+                        </Section>
+                     );
+                  }
+               )}
 
                <Project page={page} />
 
                <Footer
                   id="footer"
                   hidden={page !== "home"}
-                  theme="light"
-                  scrollToTop={scrollTo("home")}
+                  theme="light"                  
                   toPage={scrollTo}
                   state={state}
                   handleState={handleState}

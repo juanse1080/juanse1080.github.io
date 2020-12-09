@@ -34,27 +34,6 @@ const sections = {
          // subtitle: "Ruta",
       },
    },
-   portfolio: {
-      key: "portfolio",
-      title: "Portafolio",
-      component: Portfolio,
-      icon: Work,
-      props: {},
-      section: {
-         subtitle: "Mis trabajos (en construcción)",
-         fullWidth: true,
-      },
-   },
-   tech: {
-      key: "tech",
-      title: "Tecnologías",
-      component: Tech,
-      icon: Build,
-      props: {},
-      section: {
-         subtitle: "Tecnologías favoritas",
-      },
-   },
    education: {
       key: "education",
       title: "Educación",
@@ -75,6 +54,27 @@ const sections = {
       section: {
          subtitle: "Cursos virtuales",
          leftPart: Legend,
+      },
+   },
+   tech: {
+      key: "tech",
+      title: "Tecnologías",
+      component: Tech,
+      icon: Build,
+      props: {},
+      section: {
+         subtitle: "Tecnologías favoritas",
+      },
+   },
+   portfolio: {
+      key: "portfolio",
+      title: "Portafolio",
+      component: Portfolio,
+      icon: Work,
+      props: {},
+      section: {
+         subtitle: "Mis trabajos (en construcción)",
+         fullWidth: true,
       },
    },
 };
