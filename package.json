@@ -24,6 +24,7 @@
     "react-scripts": "4.0.0",
     "react-scroll": "^1.8.1",
     "react-spring": "^8.0.27",
+    "react-waypoint": "^9.0.3",
     "rebound": "^0.1.0",
     "web-vitals": "^0.2.4"
   },
