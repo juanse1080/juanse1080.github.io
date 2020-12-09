@@ -2,6 +2,7 @@ import React, { useState, useMemo } from "react";
 
 // Import Material UI components
 import AppBar from "@material-ui/core/AppBar";
+import Paper from "@material-ui/core/Paper";
 import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
 import Slide from "@material-ui/core/Slide";
@@ -25,7 +26,7 @@ export default function Header({
    onChangePage,
    ...other
 }) {
-   const classes = useStyles();
+   const classes = useStyles({ home: page === "home" });
 
    const [open, setOpen] = useState(false);
 
@@ -113,8 +114,8 @@ export default function Header({
                )}
             </div>
          ) : (
-            <Slide in={page !== "home"}>
-               <AppBar className={classes.appBar} color="transparent">
+            <div style={page !== "home" ? { height: 64 } : {}}>
+               <Paper className={classes.appBar} variant="outlined" square>
                   <Toolbar>
                      <div className={classes.floatRight} />
                      <Button
@@ -143,8 +144,8 @@ export default function Header({
                         )
                      )}
                   </Toolbar>
-               </AppBar>
-            </Slide>
+               </Paper>
+            </div>
          )}
       </>
    );
