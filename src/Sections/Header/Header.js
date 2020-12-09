@@ -29,12 +29,6 @@ export default function Header({
 
    const [open, setOpen] = useState(false);
 
-   const getCurrentIcon = () => {
-      if (!sections[page]) return <HomeIcon />;
-      const Icon = sections[page].icon;
-      return <Icon />;
-   };
-
    const scrollTo = key => () => {
       onChangePage(key)();
       setOpen(false);
