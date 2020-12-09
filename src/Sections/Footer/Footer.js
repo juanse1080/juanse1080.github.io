@@ -20,7 +20,7 @@ import Social from "Components/Social";
 import useStyles from "./styles";
 
 const Footer = (
-   { hidden, toPage, theme, state, handleState, scrollToTop, ...other },
+   { hidden, toPage, theme, state, handleState, ...other },
    ref
 ) => {
    const classes = useStyles({ theme });
@@ -50,7 +50,7 @@ const Footer = (
                            defaultValue={state.subject}
                            onBlur={handleState}
                         />
-                        <TextField
+                        <TextField                           
                            fullWidth
                            label="Contenido"
                            variant="outlined"
@@ -129,7 +129,7 @@ const Footer = (
             <Tooltip title="Scroll back to top" placement="left">
                <div role="presentation" className={classes.buttonScroll}>
                   <Fab
-                     onClick={scrollToTop}
+                     onClick={toPage("home")}
                      color="secondary"
                      size="small"
                      aria-label="scroll back to top"
