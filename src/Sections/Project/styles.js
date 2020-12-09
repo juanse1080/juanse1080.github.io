@@ -1,27 +1,54 @@
 import { makeStyles } from "@material-ui/core/styles";
 
+import themes from "const/themes";
+
 const useStyles = makeStyles(theme => ({
-   contentIcon: {
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      padding: theme.spacing(2),
-      fontWeight: 1000,
-      cursor: "default",
-   },
-   icon: {
-      cursor: "pointer",
-      transition: "all 0.3s ease-in-out",
-      transform: "translateY(-3px)",
-      filter: "drop-shadow(0px 3px 0px rgba(0,0,0,0.6))",
-      "&:hover": {
-         transform: "translateY(-11px)",
-         filter: "drop-shadow(0px 11px 0px rgba(0,0,0,0.6))",
+   paddings: {
+      padding: theme.spacing(4),
+      [theme.breakpoints.only("sm")]: {
+         padding: theme.spacing(3),
+      },
+      [theme.breakpoints.only("xs")]: {
+         padding: theme.spacing(2.5, 1, 2.5, 1),
       },
    },
-   title: {
-      marginBottom: theme.spacing(2),
+   content: {
+      padding: theme.spacing(0, 3),
+      [theme.breakpoints.only("sm")]: {
+         padding: theme.spacing(0, 1),
+      },
+      [theme.breakpoints.only("xs")]: {
+         padding: theme.spacing(0),
+      },
+   },
+   header: {
+      margin: theme.spacing(2, 0),
+      [theme.breakpoints.only("sm")]: {
+         margin: theme.spacing(1.5, 0),
+      },
+      [theme.breakpoints.only("xs")]: {
+         margin: theme.spacing(1, 0),
+      },
+   },
+   title: props => ({
+      // paddingTop: theme.spacing(1),
+      // borderTop: `2px solid ${theme.palette[themes[props.theme].icons].main}`,
+      display: "inline-block",
+      // color: theme.palette[themes[props.theme].theme].title,
+   }),
+   subtitle: props => ({
+      // color: theme.palette[themes[props.theme].theme].subtitle,
+   }),
+   media: {
+      height: 0,
+      width: "100%",
+      display: "block",
+      paddingTop: "56.25%",
+      cursor: "pointer",
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
+      position: "relative",
    },
 }));
 
