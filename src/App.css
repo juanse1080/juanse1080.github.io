@@ -74,11 +74,12 @@ video {
    font-size: 100%;
    vertical-align: baseline;
    background: transparent;
-   font-family: "Raleway", sans-serif !important;
+   font-family: "Poppins", sans-serif !important;
+   /* font-family: "Raleway", sans-serif !important; */
 }
 
 *::-webkit-scrollbar {
-   background: transparent; 
+   background: transparent;
 }
 
 /* .custom-scrollbars > div:last-child {
