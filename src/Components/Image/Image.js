@@ -7,6 +7,9 @@ import Slide from "@material-ui/core/Slide";
 import Zoom from "@material-ui/core/Zoom";
 import Visibility from "@material-ui/icons/Visibility";
 
+import { useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+
 // Import others libs
 import { isMobile } from "react-device-detect";
 
@@ -18,10 +21,13 @@ const Transition = forwardRef(function Transition(props, ref) {
 });
 
 export default function Image({ photo, ...others }) {
+   const themeProvider = useTheme();
+   const xs = useMediaQuery(themeProvider.breakpoints.only("xs"));
+
    const [open, setOpen] = useState(false);
    const [eye, setEye] = useState(false);
 
-   const classes = useStyles({ photo, eye });
+   const classes = useStyles({ photo, eye: eye || xs });
 
    const handleCloseView = () => {
       setOpen(false);
@@ -40,12 +46,12 @@ export default function Image({ photo, ...others }) {
       <div {...others}>
          <div
             className={classes.media}
-            onMouseEnter={isMobile ? null : handleEye(true)}
-            onMouseLeave={isMobile ? null : handleEye(false)}
-            onMouseOver={isMobile ? null : handleEye(true)}
+            onMouseEnter={isMobile || xs ? null : handleEye(true)}
+            onMouseLeave={isMobile || xs ? null : handleEye(false)}
+            onMouseOver={isMobile || xs ? null : handleEye(true)}
             onClick={handleShowView}
          >
-            <Zoom in={isMobile || eye}>
+            <Zoom in={isMobile || xs || eye}>
                <Paper className={classes.icon}>
                   <IconButton size="small" onClick={handleShowView}>
                      <Visibility fontSize="small" />
