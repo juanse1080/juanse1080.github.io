@@ -15,7 +15,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 // Import local components
-// import Section from "Components/Section";
+import Media from "Components/Media";
 
 // Import local const
 import images from "const/images";
@@ -40,6 +40,7 @@ const Project = ({ page, scrollTo, ...other }) => {
                   role,
                   description = [],
                   techs = [],
+                  media = null,
                },
                index
             ) => (
@@ -62,12 +63,16 @@ const Project = ({ page, scrollTo, ...other }) => {
                         <Hidden mdUp>
                            <Grid container spacing={3}>
                               <Grid item xs={12} sm={6}>
-                                 <div
-                                    className={classes.media}
-                                    style={{
-                                       backgroundImage: `url('${img}')`,
-                                    }}
-                                 />
+                                 {media ? (
+                                    <Media type="image" values={media} />
+                                 ) : (
+                                    <div
+                                       className={classes.media}
+                                       style={{
+                                          backgroundImage: `url('${img}')`,
+                                       }}
+                                    />
+                                 )}
                               </Grid>
                               <Hidden xsDown>
                                  <Grid item sm={6}>
@@ -251,10 +256,16 @@ const Project = ({ page, scrollTo, ...other }) => {
                            </Grid>
                            <Hidden smDown>
                               <Grid item lg={5} md={6}>
-                                 <div
-                                    className={classes.media}
-                                    style={{ backgroundImage: `url('${img}')` }}
-                                 />
+                                 {media ? (
+                                    <Media type="image" values={media} />
+                                 ) : (
+                                    <div
+                                       className={classes.media}
+                                       style={{
+                                          backgroundImage: `url('${img}')`,
+                                       }}
+                                    />
+                                 )}
                               </Grid>
                            </Hidden>
                         </Grid>

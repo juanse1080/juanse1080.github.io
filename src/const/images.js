@@ -1,9 +1,11 @@
-import vt_asesores from "assets/img/Portfolio/Asesores/Landing.png";
+import vt_asesores from "assets/img/Portfolio/Vtasesores/Landing.png";
 import colcief from "assets/img/Portfolio/Colcief/Landing1.png";
 import bivlab from "assets/img/Portfolio/Bivl2ab/Landing.png";
 import crowd_investment from "assets/img/Portfolio/CrowdInvestment/Login.png";
 import plataforma_tic from "assets/img/Portfolio/PlataformaTIC/Login.png";
 import deep_tools from "assets/img/Portfolio/Deeptools/Login.png";
+
+import vtasesores from "const/vt_asesores"
 
 const images = [
    {
@@ -19,6 +21,7 @@ const images = [
          "El aplicativo cuenta con diferentes herramientas para la administración de la información, generación de backups, filtrado de datos, entre otros.",
       ],
       techs: ["PHP 5.6", "PostgreSQL", "JQuery | Javascript", "Bootstrap 4"],
+      media: vtasesores,
    },
    {
       key: "colcief",
@@ -33,6 +36,7 @@ const images = [
          "El aplicativo cuenta con diferentes herramientas para la administración de la información, generación de backups, filtrado de datos, entre otros.",
       ],
       techs: ["PHP 5.6", "PostgreSQL", "JQuery | Javascript", "Bootstrap 4"],
+      media: vtasesores,
    },
    {
       key: "bivlab",
@@ -47,6 +51,7 @@ const images = [
          "El aplicativo cuenta con diferentes herramientas para la administración de la información, generación de backups, filtrado de datos, entre otros.",
       ],
       techs: ["PHP 5.6", "PostgreSQL", "JQuery | Javascript", "Bootstrap 4"],
+      media: vtasesores,
    },
    {
       key: "crowd_investment",
@@ -61,6 +66,7 @@ const images = [
          "El aplicativo cuenta con diferentes herramientas para la administración de la información, generación de backups, filtrado de datos, entre otros.",
       ],
       techs: ["PHP 5.6", "PostgreSQL", "JQuery | Javascript", "Bootstrap 4"],
+      media: vtasesores,
    },
    {
       key: "plataforma_tic",
@@ -75,6 +81,7 @@ const images = [
          "El aplicativo cuenta con diferentes herramientas para la administración de la información, generación de backups, filtrado de datos, entre otros.",
       ],
       techs: ["PHP 5.6", "PostgreSQL", "JQuery | Javascript", "Bootstrap 4"],
+      media: vtasesores,
    },
    {
       key: "deep_tools",
@@ -89,6 +96,7 @@ const images = [
          "El aplicativo cuenta con diferentes herramientas para la administración de la información, generación de backups, filtrado de datos, entre otros.",
       ],
       techs: ["PHP 5.6", "PostgreSQL", "JQuery | Javascript", "Bootstrap 4"],
+      media: vtasesores,
    },
 ];
 
