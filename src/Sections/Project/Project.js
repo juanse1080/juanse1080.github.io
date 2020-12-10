@@ -23,11 +23,11 @@ import images from "const/images";
 // import styles
 import useStyles from "./styles";
 
-const Project = ({ page, scrollTo, ...other }) => {
+const Project = ({ id, page, scrollTo, ...other }) => {
    const classes = useStyles();
 
    return (
-      <>
+      <div id={id} {...other}>
          {images.map(
             (
                {
@@ -274,7 +274,7 @@ const Project = ({ page, scrollTo, ...other }) => {
                </div>
             )
          )}
-      </>
+      </div>
    );
 };
 

@@ -5,8 +5,8 @@ import themes from "const/themes";
 
 const useStyles = makeStyles(theme => ({
    root: props => ({
-      backgroundColor: theme.palette[themes[props.theme].theme].dark,
-      color: theme.palette[themes[props.theme].theme].subtitle,
+      backgroundColor: theme.palette[themes[props.theme].theme].main,
+      color: theme.palette[themes[props.theme].theme].contrastText,
       // height: `calc(${theme.shape.viewHeight} - 46px)`,
       position: "relative",
    }),
@@ -31,10 +31,10 @@ const useStyles = makeStyles(theme => ({
    title: props => ({
       paddingBottom: theme.spacing(1),
       display: "inline-block",
-      color: theme.palette[themes[props.theme].theme].title,
+      color: theme.palette[themes[props.theme].theme].contrastText,
    }),
    subtitle: props => ({
-      color: theme.palette[themes[props.theme].theme].subtitle,
+      color: theme.palette[themes[props.theme].theme].contrastText,
    }),
    social: {
       display: "flex",
@@ -55,7 +55,7 @@ const useStyles = makeStyles(theme => ({
    bottom: {
       width: "100%",
       height: `calc(${theme.spacing(4)} + 40px)`,
-      backgroundColor: theme.palette.primary.main,
+      backgroundColor: theme.palette.secondary.dark,
       display: "flex",
       justifyContent: "center",
       alignItems: "center",

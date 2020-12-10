@@ -80,13 +80,11 @@ export default function Media({ type, values, ...others }) {
                      left: 10,
                   }}
                >
-                  <IconButton
-                     size="small"
-                     style={{ width: 24 }}
+                  <FontAwesomeIcon
                      onClick={changeMedia(index - 1)}
-                  >
-                     <FontAwesomeIcon icon={faAngleLeft} />
-                  </IconButton>
+                     className={classes.setMediaIcon}
+                     icon={faAngleLeft}
+                  />
                </Paper>
             )}
             {values[index].type === "image" ? (
@@ -113,13 +111,11 @@ export default function Media({ type, values, ...others }) {
                      right: 10,
                   }}
                >
-                  <IconButton
-                     size="small"
-                     style={{ width: 24 }}
+                  <FontAwesomeIcon
+                     className={classes.setMediaIcon}
                      onClick={changeMedia(index + 1)}
-                  >
-                     <FontAwesomeIcon icon={faAngleRight} />
-                  </IconButton>
+                     icon={faAngleRight}
+                  />
                </Paper>
             )}
             <Paper
@@ -139,192 +135,7 @@ export default function Media({ type, values, ...others }) {
                   ))}
                </div>
             </Paper>
-            <MobileStepper
-               variant="dots"
-               steps={values.length}
-               position="static"
-               activeStep={index}
-               classes={{
-                  root: classes.stepperRoot,
-               }}
-            />
          </Dialog>
-         {/* {type === "image" ? (
-            <>
-               {values.length < 2 ? (
-                  <Card className={classes.group}>
-                     <CardMedia
-                        className={classes.media}
-                        image={`${values[0]}`}
-                     />
-                     <Dialog
-                        classes={{
-                           root: classes.rootDialog,
-                           paperScrollBody: classes.paperScrollBody,
-                        }}
-                        fullWidth
-                        maxWidth="xl"
-                        scroll="body"
-                        onClose={handleCloseView}
-                        open={image}
-                     >
-                        <img
-                           className={classes.viewPreview}
-                           src={`${values[index]}`}
-                           alt={values[index]}
-                        />
-                     </Dialog>
-                  </Card>
-               ) : (
-                  <>
-                     <Card className={classes.group}>
-                        {index === 0 ? null : (
-                           <Paper
-                              variant="outlined"
-                              style={{
-                                 display: isMobile ? "flex" : "none",
-                                 position: "absolute",
-                                 left: 5,
-                                 borderRadius: "50%",
-                                 zIndex: 1,
-                                 bottom: "calc(50% - 13px)",
-                              }}
-                              className="actions"
-                           >
-                              <IconButton
-                                 size="small"
-                                 onClick={changeMedia(index - 1)}
-                              >
-                                 <ArrowBack fontSize="small" />
-                              </IconButton>
-                           </Paper>
-                        )}
-                        <CardMedia
-                           className={classes.media}
-                           image={`${values[index]}`}
-                        />
-                     </Card>
-                     <MobileStepper
-                        classes={{
-                           root: classes.stepper,
-                           dot: classes.dot,
-                           dots: classes.dots,
-                        }}
-                        variant="progress"
-                        steps={values.length + 1}
-                        position="static"
-                        activeStep={index + 1}
-                     />
-                     <Dialog
-                        classes={{
-                           root: classes.rootDialog,
-                           paperScrollBody: classes.paperScrollBody,
-                        }}
-                        fullWidth
-                        maxWidth="lg"
-                        scroll="body"
-                        onClose={handleCloseView}
-                        open={image}
-                     >
-                        {index === 0 ? null : (
-                           <Paper
-                              variant="outlined"
-                              style={{
-                                 display: isMobile ? "flex" : "none",
-                                 position: "absolute",
-                                 left: 5,
-                                 borderRadius: "50%",
-                                 zIndex: 1,
-                                 bottom: "calc(50% - 13px)",
-                              }}
-                              className="actions"
-                           >
-                              <IconButton
-                                 size="small"
-                                 onClick={changeMedia(index - 1)}
-                              >
-                                 <ArrowBack fontSize="small" />
-                              </IconButton>
-                           </Paper>
-                        )}
-                        <img
-                           className={classes.viewPreview}
-                           src={`${values[index]}`}
-                           alt={values[index]}
-                        />
-                        {index === values.length - 1 ? null : (
-                           <Paper
-                              variant="outlined"
-                              style={{
-                                 display: isMobile ? "flex" : "none",
-                                 position: "absolute",
-                                 right: 5,
-                                 borderRadius: "50%",
-                                 zIndex: 1,
-                                 bottom: "calc(50% - 13px)",
-                              }}
-                              className="actions"
-                           >
-                              <IconButton
-                                 size="small"
-                                 onClick={changeMedia(index + 1)}
-                              >
-                                 <ArrowForward fontSize="small" />
-                              </IconButton>
-                           </Paper>
-                        )}
-                     </Dialog>
-                  </>
-               )}
-            </>
-         ) : (
-            <div className={classes.group}>
-               {index === 0 ? null : (
-                  <Paper
-                     variant="outlined"
-                     style={{
-                        display: isMobile ? "flex" : "none",
-                        position: "absolute",
-                        left: 5,
-                        borderRadius: "50%",
-                        zIndex: 1,
-                        bottom: "calc(50% - 13px)",
-                     }}
-                     className="actions"
-                  >
-                     <IconButton size="small" onClick={changeMedia(index - 1)}>
-                        <ArrowBack fontSize="small" />
-                     </IconButton>
-                  </Paper>
-               )}
-               <ReactPlayer
-                  url={`${values[index]}`}
-                  className="react-player"
-                  controls
-                  loop
-                  width="100%"
-                  height="100%"
-               />
-               {index === values.length - 1 ? null : (
-                  <Paper
-                     variant="outlined"
-                     style={{
-                        display: isMobile ? "flex" : "none",
-                        position: "absolute",
-                        right: 5,
-                        borderRadius: "50%",
-                        zIndex: 1,
-                        bottom: "calc(50% - 13px)",
-                     }}
-                     className="actions"
-                  >
-                     <IconButton size="small" onClick={changeMedia(index + 1)}>
-                        <ArrowForward fontSize="small" />
-                     </IconButton>
-                  </Paper>
-               )}
-            </div>
-         )} */}
       </div>
    );
 }

@@ -11,13 +11,13 @@ const config = {
          },
       },
       color: {
-         value: palette.primary.light,
+         value: palette.primary.contrastText,
       },
       shape: {
          type: "circle",
          stroke: {
             width: 0,
-            color: palette.primary.light,
+            color: palette.primary.contrastText,
          },
          image: {
             src: "img/github.svg",
@@ -48,7 +48,7 @@ const config = {
       line_linked: {
          enable_auto: true,
          distance: 100,
-         color: palette.primary.light,
+         color: palette.primary.contrastText,
          opacity: 1,
          width: 1,
          condensed_mode: {

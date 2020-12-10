@@ -41,7 +41,7 @@ export default function Landing(props) {
    const handleState = e => {
       const { name, value } = e.target;
       setState(_state => ({ ..._state, [name]: value }));
-   };   
+   };
 
    const scrollTo = name => () => {
       if (name)
@@ -155,12 +155,12 @@ export default function Landing(props) {
                   }
                )}
 
-               <Project page={page} />
+               <Project id="project" page={page} />
 
                <Footer
                   id="footer"
                   hidden={page !== "home"}
-                  theme="light"                  
+                  theme="light"
                   toPage={scrollTo}
                   state={state}
                   handleState={handleState}

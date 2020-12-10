@@ -36,8 +36,14 @@ const useStyles = makeStyles(theme => ({
       borderRadius: "50%",
       zIndex: 1,
       bottom: "calc(50% - 13px)",
-      backgroundColor: theme.palette.secondary.main,
-      color: theme.palette.secondary.contrastText,
+      backgroundColor: theme.palette.primary.main,
+      color: theme.palette.primary.contrastText,
+   },
+   setMediaIcon: {
+      width: theme.spacing(3),
+      height: theme.spacing(3),
+      cursor: "pointer",
+      padding: theme.spacing(0, 1),
    },
    media: {
       paddingTop: "56.25%",
@@ -77,7 +83,7 @@ const useStyles = makeStyles(theme => ({
       cursor: "pointer",
    },
    dotActive: {
-      backgroundColor: theme.palette.primary.main,
+      backgroundColor: theme.palette.secondary.main,
    },
    positionBottom: {
       position: "absolute",

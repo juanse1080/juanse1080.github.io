@@ -5,8 +5,8 @@ import themes from "const/themes";
 
 const useStyles = makeStyles(theme => ({
    root: props => ({
-      backgroundColor: theme.palette[themes[props.theme].theme].dark,
-      color: theme.palette[themes[props.theme].theme].subtitle,
+      backgroundColor: theme.palette[themes[props.theme].theme].main,
+      color: theme.palette[themes[props.theme].theme].contrastText,
       // height: theme.shape.viewHeight,
    }),
    paddings: {
@@ -40,10 +40,10 @@ const useStyles = makeStyles(theme => ({
       // paddingTop: theme.spacing(1),
       // borderTop: `2px solid ${theme.palette[themes[props.theme].icons].main}`,
       display: "inline-block",
-      color: theme.palette[themes[props.theme].theme].title,
+      color: theme.palette[themes[props.theme].theme].contrastText,
    }),
    subtitle: props => ({
-      color: theme.palette[themes[props.theme].theme].subtitle,
+      color: theme.palette[themes[props.theme].theme].contrastText,
    }),
 }));
 

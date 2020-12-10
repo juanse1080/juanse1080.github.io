@@ -44,23 +44,23 @@ const useStyles = makeStyles(theme => ({
       position: "absolute",
       bottom: 20,
       left: "calc(50% - 20px)",
-      boxShadow: "0 0 0 0 rgba(255, 0, 0, 1)",
-      animation: `$pulse 3000ms ${theme.transitions.easing.easeInOut} infinite`,
+      boxShadow: "0 0 0 0 rgba(63, 113, 224, 1)",
+      animation: `$pulse 1000ms ${theme.transitions.easing.easeInOut} infinite`,
    },
    "@keyframes pulse": {
       "0%": {
          transform: "scale(0.95)",
-         boxShadow: "0 0 0 0 rgba(255, 0, 0, 0.7)",
+         boxShadow: "0 0 0 0 rgba(63, 113, 224, 0.7)",
       },
 
       "70%": {
          transform: "scale(1)",
-         boxShadow: "0 0 0 10px rgba(255, 0, 0, 0)",
+         boxShadow: "0 0 0 10px rgba(63, 113, 224, 0)",
       },
 
       "100%": {
          transform: "scale(0.95)",
-         boxShadow: "0 0 0 0 rgba(255, 0, 0, 0)",
+         boxShadow: "0 0 0 0 rgba(63, 113, 224, 0)",
       },
    },
    particlesBackground: {
