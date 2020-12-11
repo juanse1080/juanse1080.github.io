@@ -1,10 +1,10 @@
-import crowd_investment from "assets/img/Portfolio/CrowdInvestment/Login.png";
 import plataforma_tic from "assets/img/Portfolio/PlataformaTIC/Login.png";
 import deep_tools from "assets/img/Portfolio/Deeptools/Login.png";
 
 import vtasesores from "const/vt_asesores";
 import colcief from "const/colcief";
 import bivlab from "const/bivlab";
+import crowdinvestment from "const/crowdinvestment";
 
 const images = [
    {
@@ -54,7 +54,7 @@ const images = [
    },
    {
       key: "crowd_investment",
-      img: crowd_investment,
+      img: crowdinvestment[0].url,
       title: "CrowdInvestment",
       date: "Dic 10, 2017 - Feb 8, 2018",
       location: "Bucaramanga, Santander",
@@ -65,7 +65,7 @@ const images = [
          "El aplicativo cuenta con diferentes herramientas para la administración de la información, generación de backups, filtrado de datos, entre otros.",
       ],
       techs: ["PHP 5.6", "PostgreSQL", "JQuery | Javascript", "Bootstrap 4"],
-      media: vtasesores,
+      media: crowdinvestment,
    },
    {
       key: "plataforma_tic",

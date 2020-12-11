@@ -5,7 +5,7 @@ import themes from "const/themes";
 
 const useStyles = makeStyles(theme => ({
    root: props => ({
-      backgroundColor: theme.palette[themes[props.theme].theme].main,
+      backgroundColor: theme.palette[themes[props.theme].theme].dark,
       color: theme.palette[themes[props.theme].theme].contrastText,
    }),
    paddings: {
