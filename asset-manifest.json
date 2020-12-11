@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.a7a08f28.chunk.css",
-    "main.js": "/static/js/main.d0ba0194.chunk.js",
-    "main.js.map": "/static/js/main.d0ba0194.chunk.js.map",
+    "main.js": "/static/js/main.f9312521.chunk.js",
+    "main.js.map": "/static/js/main.f9312521.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c578165b.js",
     "runtime-main.js.map": "/static/js/runtime-main.c578165b.js.map",
     "static/js/2.52d81695.chunk.js": "/static/js/2.52d81695.chunk.js",
@@ -25,6 +25,9 @@
     "static/media/Estudiantes.4bb883c6.png": "/static/media/Estudiantes.4bb883c6.png",
     "static/media/Foto.f430683c.jpg": "/static/media/Foto.f430683c.jpg",
     "static/media/Horario.d0e3cb2d.png": "/static/media/Horario.d0e3cb2d.png",
+    "static/media/Inversinoes.428e813c.png": "/static/media/Inversinoes.428e813c.png",
+    "static/media/Inversion.859dd6cf.png": "/static/media/Inversion.859dd6cf.png",
+    "static/media/Inversion2.986d7d6a.png": "/static/media/Inversion2.986d7d6a.png",
     "static/media/JuanMarconCV.81ce0f18.pdf": "/static/media/JuanMarconCV.81ce0f18.pdf",
     "static/media/Landing.6286d528.png": "/static/media/Landing.6286d528.png",
     "static/media/Landing.8d564ad7.png": "/static/media/Landing.8d564ad7.png",
@@ -40,8 +43,10 @@
     "static/media/Proceso2.799abc5d.png": "/static/media/Proceso2.799abc5d.png",
     "static/media/Product.a4104825.png": "/static/media/Product.a4104825.png",
     "static/media/Products.519dd60f.png": "/static/media/Products.519dd60f.png",
+    "static/media/Profile.4aca7440.png": "/static/media/Profile.4aca7440.png",
     "static/media/Profile.5c63112f.png": "/static/media/Profile.5c63112f.png",
     "static/media/React.a7947efa.pdf": "/static/media/React.a7947efa.pdf",
+    "static/media/Solicitudes.4c06ab36.png": "/static/media/Solicitudes.4c06ab36.png",
     "static/media/Upload.7195aa09.png": "/static/media/Upload.7195aa09.png",
     "static/media/User.6c40fb0e.png": "/static/media/User.6c40fb0e.png",
     "static/media/Users.9961f8d1.png": "/static/media/Users.9961f8d1.png",
@@ -62,6 +67,6 @@
     "static/js/runtime-main.c578165b.js",
     "static/js/2.52d81695.chunk.js",
     "static/css/main.a7a08f28.chunk.css",
-    "static/js/main.d0ba0194.chunk.js"
+    "static/js/main.f9312521.chunk.js"
   ]
 }
