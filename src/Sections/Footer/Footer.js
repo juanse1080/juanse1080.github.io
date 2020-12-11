@@ -40,6 +40,7 @@ const Footer = (
                            Contacta conmigo
                         </Typography>
                         <TextField
+                           color="secondary"
                            fullWidth
                            id="subject"
                            label="Asunto"
@@ -50,7 +51,8 @@ const Footer = (
                            defaultValue={state.subject}
                            onBlur={handleState}
                         />
-                        <TextField                           
+                        <TextField
+                           color="secondary"
                            fullWidth
                            label="Contenido"
                            variant="outlined"

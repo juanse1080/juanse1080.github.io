@@ -5,6 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import Hidden from "@material-ui/core/Hidden";
 import Typography from "@material-ui/core/Typography";
+import Chip from "@material-ui/core/Chip";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -27,7 +28,7 @@ const Project = ({ id, page, scrollTo, ...other }) => {
    const classes = useStyles();
 
    return (
-      <div id={id} {...other}>
+      <div id={id} {...other} className={classes.paddings}>
          {images.map(
             (
                {
@@ -240,19 +241,14 @@ const Project = ({ id, page, scrollTo, ...other }) => {
                                     {item}
                                  </Typography>
                               ))}
-                              <ul className="pl-4">
-                                 {techs.map(item => (
-                                    <li key={item}>
-                                       <Typography
-                                          color="inherit"
-                                          align="justify"
-                                          variant="caption"
-                                       >
-                                          {item}
-                                       </Typography>
-                                    </li>
-                                 ))}
-                              </ul>
+                              {techs.map(item => (
+                                 <Chip
+                                    key={item}
+                                    label={item}
+                                    color="secondary"
+                                    className="m-1"
+                                 />
+                              ))}
                            </Grid>
                            <Hidden smDown>
                               <Grid item lg={5} md={6}>

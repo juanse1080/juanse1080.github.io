@@ -22,6 +22,16 @@ import {
 import photo from "assets/img/Foto.jpg";
 
 const sections = {
+   tech: {
+      key: "tech",
+      title: "Tecnologías",
+      component: Tech,
+      icon: Build,
+      props: {},
+      section: {
+         subtitle: "Tecnologías favoritas",
+      },
+   },
    about: {
       key: "about",
       title: "Sobre mí",
@@ -54,16 +64,6 @@ const sections = {
       section: {
          subtitle: "Cursos virtuales",
          leftPart: Legend,
-      },
-   },
-   tech: {
-      key: "tech",
-      title: "Tecnologías",
-      component: Tech,
-      icon: Build,
-      props: {},
-      section: {
-         subtitle: "Tecnologías favoritas",
       },
    },
    portfolio: {

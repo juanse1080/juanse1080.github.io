@@ -7,15 +7,23 @@ const useStyles = makeStyles(theme => ({
    root: props => ({
       backgroundColor: theme.palette[themes[props.theme].theme].main,
       color: theme.palette[themes[props.theme].theme].contrastText,
-      // height: theme.shape.viewHeight,
    }),
    paddings: {
-      padding: theme.spacing(4),
+      padding: theme.spacing(8),
       [theme.breakpoints.only("sm")]: {
-         padding: theme.spacing(3),
+         padding: theme.spacing(5),
       },
       [theme.breakpoints.only("xs")]: {
          padding: theme.spacing(2.5, 1, 2.5, 1),
+      },
+   },
+   paddingsFull: {
+      padding: theme.spacing(8, 8, 3, 8),
+      [theme.breakpoints.only("sm")]: {
+         padding: theme.spacing(5, 5, 3, 5),
+      },
+      [theme.breakpoints.only("xs")]: {
+         padding: theme.spacing(2.5, 1, 1, 1),
       },
    },
    header: {

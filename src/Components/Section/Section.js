@@ -43,7 +43,7 @@ const Section = ({
             <div className={classes.root}>
                {fullWidth ? (
                   <>
-                     <div className={classes.paddings}>
+                     <div className={classes.paddingsFull}>
                         <Container>
                            <Grid container spacing={3} justify="flex-start">
                               <Grid item lg={3} md={3} sm={4} xs={12}>

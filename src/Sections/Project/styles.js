@@ -4,15 +4,16 @@ import themes from "const/themes";
 
 const useStyles = makeStyles(theme => ({
    paddings: {
-      padding: theme.spacing(4),
+      padding: theme.spacing(8),
       [theme.breakpoints.only("sm")]: {
-         padding: theme.spacing(3),
+         padding: theme.spacing(5),
       },
       [theme.breakpoints.only("xs")]: {
          padding: theme.spacing(2.5, 1, 2.5, 1),
       },
    },
    content: {
+      color: theme.palette.primary.contrastText,
       padding: theme.spacing(0, 3),
       [theme.breakpoints.only("sm")]: {
          padding: theme.spacing(0, 1),
