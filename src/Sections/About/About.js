@@ -66,7 +66,12 @@ const About = ({ theme, state, photo, toPage, ...other }) => {
                   proyectos de desarrollo web durante el transcurso de mi
                   carrera profesional.
                </Typography>
-               <Typography variant="subtitle2" paragraph align="left">
+               <Typography
+                  variant="subtitle2"
+                  color="inherit"
+                  paragraph
+                  align="left"
+               >
                   Contacto
                </Typography>
                <Grid
@@ -82,7 +87,12 @@ const About = ({ theme, state, photo, toPage, ...other }) => {
                         align="left"
                         paragraph
                      >
-                        <Link onClick={toPage()} href="#" color="inherit">
+                        <Link
+                           href={`mailto:juanmarcon1080@gmail.com?Subject=Github%20page:%20${state.subject}&body=${state.body}`}
+                           target="_blank"
+                           rel="noreferrer"
+                           color="inherit"
+                        >
                            juanmarcon1080@gmail.com
                         </Link>
                      </Typography>
@@ -93,19 +103,15 @@ const About = ({ theme, state, photo, toPage, ...other }) => {
                      </Typography>
                   </Grid>
                   <Grid item>
-                     <Link
+                     <Button
                         href={cv}
-                        color="inherit"
                         download="JuanMarconCV.pdf"
+                        variant="contained"
+                        color="secondary"
+                        startIcon={<GetAppIcon />}
                      >
-                        <Button
-                           variant="contained"
-                           color="secondary"
-                           startIcon={<GetAppIcon />}
-                        >
-                           Descargar CV
-                        </Button>
-                     </Link>
+                        Descargar CV
+                     </Button>
                   </Grid>
                </Grid>
             </div>

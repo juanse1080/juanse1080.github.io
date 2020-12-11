@@ -14,7 +14,7 @@ const tools = [
       icon: react,
       props: {
          style: {
-            width: "40%",
+            width: "60%",
          },
       },
       target: "_blank",
@@ -26,7 +26,7 @@ const tools = [
       icon: bootstrap,
       props: {
          style: {
-            width: "40%",
+            width: "60%",
          },
       },
       target: "_blank",
@@ -38,7 +38,7 @@ const tools = [
       icon: material,
       props: {
          style: {
-            width: "40%",
+            width: "60%",
          },
       },
       target: "_blank",
@@ -50,7 +50,7 @@ const tools = [
       icon: node,
       props: {
          style: {
-            width: "50%",
+            width: "70%",
          },
       },
       target: "_blank",
@@ -62,7 +62,7 @@ const tools = [
       icon: django,
       props: {
          style: {
-            width: "60%",
+            width: "80%",
          },
       },
       target: "_blank",
@@ -74,7 +74,7 @@ const tools = [
       icon: laravel,
       props: {
          style: {
-            width: "75%",
+            width: "95%",
          },
       },
       target: "_blank",
@@ -86,7 +86,7 @@ const tools = [
       icon: git,
       props: {
          style: {
-            width: "40%",
+            width: "60%",
          },
       },
       target: "_blank",
@@ -98,7 +98,7 @@ const tools = [
       icon: trello,
       props: {
          style: {
-            width: "70%",
+            width: "90%",
          },
       },
       target: "_blank",
@@ -110,7 +110,7 @@ const tools = [
       icon: asana,
       props: {
          style: {
-            width: "80%",
+            width: "100%",
          },
       },
       target: "_blank",

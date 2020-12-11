@@ -104,7 +104,12 @@ const Footer = (
                            align="left"
                            paragraph
                         >
-                           <Link href="#" color="inherit" onClick={toPage()}>
+                           <Link
+                              href={`mailto:juanmarcon1080@gmail.com?Subject=Github%20page:%20${state.subject}&body=${state.body}`}
+                              target="_blank"
+                              rel="noreferrer"
+                              color="inherit"
+                           >
                               juanmarcon1080@gmail.com
                            </Link>
                         </Typography>
@@ -123,7 +128,7 @@ const Footer = (
             </Container>
          </div>
          <div className={classes.bottom}>
-            <Typography variant="subtitle2" color="inherit" align="center">
+            <Typography variant="caption" color="inherit" align="center">
                Juan Sebastian Marcon Caballero - Desarrollado con React JS
             </Typography>
          </div>

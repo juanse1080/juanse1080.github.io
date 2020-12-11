@@ -51,14 +51,14 @@ const custom = {
    },
    subtitle2: {
       color: palette.text.secondary,
-      fontWeight: 400,
-      fontSize: "1.1em",
+      fontWeight: 600,
+      fontSize: "1.2em",
       letterSpacing: "-0.05px",
       lineHeight: "21px",
    },
    body1: {
       color: palette.text.primary,
-      fontSize: "1.05em;",
+      fontSize: "1.1em;",
       letterSpacing: "-0.05px",
       lineHeight: "21px",
    },
@@ -74,9 +74,9 @@ const custom = {
    },
    caption: {
       color: palette.text.secondary,
-      fontSize: "0.9em;",
+      fontSize: "1.1em;",
       letterSpacing: "-0.33px",
-      lineHeight: "17px",
+      lineHeight: "21px",
    },
    overline: {
       color: palette.text.secondary,

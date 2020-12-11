@@ -67,7 +67,7 @@ export default function Header({
                   >
                      <Fab
                         onClick={scrollTo("home")}
-                        color="secondary"
+                        color="default"
                         size="small"
                         aria-label="scroll back to top"
                      >
@@ -95,7 +95,7 @@ export default function Header({
                         >
                            <Fab
                               onClick={scrollTo(key)}
-                              color="secondary"
+                              color="default"
                               size="small"
                               aria-label="scroll back to top"
                            >
@@ -107,7 +107,7 @@ export default function Header({
                )}
             </div>
          ) : (
-            <div style={page !== "home" ? { height: 64 } : {}}>
+            <div style={{ height: 64 }}>
                <Paper className={classes.appBar} variant="outlined" square>
                   <Toolbar>
                      <div className={classes.floatRight} />

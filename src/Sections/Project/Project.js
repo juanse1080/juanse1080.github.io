@@ -133,7 +133,7 @@ const Project = ({ id, page, scrollTo, ...other }) => {
                                           <Grid item xs={12} sm={12}>
                                              <Typography
                                                 noWrap
-                                                color="inherit"
+                                                color="inherit"                                                
                                                 align="justify"
                                                 paragraph
                                                 variant="caption"
@@ -164,7 +164,7 @@ const Project = ({ id, page, scrollTo, ...other }) => {
                                        <Grid item xs={12} sm={6} md={6}>
                                           <Typography
                                              noWrap
-                                             color="inherit"
+                                             color="inherit"                                             
                                              align="justify"
                                              paragraph
                                              variant="caption"
@@ -181,7 +181,7 @@ const Project = ({ id, page, scrollTo, ...other }) => {
                                        <Grid item xs={12} sm={6} md={6}>
                                           <Typography
                                              noWrap
-                                             color="inherit"
+                                             color="inherit"                                             
                                              align="justify"
                                              paragraph
                                              variant="caption"
@@ -198,7 +198,7 @@ const Project = ({ id, page, scrollTo, ...other }) => {
                                        <Grid item xs={12} sm={6} md={6}>
                                           <Typography
                                              noWrap
-                                             color="inherit"
+                                             color="inherit"                                             
                                              align="justify"
                                              paragraph
                                              variant="caption"
@@ -215,7 +215,7 @@ const Project = ({ id, page, scrollTo, ...other }) => {
                                        <Grid item xs={12} sm={6} md={6}>
                                           <Typography
                                              noWrap
-                                             color="inherit"
+                                             color="inherit"                                             
                                              align="justify"
                                              paragraph
                                              variant="caption"
@@ -233,7 +233,7 @@ const Project = ({ id, page, scrollTo, ...other }) => {
                               {description.map(item => (
                                  <Typography
                                     key={item}
-                                    color="inherit"
+                                    color="inherit"                                    
                                     align="justify"
                                     paragraph
                                     variant="caption"

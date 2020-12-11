@@ -53,18 +53,25 @@ const About = ({ theme, photo, ...other }) => {
                   >
                      <Typography
                         className={classes.title}
+                        align="justify"
                         color="inherit"
                         variant="subtitle2"
                      >
                         {study.title}
                      </Typography>
-                     <Typography color="inherit" paragraph variant="caption">
+                     <Typography
+                        align="justify"
+                        color="inherit"
+                        paragraph
+                        variant="caption"
+                     >
                         {study.institution}
                         {study.date ? ` | ${study.date}` : null}
                      </Typography>
                      {study.description.map((description, key) => (
                         <Typography
                            key={key}
+                           align="justify"
                            color="inherit"
                            paragraph
                            variant="body1"
