@@ -67,7 +67,7 @@ const useStyles = makeStyles(theme => ({
       flexDirection: "row",
       justifyContent: "center",
       alignItems: "center",
-      background: theme.palette.background.default,
+      background: "transparent",
       padding: 8,
    },
    dots: {

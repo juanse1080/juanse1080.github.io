@@ -1,16 +1,15 @@
-import vt_asesores from "assets/img/Portfolio/Vtasesores/Landing.png";
-import colcief from "assets/img/Portfolio/Colcief/Landing1.png";
-import bivlab from "assets/img/Portfolio/Bivl2ab/Landing.png";
 import crowd_investment from "assets/img/Portfolio/CrowdInvestment/Login.png";
 import plataforma_tic from "assets/img/Portfolio/PlataformaTIC/Login.png";
 import deep_tools from "assets/img/Portfolio/Deeptools/Login.png";
 
-import vtasesores from "const/vt_asesores"
+import vtasesores from "const/vt_asesores";
+import colcief from "const/colcief";
+import bivlab from "const/bivlab";
 
 const images = [
    {
       key: "vt_asesores",
-      img: vt_asesores,
+      img: vtasesores[0].url,
       title: "Vt Asesores",
       date: "Dic 10, 2017 - Feb 8, 2018",
       location: "Bucaramanga, Santander",
@@ -25,7 +24,7 @@ const images = [
    },
    {
       key: "colcief",
-      img: colcief,
+      img: colcief[0].url,
       title: "ColCIEF",
       date: "Dic 10, 2017 - Feb 8, 2018",
       location: "Bucaramanga, Santander",
@@ -36,11 +35,11 @@ const images = [
          "El aplicativo cuenta con diferentes herramientas para la administración de la información, generación de backups, filtrado de datos, entre otros.",
       ],
       techs: ["PHP 5.6", "PostgreSQL", "JQuery | Javascript", "Bootstrap 4"],
-      media: vtasesores,
+      media: colcief,
    },
    {
       key: "bivlab",
-      img: bivlab,
+      img: bivlab[0].url,
       title: "Bivl2ab",
       date: "Dic 10, 2017 - Feb 8, 2018",
       location: "Bucaramanga, Santander",
@@ -51,7 +50,7 @@ const images = [
          "El aplicativo cuenta con diferentes herramientas para la administración de la información, generación de backups, filtrado de datos, entre otros.",
       ],
       techs: ["PHP 5.6", "PostgreSQL", "JQuery | Javascript", "Bootstrap 4"],
-      media: vtasesores,
+      media: bivlab,
    },
    {
       key: "crowd_investment",
