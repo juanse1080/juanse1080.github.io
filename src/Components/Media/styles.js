@@ -50,6 +50,11 @@ const useStyles = makeStyles(theme => ({
       height: 0,
       width: "100%",
    },
+   fatherPreview: {
+      backgroundColor: "transparent",
+      display: "flex",
+      justifyContent: "center",
+   },
    viewPreview: {
       width: "auto",
       height: "auto",

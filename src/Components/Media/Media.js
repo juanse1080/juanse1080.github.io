@@ -1,13 +1,4 @@
-import {
-   Card,
-   CardMedia,
-   Chip,
-   Dialog,
-   Icon,
-   IconButton,
-   MobileStepper,
-   Paper,
-} from "@material-ui/core";
+import { Card, CardMedia, Dialog, Paper } from "@material-ui/core";
 
 // Import Font Awesome Icons components
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,7 +10,6 @@ import {
 
 import clsx from "clsx";
 import React, { useState } from "react";
-import { isMobile } from "react-device-detect";
 import ReactPlayer from "react-player";
 // import styles
 import useStyles from "./styles";
@@ -71,6 +61,10 @@ export default function Media({ type, values, ...others }) {
             scroll="body"
             onClose={handleCloseView}
             open={image}
+            PaperProps={{
+               elevation: 0,
+               style: { backgroundColor: "transparent" },
+            }}
          >
             {index === 0 ? null : (
                <Paper
@@ -88,11 +82,13 @@ export default function Media({ type, values, ...others }) {
                </Paper>
             )}
             {values[index].type === "image" ? (
-               <img
-                  className={classes.viewPreview}
-                  src={values[index].url}
-                  alt={values[index].url}
-               />
+               <div className={classes.fatherPreview}>
+                  <img
+                     className={classes.viewPreview}
+                     src={values[index].url}
+                     alt={values[index].url}
+                  />
+               </div>
             ) : (
                <ReactPlayer
                   url={values[index].url}
@@ -103,6 +99,7 @@ export default function Media({ type, values, ...others }) {
                   height="100%"
                />
             )}
+
             {index === values.length - 1 ? null : (
                <Paper
                   elevation={3}
