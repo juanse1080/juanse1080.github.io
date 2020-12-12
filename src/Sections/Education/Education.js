@@ -15,7 +15,7 @@ import studies from "const/studies";
 // import styles
 import useStyles from "./styles";
 
-const About = ({ theme, photo, ...other }) => {
+const Education = ({ theme, photo, ...other }) => {
    const classes = useStyles({ theme });
 
    const [tooltip, setTooltip] = useState(false);
@@ -87,4 +87,4 @@ const About = ({ theme, photo, ...other }) => {
    );
 };
 
-export default About;
+export default Education;
