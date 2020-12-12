@@ -3,10 +3,10 @@ import About from "Sections/About";
 import Portfolio from "Sections/Portfolio";
 import Education from "Sections/Education";
 import Course from "Sections/Course";
+import Experience from "Sections/Experience";
 import Tech from "Sections/Tech";
 import Legend from "Components/Legend";
 
-import Icon from "@material-ui/core/Icon";
 import Face from "@material-ui/icons/Face";
 import Work from "@material-ui/icons/Work";
 import Build from "@material-ui/icons/Build";
@@ -16,22 +16,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
    faGraduationCap,
    faChalkboard,
+   faBuilding,
 } from "@fortawesome/free-solid-svg-icons";
 
 // Import local assets
 import photo from "assets/img/Foto.jpg";
 
 const sections = {
-   tech: {
-      key: "tech",
-      title: "Tecnologías",
-      component: Tech,
-      icon: Build,
-      props: {},
-      section: {
-         subtitle: "Tecnologías favoritas",
-      },
-   },
    about: {
       key: "about",
       title: "Sobre mí",
@@ -55,6 +46,17 @@ const sections = {
          leftPart: Legend,
       },
    },
+   experience: {
+      key: "experience",
+      title: "Experiencia",
+      component: Experience,
+      icon: () => <FontAwesomeIcon icon={faBuilding} />,
+      props: {},
+      section: {
+         subtitle: "Experiencia certificada",
+         leftPart: Legend,
+      },
+   },
    curse: {
       key: "curse",
       title: "Cursos",
@@ -64,6 +66,16 @@ const sections = {
       section: {
          subtitle: "Cursos virtuales",
          leftPart: Legend,
+      },
+   },
+   tech: {
+      key: "tech",
+      title: "Tecnologías",
+      component: Tech,
+      icon: Build,
+      props: {},
+      section: {
+         subtitle: "Tecnologías favoritas",
       },
    },
    portfolio: {
