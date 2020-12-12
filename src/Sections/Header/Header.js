@@ -52,7 +52,7 @@ export default function Header({
                </Zoom>
                <Zoom
                   in={page !== "home" && open}
-                  timeout={200}
+                  timeout={250}
                   className="mt-3"
                >
                   <Tooltip
@@ -67,7 +67,7 @@ export default function Header({
                   >
                      <Fab
                         onClick={scrollTo("home")}
-                        color="default"
+                        color={page === "home" ? "secondary" : "default"}
                         size="small"
                         aria-label="scroll back to top"
                      >
@@ -80,7 +80,7 @@ export default function Header({
                      <Zoom
                         key={key}
                         in={page !== "home" && open}
-                        timeout={200 + 50 * (index + 1)}
+                        timeout={250 + 50 * (index + 1)}
                         className="mt-3"
                      >
                         <Tooltip
@@ -95,7 +95,7 @@ export default function Header({
                         >
                            <Fab
                               onClick={scrollTo(key)}
-                              color="default"
+                              color={page === key ? "secondary" : "default"}
                               size="small"
                               aria-label="scroll back to top"
                            >
@@ -112,7 +112,6 @@ export default function Header({
                   <Toolbar>
                      <div className={classes.floatRight} />
                      <Button
-                        startIcon={<HomeIcon />}
                         color="inherit"
                         className={clsx({
                            [classes.activeButton]: page === "home",
@@ -122,10 +121,9 @@ export default function Header({
                         Inicio
                      </Button>
                      {Object.values(sections).map(
-                        ({ key: section_name, title, icon: Icon }) => (
+                        ({ key: section_name, title }) => (
                            <Button
                               key={section_name}
-                              startIcon={<Icon />}
                               color="inherit"
                               className={clsx("ml-3", {
                                  [classes.activeButton]: page === section_name,
