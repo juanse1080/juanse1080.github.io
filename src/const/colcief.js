@@ -1,14 +1,14 @@
-import Cambiar from "assets/img/Portfolio/Colcief/Cambiar.png";
-import Componentes from "assets/img/Portfolio/Colcief/Componentes.png";
-import Contacto from "assets/img/Portfolio/Colcief/Contacto.png";
-import Curso from "assets/img/Portfolio/Colcief/Curso.png";
-import Empleados from "assets/img/Portfolio/Colcief/Empleados.png";
-import Estudiantes from "assets/img/Portfolio/Colcief/Estudiantes.png";
-import Horario from "assets/img/Portfolio/Colcief/Horario.png";
-import Landing1 from "assets/img/Portfolio/Colcief/Landing1.png";
-import Materias from "assets/img/Portfolio/Colcief/Materias.png";
-import Nivelaciones from "assets/img/Portfolio/Colcief/Nivelaciones.png";
-import Upload from "assets/img/Portfolio/Colcief/Upload.png";
+const Cambiar = "img/Portfolio/Colcief/Cambiar.png";
+const Componentes = "img/Portfolio/Colcief/Componentes.png";
+const Contacto = "img/Portfolio/Colcief/Contacto.png";
+const Curso = "img/Portfolio/Colcief/Curso.png";
+const Empleados = "img/Portfolio/Colcief/Empleados.png";
+const Estudiantes = "img/Portfolio/Colcief/Estudiantes.png";
+const Horario = "img/Portfolio/Colcief/Horario.png";
+const Landing1 = "img/Portfolio/Colcief/Landing1.png";
+const Materias = "img/Portfolio/Colcief/Materias.png";
+const Nivelaciones = "img/Portfolio/Colcief/Nivelaciones.png";
+const Upload = "img/Portfolio/Colcief/Upload.png";
 
 const images = [
    {

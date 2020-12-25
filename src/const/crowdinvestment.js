@@ -1,9 +1,9 @@
-import Login from "assets/img/Portfolio/CrowdInvestment/Login.png";
-import Inversinoes from "assets/img/Portfolio/CrowdInvestment/Inversinoes.png";
-import Inversion2 from "assets/img/Portfolio/CrowdInvestment/Inversion2.png";
-import Inversion from "assets/img/Portfolio/CrowdInvestment/Inversion.png";
-import Profile from "assets/img/Portfolio/CrowdInvestment/Profile.png";
-import Solicitudes from "assets/img/Portfolio/CrowdInvestment/Solicitudes.png";
+const Login = "img/Portfolio/CrowdInvestment/Login.png";
+const Inversinoes = "img/Portfolio/CrowdInvestment/Inversinoes.png";
+const Inversion2 = "img/Portfolio/CrowdInvestment/Inversion2.png";
+const Inversion = "img/Portfolio/CrowdInvestment/Inversion.png";
+const Profile = "img/Portfolio/CrowdInvestment/Profile.png";
+const Solicitudes = "img/Portfolio/CrowdInvestment/Solicitudes.png";
 
 const images = [
    {

@@ -19,8 +19,7 @@ import {
    faBuilding,
 } from "@fortawesome/free-solid-svg-icons";
 
-// Import local assets
-import photo from "assets/img/Foto.jpg";
+const photo = "img/Foto.jpg";
 
 const sections = {
    about: {

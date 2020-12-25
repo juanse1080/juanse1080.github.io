@@ -1,5 +1,5 @@
-import react from "assets/docs/Udemy/React.pdf";
-import django from "assets/docs/Udemy/Django.pdf";
+const react = "docs/Udemy/React.pdf";
+const django = "docs/Udemy/Django.pdf";
 
 const courses = [
    {

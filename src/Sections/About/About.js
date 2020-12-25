@@ -13,11 +13,11 @@ import GetAppIcon from "@material-ui/icons/GetApp";
 // Import local components
 import Image from "Components/Image";
 
-// import local assets
-import cv from "assets/docs/CV/JuanMarconCV.pdf";
-
 // import styles
 import useStyles from "./styles";
+
+// import local assets
+const cv = "docs/CV/JuanMarconCV.pdf";
 
 const About = ({ theme, state, photo, toPage, ...other }) => {
    const classes = useStyles();

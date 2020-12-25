@@ -31,10 +31,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "rm -rf ./build && react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "rm -rf ./build && react-scripts build && gh-pages -d build"
+    "deploy": "react-scripts build && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

@@ -1,12 +1,12 @@
-import Cliente from "assets/img/Portfolio/Vtasesores/Cliente.png";
-import CrearActualizacion from "assets/img/Portfolio/Vtasesores/CrearActualizacion.png";
-import Landing from "assets/img/Portfolio/Vtasesores/Landing.png";
-import Proceso2 from "assets/img/Portfolio/Vtasesores/Proceso2.png";
-import users from "assets/img/Portfolio/Vtasesores/users.png";
-import Clientes from "assets/img/Portfolio/Vtasesores/Clientes.png";
-import homw from "assets/img/Portfolio/Vtasesores/homw.png";
-import Proceso1 from "assets/img/Portfolio/Vtasesores/Proceso1.png";
-import User from "assets/img/Portfolio/Vtasesores/User.png";
+const Cliente = "img/Portfolio/Vtasesores/Cliente.png";
+const CrearActualizacion = "img/Portfolio/Vtasesores/CrearActualizacion.png";
+const Landing = "img/Portfolio/Vtasesores/Landing.png";
+const Proceso2 = "img/Portfolio/Vtasesores/Proceso2.png";
+const users = "img/Portfolio/Vtasesores/users.png";
+const Clientes = "img/Portfolio/Vtasesores/Clientes.png";
+const homw = "img/Portfolio/Vtasesores/homw.png";
+const Proceso1 = "img/Portfolio/Vtasesores/Proceso1.png";
+const User = "img/Portfolio/Vtasesores/User.png";
 
 const images = [
    {

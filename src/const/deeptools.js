@@ -1,15 +1,15 @@
-import ALgorithm from "assets/img/Portfolio/Deeptools/ALgorithm.png";
-import Experiment from "assets/img/Portfolio/Deeptools/Experiment.png";
-import newAlgorithm from "assets/img/Portfolio/Deeptools/newAlgorithm.png";
-import Run from "assets/img/Portfolio/Deeptools/Run.mp4";
-import Algorithms from "assets/img/Portfolio/Deeptools/Algorithms.png";
-import Login from "assets/img/Portfolio/Deeptools/Login.png";
-import Notifications from "assets/img/Portfolio/Deeptools/Notifications.png";
-import Running from "assets/img/Portfolio/Deeptools/Running.png";
-import Dashboard from "assets/img/Portfolio/Deeptools/Dashboard.png";
-import makeExperiment from "assets/img/Portfolio/Deeptools/makeExperiment.png";
-import Profile from "assets/img/Portfolio/Deeptools/Profile.png";
-import Tests from "assets/img/Portfolio/Deeptools/Tests.png";
+const ALgorithm = "img/Portfolio/Deeptools/ALgorithm.png";
+const Experiment = "img/Portfolio/Deeptools/Experiment.png";
+const newAlgorithm = "img/Portfolio/Deeptools/newAlgorithm.png";
+const Run = "img/Portfolio/Deeptools/Run.mp4";
+const Algorithms = "img/Portfolio/Deeptools/Algorithms.png";
+const Login = "img/Portfolio/Deeptools/Login.png";
+const Notifications = "img/Portfolio/Deeptools/Notifications.png";
+const Running = "img/Portfolio/Deeptools/Running.png";
+const Dashboard = "img/Portfolio/Deeptools/Dashboard.png";
+const makeExperiment = "img/Portfolio/Deeptools/makeExperiment.png";
+const Profile = "img/Portfolio/Deeptools/Profile.png";
+const Tests = "img/Portfolio/Deeptools/Tests.png";
 
 const images = [
    {

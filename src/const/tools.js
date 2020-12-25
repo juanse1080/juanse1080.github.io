@@ -1,12 +1,12 @@
-import react from "assets/img/Tech/react.svg";
-import bootstrap from "assets/img/Tech/bootstrap.svg";
-import material from "assets/img/Tech/material.svg";
-import node from "assets/img/Tech/node.svg";
-import django from "assets/img/Tech/django.svg";
-import laravel from "assets/img/Tech/laravel.svg";
-import git from "assets/img/Tech/git.svg";
-import trello from "assets/img/Tech/trello.svg";
-import asana from "assets/img/Tech/asana.svg";
+const react = "img/Tech/react.svg";
+const bootstrap = "img/Tech/bootstrap.svg";
+const material = "img/Tech/material.svg";
+const node = "img/Tech/node.svg";
+const django = "img/Tech/django.svg";
+const laravel = "img/Tech/laravel.svg";
+const git = "img/Tech/git.svg";
+const trello = "img/Tech/trello.svg";
+const asana = "img/Tech/asana.svg";
 
 const tools = [
    {

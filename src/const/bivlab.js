@@ -1,11 +1,11 @@
-import Deepsars from "assets/img/Portfolio/Bivl2ab/Deepsars.png";
-import Landing from "assets/img/Portfolio/Bivl2ab/Landing.png";
-import Login from "assets/img/Portfolio/Bivl2ab/Login.mp4";
-import LandingVideo from "assets/img/Portfolio/Bivl2ab/Landing.mp4";
-import Product from "assets/img/Portfolio/Bivl2ab/Product.png";
-import Products from "assets/img/Portfolio/Bivl2ab/Products.png";
-import Profile from "assets/img/Portfolio/Bivl2ab/Profile.png";
-import Users from "assets/img/Portfolio/Bivl2ab/Users.png";
+const Deepsars = "img/Portfolio/Bivl2ab/Deepsars.png";
+const Landing = "img/Portfolio/Bivl2ab/Landing.png";
+const Login = "img/Portfolio/Bivl2ab/Login.mp4";
+const LandingVideo = "img/Portfolio/Bivl2ab/Landing.mp4";
+const Product = "img/Portfolio/Bivl2ab/Product.png";
+const Products = "img/Portfolio/Bivl2ab/Products.png";
+const Profile = "img/Portfolio/Bivl2ab/Profile.png";
+const Users = "img/Portfolio/Bivl2ab/Users.png";
 
 const images = [
    {

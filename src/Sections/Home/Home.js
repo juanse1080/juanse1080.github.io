@@ -15,9 +15,6 @@ import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
 import { Waypoint } from "react-waypoint";
 
-//import local assets
-import Img from "assets/img/Home/develop_page.svg";
-
 // Import local components
 import ParticlesBackground from "Components/ParticlesBackground";
 import Social from "Components/Social";
@@ -25,7 +22,8 @@ import Social from "Components/Social";
 // import styles
 import useStyles from "./styles";
 
-// import const
+//import local assets
+const Img = "img/Home/develop_page.svg";
 
 const Home = ({
    id,

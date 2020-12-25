@@ -1,6 +1,3 @@
-import plataforma_tic from "assets/img/Portfolio/PlataformaTIC/Login.png";
-import deep_tools from "assets/img/Portfolio/Deeptools/Login.png";
-
 import vtasesores from "const/vt_asesores";
 import colcief from "const/colcief";
 import bivlab from "const/bivlab";
