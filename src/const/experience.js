@@ -10,7 +10,7 @@ const experience = [
       techs: ["Python 3.5", "Django 2.1", "Javascript", "React JS", "MySQL"],
    },
    {
-      title: "AUXILIATURA ADMINISTRATIVA",
+      title: "AUXILIATUR ADMINISTRATIVO",
       date: "Febrero 2019 - Octubre 2020",
       institution: "IPRED",
       description: [
