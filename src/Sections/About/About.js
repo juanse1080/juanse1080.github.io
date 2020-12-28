@@ -16,10 +16,10 @@ import Image from "Components/Image";
 // import styles
 import useStyles from "./styles";
 
-// import local assets
-const cv = "docs/CV/JuanMarconCV.pdf";
+// Import local const
+import text from "const/about";
 
-const About = ({ theme, state, photo, toPage, ...other }) => {
+const About = ({ theme, language, state, photo, toPage, ...other }) => {
    const classes = useStyles();
 
    return (
@@ -31,48 +31,24 @@ const About = ({ theme, state, photo, toPage, ...other }) => {
          </Hidden>
          <Grid item lg={9} md={9} sm={12} sx={12}>
             <div className={classes.content}>
-               <Typography
-                  color="inherit"
-                  align="justify"
-                  paragraph
-                  variant="body1"
-               >
-                  Mi nombre es Juan Sebastian Marcon Caballero, soy un
-                  estudiante de último nivel de Ingeniería de Sistemas de la
-                  Universidad Industrial de Santander (UIS) con experiencia en
-                  desarrollo web adquirida durante el proceso de aprendizaje con
-                  la UIS.
-               </Typography>
-               <Typography
-                  color="inherit"
-                  align="justify"
-                  paragraph
-                  variant="body1"
-               >
-                  He obtenido experiencia con el Instituto de Proyección
-                  Regional y Educación a Distancia (IPRED) desempeñándome como
-                  desarrollador FullStack en su plataforma administrativa. Por
-                  mi cuenta he participado en el desarrollo de multiples
-                  proyectos de desarrollo web durante el transcurso de mi
-                  carrera profesional.
-               </Typography>
-               <Typography
-                  color="inherit"
-                  align="justify"
-                  paragraph
-                  variant="body1"
-               >
-                  Por mi cuenta he participado en el desarrollo de multiples
-                  proyectos de desarrollo web durante el transcurso de mi
-                  carrera profesional.
-               </Typography>
+               {text[language].content.map((paragraph, index) => (
+                  <Typography
+                     key={index}
+                     color="inherit"
+                     align="justify"
+                     paragraph
+                     variant="body1"
+                  >
+                     {paragraph}
+                  </Typography>
+               ))}
                <Typography
                   variant="subtitle2"
                   color="inherit"
                   paragraph
                   align="left"
                >
-                  Contacto
+                  {text[language].contact}
                </Typography>
                <Grid
                   container
@@ -104,13 +80,13 @@ const About = ({ theme, state, photo, toPage, ...other }) => {
                   </Grid>
                   <Grid item>
                      <Button
-                        href={cv}
+                        href={text[language].cv}
                         download="JuanMarconCV.pdf"
                         variant="contained"
                         color="secondary"
                         startIcon={<GetAppIcon />}
                      >
-                        Descargar CV
+                        {text[language].buttons[0]}
                      </Button>
                   </Grid>
                </Grid>

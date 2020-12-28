@@ -19,6 +19,9 @@ import { Waypoint } from "react-waypoint";
 import ParticlesBackground from "Components/ParticlesBackground";
 import Social from "Components/Social";
 
+// Import local const
+import text from "const/home";
+
 // import styles
 import useStyles from "./styles";
 
@@ -27,6 +30,7 @@ const Img = "img/Home/develop_page.svg";
 
 const Home = ({
    id,
+   language,
    toPage,
    handlePage,
    after,
@@ -67,19 +71,14 @@ const Home = ({
                               paragraph
                               align="left"
                            >
-                              Juan Marcon.
+                              {text[language].title}
                            </Typography>
                            <Typography
                               variant="subtitle2"
                               color="inherit"
                               align="left"
                            >
-                              Soy un estudiante de último nivel de Ingeniería de
-                              Sistemas de la Universidad Industrial de Santander
-                              con amplia experiencia en diferentes tecnologías
-                              de desarrollo Web. He tenido la oportunidad de
-                              participar en diferentes proyectos lo cual me ha
-                              ayudado mucho en mi crecimiento profesional.
+                              {text[language].description}
                            </Typography>
                            <Box className={classes.sectionIcons}>
                               <Button
@@ -88,14 +87,14 @@ const Home = ({
                                  className="mr-3"
                                  onClick={nextPage}
                               >
-                                 Empecemos
+                                 {text[language].buttons[0]}
                               </Button>
                               <Button
                                  variant="contained"
                                  color="secondary"
                                  onClick={toPage()}
                               >
-                                 Contacto
+                                 {text[language].buttons[1]}
                               </Button>
                            </Box>
                         </Box>
@@ -120,10 +119,10 @@ const Home = ({
                <Social mailAction={toPage()} />
             </Box>
             <Zoom in={page === "home"}>
-               <Tooltip title="Next section" placement="top">
+               <Tooltip title={text[language].buttons[2]} placement="top">
                   <Fab
                      color="secondary"
-                     aria-label="Next section"
+                     aria-label={text[language].buttons[2]}
                      className={classes.scrollIcon}
                      size="small"
                      onClick={nextPage}

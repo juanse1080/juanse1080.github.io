@@ -15,7 +15,7 @@ import studies from "const/studies";
 // import styles
 import useStyles from "./styles";
 
-const Education = ({ theme, photo, ...other }) => {
+const Education = ({ theme, photo, language, ...other }) => {
    const classes = useStyles({ theme });
 
    const [tooltip, setTooltip] = useState(false);
@@ -31,7 +31,7 @@ const Education = ({ theme, photo, ...other }) => {
                root: classes.root,
             }}
          >
-            {studies.map((study, index) => (
+            {studies[language].map((study, index) => (
                <TimelineItem
                   key={study.title}
                   classes={{
@@ -43,7 +43,7 @@ const Education = ({ theme, photo, ...other }) => {
                         color={study.ended ? "secondary" : "grey"}
                         className={classes.dot}
                      />
-                     {index === studies.length - 1 ? null : (
+                     {index === studies[language].length - 1 ? null : (
                         <TimelineConnector />
                      )}
                   </TimelineSeparator>

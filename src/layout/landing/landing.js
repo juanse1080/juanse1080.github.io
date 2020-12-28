@@ -8,10 +8,11 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Section from "Components/Section";
 
 // Import local const
-import { sections, section_keys as keys } from "const/sections";
+import { sections } from "const/sections";
 
 // Import other modules
 import { Scrollbars } from "react-custom-scrollbars";
+import ReactCountryFlag from "react-country-flag";
 
 // Import local sections
 import Header from "Sections/Header";
@@ -22,6 +23,19 @@ import Project from "Sections/Project";
 // import styles
 import useStyles from "./styles";
 
+const lang = {
+   espanol: {
+      title: "Español",
+      key: "espanol",
+      icon: <ReactCountryFlag countryCode="ES" />,
+   },
+   english: {
+      title: "English",
+      key: "english",
+      icon: <ReactCountryFlag countryCode="US" />,
+   },
+};
+
 export default function Landing(props) {
    const classes = useStyles();
 
@@ -30,11 +44,14 @@ export default function Landing(props) {
 
    const scrollbar = useRef();
    const [page, setPage] = useState("home");
+   const [language, setLanguage] = useState("english");
 
    const [state, setState] = useState({
       subject: "",
       body: "",
    });
+
+   const keys = Object.keys(sections[language]);
 
    const offset = smDown ? -2 : 62;
 
@@ -82,8 +99,9 @@ export default function Landing(props) {
             >
                <Home
                   id="home"
+                  language={language}
                   handlePage={handlePage}
-                  after={Object.values(sections)[0].key}
+                  after={Object.values(sections[language])[0].key}
                   toPage={scrollTo}
                   nextPage={scrollTo(keys[0])}
                   page={page}
@@ -91,13 +109,16 @@ export default function Landing(props) {
                />
 
                <Header
+                  language={language}
+                  lang={lang}
+                  setLanguage={setLanguage}
                   onChangePage={scrollTo}
                   page={page}
-                  sections={sections}
+                  sections={sections[language]}
                   isMobile={smDown}
                />
 
-               {Object.values(sections).map(
+               {Object.values(sections[language]).map(
                   (
                      {
                         component: Component,
@@ -133,6 +154,7 @@ export default function Landing(props) {
                            leftPart={
                               LeftPart ? (
                                  <LeftPart
+                                    language={language}
                                     theme={
                                        section_index % 2 === 0
                                           ? "dark"
@@ -145,6 +167,7 @@ export default function Landing(props) {
                         >
                            <Component
                               {...props}
+                              language={language}
                               state={state}
                               page={page}
                               toPage={scrollTo}
@@ -155,10 +178,11 @@ export default function Landing(props) {
                   }
                )}
 
-               <Project id="project" page={page} />
+               <Project id="project" page={page} language={language} />
 
                <Footer
                   id="footer"
+                  language={language}
                   hidden={page !== "home"}
                   theme="light"
                   toPage={scrollTo}

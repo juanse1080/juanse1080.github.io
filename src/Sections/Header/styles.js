@@ -30,6 +30,14 @@ const useStyles = makeStyles(theme => ({
       right: theme.spacing(2),
       zIndex: 1200,
    },
+   buttonLanguage: {
+      position: "fixed",
+      display: "flex",
+      flexDirection: "column",
+      top: theme.spacing(2),
+      left: theme.spacing(2),
+      zIndex: 1200,
+   },
 }));
 
 export default useStyles;

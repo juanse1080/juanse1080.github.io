@@ -11,12 +11,12 @@ import Typography from "@material-ui/core/Typography";
 import Chip from "@material-ui/core/Chip";
 
 // Import local const
-import experience from "const/experience";
+import experiences from "const/experience";
 
 // import styles
 import useStyles from "./styles";
 
-const Experience = ({ theme, photo, ...other }) => {
+const Experience = ({ theme, language, photo, ...other }) => {
    const classes = useStyles({ theme });
 
    return (
@@ -26,7 +26,7 @@ const Experience = ({ theme, photo, ...other }) => {
                root: classes.root,
             }}
          >
-            {experience.map((experience, index, _array) => (
+            {experiences[language].map((experience, index, _array) => (
                <TimelineItem
                   key={experience.title}
                   classes={{

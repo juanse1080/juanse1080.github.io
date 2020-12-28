@@ -13,12 +13,12 @@ import legends from "const/legends";
 // import styles
 import useStyles from "./styles";
 
-export default function Legend({ theme, ...others }) {
+export default function Legend({ theme, language, ...others }) {
    const classes = useStyles({ theme });
    return (
       <div {...others}>
          <Timeline>
-            {legends.map(({ name, color }) => (
+            {legends[language].map(({ name, color }) => (
                <TimelineItem
                   key={name}
                   classes={{

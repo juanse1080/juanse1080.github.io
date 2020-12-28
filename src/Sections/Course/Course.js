@@ -17,11 +17,11 @@ import courses from "const/courses";
 // import styles
 import useStyles from "./styles";
 
-const Course = ({ theme, photo, ...other }) => {
+const Course = ({ theme, photo, language, ...other }) => {
    const classes = useStyles({ theme });
 
    const [tooltip, setTooltip] = useState(false);
-
+   
    const handleTooltip = (newState = false) => () => {
       if (newState !== tooltip) setTooltip(newState);
    };
@@ -32,7 +32,7 @@ const Course = ({ theme, photo, ...other }) => {
             root: classes.root,
          }}
       >
-         {courses.map((study, index) => (
+         {courses[language].map((study, index) => (
             <TimelineItem
                key={study.title}
                classes={{

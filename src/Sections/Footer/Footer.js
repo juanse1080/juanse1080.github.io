@@ -16,11 +16,14 @@ import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 // Import local components
 import Social from "Components/Social";
 
+// Import local const
+import text from "const/footer";
+
 // import styles
 import useStyles from "./styles";
 
 const Footer = (
-   { hidden, toPage, theme, state, handleState, ...other },
+   { hidden, language, toPage, theme, state, handleState, ...other },
    ref
 ) => {
    const classes = useStyles({ theme });
@@ -37,13 +40,13 @@ const Footer = (
                            color="inherit"
                            variant="h2"
                         >
-                           Contacta conmigo
+                           {text[language].title}
                         </Typography>
                         <TextField
                            color="secondary"
                            fullWidth
                            id="subject"
-                           label="Asunto"
+                           label={text[language].inputs[0]}
                            variant="outlined"
                            className="mt-2"
                            size="small"
@@ -54,7 +57,7 @@ const Footer = (
                         <TextField
                            color="secondary"
                            fullWidth
-                           label="Contenido"
+                           label={text[language].inputs[1]}
                            variant="outlined"
                            multiline
                            rows={6}
@@ -72,7 +75,7 @@ const Footer = (
                            href={`mailto:juanmarcon1080@gmail.com?Subject=Github%20page:%20${state.subject}&body=${state.body}`}
                            rel="noreferrer"
                         >
-                           Enviar
+                           {text[language].inputs[2]}
                         </Button>
                      </div>
                   </Grid>
@@ -83,7 +86,7 @@ const Footer = (
                            color="inherit"
                            variant="h2"
                         >
-                           Redes sociales
+                           {text[language].social}
                         </Typography>
                         <Social
                            className={classes.social}
@@ -96,7 +99,7 @@ const Footer = (
                            color="inherit"
                            variant="h2"
                         >
-                           Contacto
+                           {text[language].contact}
                         </Typography>
                         <Typography
                            color="inherit"
@@ -129,9 +132,9 @@ const Footer = (
          </div>
          <div className={classes.bottom}>
             <Typography variant="caption" color="inherit" align="center">
-               Juan Sebastian Marcon Caballero - Desarrollado con React JS
+               Juan Sebastian Marcon Caballero - {text[language].tech}
             </Typography>
-         </div>
+         </div>      
          <Zoom in={hidden}>
             <Tooltip title="Scroll back to top" placement="left">
                <div role="presentation" className={classes.buttonScroll}>

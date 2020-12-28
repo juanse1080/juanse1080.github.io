@@ -21,7 +21,7 @@ import useStyles from "./styles";
 // Import local const
 import images from "const/images";
 
-const Portfolio = ({ theme, toPage, ...other }) => {
+const Portfolio = ({ theme, toPage, language, ...other }) => {
    const classes = useStyles();
 
    const [over, setOver] = useState(false);
@@ -54,7 +54,7 @@ const Portfolio = ({ theme, toPage, ...other }) => {
                className={classes.gridList}
                cols={getColumns()}
             >
-               {images.map(({ key: _key, img: _img, title: _title }) => (
+               {images[language].map(({ key: _key, img: _img, title: _title }) => (
                   <GridListTile
                      key={_key}
                      onMouseEnter={isMobile ? null : handleOver(_key)}
