@@ -144,7 +144,7 @@ export default function Header({
                         size="small"
                         aria-label="scroll back to top"
                      >
-                        {open ? <CloseIcon /> : <TranslateIcon />}
+                        {menu ? <CloseIcon /> : <TranslateIcon />}
                      </Fab>
                   </Zoom>
                   {Object.values(lang).map(({ key, title, icon }, index) => (
