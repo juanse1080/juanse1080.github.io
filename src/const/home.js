@@ -8,7 +8,7 @@ const home = {
    english: {
       title: "Juan Marcon.",
       description:
-         "I am a last-level student of Systems Engineering at the Industrial University of Santander with extensive experience in different Web development technologies. I have had the opportunity to participate in different projects which has helped me a lot in my professional growth.",
+         "I am a last level student of Systems Engineering at the Universidad Industrial de Santander with extensive experience in different Web development technologies. I have had the opportunity to participate in different projects which has helped me a lot in my professional growth.",
       buttons: ["Begin", "Contact", "Next section"],
    },
 };
