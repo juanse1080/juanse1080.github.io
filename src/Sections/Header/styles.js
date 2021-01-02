@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
       position: "fixed",
       display: "flex",
       flexDirection: "column",
-      top: theme.spacing(2),
+      bottom: theme.spacing(2),
       left: theme.spacing(2),
       zIndex: 1200,
    },

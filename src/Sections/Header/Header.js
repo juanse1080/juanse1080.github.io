@@ -5,6 +5,8 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Tooltip from "@material-ui/core/Tooltip";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import Typography from "@material-ui/core/Typography";
 import Zoom from "@material-ui/core/Zoom";
 import CloseIcon from "@material-ui/icons/Close";
 import HomeIcon from "@material-ui/icons/Home";
@@ -137,22 +139,15 @@ export default function Header({
                   )}
                </div>
                <div role="presentation" className={classes.buttonLanguage}>
-                  <Zoom in={page !== "home"}>
-                     <Fab
-                        onClick={handleMenuLanguage()}
-                        color="secondary"
-                        size="small"
-                        aria-label="scroll back to top"
-                     >
-                        {menu ? <CloseIcon /> : <TranslateIcon />}
-                     </Fab>
-                  </Zoom>
                   {Object.values(lang).map(({ key, title, icon }, index) => (
                      <Zoom
                         key={key}
                         in={page !== "home" && menu}
-                        timeout={250 + 50 * (index + 1)}
-                        className="mt-3"
+                        timeout={
+                           250 +
+                           50 * (Object.keys(lang).length - 1) * (index + 1)
+                        }
+                        className="mb-3"
                      >
                         <Tooltip
                            open={page !== "home" && menu}
@@ -174,6 +169,16 @@ export default function Header({
                         </Tooltip>
                      </Zoom>
                   ))}
+                  <Zoom in={page !== "home"}>
+                     <Fab
+                        onClick={handleMenuLanguage()}
+                        color="secondary"
+                        size="small"
+                        aria-label="scroll back to top"
+                     >
+                        {menu ? <CloseIcon /> : <TranslateIcon />}
+                     </Fab>
+                  </Zoom>
                </div>
             </>
          ) : (
@@ -194,9 +199,10 @@ export default function Header({
                         open={Boolean(menu)}
                         onClose={menuClose}
                      >
-                        {Object.values(lang).map(({ key, title }) => (
+                        {Object.values(lang).map(({ key, title, icon }) => (
                            <MenuItem key={key} onClick={handleLanguage(key)}>
-                              {title}
+                              <ListItemIcon>{icon}</ListItemIcon>
+                              <Typography variant="inherit">{title}</Typography>
                            </MenuItem>
                         ))}
                      </Menu>

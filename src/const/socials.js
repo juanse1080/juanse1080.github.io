@@ -10,7 +10,7 @@ const socials = ({ mailAction }) => {
          children: {
             component: ({ children, ...props }) => <a {...props}>{children}</a>,
             target: "_blank",
-            href: "https://www.linkedin.com/in/juanse1080/",
+            href: "https://www.linkedin.com/in/juanmarcon/",
             rel: "noreferrer",
             style: {
                textDecoration: "none",
