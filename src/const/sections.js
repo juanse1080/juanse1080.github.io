@@ -123,7 +123,7 @@ const sections = {
       },
       curse: {
          key: "curse",
-         title: "Curses",
+         title: "Courses",
          component: Course,
          icon: () => <FontAwesomeIcon icon={faChalkboard} />,
          props: {},
