@@ -2,14 +2,24 @@ const experience = {
   espanol: [
     {
       title: "DESARROLLADOR FRONTEND",
+      date: "Febrero 15",
+      institution: "Bitnovo",
+      description: [
+        "Hace poco me vincule a una empresa española cuya misión es difundir la filosofía de #Bitcoin y otros cientos de criptomonedas en todo el mundo. En la cual tengo el cargo de desarrollador frontend en Next JS.",
+      ],
+      ended: false,
+      techs: ["Next JS", "Material UI", "SWR", "Jira", "GitLab"],
+    },
+    {
+      title: "DESARROLLADOR FRONTEND",
       date: "Enero 7",
       institution: "Binary Groups",
       description: [
-        "Al iniciar mi instancia con el Instituto de Proyección Regional y Educación a Distancia (IPRED) comencé como desarrollador fullStack, empezando con la adaptación del software para la migración de la base de datos. Ademas se desarrollaron multiples vistas administrativas para el manejo de la información de los estudiantes y profesores.",
-        "Pasado el tiempo se me asigno la optimización del algoritmo de generación de horarios y la automatización del despliegue de los horarios.",
+        "Actualmente estoy vinculado con una empresa de software brasileña llamada Binary Groups en la cual tengo el cargo de Desarrollador Frontend con React JS.",
+        "Además participó activamente en el desarrollo de aplicaciones móviles con React Native.",
       ],
       ended: false,
-      techs: ["React JS", "Material UI"],
+      techs: ["React JS", "Material UI", "React Native", "React Native Paper"],
     },
     {
       title: "AUXILIAR ADMINISTRATIVO",
@@ -46,14 +56,24 @@ const experience = {
   english: [
     {
       title: "FRONTEND DEVELOPER",
+      date: "February 15",
+      institution: "Bitnovo",
+      description: [
+        "I recently joined a Spanish company whose mission is to spread the philosophy of #Bitcoin and hundreds of other cryptocurrencies around the world. In which I have the position of frontend developer in Next JS.",
+      ],
+      ended: false,
+      techs: ["Next JS", "Material UI", "SWR", "Jira", "GitLab"],
+    },
+    {
+      title: "FRONTEND DEVELOPER",
       date: "January 7",
       institution: "Binary Groups",
       description: [
-        "When I started my instance with the Institute for Regional Projection and Distance Education (IPRED) I started as a fullStack developer, starting with the adaptation of the software for the migration of the database. In addition, multiple administrative views were developed for the management of student and teacher information",
-        "After time, I was assigned the optimization of the timetable generation algorithm and the automation of the timetable deployment.",
+        "I am currently linked to a Brazilian software company called Binary Groups in which I am a Frontend Developer with React JS.",
+        "In addition, I actively participate in the development of mobile applications with React Native.",
       ],
       ended: false,
-      techs: ["React JS", "Material UI"],
+      techs: ["React JS", "Material UI", "React Native", "React Native Paper"],
     },
     {
       title: "ADMINISTRATIVE ASSISTANT",

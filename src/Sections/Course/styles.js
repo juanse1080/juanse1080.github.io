@@ -13,6 +13,9 @@ const useStyles = makeStyles(theme => ({
       fontSize: theme.spacing(2),
       cursor: "pointer",
    },
+   button: {
+      fontSize: theme.spacing(2),
+   },
    link: {
       textDecoration: "none",
       color: "inherit",

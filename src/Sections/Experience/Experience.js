@@ -17,76 +17,74 @@ import experiences from "const/experience";
 import useStyles from "./styles";
 
 const Experience = ({ theme, language, photo, ...other }) => {
-   const classes = useStyles({ theme });
+  const classes = useStyles({ theme });
 
-   return (
-      <>
-         <Timeline
+  return (
+    <>
+      <Timeline
+        classes={{
+          root: classes.root,
+        }}
+      >
+        {experiences[language].map((experience, index, _array) => (
+          <TimelineItem
+            key={`${experience.title} ${index}`}
             classes={{
-               root: classes.root,
+              missingOppositeContent: classes.missingOppositeContent,
             }}
-         >
-            {experiences[language].map((experience, index, _array) => (
-               <TimelineItem
-                  key={experience.title}
-                  classes={{
-                     missingOppositeContent: classes.missingOppositeContent,
-                  }}
-               >
-                  <TimelineSeparator>
-                     <TimelineDot
-                        color={experience.ended ? "secondary" : "grey"}
-                        className={classes.dot}
-                     />
-                     {index === _array.length - 1 ? null : (
-                        <TimelineConnector />
-                     )}
-                  </TimelineSeparator>
-                  <TimelineContent>
-                     <Typography
-                        className={classes.title}
-                        align="justify"
-                        color="inherit"
-                        variant="subtitle2"
-                     >
-                        {experience.title}
-                     </Typography>
-                     <Typography
-                        align="justify"
-                        color="inherit"
-                        paragraph
-                        variant="caption"
-                     >
-                        {experience.institution}
-                        {experience.date ? ` | ${experience.date}` : null}
-                     </Typography>
-                     {experience.description.map((description, key) => (
-                        <Typography
-                           key={key}
-                           align="justify"
-                           color="inherit"
-                           paragraph
-                           variant="body1"
-                        >
-                           {description}
-                        </Typography>
-                     ))}
-                     <div className="mb-3">
-                        {experience.techs.map(item => (
-                           <Chip
-                              key={item}
-                              label={item}
-                              color="secondary"
-                              className="m-1"
-                           />
-                        ))}
-                     </div>
-                  </TimelineContent>
-               </TimelineItem>
-            ))}
-         </Timeline>
-      </>
-   );
+          >
+            <TimelineSeparator>
+              <TimelineDot
+                color={experience.ended ? "secondary" : "grey"}
+                className={classes.dot}
+              />
+              {index === _array.length - 1 ? null : <TimelineConnector />}
+            </TimelineSeparator>
+            <TimelineContent>
+              <Typography
+                className={classes.title}
+                align="justify"
+                color="inherit"
+                variant="subtitle2"
+              >
+                {experience.title}
+              </Typography>
+              <Typography
+                align="justify"
+                color="inherit"
+                paragraph
+                variant="caption"
+              >
+                {experience.institution}
+                {experience.date ? ` | ${experience.date}` : null}
+              </Typography>
+              {experience.description.map((description, key) => (
+                <Typography
+                  key={key}
+                  align="justify"
+                  color="inherit"
+                  paragraph
+                  variant="body1"
+                >
+                  {description}
+                </Typography>
+              ))}
+              <div className="mb-3">
+                {experience.techs.map((item) => (
+                  <Chip
+                    key={item}
+                    label={item}
+                    color="secondary"
+                    className="m-1"
+                  />
+                ))}
+              </div>
+            </TimelineContent>
+          </TimelineItem>
+        ))}
+      </Timeline>
+    </>
+  );
 };
 
 export default Experience;

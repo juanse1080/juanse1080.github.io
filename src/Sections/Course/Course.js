@@ -18,86 +18,96 @@ import courses from "const/courses";
 import useStyles from "./styles";
 
 const Course = ({ theme, photo, language, ...other }) => {
-   const classes = useStyles({ theme });
+  const classes = useStyles({ theme });
 
-   const [tooltip, setTooltip] = useState(false);
-   
-   const handleTooltip = (newState = false) => () => {
-      if (newState !== tooltip) setTooltip(newState);
-   };
+  const [tooltip, setTooltip] = useState(false);
 
-   return (
-      <Timeline
-         classes={{
-            root: classes.root,
-         }}
-      >
-         {courses[language].map((study, index) => (
-            <TimelineItem
-               key={study.title}
-               classes={{
-                  missingOppositeContent: classes.missingOppositeContent,
-               }}
+  const handleTooltip = (newState = false) => () => {
+    if (newState !== tooltip) setTooltip(newState);
+  };
+
+  return (
+    <Timeline
+      classes={{
+        root: classes.root,
+      }}
+    >
+      {courses[language].map((study, index, _array) => (
+        <TimelineItem
+          key={study.title}
+          classes={{
+            missingOppositeContent: classes.missingOppositeContent,
+          }}
+        >
+          <TimelineSeparator>
+            <TimelineDot
+              color={study.ended ? "secondary" : "grey"}
+              className={classes.dot}
+              component="a"
             >
-               <TimelineSeparator>
-                  <TimelineDot
-                     color={study.ended ? "secondary" : "grey"}
-                     className={classes.dot}
-                     component="a"
+              {study.ended ? (
+                <Tooltip title="Descargue el certificado" placement="left">
+                  <a
+                    download="certify.pdf"
+                    href={study.certify}
+                    className={classes.link}
                   >
-                     <Tooltip title="Descargue el certificado" placement="left">
-                        <a
-                           download="certify.pdf"
-                           href={study.certify}
-                           className={classes.link}
-                        >
-                           <GetAppIcon
-                              color="inherit"
-                              className={classes.buttonDownload}
-                              fontSize="small"
-                           />
-                        </a>
-                     </Tooltip>
-                  </TimelineDot>
-                  {index === courses.length - 1 ? null : <TimelineConnector />}
-               </TimelineSeparator>
-               <TimelineContent
-                  onMouseOver={handleTooltip(index)}
-                  onMouseOut={handleTooltip(false)}
-               >
-                  <Typography
-                     className={classes.title}
-                     align="justify"
-                     color="inherit"
-                     variant="subtitle2"
-                  >
-                     {study.title}
-                  </Typography>
-                  <Typography
-                     align="justify"
-                     color="inherit"
-                     variant="caption"
-                     paragraph
-                  >
-                     {study.institution}
-                     {study.date ? ` | ${study.date}` : null}
-                  </Typography>
-                  {study.description.map((description, key) => (
-                     <Typography
-                        key={key}
-                        align="justify"
-                        color="inherit"
-                        paragraph
-                        variant="body1"
-                     >
-                        {description}
-                     </Typography>
-                  ))}
-               </TimelineContent>
-            </TimelineItem>
-         ))}
-      </Timeline>
-   );
+                    <GetAppIcon
+                      color="inherit"
+                      className={classes.buttonDownload}
+                      fontSize="small"
+                    />
+                  </a>
+                </Tooltip>
+              ) : (
+                <Tooltip title="El curso no esta finalizado" placement="left">
+                  <GetAppIcon
+                    color="inherit"
+                    className={classes.button}
+                    fontSize="small"
+                  />
+                </Tooltip>
+              )}
+            </TimelineDot>
+            {index === _array.length - 1 ? null : <TimelineConnector />}
+          </TimelineSeparator>
+          <TimelineContent
+            onMouseOver={handleTooltip(index)}
+            onMouseOut={handleTooltip(false)}
+          >
+            <Typography
+              className={classes.title}
+              align="justify"
+              color="inherit"
+              variant="subtitle2"
+            >
+              {study.title}
+            </Typography>
+            <Typography
+              align="justify"
+              color="inherit"
+              variant="caption"
+              paragraph
+            >
+              {study.institution}
+              {study.date ? ` | ${study.date}` : null}
+            </Typography>
+            {study.description.map((description, key) => (
+              <Typography
+                key={key}
+                align="justify"
+                color="inherit"
+                paragraph
+                variant="body1"
+              >
+                {description}
+              </Typography>
+            ))}
+          </TimelineContent>
+        </TimelineItem>
+      ))}
+    </Timeline>
+  );
 };
 
 export default Course;
