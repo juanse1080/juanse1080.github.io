@@ -2,24 +2,24 @@ const experience = {
   espanol: [
     {
       title: "DESARROLLADOR FRONTEND",
-      date: "Febrero 15",
-      institution: "Bitnovo",
-      description: [
-        "Hace poco me vincule a una empresa española cuya misión es difundir la filosofía de #Bitcoin y otros cientos de criptomonedas en todo el mundo. En la cual tengo el cargo de desarrollador frontend en Next JS.",
-      ],
-      ended: false,
-      techs: ["Next JS", "Material UI", "SWR", "Jira", "GitLab"],
-    },
-    {
-      title: "DESARROLLADOR FRONTEND",
-      date: "Enero 7",
+      date: "Enero 2021",
       institution: "Binary Groups",
       description: [
         "Actualmente estoy vinculado con una empresa de software brasileña llamada Binary Groups en la cual tengo el cargo de Desarrollador Frontend con React JS.",
         "Además participó activamente en el desarrollo de aplicaciones móviles con React Native.",
       ],
       ended: false,
-      techs: ["React JS", "Material UI", "React Native", "React Native Paper"],
+      techs: ["Next JS", "React JS", "Typescript", "Material UI", "GitLab", "React Native", "Native base"],
+    },
+    {
+      title: "DESARROLLADOR FRONTEND",
+      date: "Febrero 2021 - Junio 2021",
+      institution: "Bitnovo",
+      description: [
+        "Hace poco me vincule a una empresa española cuya misión es difundir la filosofía de #Bitcoin y otros cientos de criptomonedas en todo el mundo. En la cual tengo el cargo de desarrollador frontend en Next JS.",
+      ],
+      ended: true,
+      techs: ["Next JS", "React", "Typescript", "Material UI", "styled-component", "redux", "SWR", "Jira", "GitLab"],
     },
     {
       title: "AUXILIAR ADMINISTRATIVO",
@@ -54,26 +54,27 @@ const experience = {
     },
   ],
   english: [
+
     {
       title: "FRONTEND DEVELOPER",
-      date: "February 15",
-      institution: "Bitnovo",
-      description: [
-        "I recently joined a Spanish company whose mission is to spread the philosophy of #Bitcoin and hundreds of other cryptocurrencies around the world. In which I have the position of frontend developer in Next JS.",
-      ],
-      ended: false,
-      techs: ["Next JS", "Material UI", "SWR", "Jira", "GitLab"],
-    },
-    {
-      title: "FRONTEND DEVELOPER",
-      date: "January 7",
+      date: "January 2021",
       institution: "Binary Groups",
       description: [
         "I am currently linked to a Brazilian software company called Binary Groups in which I am a Frontend Developer with React JS.",
         "In addition, I actively participate in the development of mobile applications with React Native.",
       ],
       ended: false,
-      techs: ["React JS", "Material UI", "React Native", "React Native Paper"],
+      techs: ["Next JS", "React JS", "Typescript", "Material UI", "GitLab", "React Native", "Native base"],
+    },
+    {
+      title: "FRONTEND DEVELOPER",
+      date: "February 2021 - June 2021",
+      institution: "Bitnovo",
+      description: [
+        "I recently joined a Spanish company whose mission is to spread the philosophy of #Bitcoin and hundreds of other cryptocurrencies around the world. In which I have the position of frontend developer in Next JS.",
+      ],
+      ended: true,
+      techs: ["Next JS", "React", "Typescript", "Material UI", "styled-component", "redux", "SWR", "Jira", "GitLab"],
     },
     {
       title: "ADMINISTRATIVE ASSISTANT",

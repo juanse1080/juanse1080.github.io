@@ -23,7 +23,7 @@ const Tech = ({ theme, page, ...other }) => {
             spacing={3}
          >
             {tools.map(({ name, icon, props, ...others }, index) => (
-               <Grid key={name} item lg={4} md={4} sm={5} xs={6}>
+               <Grid key={name} item lg={3} md={4} sm={5} xs={6}>
                   <a {...others} className={classes.contentIcon}>
                      <img
                         {...props}

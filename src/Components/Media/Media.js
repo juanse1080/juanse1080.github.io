@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 import { Card, CardMedia, Dialog, Paper } from "@material-ui/core";
 
 // Import Font Awesome Icons components
@@ -9,31 +11,28 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import clsx from "clsx";
-import React, { useState } from "react";
+
 import ReactPlayer from "react-player";
+
+// Import custom hooks
+import useBoolean from "hooks/useBoolean";
+
 // import styles
 import useStyles from "./styles";
 
 export default function Media({ type, values, ...others }) {
    const classes = useStyles();
    const [index, setIndex] = useState(0);
-   const [image, setImage] = useState(false);
+   const [open, onOpen, onClose] = useBoolean();
 
    const changeMedia = index => () => {
       setIndex(index);
    };
 
-   const handleCloseView = () => {
-      setImage(false);
-   };
-   const handleShowView = () => {
-      setImage(true);
-   };
-
    return (
       <div {...others}>
          {values[0].type === "image" ? (
-            <Card className={classes.group} onClick={handleShowView}>
+            <Card className={classes.group} onClick={onOpen}>
                <FontAwesomeIcon icon={faClone} className={classes.icon} />
                <div className={clsx(classes.backgroundDark, "background")} />
                <CardMedia
@@ -59,8 +58,8 @@ export default function Media({ type, values, ...others }) {
             fullWidth
             maxWidth="lg"
             scroll="body"
-            onClose={handleCloseView}
-            open={image}
+            onClose={onClose}
+            open={open}
             PaperProps={{
                elevation: 0,
                style: { backgroundColor: "transparent" },

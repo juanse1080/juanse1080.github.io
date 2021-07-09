@@ -44,7 +44,7 @@ export default function Landing(props) {
 
    const scrollbar = useRef();
    const [page, setPage] = useState("home");
-   const [language, setLanguage] = useState("english");
+   const [language, setLanguage] = useState("espanol");
 
    const [state, setState] = useState({
       subject: "",

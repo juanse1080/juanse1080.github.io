@@ -5,20 +5,23 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Tooltip from "@material-ui/core/Tooltip";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import Typography from "@material-ui/core/Typography";
 import Zoom from "@material-ui/core/Zoom";
 import CloseIcon from "@material-ui/icons/Close";
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import HomeIcon from "@material-ui/icons/Home";
 import MenuIcon from "@material-ui/icons/Menu";
 import TranslateIcon from "@material-ui/icons/Translate";
 import clsx from "clsx";
-import React, { useMemo, useState } from "react";
+import React, { useEffect } from "react";
 // import styles
 import useStyles from "./styles";
 
 // Import local const
 import text from "const/header";
+
+// Import custom hooks
+import useBoolean from "hooks/useBoolean";
+import useMenu from "hooks/useMenu";
 
 export default function Header({
    page,
@@ -28,42 +31,25 @@ export default function Header({
    isMobile,
    sections,
    onChangePage,
-   ...other
 }) {
    const classes = useStyles({ home: page === "home" });
 
-   const [open, setOpen] = useState(false);
-   const [menu, setMenu] = useState(false);
+   const [open, onOpen, onClose] = useBoolean()
+   const [menu, openMenu, closeMenu] = useMenu();
 
    const scrollTo = key => () => {
       onChangePage(key)();
-      setOpen(false);
-   };
-
-   const handleOpen = newState => () => {
-      if (newState !== open) setOpen(_open => (newState ? newState : !_open));
-   };
-
-   const handleMenuLanguage = newState => () => {
-      if (newState !== menu) setMenu(_open => (newState ? newState : !_open));
-   };
-
-   const handleMenu = event => {
-      setMenu(event.currentTarget);
-   };
-
-   const menuClose = () => {
-      setMenu(null);
+      onClose();
    };
 
    const handleLanguage = language => () => {
       setLanguage(language);
-      menuClose();
+      closeMenu();
    };
 
-   useMemo(() => {
-      if (page === "home" && open) setOpen(false);
-   }, [page]);
+   useEffect(() => {
+      if (page === "home" && open) onClose();
+   }, [page, open, onClose]);
 
    return (
       <>
@@ -72,7 +58,7 @@ export default function Header({
                <div role="presentation" className={classes.buttonBar}>
                   <Zoom in={page !== "home"}>
                      <Fab
-                        onClick={handleOpen()}
+                        onClick={open ? onClose : onOpen}
                         color="secondary"
                         size="small"
                         aria-label="scroll back to top"
@@ -117,9 +103,8 @@ export default function Header({
                               open={page !== "home" && open}
                               TransitionProps={{
                                  style: {
-                                    transitionDelay: `${
-                                       100 + 50 * (index + 1)
-                                    }ms`,
+                                    transitionDelay: `${100 + 50 * (index + 1)
+                                       }ms`,
                                  },
                               }}
                               title={title}
@@ -171,7 +156,7 @@ export default function Header({
                   ))}
                   <Zoom in={page !== "home"}>
                      <Fab
-                        onClick={handleMenuLanguage()}
+                        onClick={menu ? closeMenu : openMenu}
                         color="secondary"
                         size="small"
                         aria-label="scroll back to top"
@@ -185,27 +170,6 @@ export default function Header({
             <div style={{ height: 64 }}>
                <Paper className={classes.appBar} variant="outlined" square>
                   <Toolbar>
-                     <Button color="inherit" onClick={handleMenu}>
-                        {lang[language].title}
-                     </Button>
-                     <Menu
-                        anchorEl={menu}
-                        anchorOrigin={{ vertical: "top", horizontal: "right" }}
-                        keepMounted
-                        transformOrigin={{
-                           vertical: "top",
-                           horizontal: "right",
-                        }}
-                        open={Boolean(menu)}
-                        onClose={menuClose}
-                     >
-                        {Object.values(lang).map(({ key, title, icon }) => (
-                           <MenuItem key={key} onClick={handleLanguage(key)}>
-                              <ListItemIcon>{icon}</ListItemIcon>
-                              <Typography variant="inherit">{title}</Typography>
-                           </MenuItem>
-                        ))}
-                     </Menu>
                      <div className={classes.floatRight} />
                      <Button
                         color="inherit"
@@ -221,7 +185,7 @@ export default function Header({
                            <Button
                               key={section_name}
                               color="inherit"
-                              className={clsx("ml-3", {
+                              className={clsx("mr-3", {
                                  [classes.activeButton]: page === section_name,
                               })}
                               onClick={onChangePage(section_name)}
@@ -230,6 +194,27 @@ export default function Header({
                            </Button>
                         )
                      )}
+                     |
+                     <Button color="inherit" onClick={openMenu} className="ml-3" endIcon={<ArrowDropDownIcon />}>
+                        {lang[language].title}
+                     </Button>
+                     <Menu
+                        anchorEl={menu}
+                        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+                        keepMounted
+                        transformOrigin={{
+                           vertical: "top",
+                           horizontal: "right",
+                        }}
+                        open={Boolean(menu)}
+                        onClose={closeMenu}
+                     >
+                        {Object.values(lang).map(({ key, title }) => (
+                           <MenuItem key={key} onClick={handleLanguage(key)} selected={key === language}>
+                              {title}
+                           </MenuItem>
+                        ))}
+                     </Menu>
                   </Toolbar>
                </Paper>
             </div>

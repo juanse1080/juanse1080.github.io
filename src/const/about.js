@@ -16,7 +16,7 @@ const footer = {
          "On my own, I have participated in the development of multiple web development projects during the course of my professional career.",
       ],
       contact: "Contact",
-      cv: "docs/CV/JuanMarconEnglishCV.pdf",
+      cv: "docs/CV/JuanMarconCV.pdf",
       buttons: ["Download CV"],
    },
 };

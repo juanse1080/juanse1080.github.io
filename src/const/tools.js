@@ -1,7 +1,9 @@
 const react = "img/Tech/react.svg";
+const next = "img/Tech/next.svg";
 const bootstrap = "img/Tech/bootstrap.svg";
 const material = "img/Tech/material.svg";
 const node = "img/Tech/node.svg";
+const typescript = "img/Tech/typescript.svg";
 const django = "img/Tech/django.svg";
 const laravel = "img/Tech/laravel.svg";
 const git = "img/Tech/git.svg";
@@ -9,6 +11,18 @@ const trello = "img/Tech/trello.svg";
 const asana = "img/Tech/asana.svg";
 
 const tools = [
+   {
+      name: "Next JS",
+      icon: next,
+      props: {
+         style: {
+            width: "80%",
+         },
+      },
+      target: "_blank",
+      href: "https://nextjs.org",
+      rel: "noreferrer",
+   },
    {
       name: "React JS",
       icon: react,
@@ -54,7 +68,19 @@ const tools = [
          },
       },
       target: "_blank",
-      href: "https://nodejs.org/",
+      href: "https://nodejs.org",
+      rel: "noreferrer",
+   },
+   {
+      name: "Typescript",
+      icon: typescript,
+      props: {
+         style: {
+            width: "60%",
+         },
+      },
+      target: "_blank",
+      href: "https://www.typescriptlang.org",
       rel: "noreferrer",
    },
    {
