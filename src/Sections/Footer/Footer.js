@@ -14,7 +14,7 @@ import Button from "@material-ui/core/Button";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 
 // Import local components
-import Social from "Components/Social";
+import Social from "components/Social";
 
 // Import local const
 import text from "const/footer";

@@ -3,7 +3,6 @@ import React from "react";
 // Import Material UI components
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
-import Typography from "@material-ui/core/Typography";
 
 // Import local const
 import tools from "const/tools";

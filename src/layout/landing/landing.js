@@ -1,27 +1,22 @@
 import React, { useRef, useState } from "react";
 
-// Import Material UI components
 import { useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
-// Import local components
-import Section from "Components/Section";
+import Section from "components/Section";
 
-// Import local const
 import { sections } from "const/sections";
 
-// Import other modules
 import { Scrollbars } from "react-custom-scrollbars";
 import ReactCountryFlag from "react-country-flag";
 
-// Import local sections
 import Header from "Sections/Header";
 import Home from "Sections/Home";
 import Footer from "Sections/Footer";
 import Project from "Sections/Project";
 
 // import styles
-import useStyles from "./styles";
+import useStyles from "./Landing.styles";
 
 const lang = {
    espanol: {
@@ -36,7 +31,7 @@ const lang = {
    },
 };
 
-export default function Landing(props) {
+export default function Landing() {
    const classes = useStyles();
 
    const themeProvider = useTheme();

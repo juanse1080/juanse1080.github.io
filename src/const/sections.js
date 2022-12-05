@@ -5,7 +5,7 @@ import Education from "Sections/Education";
 import Course from "Sections/Course";
 import Experience from "Sections/Experience";
 import Tech from "Sections/Tech";
-import Legend from "Components/Legend";
+import Legend from "components/Legend";
 
 import Face from "@material-ui/icons/Face";
 import Work from "@material-ui/icons/Work";

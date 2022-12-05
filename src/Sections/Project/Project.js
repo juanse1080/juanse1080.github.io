@@ -16,7 +16,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 // Import local components
-import Media from "Components/Media";
+import Media from "components/Media";
 
 // Import local const
 import images from "const/images";

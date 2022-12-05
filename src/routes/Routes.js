@@ -1,10 +1,8 @@
 import React from "react";
 
-// Import other modules
 import { Switch } from "react-router-dom";
 
-// Import local components
-import Landing from "layout/landing/landing";
+import { Landing } from "layout";
 
 const Routes = () => {
    return (

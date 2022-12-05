@@ -11,7 +11,7 @@ import Link from "@material-ui/core/Link";
 import GetAppIcon from "@material-ui/icons/GetApp";
 
 // Import local components
-import Image from "Components/Image";
+import Image from "components/Image";
 
 // import styles
 import useStyles from "./styles";

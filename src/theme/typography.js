@@ -51,7 +51,7 @@ const custom = {
    },
    subtitle2: {
       color: palette.text.secondary,
-      fontWeight: 600,
+      fontWeight: 400,
       fontSize: "1.2em",
       letterSpacing: "-0.05px",
       lineHeight: "21px",
