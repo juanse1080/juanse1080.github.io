@@ -6,11 +6,13 @@ import socials from "const/socials";
 // import styles
 import useStyles from "./styles";
 
-export default function Social({ theme, mailAction, ...others }) {
+export default function Social({ theme, hiddenEmail, mailAction, ...others }) {
    const classes = useStyles({ theme });
+   const items = hiddenEmail ? socials({ mailAction }).filter(({ name }) => name !== "Gmail" ) : socials({ mailAction })
+   
    return (
       <div {...others}>
-         {socials({ mailAction }).map(
+         {items.map(
             ({
                icon: Icon,
                children: { component: Component = null, ...propsChildren },

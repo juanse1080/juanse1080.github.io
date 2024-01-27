@@ -10,7 +10,7 @@ const theme = createMuiTheme({
    overrides,
    spacing: factor => `${0.5 * factor}rem`,
    shape: {
-      borderRadius: 4,
+      borderRadius: 16,
       viewHeight: '100vh',
       viewWidth: '100vw',
    },

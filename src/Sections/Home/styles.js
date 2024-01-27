@@ -81,6 +81,9 @@ const useStyles = makeStyles(theme => ({
          padding: theme.spacing(1),
       },
    },
+   title: {
+      marginBottom: theme.spacing(5)
+   }
 }));
 
 export default useStyles;

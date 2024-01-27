@@ -84,6 +84,7 @@ const About = ({ theme, language, state, photo, toPage, ...other }) => {
                         download="JuanMarconCV.pdf"
                         variant="contained"
                         color="secondary"
+                        size="large"
                         startIcon={<GetAppIcon />}
                      >
                         {text[language].buttons[0]}

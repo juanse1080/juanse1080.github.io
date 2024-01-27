@@ -245,6 +245,7 @@ const Project = ({ id, language, page, scrollTo, ...other }) => {
                                  <Chip
                                     key={item}
                                     label={item}
+                                    variant="outlined"
                                     color="secondary"
                                     className="m-1"
                                  />

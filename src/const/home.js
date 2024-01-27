@@ -2,14 +2,14 @@ const home = {
    espanol: {
       title: "Juan Marcon.",
       description:
-         "Soy un desarrollador full-stack apasionado por la tecnología y la innovación con mas de 4 años de experiencia en diferentes tecnologías web. He tenido la oportunidad de participar en múltiples proyectos y compañías lo cual ha contribuido a mi desarrollo como profesional.",
-      buttons: ["Empecemos", "Contacto", "Siguiente sección"],
+         "Soy desarrollador full-stack apasionado por tecnología e innovación con más de 5 años de experiencia. He participado en diversos proyectos y compañías, lo que ha contribuido a mi desarrollo profesional. Mi enfoque proactivo y adaptabilidad a nuevas tecnologías me ha permitido aportar soluciones innovadoras y contribuir al éxito de los proyectos.",
+      buttons: ["Ver más", "Contacto", "Siguiente sección"],
    },
    english: {
       title: "Juan Marcon.",
       description:
-         "I am a full-stack developer passionate about technology and innovation with more than 4 years of experience in different web technologies. I have had the opportunity to participate in multiple projects and companies which has contributed to my development as a professional.",
-      buttons: ["Begin", "Contact", "Next section"],
+         "I am a full-stack developer passionate about technology and innovation with more than 5 years of experience. I have participated in several projects and companies, which has contributed to my professional development. My proactive approach and adaptability to new technologies has allowed me to bring innovative solutions and contribute to the success of projects.",
+      buttons: ["Show more", "Contact", "Next section"],
    },
 };
 

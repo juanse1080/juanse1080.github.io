@@ -74,6 +74,7 @@ const Experience = ({ theme, language, photo, ...other }) => {
                   <Chip
                     key={item}
                     label={item}
+                    variant="outlined"
                     color="secondary"
                     className="m-1"
                   />

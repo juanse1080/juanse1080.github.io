@@ -5,6 +5,15 @@ const python = "docs/Udemy/python.pdf";
 const courses = {
   espanol: [
     {
+      title: "Curso de AWS Certified Developer Associate DVA-C02",
+      date: null,
+      institution: "Udemy",
+      description: [
+        "Este curso tiene por objectivo prepararte para el examente de certificación 'Developer Associate DVA-C02' de AWS",
+      ],
+      ended: false,
+    },
+    {
       title: "React: De cero a experto ( Hooks y MERN )",
       date: null,
       institution: "Udemy",
@@ -12,7 +21,7 @@ const courses = {
         "Este curso tiene por objetivo llevarte de cero conocimiento de React hasta un nivel competitivo en el ambiente laboral de hoy en día. Este curso está construido 100% en Hooks y functional components.",
         "También cuenta con secciones sobre pruebas unitarias y de integración en cada aplicación que hacemos en el curso, esto incluye pruebas en componentes, hooks, customHooks, context, Redux, Fetch, mocks, spies, snapshots y mucho más relacionado al unit test.",
       ],
-      ended: false,
+      ended: true,
     },
     {
       title: "React JS + Redux + ES6. Completo ¡De 0 a experto!",
@@ -48,6 +57,15 @@ const courses = {
     },
   ],
   english: [
+    {
+      title: "Curso de AWS Certified Developer Associate DVA-C02",
+      date: null,
+      institution: "Udemy",
+      description: [
+        "This course is designed to prepare you for the AWS Developer Associate DVA-C02 certification exam.",
+      ],
+      ended: false,
+    },
     {
       title: "React: De cero a experto ( Hooks y MERN )",
       date: null,

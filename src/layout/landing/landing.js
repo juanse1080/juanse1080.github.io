@@ -48,7 +48,7 @@ export default function Landing() {
 
    const keys = Object.keys(sections[language]);
 
-   const offset = smDown ? -2 : 62;
+   const offset = smDown ? -2 : -2;
 
    const handleState = e => {
       const { name, value } = e.target;
@@ -101,16 +101,6 @@ export default function Landing() {
                   nextPage={scrollTo(keys[0])}
                   page={page}
                   state={state}
-               />
-
-               <Header
-                  language={language}
-                  lang={lang}
-                  setLanguage={setLanguage}
-                  onChangePage={scrollTo}
-                  page={page}
-                  sections={sections[language]}
-                  isMobile={smDown}
                />
 
                {Object.values(sections[language]).map(
