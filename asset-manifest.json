@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.942bb553.css",
-    "main.js": "/static/js/main.5a1bfbbd.js",
+    "main.css": "/static/css/main.d953b381.css",
+    "main.js": "/static/js/main.17e640c0.js",
     "reactPlayerYouTube.js": "/static/js/reactPlayerYouTube.d7b1de22.chunk.js",
     "reactPlayerSoundCloud.js": "/static/js/reactPlayerSoundCloud.98dcf83f.chunk.js",
     "reactPlayerVimeo.js": "/static/js/reactPlayerVimeo.cab00bed.chunk.js",
@@ -15,10 +15,9 @@
     "reactPlayerKaltura.js": "/static/js/reactPlayerKaltura.62ea77cc.chunk.js",
     "reactPlayerFilePlayer.js": "/static/js/reactPlayerFilePlayer.45a9563d.chunk.js",
     "reactPlayerPreview.js": "/static/js/reactPlayerPreview.a3a9f66f.chunk.js",
-    "static/js/377.89aaae74.chunk.js": "/static/js/377.89aaae74.chunk.js",
     "index.html": "/index.html",
-    "main.942bb553.css.map": "/static/css/main.942bb553.css.map",
-    "main.5a1bfbbd.js.map": "/static/js/main.5a1bfbbd.js.map",
+    "main.d953b381.css.map": "/static/css/main.d953b381.css.map",
+    "main.17e640c0.js.map": "/static/js/main.17e640c0.js.map",
     "reactPlayerYouTube.d7b1de22.chunk.js.map": "/static/js/reactPlayerYouTube.d7b1de22.chunk.js.map",
     "reactPlayerSoundCloud.98dcf83f.chunk.js.map": "/static/js/reactPlayerSoundCloud.98dcf83f.chunk.js.map",
     "reactPlayerVimeo.cab00bed.chunk.js.map": "/static/js/reactPlayerVimeo.cab00bed.chunk.js.map",
@@ -31,11 +30,10 @@
     "reactPlayerVidyard.43642f3e.chunk.js.map": "/static/js/reactPlayerVidyard.43642f3e.chunk.js.map",
     "reactPlayerKaltura.62ea77cc.chunk.js.map": "/static/js/reactPlayerKaltura.62ea77cc.chunk.js.map",
     "reactPlayerFilePlayer.45a9563d.chunk.js.map": "/static/js/reactPlayerFilePlayer.45a9563d.chunk.js.map",
-    "reactPlayerPreview.a3a9f66f.chunk.js.map": "/static/js/reactPlayerPreview.a3a9f66f.chunk.js.map",
-    "377.89aaae74.chunk.js.map": "/static/js/377.89aaae74.chunk.js.map"
+    "reactPlayerPreview.a3a9f66f.chunk.js.map": "/static/js/reactPlayerPreview.a3a9f66f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.942bb553.css",
-    "static/js/main.5a1bfbbd.js"
+    "static/css/main.d953b381.css",
+    "static/js/main.17e640c0.js"
   ]
 }
