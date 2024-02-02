@@ -9,8 +9,7 @@ import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
 import IconButton from "@material-ui/core/IconButton";
 import Slide from "@material-ui/core/Slide";
-
-import Visibility from "@material-ui/icons/Visibility";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // Import others libs
 import { isMobile } from "react-device-detect";
@@ -20,6 +19,7 @@ import useStyles from "./styles";
 
 // Import local const
 import images from "const/images";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 
 const Portfolio = ({ theme, toPage, language, ...other }) => {
    const classes = useStyles();
@@ -46,44 +46,44 @@ const Portfolio = ({ theme, toPage, language, ...other }) => {
    };
 
    return (
-      <>
-         <div className={classes.root}>
-            <GridList
-               cellHeight={300}
-               spacing={0}
-               className={classes.gridList}
-               cols={getColumns()}
-            >
-               {images[language].map(({ key: _key, img: _img, title: _title }) => (
-                  <GridListTile
-                     key={_key}
-                     onMouseEnter={isMobile ? null : handleOver(_key)}
-                     onMouseLeave={isMobile ? null : handleOver()}
-                     onMouseOver={isMobile ? null : handleOver(_key)}
-                  >
-                     <img src={_img} alt={_title} />
-                     <Slide direction="down" in={isMobile || _key === over}>
-                        <GridListTileBar
-                           title={_title}
-                           titlePosition="top"
-                           actionIcon={
-                              <IconButton
-                                 aria-label={`eye ${_title}`}
-                                 className={classes.icon}
-                                 onClick={toPage(_key)}
-                              >
-                                 <Visibility />
-                              </IconButton>
-                           }
-                           actionPosition="left"
-                           className={classes.titleBar}
-                        />
-                     </Slide>
-                  </GridListTile>
-               ))}
-            </GridList>
-         </div>
-      </>
+      <div className={classes.root}>
+         <GridList
+            cellHeight={300}
+            spacing={0}
+            className={classes.gridList}
+            cols={getColumns()}
+         >
+            {images[language].map(({ key: _key, img: _img, title: _title }) => (
+               <GridListTile
+                  key={_key}
+                  onMouseEnter={isMobile ? null : handleOver(_key)}
+                  onMouseLeave={isMobile ? null : handleOver()}
+                  onMouseOver={isMobile ? null : handleOver(_key)}
+               >
+                  <img src={_img} alt={_title} />
+                  <Slide direction="down" in={isMobile || _key === over}>
+                     <GridListTileBar
+                        title={_title}
+                        titlePosition="top"
+                        actionIcon={
+                           <IconButton
+                              aria-label={`eye ${_title}`}
+                              className={classes.icon}
+                              onClick={toPage(_key)}
+                           >
+                              
+                              
+                              <FontAwesomeIcon icon={faLink} size="xs" />
+                           </IconButton>
+                        }
+                        actionPosition="left"
+                        className={classes.titleBar}
+                     />
+                  </Slide>
+               </GridListTile>
+            ))}
+         </GridList>
+      </div>
    );
 };
 

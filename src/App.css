@@ -75,18 +75,4 @@ video {
    vertical-align: baseline;
    background: transparent;
    font-family: "Poppins", sans-serif !important;
-   /* font-family: "Raleway", sans-serif !important; */
 }
-
-*::-webkit-scrollbar {
-   background: transparent;
-}
-
-/* .custom-scrollbars > div:last-child {
-   opacity: 0;
-   transition: opacity 200ms ease;
-}
-
-.custom-scrollbars:hover > div:last-child {
-   opacity: 1;
-} */

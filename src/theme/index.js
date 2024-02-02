@@ -3,9 +3,11 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import palette from "./palette";
 import typography from "./typography";
 import overrides from "./overrides";
+import props from "./props";
 
 const theme = createMuiTheme({
    palette,
+   props,
    typography,
    overrides,
    spacing: factor => `${0.5 * factor}rem`,

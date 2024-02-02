@@ -11,6 +11,7 @@ import Typography from "@material-ui/core/Typography";
 import Tooltip from "@material-ui/core/Tooltip";
 import GetAppIcon from "@material-ui/icons/GetApp";
 
+
 // Import local const
 import courses from "const/courses";
 
@@ -60,13 +61,7 @@ const Course = ({ theme, photo, language, ...other }) => {
                   </a>
                 </Tooltip>
               ) : (
-                <Tooltip title="El curso no esta finalizado" placement="left">
-                  <GetAppIcon
-                    color="inherit"
-                    className={classes.button}
-                    fontSize="small"
-                  />
-                </Tooltip>
+                <div className={classes.link} />
               )}
             </TimelineDot>
             {index === _array.length - 1 ? null : <TimelineConnector />}

@@ -8,28 +8,13 @@ import Section from "components/Section";
 import { sections } from "const/sections";
 
 import { Scrollbars } from "react-custom-scrollbars";
-import ReactCountryFlag from "react-country-flag";
 
-import Header from "Sections/Header";
 import Home from "Sections/Home";
 import Footer from "Sections/Footer";
 import Project from "Sections/Project";
 
 // import styles
 import useStyles from "./Landing.styles";
-
-const lang = {
-   espanol: {
-      title: "Español",
-      key: "espanol",
-      icon: <ReactCountryFlag countryCode="ES" />,
-   },
-   english: {
-      title: "English",
-      key: "english",
-      icon: <ReactCountryFlag countryCode="US" />,
-   },
-};
 
 export default function Landing() {
    const classes = useStyles();
@@ -39,7 +24,7 @@ export default function Landing() {
 
    const scrollbar = useRef();
    const [page, setPage] = useState("home");
-   const [language, setLanguage] = useState("espanol");
+   const [language] = useState("espanol");
 
    const [state, setState] = useState({
       subject: "",

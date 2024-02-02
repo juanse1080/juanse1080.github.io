@@ -43,7 +43,6 @@ const useStyles = makeStyles(theme => ({
       width: theme.spacing(3),
       height: theme.spacing(3),
       cursor: "pointer",
-      padding: theme.spacing(0, 1),
    },
    media: {
       paddingTop: "56.25%",

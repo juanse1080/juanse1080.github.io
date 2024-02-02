@@ -3,15 +3,10 @@ import React from "react";
 // Import Material UI components
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
-import Fab from "@material-ui/core/Fab";
-import Zoom from "@material-ui/core/Zoom";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
-import Tooltip from "@material-ui/core/Tooltip";
 import Button from "@material-ui/core/Button";
 import Hidden from "@material-ui/core/Hidden";
-
-import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
 // Import local components
 import ParticlesBackground from "components/ParticlesBackground";

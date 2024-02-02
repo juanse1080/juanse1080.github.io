@@ -5,7 +5,7 @@ import { Card, CardMedia, Dialog, Paper } from "@material-ui/core";
 // Import Font Awesome Icons components
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-   faClone,
+   faExpand,
    faAngleLeft,
    faAngleRight,
 } from "@fortawesome/free-solid-svg-icons";
@@ -33,7 +33,7 @@ export default function Media({ type, values, ...others }) {
       <div {...others}>
          {values[0].type === "image" ? (
             <Card className={classes.group} onClick={onOpen}>
-               <FontAwesomeIcon icon={faClone} className={classes.icon} />
+               <FontAwesomeIcon icon={faExpand} className={classes.icon} />
                <div className={clsx(classes.backgroundDark, "background")} />
                <CardMedia
                   className={classes.media}
@@ -67,7 +67,7 @@ export default function Media({ type, values, ...others }) {
          >
             {index === 0 ? null : (
                <Paper
-                  elevation={3}
+                  variant="outlined"
                   className={classes.setMedia}
                   style={{
                      left: 10,
@@ -101,7 +101,7 @@ export default function Media({ type, values, ...others }) {
 
             {index === values.length - 1 ? null : (
                <Paper
-                  elevation={3}
+                  variant="outlined"
                   className={classes.setMedia}
                   style={{
                      right: 10,

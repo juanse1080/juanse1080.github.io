@@ -25,65 +25,63 @@ const Education = ({ theme, photo, language, ...other }) => {
    };
 
    return (
-      <>
-         <Timeline
-            classes={{
-               root: classes.root,
-            }}
-         >
-            {studies[language].map((study, index) => (
-               <TimelineItem
-                  key={study.title}
-                  classes={{
-                     missingOppositeContent: classes.missingOppositeContent,
-                  }}
+      <Timeline
+         classes={{
+            root: classes.root,
+         }}
+      >
+         {studies[language].map((study, index) => (
+            <TimelineItem
+               key={study.title}
+               classes={{
+                  missingOppositeContent: classes.missingOppositeContent,
+               }}
+            >
+               <TimelineSeparator>
+                  <TimelineDot
+                     color={study.ended ? "secondary" : "grey"}
+                     className={classes.dot}
+                  />
+                  {index === studies[language].length - 1 ? null : (
+                     <TimelineConnector />
+                  )}
+               </TimelineSeparator>
+               <TimelineContent
+                  onMouseOver={handleTooltip(index)}
+                  onMouseOut={handleTooltip(false)}
                >
-                  <TimelineSeparator>
-                     <TimelineDot
-                        color={study.ended ? "secondary" : "grey"}
-                        className={classes.dot}
-                     />
-                     {index === studies[language].length - 1 ? null : (
-                        <TimelineConnector />
-                     )}
-                  </TimelineSeparator>
-                  <TimelineContent
-                     onMouseOver={handleTooltip(index)}
-                     onMouseOut={handleTooltip(false)}
+                  <Typography
+                     className={classes.title}
+                     align="justify"
+                     color="inherit"
+                     variant="subtitle2"
                   >
+                     {study.title}
+                  </Typography>
+                  <Typography
+                     align="justify"
+                     color="inherit"
+                     paragraph
+                     variant="caption"
+                  >
+                     {study.institution}
+                     {study.date ? ` | ${study.date}` : null}
+                  </Typography>
+                  {study.description.map((description, key) => (
                      <Typography
-                        className={classes.title}
-                        align="justify"
-                        color="inherit"
-                        variant="subtitle2"
-                     >
-                        {study.title}
-                     </Typography>
-                     <Typography
+                        key={key}
                         align="justify"
                         color="inherit"
                         paragraph
-                        variant="caption"
+                        variant="body1"
                      >
-                        {study.institution}
-                        {study.date ? ` | ${study.date}` : null}
+                        {description}
                      </Typography>
-                     {study.description.map((description, key) => (
-                        <Typography
-                           key={key}
-                           align="justify"
-                           color="inherit"
-                           paragraph
-                           variant="body1"
-                        >
-                           {description}
-                        </Typography>
-                     ))}
-                  </TimelineContent>
-               </TimelineItem>
-            ))}
-         </Timeline>
-      </>
+                  ))}
+               </TimelineContent>
+            </TimelineItem>
+         ))}
+      </Timeline>
    );
 };
 
