@@ -14,7 +14,7 @@ import Chip from "@material-ui/core/Chip";
 import experiences from "const/experience";
 
 // import styles
-import useStyles from "./styles";
+import useStyles from "./Experience.styles";
 
 const Experience = ({ theme, language, photo, ...other }) => {
   const classes = useStyles({ theme });

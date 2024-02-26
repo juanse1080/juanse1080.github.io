@@ -11,21 +11,22 @@ import Typography from "@material-ui/core/Typography";
 import Tooltip from "@material-ui/core/Tooltip";
 import GetAppIcon from "@material-ui/icons/GetApp";
 
-
 // Import local const
 import courses from "const/courses";
 
 // import styles
-import useStyles from "./styles";
+import useStyles from "./Course.styles";
 
 const Course = ({ theme, photo, language, ...other }) => {
   const classes = useStyles({ theme });
 
   const [tooltip, setTooltip] = useState(false);
 
-  const handleTooltip = (newState = false) => () => {
-    if (newState !== tooltip) setTooltip(newState);
-  };
+  const handleTooltip =
+    (newState = false) =>
+    () => {
+      if (newState !== tooltip) setTooltip(newState);
+    };
 
   return (
     <Timeline

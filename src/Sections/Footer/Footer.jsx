@@ -15,7 +15,7 @@ import Social from "components/Social";
 import text from "const/footer";
 
 // import styles
-import useStyles from "./styles";
+import useStyles from "./Footer.styles";
 
 const Footer = (
   { hidden, language, toPage, theme, state, handleState, ...other },
@@ -27,7 +27,7 @@ const Footer = (
     <div {...other} className={classes.root}>
       <div className={classes.paddings}>
         <Container>
-          <Grid container spacing={3} justify="center">
+          <Grid container spacing={3} justifyContent="center">
             <Grid item lg={6} md={7} sm={12}>
               <div className={classes.header}>
                 <Typography
@@ -55,7 +55,7 @@ const Footer = (
                   label={text[language].inputs[1]}
                   variant="outlined"
                   multiline
-                  rows={6}
+                  minRows={6}
                   size="small"
                   className="mt-3"
                   name="body"

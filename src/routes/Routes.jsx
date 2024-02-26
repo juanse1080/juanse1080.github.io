@@ -2,14 +2,14 @@ import React from "react";
 
 import { Switch } from "react-router-dom";
 
-import { Landing } from "layout";
+import { RootLayout } from "layout";
 
 const Routes = () => {
-   return (
-      <Switch>
-         <Landing />
-      </Switch>
-   );
+  return (
+    <Switch>
+      <RootLayout />
+    </Switch>
+  );
 };
 
 export default Routes;
