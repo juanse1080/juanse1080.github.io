@@ -6,7 +6,7 @@ const footer = {
       "Considero que cuento con una excelente curva de aprendizaje, permitiendome aprender distintas tecnologias durante el desarrollo del proyecto.",
     ],
     contact: "Contacto",
-    cv: "docs/CV/JuanMarconCV.pdf",
+    cv: "docs/CV/JuanMarcon.pdf",
     buttons: ["Descargar CV"],
   },
   english: {
@@ -16,7 +16,7 @@ const footer = {
       "I consider that I have an excellent learning curve, allowing me to learn different technologies during the development of the project.",
     ],
     contact: "Contact",
-    cv: "docs/CV/JuanMarconCV.pdf",
+    cv: "docs/CV/JuanMarcon.pdf",
     buttons: ["Download CV"],
   },
 };

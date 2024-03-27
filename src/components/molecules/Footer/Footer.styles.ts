@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 // Import local const
 
 const useStyles = makeStyles((theme) => ({
-  root: (props) => ({
+  root: () => ({
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.primary.contrastText,
     position: "relative",
@@ -26,12 +26,12 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(1),
     },
   },
-  title: (props) => ({
+  title: () => ({
     paddingBottom: theme.spacing(1),
     display: "inline-block",
     color: theme.palette.primary.contrastText,
   }),
-  subtitle: (props) => ({
+  subtitle: () => ({
     color: theme.palette.primary.contrastText,
   }),
   social: {

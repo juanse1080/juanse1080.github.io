@@ -21,11 +21,9 @@ const Img = "img/Home/develop_page.svg";
 const Home = ({
   id,
   language,
-  toPage,
-  handlePage,
   after,
-  nextPage,
-  state,
+  toAbout,
+  toContact,
   page,
   ...other
 }: any) => {
@@ -47,6 +45,7 @@ const Home = ({
               <Box className={classes.contentBox}>
                 <Typography
                   variant="h1"
+                  component="h1"
                   color="inherit"
                   paragraph
                   align="left"
@@ -63,7 +62,8 @@ const Home = ({
                     color="secondary"
                     className="mr-3"
                     size="large"
-                    onClick={toPage()}
+                    onClick={toContact}
+                    // TODO: add function
                   >
                     {content.buttons[1]}
                   </Button>
@@ -71,7 +71,7 @@ const Home = ({
                     variant="contained"
                     color="secondary"
                     size="large"
-                    onClick={nextPage}
+                    onClick={toAbout}
                   >
                     {content.buttons[0]}
                   </Button>
@@ -95,7 +95,7 @@ const Home = ({
         </Container>
       </div>
       <Box className={classes.socialIcons}>
-        <Social mailAction={toPage()} />
+        <Social mailAction={toContact} />
       </Box>
     </div>
   );

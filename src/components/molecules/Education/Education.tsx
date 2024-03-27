@@ -15,8 +15,8 @@ import studies from "const/studies";
 // import styles
 import useStyles from "./Education.styles";
 
-const Education = ({ theme, photo, language, ...other }: any) => {
-  const classes = useStyles({ theme });
+const Education = ({ photo, language, ...other }: any) => {
+  const classes = useStyles();
 
   const content = studies[language as "espanol"];
 

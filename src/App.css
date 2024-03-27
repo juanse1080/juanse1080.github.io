@@ -90,3 +90,23 @@ video {
   background: transparent;
   font-family: "Poppins", sans-serif !important;
 }
+
+.m-1 {
+  margin: 0.25rem !important;
+}
+
+.mr-2 {
+  margin-right: 0.5rem !important;
+}
+
+.mt-2 {
+  margin-top: 0.5rem !important;
+}
+
+.mt-3 {
+  margin-top: 0.75rem !important;
+}
+
+.mr-3 {
+  margin-right: 0.75rem !important;
+}

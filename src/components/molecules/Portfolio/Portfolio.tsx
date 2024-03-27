@@ -21,7 +21,12 @@ import useStyles from "./Portfolio.styles";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import images from "const/images";
 
-const Portfolio = ({ theme, toPage, language, ...other }: any) => {
+export interface PortfolioProps {
+  language: "espanol";
+  refs: React.MutableRefObject<(HTMLDivElement | null)[]>;
+}
+
+const Portfolio = ({ language, refs }: PortfolioProps) => {
   const classes = useStyles();
 
   const content = images[language as "espanol"];
@@ -36,10 +41,10 @@ const Portfolio = ({ theme, toPage, language, ...other }: any) => {
   const xs = useMediaQuery(themeProvider.breakpoints.only("xs"));
 
   const getColumns = () => {
-    if (xl) return 5;
+    if (xl) return 2;
     else if (lg) return 3;
-    else if (md) return 3;
-    else if (sm) return 2;
+    else if (md) return 2;
+    else if (sm) return 1;
     else if (xs) return 1;
   };
 
@@ -47,10 +52,18 @@ const Portfolio = ({ theme, toPage, language, ...other }: any) => {
     if (key !== over) setOver(key);
   };
 
+  const toProject = (idx: number) => () => {
+    if (refs.current[idx])
+      refs.current[idx]?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+  };
+
   return (
     <div>
       <ImageList gap={0} rowHeight={300} cols={getColumns()}>
-        {content.map(({ key: _key, img: _img, title: _title }) => (
+        {content.map(({ key: _key, img: _img, title: _title }, idx) => (
           <ImageListItem
             key={_key}
             onMouseEnter={isMobile ? undefined : handleOver(_key)}
@@ -66,7 +79,7 @@ const Portfolio = ({ theme, toPage, language, ...other }: any) => {
                   <IconButton
                     aria-label={`eye ${_title}`}
                     className={classes.icon}
-                    onClick={toPage(_key)}
+                    onClick={toProject(idx)}
                   >
                     <FontAwesomeIcon icon={faLink as any} size="xs" />
                   </IconButton>

@@ -1,64 +1,43 @@
-import { useTheme } from "@material-ui/core/styles";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
-import { Section } from "components/atoms";
-import { Footer, Home, Project } from "components/molecules";
+import { Legend, Section } from "components/atoms";
+import {
+  About,
+  Course,
+  Education,
+  Experience,
+  Footer,
+  Home,
+  Tech,
+} from "components/molecules";
 import { sections } from "const/sections";
+import { PortfolioPage } from "sections";
 import useStyles from "./RootLayout.styles";
+
+const page = "home";
+const language = "espanol";
+const content = sections[language];
+const values = Object.values(content);
 
 const Landing = () => {
   const classes = useStyles();
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
 
-  const language = "espanol";
-  const content = sections[language];
-  const keys = Object.keys(content);
-  const values = Object.values(content);
-
-  const themeProvider = useTheme();
-  const smDown = useMediaQuery(themeProvider.breakpoints.down("sm"));
-
-  const scrollbar = useRef();
-  const [page, setPage] = useState("home");
-
-  const [state, setState] = useState({
-    subject: "",
-    body: "",
-  });
-
-  const offset = smDown ? -2 : -2;
-
-  const handleState = (e: any) => {
-    const { name, value } = e.target;
-    setState((_state) => ({ ..._state, [name]: value }));
+  const goToAbout = () => {
+    if (aboutRef?.current)
+      aboutRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
   };
 
-  const scrollTo = (name?: string) => () => {
-    if (scrollbar.current)
-      if (name)
-        scrollbar.current.view.scroll({
-          top: topPosition(name),
-          behavior: "smooth",
-        });
-      else
-        scrollbar.current.view.scroll({
-          top: topPosition("footer"),
-          behavior: "smooth",
-        });
-  };
-
-  const handlePage = (_page: string) => {
-    if (_page !== page) setPage(_page);
-  };
-
-  const topPosition = (name: string) => {
-    return getByID(name).offsetTop - offset;
-  };
-
-  const getByID = (name: string) => {
-    const _element = document.getElementById(name);
-    if (_element) return _element;
-    throw new Error(`${name} section not found`);
+  const goToContact = () => {
+    if (contactRef?.current)
+      contactRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
   };
 
   return (
@@ -66,74 +45,55 @@ const Landing = () => {
       <Home
         id="home"
         language={language}
-        handlePage={handlePage}
         after={values[0].key}
-        toPage={scrollTo}
-        nextPage={scrollTo(keys[0])}
         page={page}
-        state={state}
+        toAbout={goToAbout}
+        toContact={goToContact}
       />
 
-      {values.map(
-        (
-          {
-            component: Component,
-            key,
-            title,
-            props,
-            section: { leftPart: LeftPart = null, ...propsSection } = {},
-          },
-          section_index,
-          array
-        ) => {
-          return (
-            <Section
-              {...propsSection}
-              id={key}
-              page={page}
-              key={key}
-              handlePage={handlePage}
-              before={
-                array[section_index - 1] ? array[section_index - 1].key : null
-              }
-              after={
-                array[section_index + 1] ? array[section_index + 1].key : null
-              }
-              title={title}
-              leftPart={
-                LeftPart ? (
-                  <LeftPart
-                    language={language}
-                    theme={section_index % 2 === 0 ? "dark" : "light"}
-                  />
-                ) : null
-              }
-              theme={section_index % 2 === 0 ? "dark" : "light"}
-            >
-              <Component
-                {...props}
-                language={language}
-                state={state}
-                page={page}
-                toPage={scrollTo}
-                theme={section_index % 2 === 0 ? "dark" : "light"}
-              />
-            </Section>
-          );
-        }
-      )}
+      <Section ref={aboutRef} id="about" title="Sobre mí">
+        <About photo="img/Foto.jpg" language={language} page={page} />
+      </Section>
 
-      <Project id="project" page={page} language={language} />
+      <Section id="education" title="Educación" color="white">
+        <Education
+          language={language}
+          page={page}
+          leftPart={<Legend language={language} />}
+        />
+      </Section>
 
-      <Footer
-        id="footer"
-        language={language}
-        hidden={page !== "home"}
-        theme="light"
-        toPage={scrollTo}
-        state={state}
-        handleState={handleState}
-      />
+      <Section
+        id="experience"
+        title="Experiencia"
+        subtitle="Experiencia certificada"
+      >
+        <Experience
+          language={language}
+          page={page}
+          leftPart={<Legend language={language} />}
+        />
+      </Section>
+
+      <Section
+        id="curse"
+        title="Cursos"
+        subtitle="Cursos virtuales"
+        color="white"
+      >
+        <Course
+          language={language}
+          page={page}
+          leftPart={<Legend language={language} />}
+        />
+      </Section>
+
+      <Section id="tech" title="Tecnologías" subtitle="Tecnologías favoritas">
+        <Tech language={language} page={page} />
+      </Section>
+
+      <PortfolioPage page={page} language={language} />
+      <Footer ref={contactRef} language={language} />
     </div>
   );
 };

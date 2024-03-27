@@ -13,123 +13,133 @@ import { Social } from "components/atoms";
 import text from "const/footer";
 
 // import styles
+import { forwardRef, useState } from "react";
 import useStyles from "./Footer.styles";
 
-const Footer = ({
-  hidden,
-  language,
-  toPage,
-  theme,
-  state,
-  handleState,
-  ...other
-}: any) => {
-  const classes = useStyles({ theme });
+export interface FooterProps {
+  language: "espanol";
+}
 
-  const content = text[language as "espanol"];
+const Footer = forwardRef<HTMLDivElement, FooterProps>(
+  ({ language, ...other }, ref) => {
+    const classes = useStyles();
 
-  return (
-    <div {...other} className={classes.root}>
-      <div className={classes.paddings}>
-        <Container>
-          <Grid container spacing={3} justifyContent="center">
-            <Grid item lg={6} md={7} sm={12}>
-              <div className={classes.header}>
-                <Typography
-                  className={classes.title}
-                  color="inherit"
-                  variant="h2"
-                >
-                  {content.title}
-                </Typography>
-                <TextField
-                  color="secondary"
-                  fullWidth
-                  id="subject"
-                  label={content.inputs[0]}
-                  variant="outlined"
-                  className="mt-2"
-                  size="small"
-                  name="subject"
-                  defaultValue={state.subject}
-                  onBlur={handleState}
-                />
-                <TextField
-                  color="secondary"
-                  fullWidth
-                  label={content.inputs[1]}
-                  variant="outlined"
-                  multiline
-                  minRows={6}
-                  size="small"
-                  className="mt-3"
-                  name="body"
-                  defaultValue={state.body}
-                  onBlur={handleState}
-                />
-                <Button
-                  variant="contained"
-                  className="mt-3"
-                  color="secondary"
-                  size="large"
-                  target="_blank"
-                  href={`mailto:juanmarcon1080@gmail.com?Subject=Github%20page:%20${state.subject}&body=${state.body}`}
-                  rel="noreferrer"
-                >
-                  {content.inputs[2]}
-                </Button>
-              </div>
-            </Grid>
-            <Grid item lg={5} md={5} sm={12} xs={12}>
-              <div className={classes.header}>
-                <Typography
-                  className={classes.title}
-                  color="inherit"
-                  variant="h2"
-                >
-                  {content.social}
-                </Typography>
-                <Social
-                  hiddenEmail
-                  className={classes.social}
-                  mailAction={toPage()}
-                />
-              </div>
-              <div className={classes.header}>
-                <Typography
-                  className={classes.title}
-                  color="inherit"
-                  variant="h2"
-                >
-                  {content.contact}
-                </Typography>
-                <Typography
-                  color="inherit"
-                  variant="body1"
-                  align="left"
-                  paragraph
-                >
-                  <Link
-                    href={`mailto:juanmarcon1080@gmail.com?Subject=Github%20page:%20${state.subject}&body=${state.body}`}
-                    target="_blank"
-                    rel="noreferrer"
+    const content = text[language];
+
+    const [state, setState] = useState({
+      subject: "",
+      body: "",
+    });
+
+    const handleState = (e: any) => {
+      const { name, value } = e.target;
+      setState((_state) => ({ ..._state, [name]: value }));
+    };
+
+    return (
+      <div ref={ref} {...other} className={classes.root}>
+        <div className={classes.paddings}>
+          <Container>
+            <Grid container spacing={3} justifyContent="center">
+              <Grid item lg={6} md={7} sm={12}>
+                <div className={classes.header}>
+                  <Typography
+                    className={classes.title}
                     color="inherit"
+                    variant="h2"
                   >
-                    juanmarcon1080@gmail.com
-                  </Link>
-                </Typography>
-                <Typography color="inherit" variant="body1" align="left">
-                  <Link href="tel:3154390477" color="inherit">
-                    (+57) 3154390477
-                  </Link>
-                </Typography>
-              </div>
+                    {content.title}
+                  </Typography>
+                  <TextField
+                    color="secondary"
+                    fullWidth
+                    id="subject"
+                    label={content.inputs[0]}
+                    variant="outlined"
+                    className="mt-2"
+                    size="small"
+                    name="subject"
+                    defaultValue={state.subject}
+                    onBlur={handleState}
+                  />
+                  <TextField
+                    color="secondary"
+                    fullWidth
+                    label={content.inputs[1]}
+                    variant="outlined"
+                    multiline
+                    minRows={6}
+                    size="small"
+                    className="mt-3"
+                    name="body"
+                    defaultValue={state.body}
+                    onBlur={handleState}
+                  />
+                  <Button
+                    variant="contained"
+                    className="mt-3"
+                    color="secondary"
+                    size="large"
+                    target="_blank"
+                    href={`mailto:juanmarcon1080@gmail.com?Subject=Github%20page:%20${state.subject}&body=${state.body}`}
+                    rel="noreferrer"
+                  >
+                    {content.inputs[2]}
+                  </Button>
+                </div>
+              </Grid>
+              <Grid item lg={5} md={5} sm={12} xs={12}>
+                <div className={classes.header}>
+                  <Typography
+                    className={classes.title}
+                    color="inherit"
+                    variant="h2"
+                  >
+                    {content.social}
+                  </Typography>
+                  <Social
+                    hiddenEmail
+                    className={classes.social}
+                    // mailAction={toPage()}
+                    // TODO: add function
+                  />
+                </div>
+                <div className={classes.header}>
+                  <Typography
+                    className={classes.title}
+                    color="inherit"
+                    variant="h2"
+                  >
+                    {content.contact}
+                  </Typography>
+                  <Typography
+                    color="inherit"
+                    variant="body1"
+                    align="left"
+                    paragraph
+                  >
+                    <Link
+                      href="mailto:juanmarcon1080@gmail.com"
+                      target="_blank"
+                      rel="noreferrer"
+                      color="inherit"
+                    >
+                      juanmarcon1080@gmail.com
+                    </Link>
+                  </Typography>
+                  <Typography color="inherit" variant="body1" align="left">
+                    <Link href="tel:3154390477" color="inherit">
+                      (+57) 3154390477
+                    </Link>
+                  </Typography>
+                </div>
+              </Grid>
             </Grid>
-          </Grid>
-        </Container>
+          </Container>
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+);
 
 export default Footer;

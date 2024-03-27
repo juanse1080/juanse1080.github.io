@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(1),
     },
   },
-  title: (props) => ({
+  title: () => ({
     color: theme.palette.primary.contrastText,
     paddingBottom: theme.spacing(1),
   }),

@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
   rootItem: {
     minHeight: "auto",
   },
-  title: (props) => ({
+  title: () => ({
     color: theme.palette.text.primary,
     paddingBottom: theme.spacing(1),
   }),

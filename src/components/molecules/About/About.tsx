@@ -17,7 +17,7 @@ import useStyles from "./About.styles";
 // Import local const
 import text from "const/about";
 
-const About = ({ theme, language, state, photo, toPage, ...other }: any) => {
+const About = ({ language, photo, ...other }: any) => {
   const classes = useStyles();
 
   const content = text[language as "espanol"];
@@ -64,7 +64,7 @@ const About = ({ theme, language, state, photo, toPage, ...other }: any) => {
                 paragraph
               >
                 <Link
-                  href={`mailto:juanmarcon1080@gmail.com?Subject=Github%20page:%20${state.subject}&body=${state.body}`}
+                  href="mailto:juanmarcon1080@gmail.com"
                   target="_blank"
                   rel="noreferrer"
                   color="inherit"
@@ -81,7 +81,7 @@ const About = ({ theme, language, state, photo, toPage, ...other }: any) => {
             <Grid item>
               <Button
                 href={content.cv}
-                download="JuanMarconCV.pdf"
+                download="JuanMarcon.pdf"
                 variant="contained"
                 color="secondary"
                 size="large"

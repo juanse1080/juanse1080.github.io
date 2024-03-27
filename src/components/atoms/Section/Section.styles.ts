@@ -3,8 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 // Import local const
 
 const useStyles = makeStyles((theme) => ({
-  root: () => ({
-    backgroundColor: theme.palette.primary.dark,
+  root: ({ color }: any) => ({
+    backgroundColor: color ?? theme.palette.primary.dark,
     color: theme.palette.primary.contrastText,
   }),
   paddings: {
@@ -46,10 +46,12 @@ const useStyles = makeStyles((theme) => ({
   title: () => ({
     // paddingTop: theme.spacing(1),
     // borderTop: `2px solid ${theme.palette[themes[props.theme].icons].main}`,
+    whiteSpace: "nowrap",
     display: "inline-block",
     color: theme.palette.primary.contrastText,
   }),
   subtitle: (props) => ({
+    whiteSpace: "nowrap",
     color: theme.palette.primary.contrastText,
   }),
 }));

@@ -14,8 +14,8 @@ import experiences from "const/experience";
 // import styles
 import useStyles from "./Experience.styles";
 
-const Experience = ({ theme, language, photo, ...other }: any) => {
-  const classes = useStyles({ theme });
+const Experience = ({ language, photo, ...other }: any) => {
+  const classes = useStyles();
 
   const content = experiences[language as "espanol"];
 
