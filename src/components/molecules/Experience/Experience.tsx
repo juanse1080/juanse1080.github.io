@@ -42,8 +42,9 @@ const Experience = ({ language, photo, ...other }: any) => {
               align="justify"
               color="inherit"
               variant="subtitle2"
-            >
-              {experience.title}
+            >              
+              <span className={classes.bold}>{experience.title}</span>
+              <span className={classes.italic}>{experience.date}</span>
             </Typography>
             <Typography
               align="justify"
@@ -51,8 +52,7 @@ const Experience = ({ language, photo, ...other }: any) => {
               paragraph
               variant="caption"
             >
-              {experience.institution}
-              {experience.date ? ` | ${experience.date}` : null}
+              <span className={classes.bold}>{experience.institution}</span>                  
             </Typography>
             {experience.description.map((description, key) => (
               <Typography

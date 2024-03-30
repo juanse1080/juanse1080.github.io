@@ -52,8 +52,9 @@ const Education = ({ photo, language, ...other }: any) => {
               align="justify"
               color="inherit"
               variant="subtitle2"
-            >
-              {study.title}
+            >              
+              <span className={classes.bold}>{study.title}</span>
+              <span className={classes.italic}>{study.date}</span>
             </Typography>
             <Typography
               align="justify"
@@ -61,8 +62,7 @@ const Education = ({ photo, language, ...other }: any) => {
               paragraph
               variant="caption"
             >
-              {study.institution}
-              {study.date ? ` | ${study.date}` : null}
+              <span className={classes.bold}>{study.institution}</span>                  
             </Typography>
             {study.description.map((description, key) => (
               <Typography

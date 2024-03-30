@@ -10,6 +10,9 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(0),
     },
   },
+  subtitle: {
+    fontWeight: "bold",
+  }
 }));
 
 export default useStyles;

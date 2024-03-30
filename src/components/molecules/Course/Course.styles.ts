@@ -22,9 +22,20 @@ const useStyles = makeStyles((theme) => ({
     width: 16,
   },
   title: () => ({
+    display: 'flex',
+    gap: theme.spacing(1),
+    alignItems: 'center',
+    justifyContent: 'space-between',
     color: theme.palette.primary.contrastText,
     paddingBottom: theme.spacing(1),
   }),
+  bold: {
+    fontWeight: 800,
+  },
+  italic: {
+    fontStyle: 'italic',
+    textAlign: 'right',
+  },
   missingOppositeContent: {
     "&::before": {
       flex: "none",

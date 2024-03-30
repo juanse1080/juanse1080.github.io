@@ -47,6 +47,7 @@ const About = ({ language, photo, ...other }: any) => {
             color="inherit"
             paragraph
             align="left"
+            className={classes.subtitle}
           >
             {content.contact}
           </Typography>

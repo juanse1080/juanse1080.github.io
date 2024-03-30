@@ -30,7 +30,7 @@ const Section = forwardRef<HTMLDivElement, SectionProps>(
           {fullWidth ? (
             <div className={classes.paddingsFull}>
               <Container>
-                <Grid container spacing={3} justifyContent="flex-start">
+                <Grid container justifyContent="flex-start">
                   <Grid item lg={2} md={3} sm={4} xs={12}>
                     <div className={classes.header}>
                       <Typography
@@ -58,8 +58,8 @@ const Section = forwardRef<HTMLDivElement, SectionProps>(
           ) : (
             <div className={classes.paddings}>
               <Container>
-                <Grid container spacing={3} justifyContent="center">
-                  <Grid item lg={2} md={3} sm={4} xs={12}>
+                <Grid container justifyContent="center">
+                  <Grid item lg={2} md={3} sm={12}>
                     <div className={classes.header}>
                       <Typography
                         className={classes.title}
@@ -78,7 +78,7 @@ const Section = forwardRef<HTMLDivElement, SectionProps>(
                     </div>
                     {leftPart}
                   </Grid>
-                  <Grid item lg={9} md={9} sm={8} xs={12}>
+                  <Grid item lg={9} md={9} sm={12}>
                     <div className={classes.content}>{children}</div>
                   </Grid>
                 </Grid>
