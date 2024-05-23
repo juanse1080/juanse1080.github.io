@@ -1,6 +1,29 @@
 const experience = {
   espanol: [
     {
+      title: "DESARROLLADOR FULLSTACK",
+      date: "Mayo 2024",
+      institution: "ConexaLab",
+      description: [
+        "Enfocado en el desarrollar de entornos web altamente eficientes que permiten la visualización de grandes volúmenes de datos. Mi enfoque se centra especialmente en ofrecer estadísticas detalladas y mapas interactivos, utilizando herramientas avanzadas como Maptiler, Mapbox y Celcium."
+      ],
+      ended: false,
+      techs: [
+        "Node.js",
+        "Jest", 
+        "TypeScript", 
+        "Swagger", 
+        "JavaScript", 
+        "React.js", 
+        "Next.js", 
+        "Tailwind", 
+        "Maptiler", 
+        "Material-UI", 
+        "Gitlab", 
+        "PostgreSQL",
+      ],
+    },
+    {
       title: "CLOUD ENGINEER",
       date: "Enero 2023 - Enero 2024",
       institution: "Melonn",
