@@ -17,7 +17,7 @@ import useStyles from "./About.styles";
 // Import local const
 import text from "const/about";
 
-const About = ({ language, photo, ...other }: any) => {
+const About = ({ language, photo }: any) => {
   const classes = useStyles();
 
   const content = text[language as "espanol"];

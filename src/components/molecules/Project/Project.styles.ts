@@ -29,13 +29,13 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(1, 0),
     },
   },
-  title: (props) => ({
+  title: () => ({
     // paddingTop: theme.spacing(1),
     // borderTop: `2px solid ${theme.palette[themes[props.theme].icons].main}`,
     display: "inline-block",
     // color: theme.palette[themes[props.theme].theme].title,
   }),
-  subtitle: (props) => ({
+  subtitle: () => ({
     // color: theme.palette[themes[props.theme].theme].subtitle,
   }),
   media: {

@@ -15,7 +15,7 @@ import studies from "const/studies";
 // import styles
 import useStyles from "./Education.styles";
 
-const Education = ({ photo, language, ...other }: any) => {
+const Education = ({ language }: any) => {
   const classes = useStyles();
 
   const content = studies[language as "espanol"];
@@ -52,7 +52,7 @@ const Education = ({ photo, language, ...other }: any) => {
               align="justify"
               color="inherit"
               variant="subtitle2"
-            >              
+            >
               <span className={classes.bold}>{study.title}</span>
               <span className={classes.italic}>{study.date}</span>
             </Typography>
@@ -62,7 +62,7 @@ const Education = ({ photo, language, ...other }: any) => {
               paragraph
               variant="caption"
             >
-              <span className={classes.bold}>{study.institution}</span>                  
+              <span className={classes.bold}>{study.institution}</span>
             </Typography>
             {study.description.map((description, key) => (
               <Typography

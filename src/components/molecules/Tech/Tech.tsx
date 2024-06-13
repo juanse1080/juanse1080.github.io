@@ -8,7 +8,7 @@ import tools from "const/tools";
 // import styles
 import useStyles from "./Tech.styles";
 
-const Tech = ({ theme, page, ...other }: any) => {
+const Tech = ({ theme }: any) => {
   const classes = useStyles({ theme });
 
   return (
@@ -19,7 +19,7 @@ const Tech = ({ theme, page, ...other }: any) => {
         alignItems="center"
         spacing={3}
       >
-        {tools.map(({ name, icon, props, ...others }, index) => (
+        {tools.map(({ name, icon, props, ...others }) => (
           <Grid key={name} item lg={3} md={4} sm={5} xs={6}>
             <a {...others} className={classes.contentIcon}>
               <img {...props} className={classes.icon} src={icon} alt={name} />

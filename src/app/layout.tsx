@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Provider from "./Provider";
 
 export const metadata: Metadata = {
-  title: "My App",
-  description: "My App is a...",
+  title: "Juan Marcon",
+  description:
+    "Aquí encontraras parte de mi desarrollo profesional, como educación, experiencia, cursos, contacto, algunos de los proyectos que he sido parte y tecnologías que manejo.",
 };
 
 export default function RootLayout({
@@ -13,13 +15,17 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        <link rel="icon" type="image/svg+xml" href="/icon.svg" />
-        <title>My App</title>
-        <meta name="description" content="My App is a..." />
+        <link rel="icon" type="image/svg+xml" href="/icon.png" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+          rel="stylesheet"
+        />
       </head>
-      <body>
-        <div id="root">{children}</div>
-      </body>
+      <Provider>
+        <body>
+          <div id="root">{children}</div>
+        </body>
+      </Provider>
     </html>
   );
 }
