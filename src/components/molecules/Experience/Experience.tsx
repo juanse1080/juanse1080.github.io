@@ -14,7 +14,7 @@ import experiences from "const/experience";
 // import styles
 import useStyles from "./Experience.styles";
 
-const Experience = ({ language, photo, ...other }: any) => {
+const Experience = ({ language }: any) => {
   const classes = useStyles();
 
   const content = experiences[language as "espanol"];
@@ -42,7 +42,7 @@ const Experience = ({ language, photo, ...other }: any) => {
               align="justify"
               color="inherit"
               variant="subtitle2"
-            >              
+            >
               <span className={classes.bold}>{experience.title}</span>
               <span className={classes.italic}>{experience.date}</span>
             </Typography>
@@ -52,7 +52,7 @@ const Experience = ({ language, photo, ...other }: any) => {
               paragraph
               variant="caption"
             >
-              <span className={classes.bold}>{experience.institution}</span>                  
+              <span className={classes.bold}>{experience.institution}</span>
             </Typography>
             {experience.description.map((description, key) => (
               <Typography

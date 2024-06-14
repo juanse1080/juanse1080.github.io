@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     display: "inline-block",
     color: theme.palette.primary.contrastText,
   }),
-  subtitle: (props) => ({
+  subtitle: () => ({
     whiteSpace: "nowrap",
     color: theme.palette.primary.contrastText,
   }),
