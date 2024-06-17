@@ -2,6 +2,10 @@
 
 import { useRef } from "react";
 
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import MailIcon from "@material-ui/icons/Mail";
+
 import { Legend, Section } from "components/atoms";
 import {
   About,
@@ -43,7 +47,7 @@ const Landing = () => {
   };
 
   return (
-    <div className={classes.root}>
+    <>
       <Home
         id="home"
         language={language}
@@ -96,7 +100,7 @@ const Landing = () => {
 
       <PortfolioPage page={page} language={language} />
       <Footer ref={contactRef} language={language} />
-    </div>
+    </>
   );
 };
 

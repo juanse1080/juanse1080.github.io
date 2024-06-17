@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import Provider from "./Provider";
+import Provider from "./_providers/Provider";
+import "./global.css";
+import AppBar from "./_components/AppBar";
 
 export const metadata: Metadata = {
-  title: "Juan Marcon",
-  description:
-    "Aquí encontraras parte de mi desarrollo profesional, como educación, experiencia, cursos, contacto, algunos de los proyectos que he sido parte y tecnologías que manejo.",
+  title: "Juan Marcon | Desarrollador de software",
+  description: "El portafolio de Juan Marcon, desarrollador de software",
 };
 
 export default function RootLayout({
@@ -23,7 +24,13 @@ export default function RootLayout({
       </head>
       <Provider>
         <body>
-          <div id="root">{children}</div>
+          <div
+            id="root"
+            className="h-min-screen h-max-screen text-white bg-background overflow-y-hidden"
+          >
+            <AppBar />
+            <div className="container h-full p-3">{children}</div>
+          </div>
         </body>
       </Provider>
     </html>
