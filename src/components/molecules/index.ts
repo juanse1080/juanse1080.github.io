@@ -13,9 +13,6 @@ export { default as Experience } from "./Experience";
 export * from "./Footer";
 export { default as Footer } from "./Footer";
 
-export * from "./Home";
-export { default as Home } from "./Home";
-
 export * from "./Portfolio";
 export { default as Portfolio } from "./Portfolio";
 

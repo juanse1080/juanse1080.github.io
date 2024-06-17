@@ -48,14 +48,7 @@ const Landing = () => {
 
   return (
     <>
-      <Home
-        id="home"
-        language={language}
-        after={values[0].key}
-        page={page}
-        toAbout={goToAbout}
-        toContact={goToContact}
-      />
+      <Home />
 
       <Section ref={aboutRef} id="about" title="Sobre mí">
         <About photo="img/Foto.jpg" language={language} page={page} />
