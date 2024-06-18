@@ -16,19 +16,20 @@ const Home = async ({ companies }: Readonly<HomeProps>) => {
 
   return (
     <>
-      <div className="relative h-screen sm:h-5/6 md:h-screen flex gap-5">
-        <div className="z-10 flex flex-col items-center md:items-start justify-center ">
+      <div className="root relative h-screen sm:h-[calc(62vh)] md:h-screen flex justify-center md:justify-start gap-5">
+        <div className="z-10 flex flex-col items-center md:items-start justify-center">
           <Typography
             component="h1"
             variant="h2"
             className="text-center md:text-left"
           >
             {t("title.0")} <br />
-            <span className="bg-gradient-to-r from-secondary-100 to-secondary-50  text-transparent bg-clip-text">
-              {t("title.1")}
-            </span>
+            <span className="text-gradient">{t("title.1")}</span>
           </Typography>
           <Button
+            component="a"
+            href="#about"
+            size="large"
             className="group"
             endAdornment={
               <ArrowForwardIcon
@@ -42,11 +43,17 @@ const Home = async ({ companies }: Readonly<HomeProps>) => {
           </Button>
         </div>
       </div>
-      <div className="py-12 md:py-20 lg:py-24">
+      <div className="root py-12 md:py-20 lg:py-24">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
           {companies.map(({ name, image }) => (
             <div className="flex items-center justify-center">
-              <Image src={image} alt={name} width="100" height="52" />
+              <Image
+                src={image}
+                alt={name}
+                width="150"
+                height="52"
+                className="lg:w-32 xl:w-40"
+              />
             </div>
           ))}
         </div>
