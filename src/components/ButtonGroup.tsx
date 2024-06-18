@@ -54,7 +54,7 @@ const ButtonGroup = <
       className: merge(
         currentChildren.props?.className,
         {
-          "px-3": idx === 0 || isLastItem,
+          "px-3 py-1": idx === 0 || isLastItem,
           "rounded-r-none": idx === 0,
           "rounded-l-none": isLastItem,
           "bg-active": valueProp === currentChildren.props.value,
@@ -75,7 +75,7 @@ const ButtonGroup = <
     return (
       <Fragment key={idx}>
         {cloneElement(currentChildren, newChildProps)}
-        <span className="border-x border-white border-solid" />
+        <span className="border-l border-divider border-solid" />
       </Fragment>
     );
   });
@@ -83,7 +83,7 @@ const ButtonGroup = <
   return (
     <Component
       className={merge(
-        "flex rounded-full border-2 border-white border-solid box-border h-min",
+        "flex rounded-full border border-divider border-solid box-border h-min",
         className
       )}
       {...(props as any)}

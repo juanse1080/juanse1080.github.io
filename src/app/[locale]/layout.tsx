@@ -30,16 +30,25 @@ export default function RootLayout({
     <html lang={locale}>
       <head>
         <link rel="icon" type="image/svg+xml" href="/icon.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
           rel="stylesheet"
         />
+
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap"
+          rel="stylesheet"
+        ></link>
       </head>
       <body>
         <Provider locale={locale}>
-          <div className="min-h-screen h-screen overflow-y-auto text-white bg-background">
+          <div className="text-white bg-background">
             <AppBar />
-            <div className="container px-3 h-full">{children}</div>
+            <div className="min-h-screen h-full overflow-y-auto w-full">
+              {children}
+            </div>
           </div>
         </Provider>
       </body>

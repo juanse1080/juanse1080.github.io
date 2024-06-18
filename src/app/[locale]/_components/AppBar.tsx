@@ -9,7 +9,7 @@ const languages = ["en", "es"];
 
 const AppBar = () => {
   const locale = useCurrentLocale();
-  const changeLocale = useChangeLocale();
+  const changeLocale = useChangeLocale({ preserveSearchParams: true });
 
   return (
     <div className="h-min backdrop-blur fixed z-50 left-0 right-0 p-3 border-solid border-b border-divider">

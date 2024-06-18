@@ -1,4 +1,5 @@
-import Companies from "./_components/Companies";
+import About from "./_components/About";
+import Education from "./_components/Education";
 import Home from "./_components/Home";
 
 const companies = [
@@ -15,6 +16,9 @@ function App() {
   return (
     <>
       <Home companies={companies} />
+      <hr className="border-divider" />
+      <About />
+      <Education />
     </>
   );
 }

@@ -11,7 +11,7 @@ export type ButtonProps<Element extends HTMLElementKeys> = {
   disabled?: boolean;
 } & IntrinsicElementsProps<Element>;
 
-const Button = <Element extends HTMLElementKeys = "button">({
+const Button = <Element extends HTMLElementKeys>({
   component: Component = "button",
   children,
   className,
@@ -28,23 +28,27 @@ const Button = <Element extends HTMLElementKeys = "button">({
       variant="button"
       disabled={disabled}
       className={merge(
-        "rounded-full text-nowrap mb-0 inline-flex items-center gap-3 outline-none",
+        "cursor-pointer rounded-full text-nowrap mb-0 inline-flex items-center gap-3 outline-none",
         {
           "cursor-not-allowed": disabled,
         },
         {
           "bg-gradient-to-r from-secondary-100 to-secondary-50 shadow-button":
             variant === "contained",
+          "border border-solid border-divider": variant === "outlined",
         },
         {
-          "px-2 py-1": size === "small",
-          "px-5 py-4": size === "medium",
+          "px-2 py-2": size === "small",
+          "px-3 py-2": size === "medium",
+          "px-5 py-4": size === "large",
         },
         !disabled && {
           "hover:bg-[rgba(144,202,249,0.08)] focus:bg-[rgba(144,202,249,0.08)] focus:outline-2 focus:outline-secondary-50":
             variant === "text",
           "hover:shadow-none focus:shadow-none focus:outline-2 focus:outline-offset-0 focus:outline-white":
             variant === "contained",
+          "focus:outline-2 focus:outline-offset-0 focus:outline-white":
+            variant === "outlined",
         },
         className
       )}

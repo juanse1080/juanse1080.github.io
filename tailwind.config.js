@@ -11,7 +11,9 @@ module.exports = {
     },
     extend: {
       colors: {
+        code: "rgb(39 39 39)",
         background: "#1a1a1a",
+        divider: "rgba(61, 71, 81, 0.3)",
         active: "rgba(80, 191, 194, 0.3)",
         secondary: {
           50: secondary_50,
