@@ -2,10 +2,6 @@
 
 import { useRef } from "react";
 
-import GitHubIcon from "@material-ui/icons/GitHub";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import MailIcon from "@material-ui/icons/Mail";
-
 import { Legend, Section } from "components/atoms";
 import {
   About,
@@ -13,43 +9,19 @@ import {
   Education,
   Experience,
   Footer,
-  Home,
   Tech,
 } from "components/molecules";
-import { sections } from "const/sections";
 import { PortfolioPage } from "sections";
-import useStyles from "./RootLayout.styles";
 
 const page = "home";
 const language = "espanol";
-const content = sections[language];
-const values = Object.values(content);
 
 const Landing = () => {
-  const classes = useStyles();
   const aboutRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
 
-  const goToAbout = () => {
-    if (aboutRef?.current)
-      aboutRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-  };
-
-  const goToContact = () => {
-    if (contactRef?.current)
-      contactRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-  };
-
   return (
     <>
-      <Home />
-
       <Section ref={aboutRef} id="about" title="Sobre mí">
         <About photo="img/Foto.jpg" language={language} page={page} />
       </Section>

@@ -1,4 +1,3 @@
-import experience from "const/experience";
 import common from "./common";
 
 export default {
