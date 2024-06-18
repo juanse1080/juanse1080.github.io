@@ -30,7 +30,7 @@ const Education = async ({}: Readonly<EducationProps>) => {
             {t("courses.title.0")}{" "}
             <span className="text-gradient">{t("courses.title.1")}</span>{" "}
             {t("courses.title.2")}{" "}
-            <span className="text-gradient">{t("courses.title.3")}</span>{" "}
+            <span className="text-gradient">{t("courses.title.3")}</span>
             {t("courses.title.4")}
           </Typography>
           <Typography>
@@ -81,7 +81,7 @@ const Education = async ({}: Readonly<EducationProps>) => {
             alt="AWS logo"
             width="100"
             height="52"
-            className="lg:w-24 xl:w-40"
+            className="lg:w-24 xl:w-30"
           />
         </div>
       </div>

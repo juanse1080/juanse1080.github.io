@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const secondary_50 = "#50bfc2"
+const secondary_100 = "#1a84b2"
 
 module.exports = {
   content: [
@@ -17,11 +18,12 @@ module.exports = {
         active: "rgba(80, 191, 194, 0.3)",
         secondary: {
           50: secondary_50,
-          100: "#1a84b2"
+          100: secondary_100
         },
       },
       boxShadow: {
         button: `0 2px 0 inset ${secondary_50}`,
+        outlined: `0 1px 0 inset #143543`
       },
       animation: {
         'slide-right': 'slide-right 1s infinite;',

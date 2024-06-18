@@ -1,6 +1,7 @@
 import About from "./_components/About";
 import Education from "./_components/Education";
 import Home from "./_components/Home";
+import Skill from "./_components/Skill";
 
 const companies = [
   { image: "/img/Companies/melonn.svg", name: "Melonn" },
@@ -18,6 +19,7 @@ function App() {
       <Home companies={companies} />
       <hr className="border-divider" />
       <About />
+      <Skill />
       <Education />
     </>
   );

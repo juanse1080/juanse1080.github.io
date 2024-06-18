@@ -66,4 +66,16 @@ export default {
       },
     },
   },
+  skill: {
+    title: "Habilidades",
+    subtitle: [
+      "Acompañado de conocimientos en herramientas de gran escala, he adquirido experiencia en la utilización eficaz de",
+      "tecnologías avanzadas",
+      "y",
+      "recursos robustos",
+      ", clave para enfrentar desafíos en",
+      "proyectos complejos.",
+      "Algunas de estas herramientas incluyen:",
+    ],
+  },
 } as const;

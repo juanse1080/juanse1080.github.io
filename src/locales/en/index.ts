@@ -64,4 +64,16 @@ export default {
       },
     },
   },
+  skill: {
+    title: "Skills",
+    subtitle: [
+      "Accompanied by expertise in large-scale tools, I have gained experience in the effective use of",
+      "advanced technologies",
+      "and",
+      "robust resources",
+      ", key to face challenges in",
+      "complex projects",
+      "Some of these tools include:",
+    ],
+  },
 } as const;
