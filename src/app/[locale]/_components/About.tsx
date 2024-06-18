@@ -1,7 +1,6 @@
 import Button from "components/Button";
 import ContactField from "components/ContactField";
 import Section from "components/Section";
-import TitleSection from "components/TitleSection";
 import Typography from "components/Typography";
 import OpenInNewIcon from "icons/OpenInNewIcon";
 import { getScopedI18n } from "locales/server";

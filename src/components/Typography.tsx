@@ -2,7 +2,15 @@ import { HTMLElementKeys, IntrinsicElementsProps } from "types";
 import { merge } from "utils/clsx";
 
 export type TypographyProps<Element extends HTMLElementKeys> = {
-  variant?: "h1" | "h2" | "h3" | "h6" | "body" | "button" | "overline";
+  variant?:
+    | "h1"
+    | "h2"
+    | "h3"
+    | "h6"
+    | "body"
+    | "button"
+    | "overline"
+    | "caption";
   align?: "center" | "left" | "right" | "justify";
 } & IntrinsicElementsProps<Element>;
 
@@ -25,6 +33,8 @@ const Typography = <Element extends HTMLElementKeys>({
           "text-[0.875rem] leading-[1.75] font-bold": variant === "button",
           "text-[0.875rem] leading-[1.75] font-bold uppercase":
             variant === "overline",
+          "text-[0.875rem] leading-[1.43]": variant === "body",
+          "text-[0.75rem] leading-[1.6]": variant === "caption",
         },
         {
           "text-center": align === "center",

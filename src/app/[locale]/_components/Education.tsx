@@ -25,7 +25,7 @@ const Education = async ({}: Readonly<EducationProps>) => {
             {t("description")}
           </Typography>
         </div>
-        <div className="">
+        <div>
           <Typography variant="h6" component="h3">
             {t("courses.title.0")}{" "}
             <span className="text-gradient">{t("courses.title.1")}</span>{" "}
@@ -39,12 +39,12 @@ const Education = async ({}: Readonly<EducationProps>) => {
             {t("courses.description.2")}
           </Typography>
         </div>
-        <div className="">
+        <div>
           <Typography variant="h6" component="h3">
             {t("courses.current.title.0")}{" "}
             <span className="text-gradient">
               {t("courses.current.title.1")}
-            </span>{" "}
+            </span>
             {t("courses.current.title.2")}{" "}
             <span className="text-gradient">
               {t("courses.current.title.3")}

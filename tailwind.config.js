@@ -38,6 +38,30 @@ module.exports = {
             transform: "translateX(0)",
           }
         }
+      },
+      gridColumnStart: {
+        '20': '20',      
+        '24': '24',      
+        '25': '25',      
+        '34': '34',      
+        '35': '35',      
+        '39': '39',      
+        '40': '40',      
+        '49': '49',      
+        '50': '50',      
+        '64': '64',      
+        '65': '65',      
+      },
+      gridColumn: {
+        'span-18': 'span 18 / span 18',
+        'span-19': 'span 19 / span 19',
+        'span-20': 'span 20 / span 20',
+        'span-21': 'span 21 / span 21',
+        'span-66': 'span 66 / span 66',
+      },
+      gridTemplateColumns: {        
+        '22': 'repeat(22, minmax(0, 1fr))',
+        '66': 'repeat(66, minmax(0, 1fr))',
       },      
     },
   },

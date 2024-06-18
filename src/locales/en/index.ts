@@ -76,4 +76,18 @@ export default {
       "Some of these tools include:",
     ],
   },
+  experience: {
+    title: "Experience",
+    subtitle: [
+      "Accompanied by leading industry companies, including several",
+      "innovative startups",
+      ", I have had the opportunity to work with teams of",
+      "high performing",
+      "and gain valuable knowledge in the use of advanced tools and",
+      "cutting-edge technologies.",
+    ],
+    fullstack: "Fullstack developer",
+    frontend: "Frontend developer",
+    cloud: "Cloud engineer",
+  },
 } as const;

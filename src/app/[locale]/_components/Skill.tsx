@@ -25,9 +25,9 @@ export type SkillProps = {};
 const Skill = async ({}: Readonly<SkillProps>) => {
   const t = await getScopedI18n("skill");
   return (
-    <Section id="skills" title="Habilidades">
+    <Section id="skills" title={t("title")}>
       <div className="grid gap-3">
-        <div className="">
+        <div>
           <Typography variant="h6" component="h3">
             {t("subtitle.0")}{" "}
             <span className="text-gradient">{t("subtitle.1")}</span>{" "}

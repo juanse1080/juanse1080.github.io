@@ -1,3 +1,4 @@
+import experience from "const/experience";
 import common from "./common";
 
 export default {
@@ -77,5 +78,19 @@ export default {
       "proyectos complejos.",
       "Algunas de estas herramientas incluyen:",
     ],
+  },
+  experience: {
+    title: "Experiencia",
+    subtitle: [
+      "Acompañado por destacadas compañías de la industria, incluidas varias",
+      "startups innovadoras",
+      ", he tenido la oportunidad de trabajar con equipos de",
+      "alto rendimiento",
+      "y adquirir conocimientos valiosos en el uso de herramientas avanzadas y",
+      "tecnologías de vanguardia.",
+    ],
+    fullstack: "Desarrollador fullstack",
+    frontend: "Desarrollador frontend ",
+    cloud: "Ingeniero cloud",
   },
 } as const;

@@ -1,5 +1,6 @@
 import About from "./_components/About";
 import Education from "./_components/Education";
+import Experience from "./_components/Experience";
 import Home from "./_components/Home";
 import Skill from "./_components/Skill";
 
@@ -21,6 +22,7 @@ function App() {
       <About />
       <Skill />
       <Education />
+      <Experience />
     </>
   );
 }
