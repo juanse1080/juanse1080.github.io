@@ -29,4 +29,39 @@ export default {
       call_to_action: "View resume",
     },
   },
+  education: {
+    title: "Education",
+    subtitle: [
+      "Hand in hand with formal education,",
+      "I have acquired structured and essential knowledge",
+      "pillars for my professional development. As a graduate in",
+      "Systems Engineering",
+      "from the",
+      "Universidad Industrial de Santander (UIS).",
+    ],
+    description:
+      "I have experienced firsthand how a rigorous and well-organized education can open doors and provide the necessary tools to face the challenges of the working world.",
+    courses: {
+      title: [
+        "I have consolidated",
+        "practical knowledge",
+        "on learning platforms like",
+        "Udemy",
+        "as part of my ongoing quest for personal and professional development",
+      ],
+      description: [
+        "Some of the certified courses I have completed include",
+        "React (Hooks and MERN), React JS + Redux + ES6,",
+        "among others.",
+      ],
+      current: {
+        title: [
+          "My commitment is to be at the",
+          "cutting edge",
+          "that's why I am currently pursuing the AWS certification",
+          "Certified Developer Associate DVA-C02.",
+        ],
+      },
+    },
+  },
 } as const;

@@ -29,4 +29,41 @@ export default {
       call_to_action: "Ver currículum vitae",
     },
   },
+  education: {
+    title: "Education",
+    subtitle: [
+      "De la mano de la educación formal,",
+      "he adquirido conocimientos estructurados y esenciales",
+      "pilares para mi desarrollo profesional. Como egresado en",
+      "Ingeniería de Sistemas",
+      "de la",
+      "Universidad Industrial de Santander (UIS).",
+    ],
+    description:
+      "he experimentado de primera mano cómo una educación rigurosa y bien organizada puede abrir puertas y proporcionar las herramientas necesarias para enfrentar los desafíos del mundo laboral.",
+
+    courses: {
+      title: [
+        "He consolidado",
+        "conocimientos prácticos",
+
+        "en plataformas de aprendizaje como",
+        "Udemy",
+        ", como parte de mi continua búsqueda de desarrollo personal y profesional",
+      ],
+      description: [
+        "Algunos de los cursos certificados que he completado incluyen",
+        "React (Hooks y MERN), React JS + Redux + ES6,",
+        "entre otros.",
+      ],
+      current: {
+        title: [
+          "Mi compromiso es estar a la",
+          "vanguardia",
+          ", por eso actualmente estoy cursando la certificación AWS",
+          "Certified Developer Associate DVA-C02.",
+        ],
+      },
+    },
+  },
 } as const;

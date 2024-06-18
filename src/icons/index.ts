@@ -18,3 +18,6 @@ export * from "./GithubIcon";
 
 export { default as LinkedInIcon } from "./LinkedInIcon";
 export * from "./LinkedInIcon";
+
+export { default as UISIcon } from "./UISIcon";
+export * from "./UISIcon";
