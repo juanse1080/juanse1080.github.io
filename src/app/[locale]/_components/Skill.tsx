@@ -42,7 +42,7 @@ const Skill = async ({}: Readonly<SkillProps>) => {
           {skills.map((skill) => (
             <span
               key={skill}
-              className="rounded-full border border-divider border-solid px-3 py-2 shadow-outlined"
+              className="rounded-full border border-divider border-solid px-3 py-2 bg-code"
             >
               {skill}
             </span>

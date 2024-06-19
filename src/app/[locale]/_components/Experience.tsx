@@ -28,76 +28,66 @@ const Experience = async ({}: Readonly<ExperienceProps>) => {
           {t("subtitle.4")}{" "}
           <span className="text-gradient">{t("subtitle.5")}</span>
         </Typography>
-        <div className="relative grid gap-y-2 grid-cols-1 sm:grid-cols-66 grid-rows-8 z-0 overflow-hidden border-common p-3 rounded-xl mt-10">
-          <div className="absolute hidden sm:grid top-0 bottom-0 left-0 right-0 grid-cols-22 -z-10">
-            {Array(22)
-              .fill("")
-              .map((_, idx) => (
-                <span
-                  className={merge("border-r border-divider border-solid", {
-                    "border-x": idx === 0,
-                  })}
-                />
-              ))}
-          </div>
-          <Item
-            current
-            align="right"
-            company="ConexaLab"
-            role={t("fullstack")}
-            className="col-span-1 sm:col-start-65 sm:col-span-2"
-          />
-          <Item
-            align="right"
-            company="Melonn"
-            role={t("cloud")}
-            className="col-span-1 sm:col-start-50 sm:col-span-12"
-          />
-          <Item
-            align="right"
-            company="Mayasoft"
-            role={t("fullstack")}
-            className="col-span-1 sm:col-start-39 sm:col-span-10"
-          />
-          <Item
-            align="right"
-            company="Woombat"
-            role={t("frontend")}
-            className="col-span-1 sm:col-start-34 sm:col-span-5"
-          />
-          <Item
-            company="Bitnovo"
-            role={t("frontend")}
-            className="col-span-1 sm:col-start-25 sm:col-span-5"
-          />
-          <Item
-            company="Binary groups"
-            role={t("frontend")}
-            className="col-span-1 sm:col-start-24 sm:col-span-19"
-          />
-          <Item
-            company="IPRED"
-            role={t("fullstack")}
-            className="col-span-1 sm:col-start-2 sm:col-span-19"
-          />
-          <Item
-            company="UIS"
-            role={t("fullstack")}
-            className="col-span-1 sm:col-start-1 sm:col-span-4"
-          />
-          <Item
-            current
-            company="Freelance"
-            role={t("fullstack")}
-            className="col-span-1 sm:col-start-1 sm:col-span-66"
-          />
-        </div>
+      </div>
+      <div className="relative grid gap-y-2 grid-cols-1 sm:grid-cols-66 grid-rows-8 z-0 overflow-hidden sm:border-divider sm:border sm:border-solid p-3 rounded-xl my-12 md:my-20 lg:my-24">
+        <Grid />
+        <Item
+          current
+          align="right"
+          company="ConexaLab"
+          role={t("fullstack")}
+          className="col-span-1 sm:col-start-65 sm:col-span-2"
+        />
+        <Item
+          align="right"
+          company="Melonn"
+          role={t("cloud")}
+          className="col-span-1 sm:col-start-50 sm:col-span-12"
+        />
+        <Item
+          align="right"
+          company="Mayasoft"
+          role={t("fullstack")}
+          className="col-span-1 sm:col-start-39 sm:col-span-10"
+        />
+        <Item
+          align="right"
+          company="Woombat"
+          role={t("frontend")}
+          className="col-span-1 sm:col-start-34 sm:col-span-5"
+        />
+        <Item
+          company="Bitnovo"
+          role={t("frontend")}
+          className="col-span-1 sm:col-start-25 sm:col-span-5"
+        />
+        <Item
+          company="Binary groups"
+          role={t("frontend")}
+          className="col-span-1 sm:col-start-24 sm:col-span-19"
+        />
+        <Item
+          company="IPRED"
+          role={t("fullstack")}
+          className="col-span-1 sm:col-start-2 sm:col-span-19"
+        />
+        <Item
+          company="UIS"
+          role={t("fullstack")}
+          className="col-span-1 sm:col-start-1 sm:col-span-4"
+        />
+        <Item
+          current
+          company="Freelance"
+          role={t("fullstack")}
+          className="col-span-1 sm:col-start-1 sm:col-span-66"
+        />
       </div>
     </Section>
   );
 };
 
-export const Item = <Element extends HTMLElementKeys = "div">({
+const Item = <Element extends HTMLElementKeys = "div">({
   component: Component = "div",
   children,
   className,
@@ -112,7 +102,7 @@ export const Item = <Element extends HTMLElementKeys = "div">({
     <>
       <Component
         className={merge(
-          "sm:hidden flex flex-col px-5 py-3 rounded-full border-common shadow-outlined hover:shadow-none cursor-pointer",
+          "sm:hidden flex flex-col px-5 py-3 rounded-full bg-code border-common",
           className
         )}
         {...(props as any)}
@@ -150,6 +140,22 @@ export const Item = <Element extends HTMLElementKeys = "div">({
         </Typography>
       </Component>
     </>
+  );
+};
+
+const Grid = () => {
+  return (
+    <div className="absolute hidden sm:grid top-0 bottom-0 left-0 right-0 grid-cols-22 -z-10">
+      {Array(22)
+        .fill("")
+        .map((_, idx) => (
+          <span
+            className={merge("border-r border-divider border-solid", {
+              "border-x": idx === 0,
+            })}
+          />
+        ))}
+    </div>
   );
 };
 
