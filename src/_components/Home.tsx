@@ -1,6 +1,5 @@
-import Button from "components/Button";
-import Typography from "components/Typography";
-import ArrowForwardIcon from "icons/ArrowForwardIcon";
+import { Button, Typography } from "components";
+import { ArrowForwardIcon } from "icons";
 import { getScopedI18n } from "locales/server";
 
 export type HomeProps = {};

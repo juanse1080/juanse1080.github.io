@@ -1,8 +1,7 @@
-import Section from "components/Section";
-import { merge } from "utils/clsx";
-import { HTMLElementKeys, IntrinsicElementsProps } from "types";
-import Typography from "components/Typography";
+import { Section, Typography } from "components";
 import { getScopedI18n } from "locales/server";
+import { HTMLElementKeys, IntrinsicElementsProps } from "types";
+import { merge } from "utils/clsx";
 
 export type ExperienceProps = {};
 

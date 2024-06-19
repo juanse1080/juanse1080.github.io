@@ -1,7 +1,6 @@
 "use client";
 
-import Button from "components/Button";
-import ButtonGroup from "components/ButtonGroup";
+import { Button, ButtonGroup } from "components";
 import { GithubIcon, LinkedInIcon } from "icons";
 import { useChangeLocale, useCurrentLocale } from "locales/client";
 

@@ -1,5 +1,4 @@
-import Section from "components/Section";
-import Typography from "components/Typography";
+import { Section, Typography } from "components";
 import { getScopedI18n } from "locales/server";
 
 const skills = [
