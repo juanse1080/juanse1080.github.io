@@ -12,7 +12,7 @@ const LocaleLayout = ({
   return (
     <html lang={locale}>
       <head>
-        <link rel="icon" type="image/svg+xml" href="/icon.png" />
+        <link rel="icon" type="image/svg+xml" href="/icon.ico" />
       </head>
       <body className={fontPoppins.className}>
         <Provider locale={locale}>
