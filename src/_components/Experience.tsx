@@ -28,7 +28,7 @@ const Experience = async ({}: Readonly<ExperienceProps>) => {
           <span className="text-gradient">{t("subtitle.5")}</span>
         </Typography>
       </div>
-      <div className="relative grid gap-y-2 grid-cols-1 sm:grid-cols-66 grid-rows-8 z-0 overflow-hidden sm:border-divider sm:border sm:border-solid p-3 rounded-xl my-12 md:my-20 lg:my-24">
+      <div className="relative grid gap-y-2 grid-cols-1 sm:grid-cols-66 grid-rows-8 z-0 overflow-hidden sm:border-divider sm:border sm:border-solid p-0 sm:p-3 rounded-xl my-12 md:my-20 lg:my-24">
         <Grid />
         <Item
           current
