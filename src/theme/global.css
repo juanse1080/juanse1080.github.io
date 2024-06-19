@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+code {
+  font-family: 'Inconsolata', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important
+}
+
+.root {
+  @apply container px-3;
+}
+
+.section {
+  @apply pb-8 sm:pb-12 md:pb-20 lg:pb-24
+}
+
+.border-common {
+  @apply border border-solid border-divider
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-secondary-100 to-secondary-50  text-transparent bg-clip-text
+}
+
+.bg-gradient {
+  @apply bg-gradient-to-r from-secondary-100 to-secondary-50
+}
