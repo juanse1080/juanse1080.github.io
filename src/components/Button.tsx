@@ -33,8 +33,7 @@ const Button = <Element extends HTMLElementKeys>({
           "cursor-not-allowed": disabled,
         },
         {
-          "bg-gradient-to-r from-secondary-100 to-secondary-50 shadow-button":
-            variant === "contained",
+          "bg-gradient shadow-button": variant === "contained",
           "border border-solid border-divider shadow-outlined":
             variant === "outlined",
         },

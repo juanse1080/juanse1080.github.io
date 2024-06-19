@@ -1,18 +1,31 @@
-import Layout from "_components/Layout";
-import { getStaticParams } from "locales/server";
+import AppBar from "_components/AppBar";
+import Provider from "_components/Provider";
 import { PropsWithChildren } from "react";
+import { fontPoppins } from "theme/fonts";
 import "theme/global.css";
 import { LocaleParams, Params } from "types";
-
-export function generateStaticParams() {
-  return getStaticParams();
-}
 
 const LocaleLayout = ({
   children,
   params: { locale },
 }: PropsWithChildren<Params<LocaleParams>>) => {
-  return <Layout locale={locale}>{children}</Layout>;
+  return (
+    <html lang={locale}>
+      <head>
+        <link rel="icon" type="image/svg+xml" href="/icon.png" />
+      </head>
+      <body className={fontPoppins.className}>
+        <Provider locale={locale}>
+          <div className="text-white bg-background">
+            <AppBar />
+            <div className="min-h-screen h-full overflow-y-auto w-full">
+              {children}
+            </div>
+          </div>
+        </Provider>
+      </body>
+    </html>
+  );
 };
 
 export default LocaleLayout;

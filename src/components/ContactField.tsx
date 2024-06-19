@@ -6,6 +6,7 @@ import { merge } from "utils/clsx";
 import Button from "./Button";
 import Typography from "./Typography";
 import { useScopedI18n } from "locales/client";
+import { fontInconsolata } from "theme/fonts";
 
 export type ContactFieldProps<Element extends HTMLElementKeys> = {
   value: string;
@@ -31,6 +32,7 @@ const ContactField = <Element extends HTMLElementKeys>({
     <Component
       className={merge(
         "border-solid border border-divider rounded-full px-3 py-2 pl-4 bg-code flex items-center gap-1 overflow-hidden",
+        fontInconsolata.className,
         className
       )}
       {...(props as any)}
