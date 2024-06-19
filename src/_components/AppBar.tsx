@@ -26,6 +26,7 @@ const AppBar = () => {
           target="_blank"
           rel="noreferrer"
           className="flex items-center"
+          aria-label="LinkedIn profile"
         >
           <LinkedInIcon />
         </a>
@@ -34,6 +35,7 @@ const AppBar = () => {
           target="_blank"
           rel="noreferrer"
           className="flex items-center"
+          aria-label="GitHub profile"
         >
           <GithubIcon />
         </a>
