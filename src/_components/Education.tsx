@@ -57,7 +57,7 @@ const Education = async ({}: Readonly<EducationProps>) => {
 
         <div className="flex items-center justify-center">
           <img
-            src="/img/Education/udemy.png"
+            src="/img/Education/udemy.webp"
             alt="Udemy logo"
             width="150"
             height="52"
@@ -66,7 +66,7 @@ const Education = async ({}: Readonly<EducationProps>) => {
         </div>
         <div className="flex items-center justify-center">
           <img
-            src="/img/Education/coursera.png"
+            src="/img/Education/coursera.webp"
             alt="Coursera logo"
             width="150"
             height="52"
@@ -75,7 +75,7 @@ const Education = async ({}: Readonly<EducationProps>) => {
         </div>
         <div className="flex items-center justify-center">
           <img
-            src="/img/Education/aws.png"
+            src="/img/Education/aws.webp"
             alt="AWS logo"
             width="100"
             height="52"
