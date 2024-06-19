@@ -45,7 +45,7 @@ const About = async ({}: Readonly<AboutProps>) => {
           <Button
             component="a"
             target="_blank"
-            href="docs/CV/JuanMarcon.pdf"
+            href="/docs/CV/JuanMarcon.pdf"
             endAdornment={<OpenInNewIcon height={20} width={20} />}
           >
             {t("cv.call_to_action")}

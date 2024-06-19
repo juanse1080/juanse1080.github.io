@@ -1,23 +1,27 @@
-import About from "./_components/About";
-import Education from "./_components/Education";
-import Experience from "./_components/Experience";
-import Home from "./_components/Home";
-import Skill from "./_components/Skill";
+import About from "_components/About";
+import Education from "_components/Education";
+import Experience from "_components/Experience";
+import Home from "_components/Home";
+import Skill from "_components/Skill";
+import { getI18n } from "locales/server";
+import { setStaticParamsLocale } from "next-international/server";
+import { LocaleParams, Params } from "types";
 
-const companies = [
-  { image: "/img/Companies/melonn.svg", name: "Melonn" },
-  { image: "/img/Companies/woombat.svg", name: "Woombat" },
-  { image: "/img/Companies/bitnovo.svg", name: "Bitnovo" },
-  { image: "/img/Companies/mayasoft.png", name: "Mayasoft" },
-  { image: "/img/Companies/conexalab.webp", name: "ConexaLab" },
-  { image: "/img/Companies/binary.png", name: "Binary Groups" },
-  // { image: "/img/Companies/ipred.png", name: "IPRED" },
-];
+export const generateMetadata = async () => {
+  const t = await getI18n();
 
-function App() {
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+};
+
+const App = ({ params: { locale } }: Params<LocaleParams>) => {
+  setStaticParamsLocale(locale);
+
   return (
     <>
-      <Home companies={companies} />
+      <Home />
       <hr className="border-divider" />
       <About />
       <Skill />
@@ -25,6 +29,6 @@ function App() {
       <Experience />
     </>
   );
-}
+};
 
 export default App;

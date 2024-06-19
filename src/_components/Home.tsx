@@ -2,16 +2,19 @@ import Button from "components/Button";
 import Typography from "components/Typography";
 import ArrowForwardIcon from "icons/ArrowForwardIcon";
 import { getScopedI18n } from "locales/server";
-import Image from "next/image";
 
-export type HomeProps = {
-  companies: {
-    name: string;
-    image: string;
-  }[];
-};
+export type HomeProps = {};
 
-const Home = async ({ companies }: Readonly<HomeProps>) => {
+const companies = [
+  { image: "/img/Companies/melonn.svg", name: "Melonn" },
+  { image: "/img/Companies/woombat.svg", name: "Woombat" },
+  { image: "/img/Companies/bitnovo.svg", name: "Bitnovo" },
+  { image: "/img/Companies/mayasoft.png", name: "Mayasoft" },
+  { image: "/img/Companies/conexalab.webp", name: "ConexaLab" },
+  { image: "/img/Companies/binary.png", name: "Binary Groups" },
+];
+
+const Home = async ({}: Readonly<HomeProps>) => {
   const t = await getScopedI18n("content");
 
   return (
@@ -47,7 +50,8 @@ const Home = async ({ companies }: Readonly<HomeProps>) => {
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
           {companies.map(({ name, image }) => (
             <div className="flex items-center justify-center">
-              <Image
+              <img
+                key={name}
                 src={image}
                 alt={name}
                 width="150"

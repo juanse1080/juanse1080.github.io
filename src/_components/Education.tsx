@@ -2,7 +2,6 @@ import Section from "components/Section";
 import Typography from "components/Typography";
 import { UISIcon } from "icons";
 import { getScopedI18n } from "locales/server";
-import Image from "next/image";
 
 export type EducationProps = {};
 
@@ -58,7 +57,7 @@ const Education = async ({}: Readonly<EducationProps>) => {
         </div>
 
         <div className="flex items-center justify-center">
-          <Image
+          <img
             src="/img/Education/udemy.png"
             alt="Udemy logo"
             width="150"
@@ -67,7 +66,7 @@ const Education = async ({}: Readonly<EducationProps>) => {
           />
         </div>
         <div className="flex items-center justify-center">
-          <Image
+          <img
             src="/img/Education/coursera.png"
             alt="Coursera logo"
             width="150"
@@ -76,7 +75,7 @@ const Education = async ({}: Readonly<EducationProps>) => {
           />
         </div>
         <div className="flex items-center justify-center">
-          <Image
+          <img
             src="/img/Education/aws.png"
             alt="AWS logo"
             width="100"

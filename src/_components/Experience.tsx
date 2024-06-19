@@ -150,6 +150,7 @@ const Grid = () => {
         .fill("")
         .map((_, idx) => (
           <span
+            key={idx}
             className={merge("border-r border-divider border-solid", {
               "border-x": idx === 0,
             })}
