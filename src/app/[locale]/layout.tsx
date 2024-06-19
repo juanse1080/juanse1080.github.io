@@ -1,9 +1,9 @@
-import AppBar from "_components/AppBar";
-import Provider from "_components/Provider";
 import { PropsWithChildren } from "react";
 import { fontPoppins } from "theme/fonts";
 import "theme/global.css";
 import { LocaleParams, Params } from "types";
+import AppBar from "./_components/AppBar";
+import Provider from "./_providers/Provider";
 
 const LocaleLayout = ({
   children,

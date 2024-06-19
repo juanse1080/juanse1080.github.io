@@ -1,5 +1,4 @@
-import { Button, Typography } from "components";
-import { ArrowForwardIcon } from "icons";
+import { Button, Typography, ArrowForwardIcon } from "components";
 import { getScopedI18n } from "locales/server";
 
 export type HomeProps = {};

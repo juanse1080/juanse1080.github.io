@@ -1,11 +1,11 @@
-import About from "_components/About";
-import Education from "_components/Education";
-import Experience from "_components/Experience";
-import Home from "_components/Home";
-import Skill from "_components/Skill";
 import { getI18n, getStaticParams } from "locales/server";
 import { setStaticParamsLocale } from "next-international/server";
 import { LocaleParams, Params } from "types";
+import About from "./_components/About";
+import Education from "./_components/Education";
+import Experience from "./_components/Experience";
+import Home from "./_components/Home";
+import Skill from "./_components/Skill";
 
 export function generateStaticParams() {
   return getStaticParams();

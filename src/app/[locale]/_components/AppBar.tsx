@@ -1,7 +1,6 @@
 "use client";
 
-import { Button, ButtonGroup } from "components";
-import { GithubIcon, LinkedInIcon } from "icons";
+import { Button, ButtonGroup, GithubIcon, LinkedInIcon } from "components";
 import { useChangeLocale, useCurrentLocale } from "locales/client";
 
 const languages = ["en", "es"];

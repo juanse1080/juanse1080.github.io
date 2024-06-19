@@ -1,5 +1,4 @@
-import { Section, Typography } from "components";
-import { UISIcon } from "icons";
+import { Section, Typography, UISIcon } from "components";
 import { getScopedI18n } from "locales/server";
 
 export type EducationProps = {};

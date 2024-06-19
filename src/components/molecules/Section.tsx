@@ -1,6 +1,6 @@
 import { HTMLElementKeys, IntrinsicElementsProps } from "types";
 import { merge } from "utils/clsx";
-import TitleSection from "./TitleSection";
+import { TitleSection } from "components/atoms";
 
 export type SectionProps<Element extends HTMLElementKeys> = {
   id: string;

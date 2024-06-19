@@ -7,7 +7,7 @@ import {
 } from "react";
 import { HTMLElementKeys, IntrinsicElementsProps } from "types";
 import { merge } from "utils/clsx";
-import { ButtonProps } from "./Button";
+import { ButtonProps } from "components";
 
 export type ItemType = ReactNode;
 
