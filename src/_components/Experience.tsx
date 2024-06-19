@@ -101,7 +101,7 @@ const Item = <Element extends HTMLElementKeys = "div">({
     <>
       <Component
         className={merge(
-          "sm:hidden flex flex-col px-5 py-3 rounded-full bg-code border-common",
+          "sm:hidden flex flex-col px-5 py-3 rounded-full bg-code border-border border-solid border-divider",
           className
         )}
         {...(props as any)}
