@@ -8,7 +8,7 @@ const Home = async ({}: Readonly<HomeProps>) => {
 
   return (
     <div className="root relative h-screen flex justify-center items-center">
-      <div className="flex flex-col items-center justify-center gap-5 w-1/2">
+      <div className="flex flex-col items-center justify-center gap-5 w-full lg:w-1/2">
         <Typography
           component="h1"
           variant="h2"
