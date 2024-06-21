@@ -1,4 +1,4 @@
-import { Button, ContactField, Section, Typography } from "components";
+import { Button, ContactField, Section, Typography, Trans } from "components";
 import { OpenInNewIcon } from "components";
 import { getScopedI18n } from "locales/server";
 
@@ -12,8 +12,10 @@ const About = async ({}: Readonly<AboutProps>) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
         <div className="md:row-span-2">
           <Typography variant="h6" component="h3">
-            {`${t("subtitle.0")} `}
-            <span className="text-gradient">{t("subtitle.1")}</span>
+            <Trans
+              text={t("subtitle")}
+              tags={{ span: { className: "text-gradient" } }}
+            />
           </Typography>
           <Typography>{t("description.0")}</Typography>
           <Typography>{t("description.1")}</Typography>
@@ -36,8 +38,10 @@ const About = async ({}: Readonly<AboutProps>) => {
         </div>
         <div className="md:col-start-2 md:row-start-2">
           <Typography variant="h6" component="h3">
-            {`${t("cv.title.0")} `}
-            <span className="text-gradient">{t("cv.title.1")}</span>
+            <Trans
+              text={t("cv.title")}
+              tags={{ span: { className: "text-gradient" } }}
+            />
           </Typography>
           <Button
             component="a"

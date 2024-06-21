@@ -1,8 +1,7 @@
-import { Section, Typography } from "components";
+import { Section, Trans, Typography } from "components";
 import { getScopedI18n } from "locales/server";
-import { merge } from "utils/clsx";
-import ExperienceItem from "./ExperienceItem";
 import ExperienceContainer from "./ExperienceContainer";
+import ExperienceItem from "./ExperienceItem";
 
 export type ExperienceProps = {};
 
@@ -12,12 +11,10 @@ const Experience = async ({}: Readonly<ExperienceProps>) => {
   return (
     <Section id="experience" title={t("title")}>
       <Typography variant="h6" component="h3">
-        {t("subtitle.0")}{" "}
-        <span className="text-gradient">{t("subtitle.1")}</span>
-        {t("subtitle.2")}{" "}
-        <span className="text-gradient">{t("subtitle.3")}</span>{" "}
-        {t("subtitle.4")}{" "}
-        <span className="text-gradient">{t("subtitle.5")}</span>
+        <Trans
+          text={t("subtitle")}
+          tags={{ span: { className: "text-gradient" } }}
+        />
       </Typography>
       <ExperienceContainer>
         <ExperienceItem

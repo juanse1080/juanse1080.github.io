@@ -1,4 +1,4 @@
-import { Section, Typography, UISIcon } from "components";
+import { Section, Typography, UISIcon, Trans } from "components";
 import { getScopedI18n } from "locales/server";
 
 export type EducationProps = {};
@@ -11,12 +11,10 @@ const Education = async ({}: Readonly<EducationProps>) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className="md:row-span-2">
           <Typography variant="h6" component="h3">
-            {t("subtitle.0")}{" "}
-            <span className="text-gradient">{t("subtitle.1")}</span>{" "}
-            {t("subtitle.2")}{" "}
-            <span className="text-gradient">{t("subtitle.3")}</span>{" "}
-            {t("subtitle.4")}{" "}
-            <span className="text-gradient">{t("subtitle.5")}</span>
+            <Trans
+              text={t("subtitle")}
+              tags={{ span: { className: "text-gradient" } }}
+            />
           </Typography>
           <Typography className="hidden md:block">
             {t("description")}
@@ -24,30 +22,24 @@ const Education = async ({}: Readonly<EducationProps>) => {
         </div>
         <div>
           <Typography variant="h6" component="h3">
-            {t("courses.title.0")}{" "}
-            <span className="text-gradient">{t("courses.title.1")}</span>{" "}
-            {t("courses.title.2")}{" "}
-            <span className="text-gradient">{t("courses.title.3")}</span>
-            {t("courses.title.4")}
+            <Trans
+              text={t("courses.title")}
+              tags={{ span: { className: "text-gradient" } }}
+            />
           </Typography>
           <Typography>
-            {t("courses.description.0")}{" "}
-            <span className="text-gradient">{t("courses.description.1")}</span>{" "}
-            {t("courses.description.2")}
+            <Trans
+              text={t("courses.description")}
+              tags={{ span: { className: "text-gradient" } }}
+            />
           </Typography>
         </div>
-        <div>
-          <Typography variant="h6" component="h3">
-            {t("courses.current.title.0")}{" "}
-            <span className="text-gradient">
-              {t("courses.current.title.1")}
-            </span>
-            {t("courses.current.title.2")}{" "}
-            <span className="text-gradient">
-              {t("courses.current.title.3")}
-            </span>
-          </Typography>
-        </div>
+        <Typography variant="h6" component="h3">
+          <Trans
+            text={t("courses.current.title")}
+            tags={{ span: { className: "text-gradient" } }}
+          />
+        </Typography>
       </div>
       <div className="py-12 md:py-20 lg:py-24 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4">
         <div className="flex items-center justify-center">

@@ -1,4 +1,4 @@
-import { Button, Typography, ArrowForwardIcon } from "components";
+import { Button, Typography, ArrowForwardIcon, Trans } from "components";
 import { getScopedI18n } from "locales/server";
 
 export type HomeProps = {};
@@ -24,8 +24,10 @@ const Home = async ({}: Readonly<HomeProps>) => {
             variant="h2"
             className="text-center md:text-left"
           >
-            {t("title.0")} <br />
-            <span className="text-gradient">{t("title.1")}</span>
+            <Trans
+              text={t("title")}
+              tags={{ span: { className: "text-gradient block" } }}
+            />
           </Typography>
           <Button
             component="a"
