@@ -33,12 +33,13 @@ const Button = <Element extends HTMLElementKeys>({
           "cursor-not-allowed": disabled,
         },
         {
-          "bg-gradient shadow-button": variant === "contained",
-          "border border-solid border-divider shadow-outlined":
+          "bg-gradient shadow-button text-white font-thin":
+            variant === "contained",
+          "border border-solid border-divider outline-none":
             variant === "outlined",
         },
         {
-          "px-2 py-2": size === "small",
+          "px-1.5 py-1.5": size === "small",
           "px-3 py-2": size === "medium",
           "px-5 py-4": size === "large",
         },
@@ -47,7 +48,7 @@ const Button = <Element extends HTMLElementKeys>({
             variant === "text",
           "hover:shadow-none focus:shadow-none focus:outline-2 focus:outline-offset-0 focus:outline-white":
             variant === "contained",
-          "hover:shadow-none focus:outline-2 focus:outline-offset-0 focus:outline-white":
+          "hover:border-secondary-100 focus:border-secondary-100":
             variant === "outlined",
         },
         className

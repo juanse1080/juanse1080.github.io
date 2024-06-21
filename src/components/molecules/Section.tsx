@@ -1,6 +1,6 @@
+import { Divider, TitleSection } from "components/atoms";
 import { HTMLElementKeys, IntrinsicElementsProps } from "types";
 import { merge } from "utils/clsx";
-import { TitleSection } from "components/atoms";
 
 export type SectionProps<Element extends HTMLElementKeys> = {
   id: string;
@@ -25,10 +25,14 @@ const Section = <Element extends HTMLElementKeys = "div">({
         )}
         {...(props as any)}
       >
-        {title && <TitleSection id={id as string}>{title}</TitleSection>}
+        {title && (
+          <TitleSection id={id as string} href={`#${id}`}>
+            {title}
+          </TitleSection>
+        )}
         {children}
       </Component>
-      <hr className="border-divider" />
+      <Divider />
     </>
   );
 };

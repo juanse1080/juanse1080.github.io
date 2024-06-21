@@ -92,4 +92,9 @@ export default {
     frontend: "Desarrollador frontend ",
     cloud: "Ingeniero cloud",
   },
+  project: {
+    title: "Projects",
+    subtitle:
+      "A continuación, presento una selección de mis <span>trabajos públicos</span> más destacados, esto orientado a mejorar mis habilidades técnicas.",
+  },
 } as const;

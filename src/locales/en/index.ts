@@ -90,4 +90,9 @@ export default {
     frontend: "Frontend developer",
     cloud: "Cloud engineer",
   },
+  project: {
+    title: "Projects",
+    subtitle:
+      "Below, I present a selection of my most outstanding <span>public works</span>, this oriented to improve my technical skills.",
+  },
 } as const;
