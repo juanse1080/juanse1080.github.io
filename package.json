@@ -15,7 +15,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "postbuild": "cp ./dist/es/index.html ./dist/index.html"
+    "postbuild": "cp -r ./dist/es/* ./dist"
   },
   "eslintConfig": {
     "extends": [
