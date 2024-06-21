@@ -1,0 +1,48 @@
+export const projects = [
+  {
+    id: "expense_track" as const,
+    title: "Expense track",
+    skills: [
+      "Javascript",
+      "Typescript",
+      "React JS",
+      "React Native",
+      "Next JS",
+      "Gluestack",
+      "Tailwind",
+      "Nest JS",
+      "Prisma",
+      "NX",
+      "MySQL",
+    ],
+    img: "/img/projects/expense-track/home.png",
+  },
+  {
+    id: "deeptools" as const,
+    title: "Deeptools",
+    skills: [
+      "Javascript",
+      "React JS",
+      "Material UI",
+      "Python",
+      "Django",
+      "Celery",
+      "gRPC",
+      "Docker",
+      "MySQL",
+    ],
+    img: "/img/projects/deeptools/algorithms.png",
+  },
+  {
+    id: "portfolio" as const,
+    title: "Resumen",
+    skills: ["Javascript", "Typescript", "React JS", "Next JS", "Tailwind"],
+    img: "/img/projects/portfolio/home.png",
+  },
+  {
+    id: "crowdinvestment" as const,
+    title: "Crowdinvestment",
+    skills: ["PHP 7.2", "laravel 5.6", "MySQL", "JQuery", "Javascript"],
+    img: "/img/projects/crowdinvestment/investment.png",
+  },
+];

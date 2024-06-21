@@ -1,9 +1,9 @@
-import AppBar from "_components/AppBar";
-import Provider from "_components/Provider";
 import { PropsWithChildren } from "react";
 import { fontPoppins } from "theme/fonts";
 import "theme/global.css";
 import { LocaleParams, Params } from "types";
+import AppBar from "./_components/AppBar";
+import Provider from "./_providers/Provider";
 
 const LocaleLayout = ({
   children,
@@ -16,7 +16,7 @@ const LocaleLayout = ({
       </head>
       <body className={fontPoppins.className}>
         <Provider locale={locale}>
-          <div className="text-white bg-background">
+          <div className="text-slate-200 bg-background">
             <AppBar />
             <div className="min-h-screen h-full overflow-y-auto w-full">
               {children}

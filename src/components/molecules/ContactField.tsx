@@ -1,12 +1,11 @@
 "use client";
 
-import { ContentCopyIcon, SendIcon } from "icons";
+import { ContentCopyIcon, SendIcon } from "components/icons";
 import { HTMLElementKeys, IntrinsicElementsProps } from "types";
 import { merge } from "utils/clsx";
-import Button from "./Button";
-import Typography from "./Typography";
 import { useScopedI18n } from "locales/client";
 import { fontInconsolata } from "theme/fonts";
+import { Button, Typography } from "components/atoms";
 
 export type ContactFieldProps<Element extends HTMLElementKeys> = {
   value: string;
