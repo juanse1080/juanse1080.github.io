@@ -25,11 +25,7 @@ const Section = <Element extends HTMLElementKeys = "div">({
         )}
         {...(props as any)}
       >
-        {title && (
-          <TitleSection id={id as string} href={`#${id}`}>
-            {title}
-          </TitleSection>
-        )}
+        {title && <TitleSection id={id as string}>{title}</TitleSection>}
         {children}
       </Component>
       <Divider />

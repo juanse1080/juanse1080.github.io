@@ -61,5 +61,23 @@ export default {
     title: "Projects",
     subtitle:
       "Below, I present a selection of my most outstanding <span>public works</span>, this oriented to improve my technical skills.",
+    items: {
+      deeptools: {
+        description:
+          "This project is aimed at <span>AI model</span> developers without knowledge of proper algorithm deployment. The software was designed to help many members of the <span>Bivl2ab</span> group who lack this expertise.",
+      },
+      portfolio: {
+        description:
+          "This project is an opportunity to share who I am <span>professionally</span> in a more personal way. My goal is to showcase my <span>skills</span>, <span>experiences</span> and <span>accomplishments</span> in a way that reflects my passion and dedication to my career.",
+      },
+      crowdinvestment: {
+        description:
+          "This project began in a <span>Hackathon</span> organized by <span>Mayasoft</span>. The application's philosophy is <span>CrowdFunding</span>, it is based on financial donations, in order to finance a certain project in exchange for rewards, altruistic participation.",
+      },
+      expense_track: {
+        description:
+          "Expense Track is a project to keep <span>track of your expenses</span> and facilitate the maintenance of <span>shared balance</span> records with housemates, during trips, in groups, with friends and family.",
+      },
+    },
   },
 } as const;

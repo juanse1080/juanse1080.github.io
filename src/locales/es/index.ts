@@ -61,5 +61,23 @@ export default {
     title: "Projects",
     subtitle:
       "A continuación, presento una selección de mis <span>trabajos públicos</span> más destacados, esto orientado a mejorar mis habilidades técnicas.",
+    items: {
+      deeptools: {
+        description:
+          "Este proyecto está dirigido a desarrolladores de <span>modelos de IA</span> sin conocimientos sobre el despliegue adecuado de algoritmos. El software fue diseñado para ayudar a muchos miembros del grupo <span>Bivl2ab</span> que carecen de esta experiencia.",
+      },
+      portfolio: {
+        description:
+          "Este proyecto es una oportunidad para compartir quién soy <span>profesionalmente</span> de una manera más personal. Mi objetivo es mostrar mis <span>habilidades</span>, <span>experiencias</span> y <span>logros</span> de una manera que refleje mi pasión y dedicación por mi carrera",
+      },
+      crowdinvestment: {
+        description:
+          "Este proyecto comenzó en una <span>Hackathon</span> organizada por <span>Mayasoft</span>. El aplicativo tiene como filosofía el <span>CrowdFounding</span>, se basa en donaciones económicas, para conseguir financiar un determinado proyecto a cambio de recompensas.",
+      },
+      expense_track: {
+        description:
+          "Expense Track es un proyecto para llevar un <span>registro de tus gastos</span> y facilitar el mantenimiento de registros de <span>saldos compartidos</span> con compañeros de casa, durante viajes, en grupos, con amigos y familiares.",
+      },
+    },
   },
 } as const;
