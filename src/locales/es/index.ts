@@ -1,7 +1,9 @@
 import common from "./common";
+import projects from "./projects";
 
 export default {
   common,
+  projects,
   title: "Juan Marcon | Desarrollador de software",
   description: "El portafolio de Juan Marcon, desarrollador de software",
   content: {

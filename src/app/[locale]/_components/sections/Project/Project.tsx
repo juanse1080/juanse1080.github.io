@@ -26,10 +26,11 @@ const Project = async ({}: Readonly<ProjectProps>) => {
         />
       </Typography>
       <div className="mt-10 flex flex-col gap-5">
-        {mainProjects.map(({ isMobile, ...project }, idx) => (
-          <Fragment key={project.id}>
+        {mainProjects.map(({ id, isMobile, ...project }, idx) => (
+          <Fragment key={id}>
             <ProjectItem
-              description={t(`items.${project.id}.description`)}
+              href={`projects/#${id}`}
+              description={t(`items.${id}.description`)}
               {...project}
             >
               <img

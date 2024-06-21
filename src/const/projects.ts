@@ -42,14 +42,7 @@ export const projects = [
   {
     id: "crowdinvestment" as const,
     title: "Crowdinvestment",
-    skills: [
-      "PHP 7.2",
-      "laravel 5.6",
-      "MySQL",
-      "JQuery",
-      "Javascript",
-      "Bootstrap 4",
-    ],
+    skills: ["PHP 7.2", "laravel 5.6", "MySQL", "JQuery", "Javascript"],
     img: "/img/projects/crowdinvestment/investment.png",
   },
 ];

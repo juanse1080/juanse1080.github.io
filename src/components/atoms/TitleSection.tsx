@@ -4,7 +4,7 @@ import { merge } from "utils/clsx";
 
 export type TitleSectionProps<Element extends HTMLElementKeys> = {
   id: string;
-} & Omit<TitleProps<Element>, "variant" | "component" | "id" | "href">;
+} & Omit<TitleProps<Element>, "variant" | "component" | "id" | "href" | "icon">;
 
 const TitleSection = <Element extends HTMLElementKeys>({
   id,

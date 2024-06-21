@@ -44,8 +44,7 @@ const Button = <Element extends HTMLElementKeys>({
           "px-5 py-4": size === "large",
         },
         !disabled && {
-          "hover:bg-[rgba(144,202,249,0.08)] focus:bg-[rgba(144,202,249,0.08)] focus:outline-2 focus:outline-secondary-50":
-            variant === "text",
+          "hover:bg-[rgba(144,202,249,0.08)]": variant === "text",
           "hover:shadow-none focus:shadow-none focus:outline-2 focus:outline-offset-0 focus:outline-white":
             variant === "contained",
           "hover:border-secondary-100 focus:border-secondary-100":
