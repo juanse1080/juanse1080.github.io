@@ -1,29 +1,61 @@
+"use client";
+
 import { Typography } from "components";
-import { HTMLElementKeys, IntrinsicElementsProps } from "types";
+import {
+  differenceInCalendarMonths,
+  differenceInMonths,
+  endOfMonth,
+} from "date-fns";
+import { ReactNode, useMemo } from "react";
 import { merge } from "utils/clsx";
 
-export type ExperienceItemProps<Element extends HTMLElementKeys> = {
-  current?: boolean;
+export type ExperienceItemProps = {
   company: string;
   role: string;
   align?: "left" | "right";
-  time?: string;
-} & IntrinsicElementsProps<Element>;
+  startDate: string;
+  endDate?: string;
+  className?: string;
+  children?: ReactNode;
+};
 
-const ExperienceItem = <Element extends HTMLElementKeys = "div">({
-  component: Component = "div",
+const startExperience = new Date("2019-01-01");
+const endExperience = endOfMonth(new Date());
+
+const totalMonths = differenceInMonths(endExperience, startExperience);
+const percentagePerMonth = 100 / totalMonths;
+
+const monthWidth = (numberOfMonths: number) =>
+  `calc(${numberOfMonths * percentagePerMonth}%)`;
+
+const ExperienceItem = ({
   children,
   className,
-  current,
   company,
   role,
-  time,
+  startDate,
+  endDate,
   align = "left",
   ...props
-}: Readonly<ExperienceItemProps<Element>>) => {
+}: Readonly<ExperienceItemProps>) => {
+  const current = useMemo(() => !endDate, [endDate]);
+
+  const months = useMemo(
+    () =>
+      monthWidth(
+        differenceInCalendarMonths(endDate ?? endExperience, startDate)
+      ),
+    [startDate, endDate]
+  );
+
+  const rightMonths = useMemo(
+    () => monthWidth(differenceInCalendarMonths(startDate, startExperience)),
+    [startDate]
+  );
+
   return (
     <>
-      <Component
+      <div
         className={merge(
           "sm:hidden flex flex-col px-5 py-3 rounded-full bg-code border-border border-solid border-divider",
           className
@@ -32,29 +64,27 @@ const ExperienceItem = <Element extends HTMLElementKeys = "div">({
       >
         <Typography
           variant="body"
-          className="text-nowrap mb-0 font-bold text-white"
+          className={merge("text-nowrap mb-0 font-bold text-white")}
         >
           {company}
         </Typography>
 
-        <Typography variant="caption" className="text-nowrap mb-0">
+        <Typography variant="caption" className={merge("text-nowrap mb-0")}>
           {role}
         </Typography>
-      </Component>
-      <Component
-        className={merge(
-          "hidden sm:flex flex-col",
-          {
-            "items-end": align === "right",
-            "items-start": align === "left",
-          },
-          className
-        )}
+      </div>
+      <div
+        className={merge("hidden sm:flex flex-col", className)}
+        style={{ transform: `translateX(${rightMonths})` }}
         {...(props as any)}
       >
         <Typography
+          align={align}
           variant="body"
           className="text-nowrap mb-0 font-bold text-white"
+          style={{
+            width: months,
+          }}
         >
           {company}
         </Typography>
@@ -63,11 +93,21 @@ const ExperienceItem = <Element extends HTMLElementKeys = "div">({
             "rounded-l-full": current,
             "rounded-full ": !current,
           })}
+          style={{
+            width: months,
+          }}
         />
-        <Typography variant="caption" className="text-nowrap mb-0">
+        <Typography
+          align={align}
+          variant="caption"
+          className="text-nowrap mb-0"
+          style={{
+            width: months,
+          }}
+        >
           {role}
         </Typography>
-      </Component>
+      </div>
     </>
   );
 };
