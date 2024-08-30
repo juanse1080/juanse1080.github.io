@@ -1,11 +1,15 @@
 import { Section, Trans, Typography } from "components";
+import { differenceInCalendarMonths, endOfMonth } from "date-fns";
 import { getScopedI18n } from "locales/server";
 import ExperienceContainer from "./ExperienceContainer";
 import ExperienceItem from "./ExperienceItem";
 
-export type ExperienceProps = {};
+const startExperience = new Date("2019-01-01");
+const endExperience = endOfMonth(new Date());
 
-const Experience = async ({}: Readonly<ExperienceProps>) => {
+const months = differenceInCalendarMonths(endExperience, startExperience);
+
+const Experience = async () => {
   const t = await getScopedI18n("experience");
 
   return (
@@ -16,57 +20,60 @@ const Experience = async ({}: Readonly<ExperienceProps>) => {
           tags={{ span: { className: "text-gradient" } }}
         />
       </Typography>
-      <ExperienceContainer>
+      <ExperienceContainer numberOfMonths={months}>
         <ExperienceItem
-          current
           align="right"
           company="ConexaLab"
           role={t("fullstack")}
-          className="col-span-1 sm:col-start-65 sm:col-span-2"
+          startDate="2024-02-01"
         />
         <ExperienceItem
           align="right"
           company="Melonn"
           role={t("cloud")}
-          className="col-span-1 sm:col-start-50 sm:col-span-12"
+          startDate="2023-01-01"
+          endDate="2024-01-30"
         />
         <ExperienceItem
-          align="right"
           company="Mayasoft"
           role={t("fullstack")}
-          className="col-span-1 sm:col-start-39 sm:col-span-10"
+          startDate="2022-03-01"
+          endDate="2022-10-31"
         />
         <ExperienceItem
-          align="right"
           company="Woombat"
           role={t("frontend")}
-          className="col-span-1 sm:col-start-34 sm:col-span-5"
+          startDate="2021-11-01"
+          endDate="2022-03-31"
         />
         <ExperienceItem
           company="Bitnovo"
           role={t("frontend")}
-          className="col-span-1 sm:col-start-25 sm:col-span-5"
+          startDate="2021-02-01"
+          endDate="2021-07-31"
         />
         <ExperienceItem
           company="Binary groups"
           role={t("frontend")}
-          className="col-span-1 sm:col-start-24 sm:col-span-19"
+          startDate="2021-01-01"
+          endDate="2022-11-30"
         />
         <ExperienceItem
           company="IPRED"
           role={t("fullstack")}
-          className="col-span-1 sm:col-start-2 sm:col-span-19"
+          startDate="2019-02-01"
+          endDate="2020-10-31"
         />
         <ExperienceItem
           company="UIS"
           role={t("fullstack")}
-          className="col-span-1 sm:col-start-1 sm:col-span-4"
+          startDate="2019-01-01"
+          endDate="2019-05-31"
         />
         <ExperienceItem
-          current
           company="Freelance"
           role={t("fullstack")}
-          className="col-span-1 sm:col-start-1 sm:col-span-66"
+          startDate="2019-01-01"
         />
       </ExperienceContainer>
     </Section>
