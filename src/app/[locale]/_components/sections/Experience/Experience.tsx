@@ -1,13 +1,7 @@
 import { Section, Trans, Typography } from "components";
-import { differenceInCalendarMonths, endOfMonth } from "date-fns";
 import { getScopedI18n } from "locales/server";
 import ExperienceContainer from "./ExperienceContainer";
 import ExperienceItem from "./ExperienceItem";
-
-const startExperience = new Date("2019-01-01");
-const endExperience = endOfMonth(new Date());
-
-const months = differenceInCalendarMonths(endExperience, startExperience);
 
 const Experience = async () => {
   const t = await getScopedI18n("experience");
@@ -20,7 +14,7 @@ const Experience = async () => {
           tags={{ span: { className: "text-gradient" } }}
         />
       </Typography>
-      <ExperienceContainer numberOfMonths={months}>
+      <ExperienceContainer>
         <ExperienceItem
           align="right"
           company="ConexaLab"
