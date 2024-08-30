@@ -18,7 +18,7 @@ const Experience = async () => {
         <ExperienceItem
           align="right"
           company="ConexaLab"
-          role={t("fullstack")}
+          role={t("cloud")}
           startDate="2024-02-01"
         />
         <ExperienceItem

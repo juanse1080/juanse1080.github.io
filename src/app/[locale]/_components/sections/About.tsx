@@ -1,5 +1,11 @@
-import { Button, ContactField, Section, Typography, Trans } from "components";
-import { OpenInNewIcon } from "components";
+import {
+  Button,
+  ContactField,
+  OpenInNewIcon,
+  Section,
+  Trans,
+  Typography,
+} from "components";
 import { getScopedI18n } from "locales/server";
 
 export type AboutProps = {};
