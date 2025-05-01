@@ -38,11 +38,11 @@ const ExperienceItemMobile = ({
       return (
         " - " +
         format(endDate, "MMM yyyy", {
-          locale: es,
+          locale,
         })
       );
     return "";
-  }, [endDate]);
+  }, [locale]);
 
   return (
     <a
