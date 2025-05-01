@@ -4,6 +4,7 @@ export default {
   sendEmail: "Send email",
   appBar: {
     ariaLabel: {
+      home: "Home",
       github: "GitHub profile",
       linkedIn: "LinkedIn profile",
     },

@@ -1,7 +1,7 @@
 "use client";
 
 import { Typography } from "components/atoms";
-import { ArrowForwardIcon } from "components/icons";
+import { ArrowForwardIcon, OpenInNewIcon } from "components/icons";
 import {
   differenceInCalendarMonths,
   differenceInMonths,
@@ -14,6 +14,7 @@ export type ExperienceItemProps = {
   company: string;
   role: string;
   href: string;
+  ariaLabel: string;
   align?: "left" | "right";
   startDate: string;
   endDate?: string;
@@ -39,6 +40,7 @@ const ExperienceItem = ({
   endDate,
   align = "left",
   href,
+  ariaLabel,
   ...props
 }: Readonly<ExperienceItemProps>) => {
   const current = useMemo(() => !endDate, [endDate]);
@@ -60,9 +62,11 @@ const ExperienceItem = ({
     <>
       <a
         href={href}
-        aria-label={`${company} - ${role}`}
+        target="_blank"
+        aria-label={ariaLabel}
         className={merge(
-          "flex sm:hidden items-center px-5 py-3 rounded-full bg-code border-border border-solid border-divider group",
+          "flex md:hidden items-center px-5 py-3 rounded-full bg-code border-border border-solid border-divider group",
+          "text-slate-300 hover:text-white",
           className
         )}
         {...(props as any)}
@@ -70,7 +74,7 @@ const ExperienceItem = ({
         <div className="flex flex-col grow">
           <Typography
             variant="body"
-            className={merge("text-nowrap mb-0 font-bold text-white")}
+            className={merge("text-nowrap mb-0 font-bold")}
           >
             {company}
           </Typography>
@@ -79,15 +83,20 @@ const ExperienceItem = ({
             {role}
           </Typography>
         </div>
-        <ArrowForwardIcon
-          className="hidden group-hover:inline-block"
-          height={20}
+        <OpenInNewIcon
           width={20}
+          height={20}
+          className="hidden group-hover:inline-block"
         />
       </a>
-      <div
+      <a
+        href={href}
+        target="_blank"
+        aria-label={ariaLabel}
         className={merge(
-          "hidden sm:flex items-center group w-full",
+          "hidden md:flex items-center group w-full",
+          "transition-all duration-300 hover:-translate-y-1",
+          "text-slate-300 hover:text-white",
           {
             "rounded-l-full": current,
             "rounded-full ": !current,
@@ -97,16 +106,19 @@ const ExperienceItem = ({
         style={{ marginLeft: rightMonths }}
         {...(props as any)}
       >
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col gap-0.5 w-full">
           <Typography
             variant="body"
-            className="text-nowrap mb-0 font-bold text-white"
+            className="text-nowrap mb-0 font-bold w-min flex items-center gap-1"
           >
             {company}
+            <OpenInNewIcon
+              width={16}
+              height={16}
+              className="hidden group-hover:inline-block"
+            />
           </Typography>
-          <a
-            href={href}
-            aria-label={`${company} - ${role}`}
+          <span
             className={merge("block bg-gradient px-3 py-2 w-full", {
               "rounded-l-full": current,
               "rounded-full ": !current,
@@ -125,7 +137,7 @@ const ExperienceItem = ({
             {role}
           </Typography>
         </div>
-      </div>
+      </a>
     </>
   );
 };

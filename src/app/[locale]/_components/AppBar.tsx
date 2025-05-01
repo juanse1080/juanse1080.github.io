@@ -2,7 +2,7 @@
 
 import { Button } from "components/atoms";
 import { ButtonGroup } from "components/molecules";
-import { GithubIcon, LinkedInIcon } from "components/icons";
+import { CodeIcon, GithubIcon, LinkedInIcon } from "components/icons";
 import {
   useChangeLocale,
   useCurrentLocale,
@@ -18,7 +18,15 @@ const AppBar = () => {
 
   return (
     <div className="h-min backdrop-blur fixed z-50 left-0 right-0 p-3 border-solid border-b border-divider text-white">
-      <div className="container m-x-auto flex items-stretch gap-3 justify-end">
+      <div className="container m-x-auto flex items-stretch gap-3">
+        <a
+          href={`/${locale}`}
+          className="flex items-center"
+          aria-label={t("appBar.ariaLabel.home")}
+        >
+          <CodeIcon />
+        </a>
+        <span className="grow" />
         <ButtonGroup size="small" value={locale} onChange={changeLocale}>
           {languages.map((locale) => (
             <Button key={locale} value={locale}>

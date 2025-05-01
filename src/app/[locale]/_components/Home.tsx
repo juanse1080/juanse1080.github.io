@@ -3,6 +3,7 @@ import { Button, Trans, Typography } from "components/atoms";
 import { getScopedI18n } from "locales/server";
 
 const companies = [
+  { image: "/img/Companies/celerik.png", name: "Celerik" },
   { image: "/img/Companies/melonn.svg", name: "Melonn" },
   { image: "/img/Companies/woombat.svg", name: "Woombat" },
   { image: "/img/Companies/bitnovo.svg", name: "Bitnovo" },
@@ -46,7 +47,7 @@ const Home = async () => {
         </div>
       </div>
       <div className="root py-12 md:py-20 lg:py-24">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-7 gap-4">
           {companies.map(({ name, image }) => (
             <div key={name} className="flex items-center justify-center">
               <img
