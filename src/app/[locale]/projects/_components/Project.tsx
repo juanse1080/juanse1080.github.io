@@ -4,11 +4,9 @@ import { getScopedI18n } from "locales/server";
 import { merge } from "utils/clsx";
 import ProjectItem from "./ProjectItem";
 
-export type ProjectProps = {};
-
 const mobileProjects = ["expense_track"];
 
-const Project = async ({}: Readonly<ProjectProps>) => {
+const Project = async () => {
   const tSection = await getScopedI18n("project");
 
   const mainProjects = projects.map((project) => ({

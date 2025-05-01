@@ -1,9 +1,7 @@
 import { Section, Typography, UISIcon, Trans } from "components";
 import { getScopedI18n } from "locales/server";
 
-export type EducationProps = {};
-
-const Education = async ({}: Readonly<EducationProps>) => {
+const Education = async () => {
   const t = await getScopedI18n("education");
 
   return (

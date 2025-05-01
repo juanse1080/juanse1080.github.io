@@ -5,11 +5,9 @@ import { Fragment } from "react";
 import { projects } from "const/projects";
 import { merge } from "utils/clsx";
 
-export type ProjectProps = {};
-
 const mobileProjects = ["expense_track"];
 
-const Project = async ({}: Readonly<ProjectProps>) => {
+const Project = async () => {
   const t = await getScopedI18n("project");
 
   const mainProjects = projects.map((project) => ({

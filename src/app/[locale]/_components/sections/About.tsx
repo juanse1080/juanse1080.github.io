@@ -8,9 +8,7 @@ import {
 } from "components";
 import { getScopedI18n } from "locales/server";
 
-export type AboutProps = {};
-
-const About = async ({}: Readonly<AboutProps>) => {
+const About = async () => {
   const t = await getScopedI18n("about");
 
   return (

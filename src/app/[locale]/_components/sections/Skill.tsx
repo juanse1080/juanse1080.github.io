@@ -19,9 +19,7 @@ const skills = [
   "Docker",
 ];
 
-export type SkillProps = {};
-
-const Skill = async ({}: Readonly<SkillProps>) => {
+const Skill = async () => {
   const t = await getScopedI18n("skill");
   return (
     <Section id="skills" title={t("title")}>
