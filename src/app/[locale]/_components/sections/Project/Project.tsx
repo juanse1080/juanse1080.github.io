@@ -9,7 +9,7 @@ import ProjectItem from "./ProjectItem";
 const mobileProjects = ["expense_track"];
 
 const Project = async () => {
-  const t = await getScopedI18n("project");
+  const t = await getScopedI18n("home.project");
   const tCommon = await getScopedI18n("common");
 
   const mainProjects = projects.map((project) => ({

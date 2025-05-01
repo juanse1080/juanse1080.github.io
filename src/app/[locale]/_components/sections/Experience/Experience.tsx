@@ -5,7 +5,7 @@ import ExperienceContainer from "./ExperienceContainer";
 import ExperienceItem from "./ExperienceItem";
 
 const Experience = async () => {
-  const t = await getScopedI18n("experience");
+  const t = await getScopedI18n("home.experience");
   const tCommon = await getScopedI18n("common");
 
   return (

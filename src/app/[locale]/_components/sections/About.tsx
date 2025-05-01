@@ -4,7 +4,7 @@ import { ContactField, Section } from "components/molecules";
 import { getScopedI18n } from "locales/server";
 
 const About = async () => {
-  const t = await getScopedI18n("about");
+  const t = await getScopedI18n("home.about");
   const tCommon = await getScopedI18n("common");
 
   return (

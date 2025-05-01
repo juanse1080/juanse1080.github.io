@@ -13,7 +13,7 @@ const companies = [
 ] as const;
 
 const Home = async () => {
-  const t = await getScopedI18n("content");
+  const t = await getScopedI18n("home.content");
 
   return (
     <>

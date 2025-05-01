@@ -4,7 +4,7 @@ import { Section } from "components/molecules";
 import { getScopedI18n } from "locales/server";
 
 const Education = async () => {
-  const t = await getScopedI18n("education");
+  const t = await getScopedI18n("home.education");
   const tCommon = await getScopedI18n("common");
 
   return (

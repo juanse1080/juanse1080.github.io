@@ -10,7 +10,7 @@ export function generateStaticParams() {
 }
 
 export const generateMetadata = async () => {
-  const t = await getScopedI18n("projects");
+  const t = await getScopedI18n("experience");
 
   return {
     title: t("title"),

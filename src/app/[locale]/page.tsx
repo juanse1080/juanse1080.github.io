@@ -1,5 +1,5 @@
 import { Divider } from "components/atoms";
-import { getI18n, getStaticParams } from "locales/server";
+import { getScopedI18n, getStaticParams } from "locales/server";
 import { setStaticParamsLocale } from "next-international/server";
 import { LocaleParams, Params } from "types";
 import Home from "./_components/Home";
@@ -14,7 +14,7 @@ export function generateStaticParams() {
 }
 
 export const generateMetadata = async () => {
-  const t = await getI18n();
+  const t = await getScopedI18n("home");
 
   return {
     title: t("title"),

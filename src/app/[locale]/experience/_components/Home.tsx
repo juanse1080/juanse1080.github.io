@@ -3,7 +3,7 @@ import { ArrowForwardIcon } from "components/icons";
 import { getScopedI18n } from "locales/server";
 
 const Home = async () => {
-  const t = await getScopedI18n("projects");
+  const t = await getScopedI18n("experience");
 
   return (
     <div className="root relative h-screen flex justify-center items-center">

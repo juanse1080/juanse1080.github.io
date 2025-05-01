@@ -21,7 +21,7 @@ const skills = [
 ];
 
 const Skill = async () => {
-  const t = await getScopedI18n("skill");
+  const t = await getScopedI18n("home.skill");
   const tCommon = await getScopedI18n("common");
 
   return (
