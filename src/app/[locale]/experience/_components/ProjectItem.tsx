@@ -1,4 +1,4 @@
-import { Chip, Trans, Typography } from "components";
+import { Chip, Trans, Typography } from "components/atoms";
 import { PropsWithChildren } from "react";
 import { merge } from "utils/clsx";
 

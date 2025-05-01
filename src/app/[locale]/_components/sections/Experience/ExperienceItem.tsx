@@ -60,6 +60,7 @@ const ExperienceItem = ({
     <>
       <a
         href={href}
+        aria-label={`${company} - ${role}`}
         className={merge(
           "flex sm:hidden items-center px-5 py-3 rounded-full bg-code border-border border-solid border-divider group",
           className

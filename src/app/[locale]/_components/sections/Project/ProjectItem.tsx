@@ -6,8 +6,9 @@ import { merge } from "utils/clsx";
 export type ProjectItemProps = PropsWithChildren<{
   href: string;
   title: string;
-  description: string;
   skills: string[];
+  ariaLabel: string;
+  description: string;
 }>;
 
 const ProjectItem = ({
@@ -15,6 +16,7 @@ const ProjectItem = ({
   title,
   skills,
   children,
+  ariaLabel,
   description,
 }: Readonly<ProjectItemProps>) => {
   return (
@@ -22,13 +24,14 @@ const ProjectItem = ({
       <div className="col-span-1 2xl:col-start-1 2xl:col-span-3">
         <Title
           variant="h5"
-          icon={<OpenInNewIcon width={20} height={20} />}
           component="h3"
-          href={href}
           className="font-bold text-gradient"
           buttonProps={{
+            href,
             target: "_blank",
+            "aria-label": ariaLabel,
           }}
+          icon={<OpenInNewIcon width={20} height={20} />}
         >
           {title}
         </Title>
@@ -47,6 +50,7 @@ const ProjectItem = ({
       <a
         href={href}
         target="_black"
+        aria-label={ariaLabel}
         className={merge(
           "col-start-1 md:col-start-2 2xl:col-span-2 2xl:col-start-5",
           "group bg-code rounded-3xl border-divider border border-solid transition-colors hover:border-secondary-100 cursor-pointer overflow-hidden h-min"

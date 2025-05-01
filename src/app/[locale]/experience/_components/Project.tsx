@@ -1,4 +1,4 @@
-import { Section } from "components";
+import { Section } from "components/molecules";
 import { projects } from "const/projects";
 import { getScopedI18n } from "locales/server";
 import { merge } from "utils/clsx";

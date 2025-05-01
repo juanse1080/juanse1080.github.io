@@ -21,7 +21,7 @@ const Project = async () => {
     <Section
       id="projects"
       title={t("title")}
-      ariaLabel={tCommon("goTo", { label: t("title").toLowerCase() })}
+      ariaLabel={tCommon("goTo", { label: t("title") })}
     >
       <Typography variant="h6" component="h3">
         <Trans
@@ -35,6 +35,9 @@ const Project = async () => {
             <ProjectItem
               href={`projects/#${id}`}
               description={t(`items.${id}.description`)}
+              ariaLabel={tCommon("goTo", {
+                label: `${t("title")} | ${project.title}`,
+              })}
               {...project}
             >
               <img

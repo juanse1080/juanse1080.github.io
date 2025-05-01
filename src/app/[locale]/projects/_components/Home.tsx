@@ -1,9 +1,8 @@
-import { Button, Typography, ArrowForwardIcon, Trans } from "components";
+import { Button, Trans, Typography } from "components/atoms";
+import { ArrowForwardIcon } from "components/icons";
 import { getScopedI18n } from "locales/server";
 
-export type HomeProps = {};
-
-const Home = async ({}: Readonly<HomeProps>) => {
+const Home = async () => {
   const t = await getScopedI18n("projects");
 
   return (

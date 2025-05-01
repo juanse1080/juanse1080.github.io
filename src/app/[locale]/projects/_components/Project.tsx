@@ -1,4 +1,4 @@
-import { Section } from "components";
+import { Section } from "components/molecules";
 import { projects } from "const/projects";
 import { getScopedI18n } from "locales/server";
 import { merge } from "utils/clsx";
@@ -7,6 +7,7 @@ import ProjectItem from "./ProjectItem";
 const mobileProjects = ["expense_track"];
 
 const Project = async () => {
+  const tCommon = await getScopedI18n("common");
   const tSection = await getScopedI18n("project");
 
   const mainProjects = projects.map((project) => ({
@@ -17,7 +18,12 @@ const Project = async () => {
   return (
     <>
       {mainProjects.map(({ isMobile, ...project }) => (
-        <Section key={project.id} id={project.id} title={project.title}>
+        <Section
+          key={project.id}
+          id={project.id}
+          title={project.title}
+          ariaLabel={tCommon("goTo", { label: project.title })}
+        >
           <ProjectItem
             description={tSection(`items.${project.id}.description`)}
             {...project}

@@ -16,12 +16,13 @@ const TitleSection = <Element extends HTMLElementKeys>({
   return (
     <Title
       component="h2"
-      label={children}
       variant="overline"
       icon={<LinkIcon />}
       className={merge("pt-8 sm:pt-12 md:pt-20 lg:pt-24", className)}
       {...(props as any)}
-    />
+    >
+      {children}
+    </Title>
   );
 };
 
