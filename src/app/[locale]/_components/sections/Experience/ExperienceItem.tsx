@@ -1,7 +1,7 @@
 "use client";
 
 import { Typography } from "components/atoms";
-import { ArrowForwardIcon, OpenInNewIcon } from "components/icons";
+import { OpenInNewIcon } from "components/icons";
 import {
   differenceInCalendarMonths,
   differenceInMonths,
@@ -65,7 +65,7 @@ const ExperienceItem = ({
         target="_blank"
         aria-label={ariaLabel}
         className={merge(
-          "flex md:hidden items-center px-5 py-3 rounded-full bg-code border-border border-solid border-divider group",
+          "flex md:hidden items-center px-5 py-3 rounded-full bg-code border border-solid border-divider group transition-colors hover:border-secondary-100",
           "text-slate-300 hover:text-white",
           className
         )}
@@ -95,7 +95,7 @@ const ExperienceItem = ({
         aria-label={ariaLabel}
         className={merge(
           "hidden md:flex items-center group w-full",
-          "transition-all duration-300 hover:-translate-y-1",
+          "transition-all duration-300 hover:translate-x-1",
           "text-slate-300 hover:text-white",
           {
             "rounded-l-full": current,
