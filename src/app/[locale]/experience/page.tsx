@@ -3,18 +3,14 @@ import { getScopedI18n, getStaticParams } from "locales/server";
 import { setStaticParamsLocale } from "next-international/server";
 import { LocaleParams, Params } from "types";
 import Home from "./_components/Home";
-import About from "./_components/sections/About";
-import Education from "./_components/sections/Education";
-import Experience from "./_components/sections/Experience";
-import Project from "./_components/sections/Project";
-import Skill from "./_components/sections/Skill";
+import Experience from "./_components/Experience";
 
 export function generateStaticParams() {
   return getStaticParams();
 }
 
 export const generateMetadata = async () => {
-  const t = await getScopedI18n("home");
+  const t = await getScopedI18n("experience");
 
   return {
     title: t("title"),
@@ -29,11 +25,7 @@ const App = ({ params: { locale } }: Params<LocaleParams>) => {
     <>
       <Home />
       <Divider />
-      <About />
-      <Skill />
-      <Education />
       <Experience />
-      <Project />
     </>
   );
 };

@@ -48,10 +48,12 @@ const ContactField = <Element extends HTMLElementKeys>({
         <ContentCopyIcon height={20} width={20} />
       </Button>
       <Button
-        component="a"
-        variant="outlined"
         size="small"
+        component="a"
+        target="_blank"
+        variant="outlined"
         href={`${link}:${value}`}
+        aria-label={tCommon("sendEmail")}
       >
         <SendIcon height={20} width={20} />
       </Button>

@@ -1,4 +1,5 @@
-import { Chip, Section, Typography, Trans } from "components";
+import { Chip, Trans, Typography } from "components/atoms";
+import { Section } from "components/molecules";
 import { getScopedI18n } from "locales/server";
 
 const skills = [
@@ -19,12 +20,16 @@ const skills = [
   "Docker",
 ];
 
-export type SkillProps = {};
+const Skill = async () => {
+  const t = await getScopedI18n("home.skill");
+  const tCommon = await getScopedI18n("common");
 
-const Skill = async ({}: Readonly<SkillProps>) => {
-  const t = await getScopedI18n("skill");
   return (
-    <Section id="skills" title={t("title")}>
+    <Section
+      id="skills"
+      title={t("title")}
+      ariaLabel={tCommon("goTo", { label: t("title").toLowerCase() })}
+    >
       <div className="grid gap-3">
         <Typography variant="h6" component="h3">
           <Trans

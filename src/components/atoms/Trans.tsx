@@ -15,7 +15,9 @@ const Trans = ({ text, tags }: Readonly<TransProps>) => {
     <>
       {extractContentWithinTags(text).map(
         ({ tag: Component, content }, idx) => {
-          if (!Component) return <Fragment key={idx}>{content}</Fragment>;
+          const key = `${idx}-${content.slice(0, 10)}`;
+
+          if (!Component) return <Fragment key={key}>{content}</Fragment>;
 
           const props = {
             children: content,
@@ -23,7 +25,7 @@ const Trans = ({ text, tags }: Readonly<TransProps>) => {
           };
 
           return (
-            <Fragment key={idx}>
+            <Fragment key={key}>
               <Component {...(props as any)} />
             </Fragment>
           );

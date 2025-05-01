@@ -16,3 +16,5 @@ export * from "./SendIcon";
 export { default as SendIcon } from "./SendIcon";
 export * from "./UISIcon";
 export { default as UISIcon } from "./UISIcon";
+export * from "./CodeIcon";
+export { default as CodeIcon } from "./CodeIcon";

@@ -1,19 +1,19 @@
-import { Button, Typography, ArrowForwardIcon, Trans } from "components";
+import { ArrowForwardIcon } from "components/icons";
+import { Button, Trans, Typography } from "components/atoms";
 import { getScopedI18n } from "locales/server";
 
-export type HomeProps = {};
-
 const companies = [
+  { image: "/img/Companies/celerik.png", name: "Celerik" },
   { image: "/img/Companies/melonn.svg", name: "Melonn" },
   { image: "/img/Companies/woombat.svg", name: "Woombat" },
   { image: "/img/Companies/bitnovo.svg", name: "Bitnovo" },
   { image: "/img/Companies/mayasoft.webp", name: "Mayasoft" },
   { image: "/img/Companies/conexalab.webp", name: "ConexaLab" },
   { image: "/img/Companies/binary.webp", name: "Binary Groups" },
-];
+] as const;
 
-const Home = async ({}: Readonly<HomeProps>) => {
-  const t = await getScopedI18n("content");
+const Home = async () => {
+  const t = await getScopedI18n("home.content");
 
   return (
     <>
@@ -47,11 +47,10 @@ const Home = async ({}: Readonly<HomeProps>) => {
         </div>
       </div>
       <div className="root py-12 md:py-20 lg:py-24">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-7 gap-4">
           {companies.map(({ name, image }) => (
-            <div className="flex items-center justify-center">
+            <div key={name} className="flex items-center justify-center">
               <img
-                key={name}
                 src={image}
                 alt={name}
                 width="150"

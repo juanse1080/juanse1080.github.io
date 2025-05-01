@@ -54,9 +54,9 @@ const Button = <Element extends HTMLElementKeys>({
       )}
       {...(props as any)}
     >
-      {startAdornment && startAdornment}
+      {startAdornment}
       {children}
-      {endAdornment && endAdornment}
+      {endAdornment}
     </Typography>
   );
 };

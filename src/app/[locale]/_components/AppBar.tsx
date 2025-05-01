@@ -1,17 +1,32 @@
 "use client";
 
-import { Button, ButtonGroup, GithubIcon, LinkedInIcon } from "components";
-import { useChangeLocale, useCurrentLocale } from "locales/client";
+import { Button } from "components/atoms";
+import { ButtonGroup } from "components/molecules";
+import { CodeIcon, GithubIcon, LinkedInIcon } from "components/icons";
+import {
+  useChangeLocale,
+  useCurrentLocale,
+  useScopedI18n,
+} from "locales/client";
 
 const languages = ["en", "es"];
 
 const AppBar = () => {
   const locale = useCurrentLocale();
+  const t = useScopedI18n("common");
   const changeLocale = useChangeLocale({ preserveSearchParams: true });
 
   return (
     <div className="h-min backdrop-blur fixed z-50 left-0 right-0 p-3 border-solid border-b border-divider text-white">
-      <div className="container m-x-auto flex items-stretch gap-3 justify-end">
+      <div className="container m-x-auto flex items-stretch gap-3">
+        <a
+          href={`/${locale}`}
+          className="flex items-center"
+          aria-label={t("appBar.ariaLabel.home")}
+        >
+          <CodeIcon />
+        </a>
+        <span className="grow" />
         <ButtonGroup size="small" value={locale} onChange={changeLocale}>
           {languages.map((locale) => (
             <Button key={locale} value={locale}>
@@ -25,7 +40,7 @@ const AppBar = () => {
           target="_blank"
           rel="noreferrer"
           className="flex items-center"
-          aria-label="LinkedIn profile"
+          aria-label={t("appBar.ariaLabel.linkedIn")}
         >
           <LinkedInIcon />
         </a>
@@ -34,7 +49,7 @@ const AppBar = () => {
           target="_blank"
           rel="noreferrer"
           className="flex items-center"
-          aria-label="GitHub profile"
+          aria-label={t("appBar.ariaLabel.github")}
         >
           <GithubIcon />
         </a>

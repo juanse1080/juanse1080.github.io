@@ -1,4 +1,4 @@
-import { Divider } from "components";
+import { Divider } from "components/atoms";
 import { getScopedI18n, getStaticParams } from "locales/server";
 import { setStaticParamsLocale } from "next-international/server";
 import { LocaleParams, Params } from "types";

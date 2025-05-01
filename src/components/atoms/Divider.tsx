@@ -2,7 +2,7 @@ import { HTMLElementKeys, IntrinsicElementsProps } from "types";
 import { merge } from "utils/clsx";
 
 export type DividerProps<Element extends HTMLElementKeys> =
-  {} & IntrinsicElementsProps<Element>;
+  IntrinsicElementsProps<Element>;
 
 const Divider = <Element extends HTMLElementKeys>({
   component: Component = "hr",
