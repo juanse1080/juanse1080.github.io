@@ -2,18 +2,15 @@ import { Chip, Trans, Typography } from "components/atoms";
 import { PropsWithChildren } from "react";
 import { merge } from "utils/clsx";
 
-export type ProjectItemProps = PropsWithChildren<{
-  id: string;
+export type ExperienceItemProps = PropsWithChildren<{
   description: string;
   skills: string[];
 }>;
 
-const ProjectItem = ({
-  id,
+const ExperienceItem = ({
   skills,
-  children,
   description,
-}: Readonly<ProjectItemProps>) => {
+}: Readonly<ExperienceItemProps>) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-6 gap-5">
       <div className="col-span-1 2xl:col-start-1 2xl:col-span-3">
@@ -29,17 +26,8 @@ const ProjectItem = ({
           ))}
         </div>
       </div>
-      <a
-        href={`#${id}`}
-        className={merge(
-          "col-start-1 md:col-start-2 2xl:col-span-2 2xl:col-start-5",
-          "group bg-code rounded-3xl border-divider border border-solid transition-colors hover:border-secondary-100 cursor-pointer overflow-hidden h-min"
-        )}
-      >
-        {children}
-      </a>
     </div>
   );
 };
 
-export default ProjectItem;
+export default ExperienceItem;

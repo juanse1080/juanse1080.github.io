@@ -27,7 +27,7 @@ const Home = async () => {
         </Typography>
         <Button
           component="a"
-          href="#expense_track"
+          href="#celerik"
           size="large"
           className="group"
           endAdornment={

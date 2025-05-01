@@ -3,7 +3,7 @@ import { getScopedI18n, getStaticParams } from "locales/server";
 import { setStaticParamsLocale } from "next-international/server";
 import { LocaleParams, Params } from "types";
 import Home from "./_components/Home";
-import Project from "./_components/Project";
+import Experience from "./_components/Experience";
 
 export function generateStaticParams() {
   return getStaticParams();
@@ -25,7 +25,7 @@ const App = ({ params: { locale } }: Params<LocaleParams>) => {
     <>
       <Home />
       <Divider />
-      <Project />
+      <Experience />
     </>
   );
 };
