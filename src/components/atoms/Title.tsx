@@ -1,20 +1,19 @@
+import { Button, ButtonProps } from "components/atoms";
+import { ReactNode } from "react";
 import { HTMLElementKeys } from "types";
 import { merge } from "utils/clsx";
 import Typography, { TypographyProps } from "./Typography";
-import { Button, ButtonProps } from "components";
-import { ReactNode } from "react";
 
 export type TitleProps<Element extends HTMLElementKeys> = {
-  href: string;
   icon: ReactNode;
   buttonProps?: ButtonProps<"a">;
 } & TypographyProps<Element>;
 
 const Title = <Element extends HTMLElementKeys>({
-  className,
-  children,
-  href,
+  id,
   icon,
+  children,
+  className,
   buttonProps,
   ...props
 }: Readonly<TitleProps<Element>>) => {
@@ -26,11 +25,10 @@ const Title = <Element extends HTMLElementKeys>({
       <div className="group flex items-center gap-3">
         {children}
         <Button
-          href={href}
+          size="small"
           component="a"
           variant="text"
           className="transition-colors text-transparent !outline-none group-hover:text-slate-300 hover:!text-white"
-          size="small"
           {...buttonProps}
         >
           {icon}

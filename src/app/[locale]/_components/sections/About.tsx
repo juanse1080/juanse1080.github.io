@@ -1,18 +1,18 @@
-import {
-  Button,
-  ContactField,
-  OpenInNewIcon,
-  Section,
-  Trans,
-  Typography,
-} from "components";
+import { Button, Trans, Typography } from "components/atoms";
+import { OpenInNewIcon } from "components/icons";
+import { ContactField, Section } from "components/molecules";
 import { getScopedI18n } from "locales/server";
 
 const About = async () => {
   const t = await getScopedI18n("about");
+  const tCommon = await getScopedI18n("common");
 
   return (
-    <Section id="about" title={t("title")}>
+    <Section
+      id="about"
+      title={t("title")}
+      ariaLabel={tCommon("goTo", { label: t("title") })}
+    >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
         <div className="md:row-span-2">
           <Typography variant="h6" component="h3">

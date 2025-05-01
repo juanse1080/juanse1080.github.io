@@ -1,14 +1,16 @@
-import { Divider, Section, Trans, Typography } from "components";
-import { getScopedI18n } from "locales/server";
-import ProjectItem from "./ProjectItem";
-import { Fragment } from "react";
+import { Divider, Trans, Typography } from "components/atoms";
+import { Section } from "components/molecules";
 import { projects } from "const/projects";
+import { getScopedI18n } from "locales/server";
+import { Fragment } from "react";
 import { merge } from "utils/clsx";
+import ProjectItem from "./ProjectItem";
 
 const mobileProjects = ["expense_track"];
 
 const Project = async () => {
   const t = await getScopedI18n("project");
+  const tCommon = await getScopedI18n("common");
 
   const mainProjects = projects.map((project) => ({
     ...project,
@@ -16,7 +18,11 @@ const Project = async () => {
   }));
 
   return (
-    <Section id="projects" title={t("title")}>
+    <Section
+      id="projects"
+      title={t("title")}
+      ariaLabel={tCommon("goTo", { label: t("title").toLowerCase() })}
+    >
       <Typography variant="h6" component="h3">
         <Trans
           text={t("subtitle")}

@@ -1,11 +1,18 @@
-import { Section, Typography, UISIcon, Trans } from "components";
+import { Trans, Typography } from "components/atoms";
+import { UISIcon } from "components/icons";
+import { Section } from "components/molecules";
 import { getScopedI18n } from "locales/server";
 
 const Education = async () => {
   const t = await getScopedI18n("education");
+  const tCommon = await getScopedI18n("common");
 
   return (
-    <Section id="education" title={t("title")}>
+    <Section
+      id="education"
+      title={t("title")}
+      ariaLabel={tCommon("goTo", { label: t("title").toLowerCase() })}
+    >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div className="md:row-span-2">
           <Typography variant="h6" component="h3">

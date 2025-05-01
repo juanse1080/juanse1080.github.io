@@ -1,4 +1,5 @@
-import { Chip, OpenInNewIcon, Title, Trans, Typography } from "components";
+import { Chip, Title, Trans, Typography } from "components/atoms";
+import { OpenInNewIcon } from "components/icons";
 import { PropsWithChildren } from "react";
 import { merge } from "utils/clsx";
 

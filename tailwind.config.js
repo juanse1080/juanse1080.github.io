@@ -11,6 +11,10 @@ module.exports = {
       center: true,
     },
     extend: {
+      fontFamily: {
+        'raleway': ['Raleway', 'sans-serif'],
+        'poppins': ['Poppins', 'sans-serif'],
+      },
       colors: {
         code: "rgb(39 39 39)",
         background: "#1a1a1a",

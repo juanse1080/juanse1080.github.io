@@ -5,21 +5,24 @@ import { merge } from "utils/clsx";
 export type SectionProps<Element extends HTMLElementKeys> = {
   id?: string;
   title?: string;
+  ariaLabel?: string;
   hiddenDivider?: boolean;
 } & Omit<IntrinsicElementsProps<Element>, "title" | "id">;
 
 const Section = <Element extends HTMLElementKeys = "div">({
-  component: Component = "div",
-  children,
-  className,
   id,
   title,
+  children,
+  ariaLabel,
+  className,
   hiddenDivider,
+  component: Component = "div",
   ...props
 }: Readonly<SectionProps<Element>>) => {
   return (
     <>
       <Component
+        id={id}
         className={merge(
           "container px-3",
           "pb-8 sm:pb-12 md:pb-20 lg:pb-24",
@@ -28,7 +31,16 @@ const Section = <Element extends HTMLElementKeys = "div">({
         )}
         {...(props as any)}
       >
-        {title && <TitleSection id={id as string}>{title}</TitleSection>}
+        {title && (
+          <TitleSection
+            buttonProps={{
+              href: `#${id}`,
+              "aria-label": ariaLabel,
+            }}
+          >
+            {title}
+          </TitleSection>
+        )}
         {children}
       </Component>
       {!hiddenDivider && <Divider />}

@@ -1,13 +1,13 @@
+import { Divider } from "components/atoms";
 import { getI18n, getStaticParams } from "locales/server";
 import { setStaticParamsLocale } from "next-international/server";
 import { LocaleParams, Params } from "types";
+import Home from "./_components/Home";
 import About from "./_components/sections/About";
 import Education from "./_components/sections/Education";
 import Experience from "./_components/sections/Experience";
-import Home from "./_components/Home";
-import Skill from "./_components/sections/Skill";
 import Project from "./_components/sections/Project";
-import { Divider } from "components";
+import Skill from "./_components/sections/Skill";
 
 export function generateStaticParams() {
   return getStaticParams();

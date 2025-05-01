@@ -1,12 +1,19 @@
 "use client";
 
-import { Button, ButtonGroup, GithubIcon, LinkedInIcon } from "components";
-import { useChangeLocale, useCurrentLocale } from "locales/client";
+import { Button } from "components/atoms";
+import { ButtonGroup } from "components/molecules";
+import { GithubIcon, LinkedInIcon } from "components/icons";
+import {
+  useChangeLocale,
+  useCurrentLocale,
+  useScopedI18n,
+} from "locales/client";
 
 const languages = ["en", "es"];
 
 const AppBar = () => {
   const locale = useCurrentLocale();
+  const t = useScopedI18n("common");
   const changeLocale = useChangeLocale({ preserveSearchParams: true });
 
   return (
@@ -25,7 +32,7 @@ const AppBar = () => {
           target="_blank"
           rel="noreferrer"
           className="flex items-center"
-          aria-label="LinkedIn profile"
+          aria-label={t("appBar.ariaLabel.linkedIn")}
         >
           <LinkedInIcon />
         </a>
@@ -34,7 +41,7 @@ const AppBar = () => {
           target="_blank"
           rel="noreferrer"
           className="flex items-center"
-          aria-label="GitHub profile"
+          aria-label={t("appBar.ariaLabel.github")}
         >
           <GithubIcon />
         </a>

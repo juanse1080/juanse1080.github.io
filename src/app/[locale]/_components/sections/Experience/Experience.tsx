@@ -1,13 +1,19 @@
-import { Section, Trans, Typography } from "components";
+import { Trans, Typography } from "components/atoms";
+import { Section } from "components/molecules";
 import { getScopedI18n } from "locales/server";
 import ExperienceContainer from "./ExperienceContainer";
 import ExperienceItem from "./ExperienceItem";
 
 const Experience = async () => {
   const t = await getScopedI18n("experience");
+  const tCommon = await getScopedI18n("common");
 
   return (
-    <Section id="experience" title={t("title")}>
+    <Section
+      id="experience"
+      title={t("title")}
+      ariaLabel={tCommon("goTo", { label: t("title").toLowerCase() })}
+    >
       <Typography variant="h6" component="h3">
         <Trans
           text={t("subtitle")}

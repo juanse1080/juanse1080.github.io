@@ -1,10 +1,10 @@
 "use client";
 
-import { ArrowForwardIcon, Typography } from "components";
+import { Typography } from "components/atoms";
+import { ArrowForwardIcon } from "components/icons";
 import {
   differenceInCalendarMonths,
   differenceInMonths,
-  endOfMonth,
   startOfMonth,
 } from "date-fns";
 import { ReactNode, useMemo } from "react";
@@ -84,7 +84,7 @@ const ExperienceItem = ({
           width={20}
         />
       </a>
-      <div        
+      <div
         className={merge(
           "hidden sm:flex items-center group w-full",
           {
@@ -105,6 +105,7 @@ const ExperienceItem = ({
           </Typography>
           <a
             href={href}
+            aria-label={`${company} - ${role}`}
             className={merge("block bg-gradient px-3 py-2 w-full", {
               "rounded-l-full": current,
               "rounded-full ": !current,
