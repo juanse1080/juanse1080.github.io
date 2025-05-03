@@ -63,7 +63,7 @@ const Home = async () => {
           <Typography
             component="h1"
             variant="h2"
-            className="text-center md:text-left"
+            className="text-center md:text-left !leading-[1.25]"
           >
             <Trans
               text={t("title")}
