@@ -13,7 +13,7 @@ export default {
       "Committed to continuous improvement <span>through constant learning</span>",
     description: [
       "My proactive approach and adaptability to new technologies have allowed me to bring innovative solutions.",
-      "I have collaborated in dynamic teams, from startups to consolidated companies, gaining a broad perspective in software engineer.",
+      "I have collaborated in dynamic teams, from startups to consolidated companies, gaining a broad perspective in Software Engineer.",
     ],
     experience: "years of experience",
     query: {
