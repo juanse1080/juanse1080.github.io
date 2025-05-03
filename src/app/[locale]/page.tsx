@@ -30,10 +30,10 @@ const App = ({ params: { locale } }: Params<LocaleParams>) => {
       <Home />
       <Divider />
       <About />
-      <Skill />
-      <Education />
       <Experience />
       <Project />
+      <Skill />
+      <Education />
     </>
   );
 };

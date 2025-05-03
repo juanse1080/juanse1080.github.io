@@ -8,6 +8,7 @@ import {
   useCurrentLocale,
   useScopedI18n,
 } from "locales/client";
+import { merge } from "utils/clsx";
 
 const languages = ["en", "es"];
 
@@ -17,7 +18,14 @@ const AppBar = () => {
   const changeLocale = useChangeLocale({ preserveSearchParams: true });
 
   return (
-    <div className="h-min backdrop-blur fixed z-50 left-0 right-0 p-3 border-solid border-b border-divider text-white">
+    <div
+      className={merge(
+        "h-min backdrop-blur",
+        "px-3 py-1 sm:p-3 text-white",
+        "fixed z-50 left-0 right-0",
+        "border-solid border-b border-divider",
+      )}
+    >
       <div className="container m-x-auto flex items-stretch gap-3">
         <a
           href={`/${locale}`}

@@ -65,10 +65,6 @@ export default {
         description:
           "Este proyecto está dirigido a desarrolladores de <span>modelos de IA</span> sin conocimientos sobre el despliegue adecuado de algoritmos. El software fue diseñado para ayudar a muchos miembros del grupo <span>Bivl2ab</span> que carecen de esta experiencia.",
       },
-      portfolio: {
-        description:
-          "Este proyecto es una oportunidad para compartir quién soy <span>profesionalmente</span> de una manera más personal. Mi objetivo es mostrar mis <span>habilidades</span>, <span>experiencias</span> y <span>logros</span> de una manera que refleje mi pasión y dedicación por mi carrera",
-      },
       crowdinvestment: {
         description:
           "Este proyecto comenzó en una <span>Hackathon</span> organizada por <span>Mayasoft</span>. El aplicativo tiene como filosofía el <span>CrowdFounding</span>, se basa en donaciones económicas, para conseguir financiar un determinado proyecto a cambio de recompensas.",
