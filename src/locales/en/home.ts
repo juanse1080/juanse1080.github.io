@@ -1,8 +1,8 @@
 export default {
-  title: "Juan Marcon | Software Developer",
-  description: "The portfolio of Juan Marcon, software developer",
+  title: "Juan Marcon | Software Engineer",
+  description: "The portfolio of Juan Marcon, Software Engineer",
   content: {
-    title: "Hi. I'm Juan. <span>A software developer</span>",
+    title: "Hi. I'm Juan. <span>A software engineer</span>",
     call_to_action: {
       contact: "Contact me",
     },
@@ -13,7 +13,7 @@ export default {
       "Committed to continuous improvement <span>through constant learning</span>",
     description: [
       "My proactive approach and adaptability to new technologies have allowed me to bring innovative solutions.",
-      "I have collaborated in dynamic teams, from startups to consolidated companies, gaining a broad perspective in software development.",
+      "I have collaborated in dynamic teams, from startups to consolidated companies, gaining a broad perspective in software engineer.",
     ],
     experience: "years of experience",
     query: {

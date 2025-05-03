@@ -1,25 +1,28 @@
 {
-  "short_name": "Juan Marcon",
-  "name": "Juan Marcon | Desarrollador de software",
+  "id": "juan_marcon",
+  "theme_color": "#50bfc2",
+  "background_color": "#1a1a1a",
   "icons": [
     {
-      "src": "icon.icon",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/icon"
+      "purpose": "maskable",
+      "sizes": "512x512",
+      "src": "icon512_maskable.png",
+      "type": "image/png"
     },
     {
-      "src": "icon.icon",
-      "type": "image/icon",
-      "sizes": "192x192"
-    },
-    {
-      "src": "icon.icon",
-      "type": "image/icon",
-      "sizes": "512x512"
+      "purpose": "any",
+      "sizes": "512x512",
+      "src": "icon512_rounded.png",
+      "type": "image/png"
     }
   ],
-  "start_url": ".",
+  "orientation": "landscape",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "dir": "left",
+  "lang": "es-419",
+  "name": "Juan Marcon",
+  "short_name": "Juan Marco",
+  "start_url": "https://juanse1080.github.io",
+  "scope": "https://juanse1080.github.io",
+  "description": "Portafolio de Juan Marcon, Ingeniero de software con experiencia en desarrollo web, cloud computing y soluciones escalables. Apasionado por la innovación, el rendimiento y la experiencia del usuario."
 }
