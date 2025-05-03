@@ -18,7 +18,7 @@ const TitleSection = <Element extends HTMLElementKeys>({
       component="h2"
       variant="overline"
       icon={<LinkIcon />}
-      className={merge("pt-8 sm:pt-12 md:pt-20 lg:pt-24", className)}
+      className={merge(className)}
       {...(props as any)}
     >
       {children}

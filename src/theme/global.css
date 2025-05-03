@@ -6,6 +6,28 @@
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  margin-right: 10px; /* Doesn't work on all browsers */
+  margin-bottom: 10px; /* Doesn't work on all browsers */
+}
+
+::-webkit-scrollbar-track {
+  background: #2e2e2e; /* Dark background */
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #595959; /* Medium grey thumb */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777; /* Lighter grey on hover */
+}
+
 .root {
   @apply container px-3;
 }

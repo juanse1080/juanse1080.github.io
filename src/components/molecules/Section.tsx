@@ -24,9 +24,10 @@ const Section = <Element extends HTMLElementKeys = "div">({
       <Component
         id={id}
         className={merge(
-          "container px-3",
-          "pb-8 sm:pb-12 md:pb-20 lg:pb-24",
-          { "pt-8 sm:pt-12 md:pt-20 lg:pt-24": !title },
+          "container ",
+          "p-3 sm:py-5",
+          "md:py-14 lg:py-18",
+          "xl:py-20 2xl:py-24",
           className
         )}
         {...(props as any)}

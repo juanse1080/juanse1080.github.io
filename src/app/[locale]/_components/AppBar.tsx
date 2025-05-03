@@ -21,9 +21,8 @@ const AppBar = () => {
     <div
       className={merge(
         "h-min backdrop-blur",
-        "px-3 py-1 sm:p-3 text-white",
-        "fixed z-50 left-0 right-0",
-        "border-solid border-b border-divider",
+        "z-50 px-3 py-2 sm:p-3 text-white",
+        "border-solid border-b border-divider"
       )}
     >
       <div className="container m-x-auto flex items-stretch gap-3">
