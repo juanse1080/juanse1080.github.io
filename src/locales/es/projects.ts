@@ -1,6 +1,6 @@
 export default {
   title: "Juan Marcon | Mi trabajo",
-  description: "Resumen de mi trabajo como Desarrollador de software",
+  description: "Resumen de mi trabajo como Ingeniero de Software",
   content: {
     title: "Mi trabajo",
     subtitle:

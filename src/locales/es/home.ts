@@ -1,10 +1,10 @@
 
 
 export default {
-  title: "Juan Marcon | Desarrollador de software",
-  description: "El portafolio de Juan Marcon, desarrollador de software",
+  title: "Juan Marcon | Ingeniero de Software",
+  description: "El portafolio de Juan Marcon, Ingeniero de Software",
   content: {
-    title: "Hola. Soy Juan. <span>Un desarrollador de software</span>",
+    title: "Hola. Soy Juan. <span>Un Ingeniero de Software</span>",
     call_to_action: {
       contact: "Contacta conmigo",
     },
