@@ -1,8 +1,8 @@
 export default {
-  title: "Juan Marcon | Software Developer",
-  description: "The portfolio of Juan Marcon, software developer",
+  title: "Juan Marcon | Software Engineer",
+  description: "The portfolio of Juan Marcon, Software Engineer",
   content: {
-    title: "Hi. I'm Juan. <span>A software developer</span>",
+    title: "Hi. I'm Juan. <span>A software engineer</span>",
     call_to_action: {
       contact: "Contact me",
     },
@@ -13,7 +13,7 @@ export default {
       "Committed to continuous improvement <span>through constant learning</span>",
     description: [
       "My proactive approach and adaptability to new technologies have allowed me to bring innovative solutions.",
-      "I have collaborated in dynamic teams, from startups to consolidated companies, gaining a broad perspective in software development.",
+      "I have collaborated in dynamic teams, from startups to consolidated companies, gaining a broad perspective in software engineer.",
     ],
     experience: "years of experience",
     query: {
@@ -62,10 +62,6 @@ export default {
       deeptools: {
         description:
           "This project is aimed at <span>AI model</span> developers without knowledge of proper algorithm deployment. The software was designed to help many members of the <span>Bivl2ab</span> group who lack this expertise.",
-      },
-      portfolio: {
-        description:
-          "This project is an opportunity to share who I am <span>professionally</span> in a more personal way. My goal is to showcase my <span>skills</span>, <span>experiences</span> and <span>accomplishments</span> in a way that reflects my passion and dedication to my career.",
       },
       crowdinvestment: {
         description:

@@ -32,13 +32,7 @@ export const projects = [
       "MySQL",
     ],
     img: "/img/projects/deeptools/algorithms.png",
-  },
-  {
-    id: "portfolio" as const,
-    title: "Resumen",
-    skills: ["Javascript", "Typescript", "React JS", "Next JS", "Tailwind"],
-    img: "/img/projects/portfolio/home.png",
-  },
+  }, 
   {
     id: "crowdinvestment" as const,
     title: "Crowdinvestment",
