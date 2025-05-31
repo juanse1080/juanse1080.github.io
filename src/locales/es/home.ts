@@ -2,7 +2,7 @@
 
 export default {
   title: "Juan Marcon | Ingeniero de Software",
-  description: "El portafolio de Juan Marcon, Ingeniero de Software",
+  description: "Portafolio de Juan Marcon. Ingeniero de Software que convierte ideas complejas en soluciones web y cloud simples, potentes y escalables. Apasionado por la innovación, la performance y la experiencia del usuario.",
   content: {
     title: "Hola. Soy Juan. <span>Un Ingeniero de Software</span>",
     call_to_action: {
