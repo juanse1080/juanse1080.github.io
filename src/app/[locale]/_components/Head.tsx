@@ -1,7 +1,6 @@
-import { getCurrentLocale, getScopedI18n } from "locales/server";
+import { getScopedI18n } from "locales/server";
 
 const Head = async () => {
-  const locale = getCurrentLocale();
   const t = await getScopedI18n("home");
 
   const data = {
@@ -14,7 +13,6 @@ const Head = async () => {
       "@type": "Organization",
       name: "Freelance",
     },
-    inLanguage: locale,
     description: t("description"),
     email: "mailto:juanmarcon@gmail.com",
     image: "https://juanse1080.github.io/img/profile.webp",
@@ -47,7 +45,6 @@ const Head = async () => {
         logo: "https://web.uis.edu.co/wp-content/uploads/elementor/thumbs/Logo-UIS-web-qbqj494k91py9kvbai0ukya46twhbb1tj22br6je4k.webp",
         address: "Calle 27 # 8-23, Bucaramanga, Colombia",
         email: "info@uis.edu.co",
-        phone: "+57 317 890 1234",
       },
     ],
     knowsLanguage: ["Spanish"],
