@@ -1,3 +1,4 @@
+import { Image } from "components/atoms";
 import { Section } from "components/molecules";
 import { projects } from "const/projects";
 import { getScopedI18n } from "locales/server";
@@ -28,7 +29,7 @@ const Project = async () => {
             description={tSection(`items.${project.id}.description`)}
             {...project}
           >
-            <img
+            <Image
               src={project.img}
               alt={project.title}
               className={merge(

@@ -1,4 +1,4 @@
-import { Divider, Trans, Typography } from "components/atoms";
+import { Divider, Image, Trans, Typography } from "components/atoms";
 import { Section } from "components/molecules";
 import { projects } from "const/projects";
 import { getScopedI18n } from "locales/server";
@@ -40,7 +40,7 @@ const Project = async () => {
               })}
               {...project}
             >
-              <img
+              <Image
                 src={project.img}
                 alt={project.title}
                 className={merge(
