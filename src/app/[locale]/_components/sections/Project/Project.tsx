@@ -55,7 +55,7 @@ const Project = async () => {
                 )}
               />
             </ProjectItem>
-            {idx + 1 !== mainProjects.length && <Divider />}
+            {idx + 1 !== mainProjects.length ? <Divider /> : null}
           </Fragment>
         ))}
       </div>

@@ -32,7 +32,7 @@ const Section = <Element extends HTMLElementKeys = "div">({
         )}
         {...(props as any)}
       >
-        {title && (
+        {title ? (
           <TitleSection
             buttonProps={{
               href: `#${id}`,
@@ -41,7 +41,7 @@ const Section = <Element extends HTMLElementKeys = "div">({
           >
             {title}
           </TitleSection>
-        )}
+        ) : null}
         {children}
       </Component>
       {!hiddenDivider && <Divider />}
