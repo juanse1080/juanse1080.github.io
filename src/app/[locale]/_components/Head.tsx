@@ -23,6 +23,34 @@ const Head = async () => {
       "https://github.com/juanse1080",
       "https://linkedin.com/in/juanmarcon",
     ],
+    knowsAbout: [
+      "AWS",
+      "Typescript",
+      "Next JS",
+      "React JS",
+      "React Native",
+      "Angular",
+      "Node JS",
+      "Nest JS",
+      "Jest",
+      "Python",
+      "FastAPI",
+      "Playwright",
+      "Docker",
+    ],
+    alumniOf: [
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Universidad Industrial de Santander",
+        alternateName: "UIS",
+        url: "https://uis.edu.co/",
+        logo: "https://web.uis.edu.co/wp-content/uploads/elementor/thumbs/Logo-UIS-web-qbqj494k91py9kvbai0ukya46twhbb1tj22br6je4k.webp",
+        address: "Calle 27 # 8-23, Bucaramanga, Colombia",
+        email: "info@uis.edu.co",
+        phone: "+57 317 890 1234",
+      },
+    ],
+    knowsLanguage: ["Spanish"],
   };
 
   return (
