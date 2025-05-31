@@ -16,6 +16,8 @@ export const projects = [
       "MySQL",
     ],
     img: "/img/projects/expense-track/home.webp",
+    width: 110,
+    height: 240,
   },
   {
     id: "deeptools" as const,
@@ -32,11 +34,15 @@ export const projects = [
       "MySQL",
     ],
     img: "/img/projects/deeptools/algorithms.webp",
+    width: 488,
+    height: 222,
   },
   {
     id: "crowdinvestment" as const,
     title: "Crowdinvestment",
     skills: ["PHP 7.2", "laravel 5.6", "MySQL", "JQuery", "Javascript"],
     img: "/img/projects/crowdinvestment/investment.webp",
+    width: 471,
+    height: 242,
   },
 ];

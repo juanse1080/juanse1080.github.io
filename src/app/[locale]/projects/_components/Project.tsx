@@ -32,6 +32,8 @@ const Project = async () => {
             <Image
               src={project.img}
               alt={project.title}
+              width={project.width}
+              height={project.height}
               className={merge(
                 "rounded-2xl transition-all max-h-60 max-w-[100%]",
                 "-translate-x-10 translate-y-10 group-hover:-translate-x-5 group-hover:translate-y-5",
