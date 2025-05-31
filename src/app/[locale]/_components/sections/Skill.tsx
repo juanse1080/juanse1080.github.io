@@ -4,7 +4,6 @@ import { getScopedI18n } from "locales/server";
 
 const skills = [
   "AWS",
-  "Javascript",
   "Typescript",
   "Next JS",
   "React JS",
@@ -13,10 +12,9 @@ const skills = [
   "Node JS",
   "Nest JS",
   "Jest",
+  "Python",
+  "FastAPI",
   "Playwright",
-  "Git",
-  "Github",
-  "Gitlab",
   "Docker",
 ];
 
