@@ -2,9 +2,10 @@ import { PropsWithChildren } from "react";
 import { fontPoppins } from "theme/fonts";
 import "theme/global.css";
 import { LocaleParams, Params } from "types";
-import AppBar from "./_components/AppBar";
-import Provider from "./_providers/Provider";
 import { merge } from "utils/clsx";
+import AppBar from "./_components/AppBar";
+import Head from "./_components/Head";
+import Provider from "./_providers/Provider";
 
 const LocaleLayout = ({
   children,
@@ -22,6 +23,7 @@ const LocaleLayout = ({
         href="/favicon-dark.png"
         media="(prefers-color-scheme: dark)"
       />
+      <Head />
       <Provider locale={locale}>
         <body
           className={merge(
