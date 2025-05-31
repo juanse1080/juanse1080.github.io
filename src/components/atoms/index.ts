@@ -18,3 +18,6 @@ export { default as Chip } from "./Chip";
 
 export * from "./Trans";
 export { default as Trans } from "./Trans";
+
+export * from "./Image";
+export { default as Image } from "./Image";

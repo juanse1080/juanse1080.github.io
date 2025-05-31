@@ -1,4 +1,4 @@
-import { Trans, Typography } from "components/atoms";
+import { Image, Trans, Typography } from "components/atoms";
 import { UISIcon } from "components/icons";
 import { Section } from "components/molecules";
 import { getScopedI18n } from "locales/server";
@@ -52,7 +52,7 @@ const Education = async () => {
         </div>
 
         <div className="flex items-center justify-center">
-          <img
+          <Image
             src="/img/Education/udemy.webp"
             alt="Udemy logo"
             width="150"
@@ -61,7 +61,7 @@ const Education = async () => {
           />
         </div>
         <div className="flex items-center justify-center">
-          <img
+          <Image
             src="/img/Education/coursera.webp"
             alt="Coursera logo"
             width="150"
@@ -70,7 +70,7 @@ const Education = async () => {
           />
         </div>
         <div className="flex items-center justify-center">
-          <img
+          <Image
             src="/img/Education/aws.webp"
             alt="AWS logo"
             width="100"

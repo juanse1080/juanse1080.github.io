@@ -1,8 +1,8 @@
 export default {
   title: "Juan Marcon | Software Engineer",
-  description: "The portfolio of Juan Marcon, Software Engineer",
+  description: "Portfolio of Juan Marcon. Software Engineer who converts complex ideas into simple, powerful, and scalable web and cloud solutions. Passionate about innovation, performance, and user experience.",
   content: {
-    title: "Hi. I'm Juan. <span>A software engineer</span>",
+    title: "Hi. I'm Juan. <span>A Software Engineer</span>",
     call_to_action: {
       contact: "Contact me",
     },

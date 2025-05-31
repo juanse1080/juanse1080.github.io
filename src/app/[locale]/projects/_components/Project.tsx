@@ -1,3 +1,4 @@
+import { Image } from "components/atoms";
 import { Section } from "components/molecules";
 import { projects } from "const/projects";
 import { getScopedI18n } from "locales/server";
@@ -28,9 +29,11 @@ const Project = async () => {
             description={tSection(`items.${project.id}.description`)}
             {...project}
           >
-            <img
+            <Image
               src={project.img}
               alt={project.title}
+              width={project.width}
+              height={project.height}
               className={merge(
                 "rounded-2xl transition-all max-h-60 max-w-[100%]",
                 "-translate-x-10 translate-y-10 group-hover:-translate-x-5 group-hover:translate-y-5",

@@ -1,10 +1,11 @@
 import { CodeIcon, GithubIcon, LinkedInIcon } from "components/icons";
 import { merge } from "utils/clsx";
 import ChangeLanguage from "./ChangeLanguage";
-import { getScopedI18n } from "locales/server";
+import { getCurrentLocale, getScopedI18n } from "locales/server";
 
 const AppBar = async () => {
   const t = await getScopedI18n("common");
+  const locale = getCurrentLocale();
 
   return (
     <div
@@ -16,7 +17,7 @@ const AppBar = async () => {
     >
       <div className="container m-x-auto flex items-stretch gap-3">
         <a
-          href={`/|`}
+          href={`/${locale}`}
           className="flex items-center"
           aria-label={t("appBar.ariaLabel.home")}
         >

@@ -1,21 +1,21 @@
 import { ArrowForwardIcon } from "components/icons";
-import { Button, Trans, Typography } from "components/atoms";
+import { Button, Image, Trans, Typography } from "components/atoms";
 import { getScopedI18n } from "locales/server";
 import { merge } from "utils/clsx";
 
 const companies = [
   {
-    image: "/img/Companies/celerik.png",
+    image: "/img/Companies/celerik.webp",
     name: "Celerik",
     className: "col-span-1 lg:col-span-3 xl:col-span-3 2xl:col-span-1",
   },
   {
-    image: "/img/Companies/melonn.svg",
+    image: "/img/Companies/melonn.webp",
     name: "Melonn",
     className: "col-span-1 lg:col-span-3 xl:col-span-3 2xl:col-span-1",
   },
   {
-    image: "/img/Companies/bitnovo.svg",
+    image: "/img/Companies/bitnovo.webp",
     name: "Bitnovo",
     className: "col-span-1 lg:col-span-3 xl:col-span-3 2xl:col-span-1",
   },
@@ -30,7 +30,7 @@ const companies = [
     className: "col-span-1 lg:col-span-4 xl:col-span-4 2xl:col-span-1",
   },
   {
-    image: "/img/Companies/woombat.svg",
+    image: "/img/Companies/woombat.webp",
     name: "Woombat",
     className: "col-span-1 lg:col-span-4 xl:col-span-4 2xl:col-span-1",
   },
@@ -50,12 +50,12 @@ const Home = async () => {
       <div
         className={merge(
           "root relative",
-          "h-[calc(100vh-52px)]",
-          "sm:h-[calc(100vh-60px-245px)]",
-          "md:h-[calc(100vh-60px-279px)]",
-          "lg:h-[calc(100vh-60px-199px)]",
-          "xl:h-[calc(100vh-60px-201px)]",
-          "2xl:h-[calc(100vh-60px-132px)]",
+          "h-[calc(100dvh-52px)]",
+          "sm:h-[calc(100dvh-60px-277px)]",
+          "md:h-[calc(100dvh-60px-309px)]",
+          "lg:h-[calc(100dvh-60px-231px)]",
+          "xl:h-[calc(100dvh-60px-232px)]",
+          "2xl:h-[calc(100dvh-60px-165px)]",
           "flex justify-center md:justify-start gap-5"
         )}
       >
@@ -71,9 +71,9 @@ const Home = async () => {
             />
           </Typography>
           <Button
-            component="a"
-            href="#about"
             size="large"
+            href="#about"
+            component="a"
             className="group"
             endAdornment={
               <ArrowForwardIcon
@@ -94,7 +94,7 @@ const Home = async () => {
               key={name}
               className={merge("flex items-center justify-center", className)}
             >
-              <img
+              <Image
                 src={image}
                 alt={name}
                 width="150"

@@ -12,9 +12,16 @@ const LocaleLayout = ({
 }: PropsWithChildren<Params<LocaleParams>>) => {
   return (
     <html lang={locale}>
-      <head>
-        <link rel="icon" type="image/svg+xml" href="/icon.ico" />
-      </head>
+      <link
+        rel="icon"
+        href="/favicon-light.png"
+        media="(prefers-color-scheme: light)"
+      />
+      <link
+        rel="icon"
+        href="/favicon-dark.png"
+        media="(prefers-color-scheme: dark)"
+      />
       <Provider locale={locale}>
         <body
           className={merge(
@@ -25,8 +32,8 @@ const LocaleLayout = ({
           <AppBar />
           <div
             className={merge(
-              "overflow-y-auto ",
-              "h-[calc(100vh-52px)] sm:h-[calc(100vh-60px)]"
+              "overflow-y-auto",
+              "h-[calc(100dvh-52px)] sm:h-[calc(100dvh-60px)]"
             )}
           >
             {children}
