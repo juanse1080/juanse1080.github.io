@@ -50,12 +50,12 @@ const Home = async () => {
       <div
         className={merge(
           "root relative",
-          "h-[calc(100vh-52px)]",
-          "sm:h-[calc(100vh-60px-245px)]",
-          "md:h-[calc(100vh-60px-279px)]",
-          "lg:h-[calc(100vh-60px-199px)]",
-          "xl:h-[calc(100vh-60px-201px)]",
-          "2xl:h-[calc(100vh-60px-132px)]",
+          "h-[calc(100dvh-52px)]",
+          "sm:h-[calc(100dvh-60px-277px)]",
+          "md:h-[calc(100dvh-60px-309px)]",
+          "lg:h-[calc(100dvh-60px-231px)]",
+          "xl:h-[calc(100dvh-60px-232px)]",
+          "2xl:h-[calc(100dvh-60px-165px)]",
           "flex justify-center md:justify-start gap-5"
         )}
       >

@@ -32,8 +32,8 @@ const LocaleLayout = ({
           <AppBar />
           <div
             className={merge(
-              "overflow-y-auto ",
-              "h-[calc(100vh-52px)] sm:h-[calc(100vh-60px)]"
+              "overflow-y-auto",
+              "h-[calc(100dvh-52px)] sm:h-[calc(100dvh-60px)]"
             )}
           >
             {children}
