@@ -12,7 +12,8 @@ const AppBar = async () => {
       className={merge(
         "h-min backdrop-blur",
         "z-50 px-3 py-2 sm:p-3 text-white",
-        "border-solid border-b border-divider"
+        "border-solid border-b border-divider",
+        "sticky top-0"
       )}
     >
       <div className="container m-x-auto flex items-stretch gap-3">
