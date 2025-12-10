@@ -6,6 +6,7 @@ import { merge } from "utils/clsx";
 import AppBar from "./_components/AppBar";
 import Provider from "./_providers/Provider";
 import { getScopedI18n } from "locales/server";
+import HashScroll from "./_components/HashScroll";
 
 const LocaleLayout = async ({
   children,
@@ -86,6 +87,7 @@ const LocaleLayout = async ({
           )}
         >
           <AppBar />
+          <HashScroll />
           {children}
         </body>
       </Provider>
