@@ -6,6 +6,7 @@ import { merge } from "utils/clsx";
 import AppBar from "./_components/AppBar";
 import Provider from "./_providers/Provider";
 import { getScopedI18n } from "locales/server";
+import HashScroll from "./_components/HashScroll";
 
 const LocaleLayout = async ({
   children,
@@ -61,36 +62,33 @@ const LocaleLayout = async ({
   };
   return (
     <html lang={locale}>
-      <link
-        rel="icon"
-        href="/favicon-light.png"
-        media="(prefers-color-scheme: light)"
-      />
-      <link
-        rel="icon"
-        href="/favicon-dark.png"
-        media="(prefers-color-scheme: dark)"
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-      />
+      <head>
+        <link
+          rel="icon"
+          href="/favicon-light.png"
+          media="(prefers-color-scheme: light)"
+        />
+        <link
+          rel="icon"
+          href="/favicon-dark.png"
+          media="(prefers-color-scheme: dark)"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+        />
+      </head>
       <Provider locale={locale}>
         <body
           className={merge(
             fontPoppins.className,
-            "text-slate-200 bg-background"
+            "text-slate-200 bg-background",
+            "min-h-screen"
           )}
         >
           <AppBar />
-          <div
-            className={merge(
-              "overflow-y-auto",
-              "h-[calc(100dvh-52px)] sm:h-[calc(100dvh-60px)]"
-            )}
-          >
-            {children}
-          </div>
+          <HashScroll />
+          {children}
         </body>
       </Provider>
     </html>

@@ -1,11 +1,17 @@
 import { Button, Trans, Typography } from "components/atoms";
 import { OpenInNewIcon } from "components/icons";
 import { ContactField, Section } from "components/molecules";
-import { getScopedI18n } from "locales/server";
+import { getCurrentLocale, getScopedI18n } from "locales/server";
 
 const About = async () => {
+  const locale = getCurrentLocale();
   const t = await getScopedI18n("home.about");
   const tCommon = await getScopedI18n("common");
+
+  const cvLink =
+    locale === "es"
+      ? "/docs/CV/JuanMarcon.pdf"
+      : "/docs/CV/JuanMarconEnglish.pdf";
 
   return (
     <Section
@@ -50,7 +56,7 @@ const About = async () => {
           <Button
             component="a"
             target="_blank"
-            href="/docs/CV/JuanMarcon.pdf"
+            href={cvLink}
             endAdornment={<OpenInNewIcon height={20} width={20} />}
           >
             {t("cv.call_to_action")}
