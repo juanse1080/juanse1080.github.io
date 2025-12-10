@@ -29,6 +29,7 @@ const Experience = async () => {
           company="Celerik"
           role={t("fullstack")}
           startDate="2024-11-01"
+          endDate="2025-12-05"
         />
         <ExperienceItem
           href="experience#conexalab"
