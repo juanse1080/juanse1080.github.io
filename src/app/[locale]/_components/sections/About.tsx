@@ -44,7 +44,12 @@ const About = async () => {
           <Typography variant="h6" component="h3">
             {t("query.title")}
           </Typography>
-          <ContactField type="email" value="juanmarcon1080@gmail.com" />
+          <ContactField
+            type="email"
+            value="juanmarcon1080@gmail.com"
+            copyLabel={tCommon("copy")}
+            sendLabel={tCommon("sendEmail")}
+          />
         </div>
         <div className="md:col-start-2 md:row-start-2">
           <Typography variant="h6" component="h3">

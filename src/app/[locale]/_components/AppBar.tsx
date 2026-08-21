@@ -3,7 +3,11 @@ import { merge } from "utils/clsx";
 import ChangeLanguage from "./ChangeLanguage";
 import { getCurrentLocale, getScopedI18n } from "locales/server";
 
-const AppBar = async () => {
+export type AppBarProps = {
+  path?: `/${string}` | "";
+};
+
+const AppBar = async ({ path = "" }: Readonly<AppBarProps>) => {
   const t = await getScopedI18n("common");
   const locale = getCurrentLocale();
 
@@ -25,7 +29,7 @@ const AppBar = async () => {
           <CodeIcon />
         </a>
         <span className="grow" />
-        <ChangeLanguage />
+        <ChangeLanguage locale={locale} path={path} />
 
         <a
           href="https://www.linkedin.com/in/juanmarcon"

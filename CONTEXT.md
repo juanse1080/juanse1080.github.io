@@ -24,6 +24,10 @@ _Avoid_: tagline, slogan, hero text
 A portfolio delivered as static assets without a runtime server, optimized for fast loading, simple hosting, and indexable output.
 _Avoid_: dynamic app, SSR app, Next app
 
+**Indexable Static HTML**:
+Exported route HTML that contains the route's meaningful text content, links, headings, and primary evidence before client-side JavaScript runs, so search engines and technical evaluators can inspect the page as a static document.
+_Avoid_: build success, hydrated content, client-rendered page
+
 **Performance Budget**:
 The quality bar for shipping changes: Lighthouse Performance 95+, SEO 100, Accessibility 95+, minimal initial JavaScript, lazy non-critical images, and indexable HTML on every route.
 _Avoid_: performance goal, optimization target

@@ -3,8 +3,6 @@ import { fontPoppins } from "theme/fonts";
 import "theme/global.css";
 import { LocaleParams, Params } from "types";
 import { merge } from "utils/clsx";
-import AppBar from "./_components/AppBar";
-import Provider from "./_providers/Provider";
 import { getScopedI18n } from "locales/server";
 import HashScroll from "./_components/HashScroll";
 
@@ -78,19 +76,16 @@ const LocaleLayout = async ({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
         />
       </head>
-      <Provider locale={locale}>
-        <body
+      <body
           className={merge(
             fontPoppins.className,
             "text-slate-200 bg-background",
             "min-h-screen"
           )}
         >
-          <AppBar />
           <HashScroll />
           {children}
-        </body>
-      </Provider>
+      </body>
     </html>
   );
 };

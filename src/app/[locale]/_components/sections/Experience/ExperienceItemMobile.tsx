@@ -1,48 +1,25 @@
-"use client";
-
 import { Typography } from "components/atoms";
 import { OpenInNewIcon } from "components/icons";
 import { merge } from "utils/clsx";
 import { ExperienceItemProps } from "./Experience.const";
-import { useMemo } from "react";
 import { format } from "date-fns";
 import { es, enUS } from "date-fns/locale";
-import { useCurrentLocale } from "locales/client";
 
 const ExperienceItemMobile = ({
-  children,
   className,
   company,
   role,
   startDate,
   endDate,
-  align = "left",
   href,
   ariaLabel,
-  ...props
+  locale: localeKey,
 }: Readonly<ExperienceItemProps>) => {
-  const localeKey = useCurrentLocale();
-
-  const locale = useMemo(() => {
-    if (localeKey === "es") return es;
-    return enUS;
-  }, [localeKey]);
-
-  const startFormatted = useMemo(
-    () => format(startDate, "MMM yyyy", { locale }),
-    [startDate, locale]
-  );
-
-  const endFormatted = useMemo(() => {
-    if (endDate)
-      return (
-        " - " +
-        format(endDate, "MMM yyyy", {
-          locale,
-        })
-      );
-    return "";
-  }, [locale]);
+  const locale = localeKey === "es" ? es : enUS;
+  const startFormatted = format(startDate, "MMM yyyy", { locale });
+  const endFormatted = endDate
+    ? ` - ${format(endDate, "MMM yyyy", { locale })}`
+    : "";
 
   return (
     <a
@@ -54,7 +31,6 @@ const ExperienceItemMobile = ({
         "text-slate-300 hover:text-white",
         className
       )}
-      {...(props as any)}
     >
       <div className="flex flex-col grow">
         <Typography

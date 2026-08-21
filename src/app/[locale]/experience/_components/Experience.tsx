@@ -1,9 +1,10 @@
 import { Section } from "components/molecules";
 import { experiences } from "const/experiences";
-import { getScopedI18n } from "locales/server";
+import { getCurrentLocale, getScopedI18n } from "locales/server";
 import ExperienceItem from "./ExperienceItem";
 
 const Experience = async () => {
+  const locale = getCurrentLocale();
   const t = await getScopedI18n("experience");
   const tCommon = await getScopedI18n("common");
   const tSection = await getScopedI18n("experience.sections");
@@ -24,6 +25,7 @@ const Experience = async () => {
             endDate={project.endDate}
             startDate={project.startDate}
             description={tSection(project.id as "celerik")}
+            locale={locale}
           />
         </Section>
       ))}
