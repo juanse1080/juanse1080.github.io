@@ -24,7 +24,7 @@ Source baseline: #39 alignment audit, current repository portfolio copy, LinkedI
 **Senior Software Engineer — Web, Cloud & AI Products**  
 Bucaramanga, Colombia · Open to global/remote software engineering opportunities  
 juanmarcon1080@gmail.com · [linkedin.com/in/juanmarcon](https://www.linkedin.com/in/juanmarcon) · [juanse1080.github.io](https://juanse1080.github.io) · [github.com/juanse1080](https://github.com/juanse1080)  
-Current resume access: https://juanse1080.github.io/docs/CV/JuanMarconEnglish.pdf (to be replaced by the approved #41 export)
+Current resume access: https://juanse1080.github.io/resume/Juan-Marcon-Resume.pdf
 
 ### Professional summary
 
@@ -107,7 +107,7 @@ TypeScript · JavaScript · React · Next.js · Node.js · Python · FastAPI · 
 **Senior Software Engineer — Web, Cloud & AI Products**  
 Bucaramanga, Colombia · Abierto a oportunidades globales/remotas en ingeniería de software  
 juanmarcon1080@gmail.com · [linkedin.com/in/juanmarcon](https://www.linkedin.com/in/juanmarcon) · [juanse1080.github.io](https://juanse1080.github.io) · [github.com/juanse1080](https://github.com/juanse1080)  
-Acceso actual al CV: https://juanse1080.github.io/docs/CV/JuanMarcon.pdf (por reemplazar con la exportación aprobada de #41)
+Acceso actual al CV: https://juanse1080.github.io/resume/Juan-Marcon-CV-ES.pdf
 
 ### Resumen profesional
 
@@ -189,7 +189,7 @@ TypeScript · JavaScript · React · Next.js · Node.js · Python · FastAPI · 
 **Senior Software Engineer — Web, Cloud & AI Products**  
 Bucaramanga, Colombia · Open to global/remote software engineering opportunities  
 juanmarcon1080@gmail.com · https://www.linkedin.com/in/juanmarcon · https://juanse1080.github.io · https://github.com/juanse1080  
-Current resume access: https://juanse1080.github.io/docs/CV/JuanMarconEnglish.pdf (to be replaced by the approved #41 export)
+Current resume access: https://juanse1080.github.io/resume/Juan-Marcon-Resume.pdf
 
 ## Professional summary
 

@@ -10,8 +10,8 @@ const About = async () => {
 
   const cvLink =
     locale === "es"
-      ? "/docs/CV/JuanMarcon.pdf"
-      : "/docs/CV/JuanMarconEnglish.pdf";
+      ? "/resume/Juan-Marcon-CV-ES.pdf"
+      : "/resume/Juan-Marcon-Resume.pdf";
 
   return (
     <Section
