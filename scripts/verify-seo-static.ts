@@ -6,6 +6,7 @@ import {
   getOpenGraphUrl,
   getPersonJsonLd,
   getPublicRoutePath,
+  primaryLocale,
   locales,
   publicRoutes,
   seoRoutes,
@@ -110,13 +111,26 @@ for (const route of publicRoutes) {
 }
 
 const rootHtml = readDist("index.html");
-includesHtml(rootHtml, `<title>${seoRoutes.home.title.en}</title>`, "index.html");
-includes(rootHtml, `<link rel="canonical" href="${getCanonicalUrl("en", "home")}"`, "index.html");
+includesHtml(
+  rootHtml,
+  `<title>${seoRoutes.home.title[primaryLocale]}</title>`,
+  "index.html",
+);
+includes(
+  rootHtml,
+  `<link rel="canonical" href="${getCanonicalUrl(primaryLocale, "home")}"`,
+  "index.html",
+);
 includes(
   rootHtml,
   `<link rel="alternate" hrefLang="x-default" href="${siteUrl}/"`,
   "index.html",
 );
+
+const primaryLocaleHtml = readDist(getDistFile(primaryLocale, "home"));
+if (rootHtml !== primaryLocaleHtml) {
+  fail("index.html: root artifact must match the configured primary locale");
+}
 
 for (const rootAlias of ["experience/index.html", "projects/index.html"]) {
   if (existsSync(join(process.cwd(), "dist", rootAlias))) {

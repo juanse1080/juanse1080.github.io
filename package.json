@@ -16,7 +16,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "postbuild": "cp ./dist/en/index.html ./dist/index.html",
+    "postbuild": "tsx scripts/sync-root-primary-locale.ts",
     "lint": "next lint",
     "verify:seo": "tsx scripts/verify-seo-static.ts"
   },
