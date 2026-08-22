@@ -9,8 +9,29 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
+    id: "main-12",
+    role: "Senior Software Engineer",
+    company: "MAIN 12 LLC",
+    skills: [
+      "TypeScript",
+      "Next.js",
+      "React.js",
+      "Payload CMS",
+      "PostgreSQL",
+      "Google Cloud",
+      "Redis",
+      "Queues/Jobs",
+      "Storage",
+      "Gemini",
+      "OpenAI",
+      "LLMs",
+      "Mobile Architecture"
+    ],
+    startDate: "2025-12-01",
+  },
+  {
     id: "celerik",
-    role: "Fullstack Developer",
+    role: "Software Engineer",
     company: "Celerik",
     skills: [
       "Azure Cloud Services",
@@ -25,6 +46,7 @@ export const experiences: Experience[] = [
       "Microservicios"
     ],
     startDate: "2024-11-01",
+    endDate: "2025-12-01"
   },
   {
     id: "conexalab",

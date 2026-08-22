@@ -5,6 +5,11 @@ import { merge } from "utils/clsx";
 
 const companies = [
   {
+    image: undefined,
+    name: "MAIN 12 LLC",
+    className: "col-span-2 sm:col-span-3 lg:col-span-4 xl:col-span-4 2xl:col-span-1",
+  },
+  {
     image: "/img/Companies/celerik.webp",
     name: "Celerik",
     className: "col-span-1 lg:col-span-3 xl:col-span-3 2xl:col-span-1",
@@ -94,13 +99,19 @@ const Home = async () => {
               key={name}
               className={merge("flex items-center justify-center", className)}
             >
-              <Image
-                src={image}
-                alt={name}
-                width="150"
-                height="52"
-                className={merge("sm:w-[150px] md:w-[180px]")}
-              />
+              {image ? (
+                <Image
+                  src={image}
+                  alt={name}
+                  width="150"
+                  height="52"
+                  className={merge("sm:w-[150px] md:w-[180px]")}
+                />
+              ) : (
+                <span className="rounded-full border border-divider border-solid px-5 py-2 text-sm font-bold tracking-wide text-slate-200">
+                  {name}
+                </span>
+              )}
             </div>
           ))}
         </div>

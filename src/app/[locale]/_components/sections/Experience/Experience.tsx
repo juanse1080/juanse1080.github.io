@@ -23,14 +23,24 @@ const Experience = async () => {
       </Typography>
       <ExperienceContainer>
         <ExperienceItem
+          href="experience#main-12"
+          ariaLabel={tCommon("goTo", {
+            label: `${t("title")} - MAIN 12 LLC`,
+          })}
+          company="MAIN 12 LLC"
+          role={t("senior")}
+          startDate="2025-12-01"
+          locale={locale}
+        />
+        <ExperienceItem
           href="experience#celerik"
           ariaLabel={tCommon("goTo", {
             label: `${t("title")} - Celerik`,
           })}
           company="Celerik"
-          role={t("fullstack")}
+          role={t("software")}
           startDate="2024-11-01"
-          endDate="2025-12-05"
+          endDate="2025-12-01"
           locale={locale}
         />
         <ExperienceItem

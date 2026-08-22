@@ -36,7 +36,7 @@ const About = async () => {
             component="span"
             className="text-gradient mb-0"
           >
-            +5
+            6+
           </Typography>
           <Typography component="span">{t("experience")}</Typography>
         </div>

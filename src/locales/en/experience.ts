@@ -1,6 +1,6 @@
 export default {
-  title: "Juan Marcon | My experience",
-  description: "Summary of my experience as a Software Engineer",
+  title: "Juan Marcon | Senior Software Engineering Experience",
+  description: "Summary of my experience building web, cloud, and AI-enabled products as a Senior Software Engineer",
   content: {
     title: "My experience",
     subtitle:
@@ -10,10 +10,12 @@ export default {
   sections: {
     melonn:
       "Responsible for the creation and maintenance of integrations with e-commerce platforms such as Shopify, Mercado Libre, and WooCommerce. Developed and optimized microservices for user management, leveraging the scalability and security of AWS Cognito.",
+    "main-12":
+      "I build SaaS and AI-enabled product capabilities across web, cloud, and mobile-adjacent surfaces for a United States-focused team. My work translates business needs into maintainable product architecture while contributing across frontend, backend, Google Cloud infrastructure, queues/jobs, storage flows, shared contracts, and upload/mobile architecture. Dedicated client and internal product details remain confidential.",
     celerik:
-      "I design and implement solutions using language models to automate processes, improve user experience, and enable functionalities such as chatbots and text analytics, applying scalable architecture and best practices in the cloud. I participated in the development of an educational financial assistant based on LLMs, creating the backend with FastAPI and Clean Architecture, authentication with OAuth2, and the complete frontend in React.",
+      "I contributed to AI-enabled platforms and project monitoring tools that helped teams improve visibility, prioritization, and evidence-based delivery decisions. I designed and implemented AI, LLM, and RAG-based solutions, including backend services with FastAPI and Clean Architecture, OAuth2 authentication, PostgreSQL/Cosmos DB data work, Azure Cloud Services, and React frontend delivery.",
     conexalab:
-      "Developed high-performance web platforms for visualizing large data volumes, integrating detailed statistics and interactive maps using advanced tools like Maptiler, Mapbox, and Celcium, optimizing the user experience in data-intensive environments.",
+      "Built high-performance web platforms for real-time data visualization, statistics, and interactive maps, contributing across architecture, full-stack development, performance, and security. Applied hexagonal architecture and cloud-oriented engineering practices to reduce delivery friction and support continued platform evolution.",
     woombat:
       "Developed a web SDK for biometric authentication in collaboration with financial platforms, utilizing Web Components to ensure compatibility across different frameworks and ensure seamless and secure integration into web applications.",
     bitnovo:
