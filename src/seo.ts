@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const siteUrl = "https://juanse1080.github.io";
 export const socialPreviewImageUrl = `${siteUrl}/icon512_rounded.png`;
