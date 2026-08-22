@@ -3,7 +3,10 @@ import type { Metadata } from "next";
 export const siteUrl = "https://juanse1080.github.io";
 export const socialPreviewImageUrl = `${siteUrl}/icon512_rounded.png`;
 
-export type Locale = "en" | "es";
+export const primaryLocale = "en";
+export const locales = ["en", "es"] as const;
+
+export type Locale = (typeof locales)[number];
 export type PublicRoute = "home" | "experience" | "projects";
 
 type RouteSeo = {
@@ -48,7 +51,6 @@ export const seoRoutes: Record<PublicRoute, RouteSeo> = {
   },
 };
 
-export const locales: Locale[] = ["en", "es"];
 export const publicRoutes: PublicRoute[] = ["home", "experience", "projects"];
 
 export const getPublicRoutePath = (locale: Locale, route: PublicRoute) => {
@@ -133,7 +135,7 @@ export const getPersonJsonLd = (locale: Locale) => ({
   jobTitle: "Senior Software Engineer",
   description: seoRoutes.home.description[locale],
   email: "mailto:juanmarcon@gmail.com",
-  url: getCanonicalUrl("en", "home"),
+  url: getCanonicalUrl(primaryLocale, "home"),
   sameAs: [
     "https://github.com/juanse1080",
     "https://linkedin.com/in/juanmarcon",
