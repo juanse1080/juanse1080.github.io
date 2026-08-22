@@ -16,8 +16,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "postbuild": "cp -r ./dist/es/* ./dist",
-    "lint": "next lint"
+    "postbuild": "cp ./dist/en/index.html ./dist/index.html",
+    "lint": "next lint",
+    "verify:seo": "node scripts/verify-seo-static.mjs"
   },
   "browserslist": {
     "production": [

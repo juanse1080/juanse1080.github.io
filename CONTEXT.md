@@ -212,6 +212,23 @@ _Avoid_: LinkedIn rewrite, social copy, profile notes
 The ordered recommendation for LinkedIn Featured items, starting with the Opportunity Portfolio, Approved Resume Export, and GitHub profile, while deferring individual projects until they satisfy the Project Inclusion Rule.
 _Avoid_: featured links, LinkedIn media list, profile attachments
 
+
+**SEO Foundation**:
+The public metadata layer that lets crawlers, search previews, and locale-aware tools understand each Static Portfolio route: focused titles and descriptions, canonical URLs, locale alternatives, social preview metadata, robots, sitemap, and valid JSON-LD.
+_Avoid_: SEO polish, metadata cleanup, search tweaks
+
+**Canonical Public URL**:
+The preferred absolute URL for a public route when aliases or locale rewrites exist. Canonicals should point to the clean route intended for indexing, not merely the route a visitor happened to load.
+_Avoid_: current URL, permalink, page URL
+
+**Locale Alternative Link**:
+A language-specific relationship between equivalent English and Spanish public routes, expressed for crawlers through `hreflang` metadata.
+_Avoid_: translation link, language switch URL, alternate page
+
+**Social Preview Metadata**:
+Open Graph and Twitter card metadata that controls how a public route appears when shared outside the portfolio. It should summarize the same visible page intent rather than introduce new claims.
+_Avoid_: social SEO, share image tags, preview polish
+
 **Alignment Audit**:
 A versioned review that compares the portfolio, LinkedIn snapshot, Canva CVs, and resume sources to identify stale content, missing experience, title mismatches, claim risk, confidentiality issues, and readiness for rewrite work.
 _Avoid_: review notes, content check, audit comment
