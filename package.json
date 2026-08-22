@@ -18,6 +18,7 @@
     "start": "next start",
     "postbuild": "tsx scripts/sync-root-primary-locale.ts",
     "lint": "next lint",
+    "verify:generated-artifacts": "tsx scripts/verify-generated-artifacts.ts",
     "verify:seo": "tsx scripts/verify-seo-static.ts",
     "verify:static-interactions": "tsx scripts/verify-static-interactions.ts",
     "verify:experience-duration": "tsx scripts/verify-experience-duration-static.ts"
