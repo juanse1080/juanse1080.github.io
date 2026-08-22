@@ -3,11 +3,23 @@ import { Button, Image, Trans, Typography } from "components/atoms";
 import { getScopedI18n } from "locales/server";
 import { merge } from "utils/clsx";
 
-const companies = [
+type CompanyLogo = {
+  image: string;
+  name: string;
+  className: string;
+  width?: string;
+  height?: string;
+  imageClassName?: string;
+};
+
+const companies: CompanyLogo[] = [
   {
-    image: undefined,
+    image: "/img/Companies/main12.webp",
     name: "MAIN 12 LLC",
+    width: "180",
+    height: "26",
     className: "col-span-2 sm:col-span-3 lg:col-span-4 xl:col-span-4 2xl:col-span-1",
+    imageClassName: "sm:w-[180px] md:w-[220px]",
   },
   {
     image: "/img/Companies/celerik.webp",
@@ -45,7 +57,7 @@ const companies = [
     className:
       "col-span-2 sm:col-span-3 lg:col-span-4 xl:col-span-4 2xl:col-span-1",
   },
-] as const;
+];
 
 const Home = async () => {
   const t = await getScopedI18n("home.content");
@@ -94,24 +106,25 @@ const Home = async () => {
       </div>
       <div className="root px-3 pb-12">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-12 xl:grid-cols-12 2xl:grid-cols-7 gap-4">
-          {companies.map(({ name, image, className }) => (
+          {companies.map(({
+            name,
+            image,
+            className,
+            width = "150",
+            height = "52",
+            imageClassName = "sm:w-[150px] md:w-[180px]",
+          }) => (
             <div
               key={name}
               className={merge("flex items-center justify-center", className)}
             >
-              {image ? (
-                <Image
-                  src={image}
-                  alt={name}
-                  width="150"
-                  height="52"
-                  className={merge("sm:w-[150px] md:w-[180px]")}
-                />
-              ) : (
-                <span className="rounded-full border border-divider border-solid px-5 py-2 text-sm font-bold tracking-wide text-slate-200">
-                  {name}
-                </span>
-              )}
+              <Image
+                src={image}
+                alt={name}
+                width={width}
+                height={height}
+                className={merge(imageClassName)}
+              />
             </div>
           ))}
         </div>
