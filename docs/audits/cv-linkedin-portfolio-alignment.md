@@ -23,7 +23,7 @@ Issue: #39
 | Surface | Source | Reviewed? | Notes |
 | --- | --- | --- | --- |
 | Website | Repository source under `src/locales`, `src/const`, and `src/app/[locale]` | Yes | Reviewed hero/about/experience/projects/skills/contact/resume links. |
-| Website resume PDFs | `public/docs/CV/JuanMarcon.pdf`, `public/docs/CV/JuanMarconEnglish.pdf` | Yes | Existing public PDFs are Canva exports from 2025-12-09 and are stale relative to the LinkedIn snapshot/current strategy. |
+| Website resume PDFs | Historical baseline: `public/docs/CV/JuanMarcon.pdf`, `public/docs/CV/JuanMarconEnglish.pdf`; current exports: `public/resume/Juan-Marcon-CV-ES.pdf`, `public/resume/Juan-Marcon-Resume.pdf` | Yes | Baseline public PDFs were Canva exports from 2025-12-09 and were stale relative to the LinkedIn snapshot/current strategy; #41 replaced them with current approved exports. |
 | LinkedIn PDF snapshot | User-provided LinkedIn PDF snapshot generated 2026-08-21 | Yes | Snapshot was generated from LinkedIn on 2026-08-21 and is the freshest available experience source. |
 | Canva EN | `DAF77SEK_44` (`Juan Marcon English`) | Yes | 3-page design; text content reviewed via Canva connector; page thumbnails/metadata retrieved. |
 | Canva ES | `DAGDzu21sDM` (`Juan Marcon`) | Yes | 3-page design; text content reviewed via Canva connector; page thumbnails/metadata retrieved. |
@@ -44,7 +44,7 @@ Issue: #39
 | High | Required | Canva EN, Canva ES, public PDFs | Claim risk | Mayasoft claims 30% reduction in delivery/operational times and approximately 40% fewer human errors/cost reductions. ConexaLab claims 30%+ time-to-market improvement and increased adoption. | Metrics may be strong but require interview-defendable source/context/calculation/contribution. | Revise or convert to qualitative unless Juan confirms defendibility. | #40 |
 | Medium | Recommended | Website | Bilingual mismatch | Spanish homepage uses English labels such as `Education` and `Projects`. | The Spanish surface should remain high quality and intentional. | Fix in website sync. | #43 |
 | Medium | Recommended | Website | Grammar/typo | English homepage says `Get a copy of me resume`, `broad perspective in Software Engineer`, and `Any type of query`; Spanish has `Acerca de mi` without accent and awkward course copy. | Visible language issues reduce credibility before users reach the CV. | Rewrite through conversion-copy work; do not fix inside #39. | #43 / existing copy issues |
-| Medium | Recommended | Website | Link/contact issue | Website links resumes to `/docs/CV/JuanMarcon.pdf` and `/docs/CV/JuanMarconEnglish.pdf`, but the agreed future filenames are `Juan-Marcon-Resume.pdf` and `Juan-Marcon-CV-ES.pdf`. | Resume access will remain stale unless links and files are updated together. | Update after #41 exports final PDFs. | #41, #43 |
+| Medium | Recommended | Website | Link/contact issue | Website linked resumes to legacy `/docs/CV/` PDFs, while the agreed filenames were `Juan-Marcon-Resume.pdf` and `Juan-Marcon-CV-ES.pdf`. | Resume access would remain stale unless links and files were updated together. | Resolved by #41 approved exports under `/resume/`; keep watching website sync in #43. | #41, #43 |
 | Medium | Recommended | LinkedIn PDF snapshot | Grammar/typo | Snapshot has `Software Enginner`, `contribuí al diseñé`, `pagina`, `Ingenieria`, and mixed Spanish/English labels such as `Contactar`, `Home`, and `Personal`. | The snapshot should be a source of facts, not copy to reuse verbatim. | Use as evidence only; rewrite in #40/#42. | #40, #42 |
 | Medium | Recommended | LinkedIn PDF snapshot | Confidentiality risk | Snapshot includes exact home address and phone label `Home`. | Low-conversion personal details should not appear in global CV unless Juan explicitly chooses them. | Remove/minimize in public CV; keep email, LinkedIn, portfolio, general location. | #40 |
 | Medium | Recommended | Website, Canva EN, Canva ES | Title mismatch | Celerik appears as `Fullstack Developer` in website/Canva ES, `Cloud Engineer` in Canva EN, and `Mid Software Developer` in LinkedIn PDF snapshot. Grill decision says public positioning should use `Software Engineer` for Celerik. | Role-title drift makes the profile feel stitched together from different versions. | Normalize to `Software Engineer` in CV; LinkedIn can use optimized title if truthful. | #40, #42, #43 |
@@ -80,7 +80,7 @@ English should be primary. Spanish should be a LATAM adaptation, not a literal t
 
 Contact channels are present: email, LinkedIn, GitHub, and portfolio links appear across surfaces. The issue is not absence but consistency and cleanup:
 
-- Website still links to older public PDFs under `/docs/CV/`.
+- Website previously linked to older public PDFs under `/docs/CV/`; #41 replaced the served resume links with approved `/resume/` exports.
 - Canva rich text has duplicated empty link artifacts.
 - LinkedIn PDF snapshot includes low-value personal details that should be removed from global CV.
 

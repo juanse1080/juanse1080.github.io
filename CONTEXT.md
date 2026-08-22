@@ -196,6 +196,14 @@ _Avoid_: invented title, keyword title, inflated role
 A simple, machine-readable resume version that follows the same selected narrative as the visual CV instead of dumping the full LinkedIn history or keyword-stuffing.
 _Avoid_: ATS dump, plain CV, keyword resume
 
+**Approved Resume Export**:
+A final PDF resume/CV generated from approved source copy and reviewed Canva design copies, ready to be served as a static repository asset.
+_Avoid_: Canva draft, latest PDF, exported file
+
+**Resume Export Log**:
+A compact repository record that links the Canva design copies, approved source drafts, export date, target PDF paths, and quality checks used to produce an Approved Resume Export.
+_Avoid_: notes, manual checklist, Canva links
+
 **Alignment Audit**:
 A versioned review that compares the portfolio, LinkedIn snapshot, Canva CVs, and resume sources to identify stale content, missing experience, title mismatches, claim risk, confidentiality issues, and readiness for rewrite work.
 _Avoid_: review notes, content check, audit comment
