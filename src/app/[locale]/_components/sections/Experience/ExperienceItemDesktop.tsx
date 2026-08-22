@@ -1,9 +1,6 @@
-"use client";
-
 import { Typography } from "components/atoms";
 import { OpenInNewIcon } from "components/icons";
 import { differenceInCalendarMonths } from "date-fns";
-import { useMemo } from "react";
 import { merge } from "utils/clsx";
 import {
   endExperience,
@@ -13,30 +10,20 @@ import {
 } from "./Experience.const";
 
 const ExperienceItemDesktop = ({
-  children,
   className,
   company,
   role,
   startDate,
   endDate,
-  align = "left",
   href,
   ariaLabel,
-  ...props
 }: Readonly<ExperienceItemProps>) => {
-  const current = useMemo(() => !endDate, [endDate]);
-
-  const months = useMemo(
-    () =>
-      monthWidth(
-        differenceInCalendarMonths(endDate ?? endExperience, startDate)
-      ),
-    [startDate, endDate]
+  const current = !endDate;
+  const months = monthWidth(
+    differenceInCalendarMonths(endDate ?? endExperience, startDate)
   );
-
-  const rightMonths = useMemo(
-    () => monthWidth(differenceInCalendarMonths(startDate, startExperience)),
-    [startDate]
+  const rightMonths = monthWidth(
+    differenceInCalendarMonths(startDate, startExperience)
   );
 
   return (
@@ -55,7 +42,6 @@ const ExperienceItemDesktop = ({
         className
       )}
       style={{ marginLeft: rightMonths }}
-      {...(props as any)}
     >
       <div className="flex flex-col gap-0.5 w-full">
         <Typography

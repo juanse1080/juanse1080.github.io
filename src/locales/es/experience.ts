@@ -1,6 +1,6 @@
 export default {
-  title: "Juan Marcon | Mi experiencia",
-  description: "Resumen de mi experiencia como Ingeniero de Software",
+  title: "Juan Marcon | Experiencia en ingeniería de software senior",
+  description: "Resumen de mi experiencia construyendo productos web, cloud y habilitados con IA como Senior Software Engineer",
   content: {
     title: "Mi experiencia",
     subtitle:
@@ -10,10 +10,12 @@ export default {
   sections: {
     melonn:
       "Responsable de la creación y mantenimiento de integraciones con plataformas de comercio electrónico como Shopify, Mercado Libre y WooCommerce. Desarrollo y optimización de microservicios para la gestión de usuarios, aprovechando la escalabilidad y seguridad de AWS Cognito.",
+    "main-12":
+      "Construyo capacidades SaaS y habilitadas con IA entre superficies web, cloud y cercanas a mobile para un equipo enfocado en Estados Unidos. Mi trabajo convierte necesidades de negocio en arquitectura de producto mantenible y contribuye en frontend, backend, infraestructura en Google Cloud, colas/jobs, flujos de storage, contratos compartidos y arquitectura de carga/mobile. Los detalles del cliente dedicado y productos internos permanecen confidenciales.",
     celerik:
-      "Diseño e implemento soluciones con modelos de lenguaje para automatizar procesos, mejorar la experiencia del usuario y habilitar funcionalidades como chatbots y análisis de texto, aplicando arquitectura escalable y buenas prácticas en la nube. Participé en el desarrollo de un asistente financiero educativo basado en LLMs, creando el backend con FastAPI y Clean Architecture, la autenticación con OAuth2 y el frontend completo en React.",
+      "Contribuí a plataformas habilitadas con IA y herramientas de monitoreo de proyectos que ayudaron a mejorar visibilidad, priorización y decisiones de entrega basadas en evidencia. Diseñé e implementé soluciones con IA, LLMs y RAG, incluyendo servicios backend con FastAPI y Clean Architecture, autenticación OAuth2, trabajo de datos con PostgreSQL/Cosmos DB, Azure Cloud Services y frontend en React.",
     conexalab:
-      "Desarrollo de plataformas web de alto rendimiento para la visualización de grandes volúmenes de datos, integrando estadísticas detalladas y mapas interactivos mediante herramientas avanzadas como Maptiler, Mapbox y Celcium, optimizando la experiencia de usuario en entornos de datos complejos.",
+      "Construí plataformas web de alto rendimiento para visualización de datos en tiempo real, estadísticas y mapas interactivos, contribuyendo en arquitectura, desarrollo full-stack, performance y seguridad. Apliqué arquitectura hexagonal y prácticas orientadas a cloud para reducir fricción de entrega y sostener la evolución de la plataforma.",
     woombat:
       "Desarrollo de un SDK web para autenticación biométrica en colaboración con plataformas financieras, utilizando Web Components para garantizar la compatibilidad entre diferentes frameworks y asegurar una integración fluida y segura en aplicaciones web.",
     bitnovo:

@@ -10,8 +10,8 @@ const About = async () => {
 
   const cvLink =
     locale === "es"
-      ? "/docs/CV/JuanMarcon.pdf"
-      : "/docs/CV/JuanMarconEnglish.pdf";
+      ? "/resume/Juan-Marcon-CV-ES.pdf"
+      : "/resume/Juan-Marcon-Resume.pdf";
 
   return (
     <Section
@@ -36,7 +36,7 @@ const About = async () => {
             component="span"
             className="text-gradient mb-0"
           >
-            +5
+            6+
           </Typography>
           <Typography component="span">{t("experience")}</Typography>
         </div>
@@ -44,7 +44,12 @@ const About = async () => {
           <Typography variant="h6" component="h3">
             {t("query.title")}
           </Typography>
-          <ContactField type="email" value="juanmarcon1080@gmail.com" />
+          <ContactField
+            type="email"
+            value="juanmarcon1080@gmail.com"
+            copyLabel={tCommon("copy")}
+            sendLabel={tCommon("sendEmail")}
+          />
         </div>
         <div className="md:col-start-2 md:row-start-2">
           <Typography variant="h6" component="h3">

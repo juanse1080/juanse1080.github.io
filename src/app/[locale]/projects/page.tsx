@@ -2,6 +2,7 @@ import { Divider } from "components/atoms";
 import { getScopedI18n, getStaticParams } from "locales/server";
 import { setStaticParamsLocale } from "next-international/server";
 import { LocaleParams, Params } from "types";
+import AppBar from "../_components/AppBar";
 import Home from "./_components/Home";
 import Project from "./_components/Project";
 
@@ -23,6 +24,7 @@ const App = ({ params: { locale } }: Params<LocaleParams>) => {
 
   return (
     <>
+      <AppBar path="/projects" />
       <Home />
       <Divider />
       <Project />

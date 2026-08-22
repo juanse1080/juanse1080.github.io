@@ -6,3 +6,6 @@ export { default as ContactField } from "./ContactField";
 
 export * from "./Section";
 export { default as Section } from "./Section";
+
+export * from "./CopyButton";
+export { default as CopyButton } from "./CopyButton";

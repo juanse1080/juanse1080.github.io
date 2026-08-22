@@ -1,10 +1,11 @@
 import { Trans, Typography } from "components/atoms";
 import { Section } from "components/molecules";
-import { getScopedI18n } from "locales/server";
+import { getCurrentLocale, getScopedI18n } from "locales/server";
 import ExperienceContainer from "./ExperienceContainer";
 import ExperienceItem from "./ExperienceItem";
 
 const Experience = async () => {
+  const locale = getCurrentLocale();
   const t = await getScopedI18n("home.experience");
   const tCommon = await getScopedI18n("common");
 
@@ -22,14 +23,25 @@ const Experience = async () => {
       </Typography>
       <ExperienceContainer>
         <ExperienceItem
+          href="experience#main-12"
+          ariaLabel={tCommon("goTo", {
+            label: `${t("title")} - MAIN 12 LLC`,
+          })}
+          company="MAIN 12 LLC"
+          role={t("senior")}
+          startDate="2025-12-01"
+          locale={locale}
+        />
+        <ExperienceItem
           href="experience#celerik"
           ariaLabel={tCommon("goTo", {
             label: `${t("title")} - Celerik`,
           })}
           company="Celerik"
-          role={t("fullstack")}
+          role={t("software")}
           startDate="2024-11-01"
-          endDate="2025-12-05"
+          endDate="2025-12-01"
+          locale={locale}
         />
         <ExperienceItem
           href="experience#conexalab"
@@ -39,6 +51,7 @@ const Experience = async () => {
           company="ConexaLab"
           role={t("cloud")}
           startDate="2024-05-01"
+          locale={locale}
         />
         <ExperienceItem
           href="experience#melonn"
@@ -49,6 +62,7 @@ const Experience = async () => {
           role={t("cloud")}
           startDate="2023-01-01"
           endDate="2024-01-30"
+          locale={locale}
         />
         <ExperienceItem
           href="experience#mayasoft"
@@ -59,6 +73,7 @@ const Experience = async () => {
           role={t("fullstack")}
           startDate="2022-03-01"
           endDate="2022-10-31"
+          locale={locale}
         />
         <ExperienceItem
           href="experience#woombat"
@@ -69,6 +84,7 @@ const Experience = async () => {
           role={t("frontend")}
           startDate="2021-11-01"
           endDate="2022-03-31"
+          locale={locale}
         />
         <ExperienceItem
           href="experience#bitnovo"
@@ -79,6 +95,7 @@ const Experience = async () => {
           role={t("frontend")}
           startDate="2021-02-01"
           endDate="2021-07-31"
+          locale={locale}
         />
         <ExperienceItem
           href="experience#binary-groups"
@@ -89,6 +106,7 @@ const Experience = async () => {
           role={t("frontend")}
           startDate="2021-01-01"
           endDate="2022-11-30"
+          locale={locale}
         />
         <ExperienceItem
           href="experience#ipred"
@@ -99,6 +117,7 @@ const Experience = async () => {
           role={t("fullstack")}
           startDate="2019-02-01"
           endDate="2020-10-31"
+          locale={locale}
         />
         <ExperienceItem
           href="experience#uis"
@@ -109,6 +128,7 @@ const Experience = async () => {
           role={t("fullstack")}
           startDate="2019-01-01"
           endDate="2019-05-31"
+          locale={locale}
         />
         <ExperienceItem
           href="experience#freelance"
@@ -118,6 +138,7 @@ const Experience = async () => {
           company="Freelance"
           role={t("fullstack")}
           startDate="2019-01-01"
+          locale={locale}
         />
       </ExperienceContainer>
     </Section>

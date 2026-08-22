@@ -1,31 +1,27 @@
-"use client";
-
-import { ContentCopyIcon, SendIcon } from "components/icons";
+import { SendIcon } from "components/icons";
 import { HTMLElementKeys, IntrinsicElementsProps } from "types";
 import { merge } from "utils/clsx";
-import { useScopedI18n } from "locales/client";
 import { fontInconsolata } from "theme/fonts";
 import { Button, Typography } from "components/atoms";
+import CopyButton from "./CopyButton";
 
 export type ContactFieldProps<Element extends HTMLElementKeys> = {
   value: string;
   type: "email" | "phone";
+  copyLabel: string;
+  sendLabel: string;
 } & IntrinsicElementsProps<Element>;
 
 const ContactField = <Element extends HTMLElementKeys>({
   component: Component = "code",
-  children,
   className,
   value,
   type,
+  copyLabel,
+  sendLabel,
   ...props
 }: Readonly<ContactFieldProps<Element>>) => {
-  const tCommon = useScopedI18n("common");
   const link = type === "email" ? "mailto" : "tel";
-
-  const onCopy = () => {
-    navigator.clipboard.writeText(value);
-  };
 
   return (
     <Component
@@ -39,21 +35,14 @@ const ContactField = <Element extends HTMLElementKeys>({
       <Typography title={value} className="grow mb-0 mr-2">
         {value}
       </Typography>
-      <Button
-        title={tCommon("copy")}
-        variant="outlined"
-        size="small"
-        onClick={onCopy}
-      >
-        <ContentCopyIcon height={20} width={20} />
-      </Button>
+      <CopyButton title={copyLabel} value={value} />
       <Button
         size="small"
         component="a"
         target="_blank"
         variant="outlined"
         href={`${link}:${value}`}
-        aria-label={tCommon("sendEmail")}
+        aria-label={sendLabel}
       >
         <SendIcon height={20} width={20} />
       </Button>

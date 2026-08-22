@@ -1,10 +1,8 @@
-"use client";
-
 import { Chip, Trans, Typography } from "components/atoms";
 import { enUS, es } from "date-fns/locale";
 import { format } from "date-fns";
-import { useCurrentLocale } from "locales/client";
-import { PropsWithChildren, useMemo } from "react";
+import { PropsWithChildren } from "react";
+import { LocaleParams } from "types";
 import { merge } from "utils/clsx";
 
 export type ExperienceItemProps = PropsWithChildren<{
@@ -12,6 +10,7 @@ export type ExperienceItemProps = PropsWithChildren<{
   endDate?: string;
   startDate: string;
   description: string;
+  locale: LocaleParams["locale"];
 }>;
 
 const ExperienceItem = ({
@@ -19,29 +18,13 @@ const ExperienceItem = ({
   endDate,
   startDate,
   description,
+  locale: localeKey,
 }: Readonly<ExperienceItemProps>) => {
-  const localeKey = useCurrentLocale();
-
-  const locale = useMemo(() => {
-    if (localeKey === "es") return es;
-    return enUS;
-  }, [localeKey]);
-
-  const startFormatted = useMemo(
-    () => format(startDate, "MMM yyyy", { locale }),
-    [startDate, locale]
-  );
-
-  const endFormatted = useMemo(() => {
-    if (endDate)
-      return (
-        " - " +
-        format(endDate, "MMM yyyy", {
-          locale,
-        })
-      );
-    return "";
-  }, [locale]);
+  const locale = localeKey === "es" ? es : enUS;
+  const startFormatted = format(startDate, "MMM yyyy", { locale });
+  const endFormatted = endDate
+    ? ` - ${format(endDate, "MMM yyyy", { locale })}`
+    : "";
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-6 gap-5">

@@ -1,10 +1,6 @@
-"use client";
-
-import {
-  differenceInMonths,
-  startOfMonth
-} from "date-fns";
+import { differenceInMonths, startOfMonth } from "date-fns";
 import { ReactNode } from "react";
+import { LocaleParams } from "types";
 
 export type ExperienceItemProps = {
   company: string;
@@ -16,6 +12,7 @@ export type ExperienceItemProps = {
   endDate?: string;
   className?: string;
   children?: ReactNode;
+  locale: LocaleParams["locale"];
 };
 
 export const startExperience = new Date("2019-01-01");

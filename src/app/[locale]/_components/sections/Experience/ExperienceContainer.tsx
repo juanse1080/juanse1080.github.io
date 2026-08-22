@@ -1,5 +1,3 @@
-"use client";
-
 import { differenceInCalendarMonths, endOfMonth } from "date-fns";
 import { PropsWithChildren } from "react";
 import { merge } from "utils/clsx";
