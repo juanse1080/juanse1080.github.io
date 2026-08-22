@@ -204,6 +204,14 @@ _Avoid_: Canva draft, latest PDF, exported file
 A compact repository record that links the Canva design copies, approved source drafts, export date, target PDF paths, and quality checks used to produce an Approved Resume Export.
 _Avoid_: notes, manual checklist, Canva links
 
+**LinkedIn Profile Copy**:
+Paste-ready English copy for Juan's LinkedIn profile that adapts the Source Narrative to LinkedIn's profile fields while preserving confidentiality, defendable claims, and senior positioning.
+_Avoid_: LinkedIn rewrite, social copy, profile notes
+
+**LinkedIn Featured Plan**:
+The ordered recommendation for LinkedIn Featured items, starting with the Opportunity Portfolio, Approved Resume Export, and GitHub profile, while deferring individual projects until they satisfy the Project Inclusion Rule.
+_Avoid_: featured links, LinkedIn media list, profile attachments
+
 **Alignment Audit**:
 A versioned review that compares the portfolio, LinkedIn snapshot, Canva CVs, and resume sources to identify stale content, missing experience, title mismatches, claim risk, confidentiality issues, and readiness for rewrite work.
 _Avoid_: review notes, content check, audit comment
