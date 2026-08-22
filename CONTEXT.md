@@ -116,6 +116,10 @@ _Avoid_: language toggle, locale button
 Anchor navigation that relies on browser behavior and CSS smooth scrolling instead of custom client-side scroll code.
 _Avoid_: hash scroll, custom scroll handler
 
+**Client JavaScript Exception**:
+A small client-side behavior kept only when it directly supports Conversion to Opportunity, accessibility, or essential UX and cannot be replaced by static HTML/CSS without losing that value.
+_Avoid_: interactive polish, convenience script, hydration by default
+
 **Explicit Experience Dates**:
 Experience date data stored deliberately in content/data and used to render duration visuals without relying on hidden runtime assumptions.
 _Avoid_: dynamic dates, date calculation

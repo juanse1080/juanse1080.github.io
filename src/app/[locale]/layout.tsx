@@ -4,7 +4,6 @@ import "theme/global.css";
 import { LocaleParams, Params } from "types";
 import { merge } from "utils/clsx";
 import { getPersonJsonLd } from "seo";
-import HashScroll from "./_components/HashScroll";
 
 const LocaleLayout = async ({
   children,
@@ -36,7 +35,6 @@ const LocaleLayout = async ({
             "min-h-screen"
           )}
         >
-          <HashScroll />
           {children}
       </body>
     </html>

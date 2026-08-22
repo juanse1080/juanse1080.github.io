@@ -18,7 +18,8 @@
     "start": "next start",
     "postbuild": "tsx scripts/sync-root-primary-locale.ts",
     "lint": "next lint",
-    "verify:seo": "tsx scripts/verify-seo-static.ts"
+    "verify:seo": "tsx scripts/verify-seo-static.ts",
+    "verify:static-interactions": "tsx scripts/verify-static-interactions.ts"
   },
   "browserslist": {
     "production": [
