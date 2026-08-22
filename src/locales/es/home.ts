@@ -1,25 +1,23 @@
-
-
 export default {
-  title: "Juan Marcon | Ingeniero de Software",
-  description: "Portafolio de Juan Marcon. Ingeniero de Software que convierte ideas complejas en soluciones web y cloud simples, potentes y escalables. Apasionado por la innovación, la performance y la experiencia del usuario.",
+  title: "Juan Marcon | Senior Software Engineer",
+  description: "Portafolio de Juan Marcon, Senior Software Engineer enfocado en productos web, cloud y habilitados con IA. Convierto necesidades de negocio en software mantenible, arquitectura escalable y experiencias listas para producción.",
   content: {
-    title: "Hola. Soy Juan. <span>Un Ingeniero de Software</span>",
+    title: "Hola. Soy Juan. <span>Senior Software Engineer</span>",
     call_to_action: {
       contact: "Contacta conmigo",
     },
   },
   about: {
-    title: "Acerca de mi",
+    title: "Acerca de mí",
     subtitle:
-      "Comprometido con la mejora continua <span>a través del aprendizaje constante</span>",
+      "Construyo <span>productos web, cloud y habilitados con IA</span> con foco en arquitectura, performance y calidad de entrega",
     description: [
-      "Mi enfoque proactivo y adaptabilidad a nuevas tecnologías me han permitido aportar soluciones innovadoras.",
-      "He colaborado en equipos dinámicos, desde startups hasta empresas consolidadas, obteniendo una perspectiva amplia en el desarrollo de software.",
+      "He trabajado en plataformas SaaS, capacidades basadas en LLMs, productos de visualización de datos, integraciones de e-commerce y sistemas distribuidos, ayudando a convertir contexto de negocio en software mantenible.",
+      "Mi experiencia cruza arquitectura frontend, servicios backend, infraestructura cloud y entrega orientada a producto, con foco en sistemas confiables para usuarios reales y decisiones técnicas pragmáticas.",
     ],
     experience: "años de experiencia",
     query: {
-      title: "Cualquier tipo de consulta",
+      title: "Hablemos de oportunidades",
     },
     cv: {
       title: "Obtén una copia de mi <span>currículum vitae</span>",
@@ -27,39 +25,41 @@ export default {
     },
   },
   education: {
-    title: "Education",
+    title: "Educación",
     subtitle:
-      "De la mano de la educación formal, <span>he adquirido conocimientos estructurados y esenciales</span> pilares para mi desarrollo profesional. Como egresado en <span>Ingeniería de Sistemas</span> de la <span>Universidad Industrial de Santander (UIS).</span>",
+      "De la mano de la educación formal, <span>he adquirido conocimientos estructurados y esenciales</span> para mi desarrollo profesional. Soy egresado en <span>Ingeniería de Sistemas</span> de la <span>Universidad Industrial de Santander (UIS).</span>",
     description:
-      "he experimentado de primera mano cómo una educación rigurosa y bien organizada puede abrir puertas y proporcionar las herramientas necesarias para enfrentar los desafíos del mundo laboral.",
+      "He experimentado de primera mano cómo una educación rigurosa y bien organizada puede abrir puertas y proporcionar las herramientas necesarias para enfrentar los desafíos del mundo laboral.",
     courses: {
       title:
-        "He consolidado <span>conocimientos prácticos</span> en plataformas de aprendizaje como <span>Udemy</span>, como parte de mi continua búsqueda de desarrollo personal y profesional",
+        "He consolidado <span>conocimientos prácticos</span> en plataformas de aprendizaje como <span>Udemy</span>, como parte de mi búsqueda continua de desarrollo personal y profesional",
       description:
         "Algunos de los cursos certificados que he completado incluyen <span>React (Hooks y MERN)</span>, <span>React JS + Redux + ES6,</span> entre otros.",
       current: {
         title:
-          "Mi compromiso es estar a la <span>vanguardia</span>, por eso actualmente estoy cursando la certificación AWS <span>Certified Developer Associate DVA-C02.</span>",
+          "Mi compromiso es mantenerme a la <span>vanguardia</span>, por eso sigo profundizando en cloud y software engineering.",
       },
     },
   },
   skill: {
     title: "Habilidades",
     subtitle:
-      "Acompañado de conocimientos en herramientas de gran escala, he adquirido experiencia en la utilización eficaz de <span>tecnologías avanzadas</span> y <span>recursos robustos</span>, clave para enfrentar desafíos en <span>proyectos complejos.</span> Algunas de estas herramientas incluyen:",
+      "Trabajo entre <span>ingeniería de producto, arquitectura frontend, servicios backend, infraestructura cloud e IA aplicada</span>. Las tecnologías siguientes soportan ese enfoque de entrega:",
   },
   experience: {
     title: "Experiencia",
     subtitle:
-      "Acompañado por destacadas compañías de la industria, incluidas varias <span>startups innovadoras</span>, he tenido la oportunidad de trabajar con equipos de <span>alto rendimiento</span> y adquirir conocimientos valiosos en el uso de herramientas avanzadas y <span>tecnologías de vanguardia.</span>",
+      "Una selección de roles donde he construido <span>productos web, cloud y habilitados con IA</span>, desde entrega SaaS actual y productos con IA hasta experiencia previa en e-commerce, visualización de datos y plataformas.",
+    senior: "Senior Software Engineer",
+    software: "Software Engineer",
     fullstack: "Desarrollador fullstack",
-    frontend: "Desarrollador frontend ",
+    frontend: "Desarrollador frontend",
     cloud: "Ingeniero cloud",
   },
   project: {
-    title: "Projects",
+    title: "Proyectos",
     subtitle:
-      "A continuación, presento una selección de mis <span>trabajos públicos</span> más destacados, esto orientado a mejorar mis habilidades técnicas.",
+      "A continuación, presento una selección de mis <span>trabajos públicos</span> más destacados, orientados a mejorar y demostrar mis habilidades técnicas.",
     items: {
       deeptools: {
         description:
@@ -67,7 +67,7 @@ export default {
       },
       crowdinvestment: {
         description:
-          "Este proyecto comenzó en una <span>Hackathon</span> organizada por <span>Mayasoft</span>. El aplicativo tiene como filosofía el <span>CrowdFounding</span>, se basa en donaciones económicas, para conseguir financiar un determinado proyecto a cambio de recompensas.",
+          "Este proyecto comenzó en una <span>Hackathon</span> organizada por <span>Mayasoft</span>. El aplicativo tiene como filosofía el <span>CrowdFunding</span>: donaciones económicas para financiar un proyecto a cambio de recompensas o participación altruista.",
       },
       expense_track: {
         description:

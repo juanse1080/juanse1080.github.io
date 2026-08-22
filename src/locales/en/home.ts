@@ -1,8 +1,8 @@
 export default {
-  title: "Juan Marcon | Software Engineer",
-  description: "Portfolio of Juan Marcon. Software Engineer who converts complex ideas into simple, powerful, and scalable web and cloud solutions. Passionate about innovation, performance, and user experience.",
+  title: "Juan Marcon | Senior Software Engineer",
+  description: "Portfolio of Juan Marcon, Senior Software Engineer focused on web, cloud, and AI-enabled products. I turn business needs into maintainable software, scalable architecture, and production-ready user experiences.",
   content: {
-    title: "Hi. I'm Juan. <span>A Software Engineer</span>",
+    title: "Hi. I'm Juan. <span>Senior Software Engineer</span>",
     call_to_action: {
       contact: "Contact me",
     },
@@ -10,17 +10,17 @@ export default {
   about: {
     title: "About me",
     subtitle:
-      "Committed to continuous improvement <span>through constant learning</span>",
+      "I build <span>web, cloud, and AI-enabled products</span> with architecture, performance, and delivery quality in mind",
     description: [
-      "My proactive approach and adaptability to new technologies have allowed me to bring innovative solutions.",
-      "I have collaborated in dynamic teams, from startups to consolidated companies, gaining a broad perspective in Software Engineer.",
+      "Across SaaS platforms, LLM-based capabilities, data visualization products, e-commerce integrations, and distributed systems, I help teams translate business context into maintainable software.",
+      "My work spans frontend architecture, backend services, cloud infrastructure, and product-oriented delivery, with a focus on reliable user-facing systems and pragmatic technical decisions.",
     ],
     experience: "years of experience",
     query: {
-      title: "Any type of query",
+      title: "Let's talk about opportunities",
     },
     cv: {
-      title: "Get a copy of me <span>resume</span>",
+      title: "Get a copy of my <span>resume</span>",
       call_to_action: "View resume",
     },
   },
@@ -32,24 +32,26 @@ export default {
       "I have experienced firsthand how a rigorous and well-organized education can open doors and provide the necessary tools to face the challenges of the working world.",
     courses: {
       title:
-        "I have consolidated <span>practical knowledge</span> on learning platforms like <span>Udemy</span>as part of my ongoing quest for personal and professional development",
+        "I have consolidated <span>practical knowledge</span> on learning platforms like <span>Udemy</span> as part of my ongoing quest for personal and professional development",
       description:
         "Some of the certified courses I have completed include <span>React (Hooks and MERN)</span>, <span>React JS + Redux + ES6,</span> among others.",
       current: {
         title:
-          "My commitment is to be at the <span>cutting edge</span> that's why I am currently pursuing the AWS certification <span>Certified Developer Associate DVA-C02.</span>",
+          "My commitment is to stay at the <span>cutting edge</span>, which is why I continue deepening cloud and software engineering knowledge.",
       },
     },
   },
   skill: {
     title: "Skills",
     subtitle:
-      "Accompanied by expertise in large-scale tools, I have gained experience in the effective use of <span>advanced technologies</span> and <span>robust resources</span>, key to face challenges in <span>complex projects</span> Some of these tools include:",
+      "I work across <span>product engineering, frontend architecture, backend services, cloud infrastructure, and applied AI</span>. The technologies below support that delivery focus:",
   },
   experience: {
     title: "Experience",
     subtitle:
-      "Accompanied by leading industry companies, including several <span>innovative startups</span>, I have had the opportunity to work with teams of <span>high performing</span> and gain valuable knowledge in the use of advanced tools and <span>cutting-edge technologies.</span>",
+      "A selection of roles where I have built <span>web, cloud, and AI-enabled products</span>, from current SaaS and AI product delivery to earlier e-commerce, data visualization, and platform work.",
+    senior: "Senior Software Engineer",
+    software: "Software Engineer",
     fullstack: "Fullstack developer",
     frontend: "Frontend developer",
     cloud: "Cloud engineer",
@@ -57,7 +59,7 @@ export default {
   project: {
     title: "Projects",
     subtitle:
-      "Below, I present a selection of my most outstanding <span>public works</span>, this oriented to improve my technical skills.",
+      "Below, I present a selection of my most outstanding <span>public works</span>, oriented toward improving and demonstrating my technical skills.",
     items: {
       deeptools: {
         description:
