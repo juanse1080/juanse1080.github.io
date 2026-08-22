@@ -1,30 +1,27 @@
 import { Typography } from "components/atoms";
 import { OpenInNewIcon } from "components/icons";
-import { differenceInCalendarMonths } from "date-fns";
 import { merge } from "utils/clsx";
-import {
-  endExperience,
-  monthWidth,
-  startExperience,
-  ExperienceItemProps,
-} from "./Experience.const";
+import { ExperienceItemProps, experienceDurationModel } from "./Experience.const";
+import { cssPercent } from "utils/experienceDuration";
 
 const ExperienceItemDesktop = ({
   className,
   company,
   role,
-  startDate,
+  id,
   endDate,
   href,
   ariaLabel,
 }: Readonly<ExperienceItemProps>) => {
   const current = !endDate;
-  const months = monthWidth(
-    differenceInCalendarMonths(endDate ?? endExperience, startDate)
-  );
-  const rightMonths = monthWidth(
-    differenceInCalendarMonths(startDate, startExperience)
-  );
+  const duration = experienceDurationModel.items.find((item) => item.id === id);
+
+  if (!duration) {
+    throw new Error(`${id}: missing experience duration model item`);
+  }
+
+  const width = cssPercent(duration.widthPercent);
+  const marginLeft = cssPercent(duration.offsetPercent);
 
   return (
     <a
@@ -41,7 +38,7 @@ const ExperienceItemDesktop = ({
         },
         className
       )}
-      style={{ marginLeft: rightMonths }}
+      style={{ marginLeft }}
     >
       <div className="flex flex-col gap-0.5 w-full">
         <Typography
@@ -61,14 +58,14 @@ const ExperienceItemDesktop = ({
             "rounded-full ": !current,
           })}
           style={{
-            width: months,
+            width,
           }}
         />
         <Typography
           variant="caption"
           className="text-nowrap mb-0"
           style={{
-            width: months,
+            width,
           }}
         >
           {role}
