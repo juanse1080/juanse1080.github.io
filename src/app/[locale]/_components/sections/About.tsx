@@ -1,6 +1,7 @@
 import { Button, Trans, Typography } from "components/atoms";
-import { OpenInNewIcon } from "components/icons";
+import { LinkedInIcon, OpenInNewIcon } from "components/icons";
 import { ContactField, Section } from "components/molecules";
+import { getResumePath, linkedInProfileUrl, publicEmail } from "const/profile";
 import { getCurrentLocale, getScopedI18n } from "locales/server";
 
 const About = async () => {
@@ -8,10 +9,7 @@ const About = async () => {
   const t = await getScopedI18n("home.about");
   const tCommon = await getScopedI18n("common");
 
-  const cvLink =
-    locale === "es"
-      ? "/resume/Juan-Marcon-CV-ES.pdf"
-      : "/resume/Juan-Marcon-Resume.pdf";
+  const cvLink = getResumePath(locale);
 
   return (
     <Section
@@ -40,16 +38,29 @@ const About = async () => {
           </Typography>
           <Typography component="span">{t("experience")}</Typography>
         </div>
-        <div className="md:col-start-2 md:row-start-1">
+        <div id="contact" className="md:col-start-2 md:row-start-1 scroll-mt-24">
           <Typography variant="h6" component="h3">
             {t("query.title")}
           </Typography>
-          <ContactField
-            type="email"
-            value="juanmarcon1080@gmail.com"
-            copyLabel={tCommon("copy")}
-            sendLabel={tCommon("sendEmail")}
-          />
+          <Typography>{t("query.availability")}</Typography>
+          <div className="flex flex-col gap-3">
+            <ContactField
+              type="email"
+              value={publicEmail}
+              copyLabel={tCommon("copy")}
+              sendLabel={tCommon("sendEmail")}
+            />
+            <Button
+              component="a"
+              href={linkedInProfileUrl}
+              target="_blank"
+              rel="noreferrer"
+              variant="outlined"
+              endAdornment={<LinkedInIcon height={20} width={20} />}
+            >
+              {t("query.linkedin")}
+            </Button>
+          </div>
         </div>
         <div className="md:col-start-2 md:row-start-2">
           <Typography variant="h6" component="h3">

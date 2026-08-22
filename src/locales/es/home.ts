@@ -3,8 +3,13 @@ export default {
   description: "Portafolio de Juan Marcon, Senior Software Engineer enfocado en productos web, cloud y habilitados con IA. Convierto necesidades de negocio en software mantenible, arquitectura escalable y experiencias listas para producción.",
   content: {
     title: "Hola. Soy Juan. <span>Senior Software Engineer</span>",
+    description:
+      "Construyo <span>productos web, cloud y habilitados con IA</span> rápidos y confiables, con foco en arquitectura, performance e impacto de producto.",
+    company_context:
+      "Experiencia entregando en <span>SaaS, e-commerce, visualización de datos, plataformas cloud y productos habilitados con IA</span>.",
     call_to_action: {
       contact: "Contacta conmigo",
+      resume: "Ver / descargar CV",
     },
   },
   about: {
@@ -18,26 +23,29 @@ export default {
     experience: "años de experiencia",
     query: {
       title: "Hablemos de oportunidades",
+      availability:
+        "Abierto a oportunidades alineadas en software engineering para productos web, cloud y habilitados con IA.",
+      linkedin: "LinkedIn",
     },
     cv: {
-      title: "Obtén una copia de mi <span>currículum vitae</span>",
-      call_to_action: "Ver currículum vitae",
+      title: "Obtén una copia de mi <span>CV</span>",
+      call_to_action: "Ver / descargar CV",
     },
   },
   education: {
     title: "Educación",
     subtitle:
-      "De la mano de la educación formal, <span>he adquirido conocimientos estructurados y esenciales</span> para mi desarrollo profesional. Soy egresado en <span>Ingeniería de Sistemas</span> de la <span>Universidad Industrial de Santander (UIS).</span>",
+      "Soy egresado de <span>Ingeniería de Sistemas</span> de la <span>Universidad Industrial de Santander (UIS)</span>, una base que conecto con trabajo de software en producción.",
     description:
-      "He experimentado de primera mano cómo una educación rigurosa y bien organizada puede abrir puertas y proporcionar las herramientas necesarias para enfrentar los desafíos del mundo laboral.",
+      "La formación formal me dio una base estructurada para razonar sobre sistemas, trade-offs y software mantenible.",
     courses: {
       title:
-        "He consolidado <span>conocimientos prácticos</span> en plataformas de aprendizaje como <span>Udemy</span>, como parte de mi búsqueda continua de desarrollo personal y profesional",
+        "Sigo aprendiendo con <span>estudio práctico y enfocado</span> en cloud, arquitectura frontend, sistemas backend e IA aplicada.",
       description:
-        "Algunos de los cursos certificados que he completado incluyen <span>React (Hooks y MERN)</span>, <span>React JS + Redux + ES6,</span> entre otros.",
+        "El foco no es acumular nombres de cursos; es mantener criterio y herramientas vigentes para entregar productos reales.",
       current: {
         title:
-          "Mi compromiso es mantenerme a la <span>vanguardia</span>, por eso sigo profundizando en cloud y software engineering.",
+          "El aprendizaje actual apoya la misma promesa profesional: <span>productos web, cloud y habilitados con IA confiables</span>.",
       },
     },
   },
@@ -59,19 +67,19 @@ export default {
   project: {
     title: "Proyectos",
     subtitle:
-      "A continuación, presento una selección de mis <span>trabajos públicos</span> más destacados, orientados a mejorar y demostrar mis habilidades técnicas.",
+      "Proyectos <span>públicos seleccionados</span> que funcionan como evidencia secundaria de pensamiento de producto, criterio técnico y entrega práctica.",
     items: {
       deeptools: {
         description:
-          "Este proyecto está dirigido a desarrolladores de <span>modelos de IA</span> sin conocimientos sobre el despliegue adecuado de algoritmos. El software fue diseñado para ayudar a muchos miembros del grupo <span>Bivl2ab</span> que carecen de esta experiencia.",
+          "Deeptools exploró cómo equipos de investigación podían exponer flujos de <span>modelos de IA</span> a usuarios que no eran especialistas en despliegue, combinando React con Python, Django, Celery, gRPC, Docker y MySQL.",
       },
       crowdinvestment: {
         description:
-          "Este proyecto comenzó en una <span>Hackathon</span> organizada por <span>Mayasoft</span>. El aplicativo tiene como filosofía el <span>CrowdFunding</span>: donaciones económicas para financiar un proyecto a cambio de recompensas o participación altruista.",
+          "Crowdinvestment convirtió una idea de hackathon en una aplicación funcional de <span>crowdfunding</span>, usando Laravel, MySQL, jQuery y JavaScript para modelar financiación de proyectos, recompensas y participación de donantes.",
       },
       expense_track: {
         description:
-          "Expense Track es un proyecto para llevar un <span>registro de tus gastos</span> y facilitar el mantenimiento de registros de <span>saldos compartidos</span> con compañeros de casa, durante viajes, en grupos, con amigos y familiares.",
+          "Expense Track resuelve la coordinación de gastos compartidos en hogares, viajes y grupos mediante interfaces <span>web y mobile</span> sobre un stack con TypeScript, React, React Native, Next.js, NestJS, Prisma y MySQL.",
       },
     },
   },
