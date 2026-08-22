@@ -44,6 +44,22 @@ _Avoid_: showcase, experimental site, over-engineered portfolio
 The site's primary success outcome: a qualified visitor understands Juan's fit and takes a next step such as contacting him, downloading the resume, visiting LinkedIn, or reviewing relevant work.
 _Avoid_: conversion, lead, CTA click
 
+**External Conversion Surface**:
+A non-website artifact that helps turn professional attention into opportunities, especially the Canva resume/CV and LinkedIn profile. These surfaces should reinforce the Opportunity Portfolio's narrative while adapting depth and format to their channel.
+_Avoid_: external profile, social media, document
+
+**Source Narrative**:
+The canonical professional story that all conversion surfaces should share: Juan is a Software Engineer focused on web, cloud, and AI products, with architecture, performance, and product impact as the through-line.
+_Avoid_: master copy, brand message, positioning text
+
+**Freshest Experience Source**:
+The source with the most up-to-date role history at a given moment. LinkedIn may temporarily be the Freshest Experience Source when the website and Canva resume lag behind, but it does not replace the Source Narrative once the portfolio is updated.
+_Avoid_: source of truth, latest CV, current profile
+
+**Execution Priority Surface**:
+The conversion surface currently optimized first for practical opportunity impact. The Source Narrative may still live on the website, but the immediate work can prioritize the CV and LinkedIn when they are the highest-leverage surfaces.
+_Avoid_: main channel, priority artifact, current task
+
 **Evidence Hierarchy**:
 The order in which proof should be presented to technical evaluators: production experience, measurable impact, architecture trade-offs, technology stack, then public projects.
 _Avoid_: content order, proof list
@@ -159,6 +175,34 @@ _Avoid_: skills list, tech stack chips
 **Prioritized Experience**:
 An experience presentation that keeps the full career history but gives more detail and prominence to the most relevant roles.
 _Avoid_: full CV, chronological list only
+
+**Senior Positioning**:
+The external positioning that presents Juan as ready for senior-level software engineering complexity through ownership, architecture judgment, cross-functional delivery, and production impact. It may be used in headlines and summaries even when individual experience entries preserve official role titles.
+_Avoid_: inflated title, seniority claim, job title rewrite
+
+**Dedicated Client Work**:
+Current or recent employment where Juan works full-time through an employer for a specific client. Public copy may describe it as client-facing product work without naming the client unless the client relationship is explicitly approved for public use.
+_Avoid_: freelance, side client, unnamed company
+
+**Client Naming Permission**:
+The explicit permission required before naming a dedicated client in public portfolio, CV, or LinkedIn copy. Without permission, copy should describe the work by product type, audience, and technical scope rather than by client name.
+_Avoid_: client mention, public client, named account
+
+**Optimized Role Title**:
+A public-facing role title chosen to improve market clarity while staying truthful to the work performed. LinkedIn may use optimized titles more aggressively than the CV, but the surrounding copy must remain defensible.
+_Avoid_: invented title, keyword title, inflated role
+
+**Curated ATS Resume**:
+A simple, machine-readable resume version that follows the same selected narrative as the visual CV instead of dumping the full LinkedIn history or keyword-stuffing.
+_Avoid_: ATS dump, plain CV, keyword resume
+
+**Alignment Audit**:
+A versioned review that compares the portfolio, LinkedIn snapshot, Canva CVs, and resume sources to identify stale content, missing experience, title mismatches, claim risk, confidentiality issues, and readiness for rewrite work.
+_Avoid_: review notes, content check, audit comment
+
+**Claim Disposition**:
+The action assigned to a professional claim or metric after review: keep, revise, convert to qualitative, or remove. A claim is defendable when Juan can explain its source, context, approximate calculation, and his contribution in an interview.
+_Avoid_: claim status, metric decision, content note
 
 **Project Inclusion Rule**:
 A public project should remain visible only if it has evidence, a strong learning, a usable demo/repo, or a clear technical reason to build trust.
