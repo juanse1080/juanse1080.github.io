@@ -11,20 +11,31 @@ const Experience = async () => {
 
   return (
     <>
-      {experiences.map((project) => (
+      {experiences.map((experience) => (
         <Section
-          key={project.id}
-          id={project.id}
-          title={project.company}
+          key={experience.id}
+          id={experience.id}
+          title={experience.company}
           ariaLabel={tCommon("goTo", {
-            label: `${t("title")} - ${project.company}`,
+            label: `${t("title")} - ${experience.company}`,
           })}
         >
           <ExperienceItem
-            skills={project.skills}
-            endDate={project.endDate}
-            startDate={project.startDate}
-            description={tSection(project.id as "celerik")}
+            skills={experience.skills}
+            endDate={"endDate" in experience ? experience.endDate : undefined}
+            startDate={experience.startDate}
+            priority={experience.priority}
+            role={experience.role}
+            summary={tSection(experience.localizedCaseStudy.summaryKey)}
+            problem={tSection(experience.localizedCaseStudy.problemKey)}
+            action={tSection(experience.localizedCaseStudy.actionKey)}
+            result={tSection(experience.localizedCaseStudy.resultKey)}
+            labels={{
+              priority: t(`labels.${experience.priority}`),
+              problem: t("labels.problem"),
+              action: t("labels.action"),
+              result: t("labels.result"),
+            }}
             locale={locale}
           />
         </Section>

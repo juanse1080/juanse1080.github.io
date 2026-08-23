@@ -22,7 +22,8 @@
     "verify:seo": "tsx scripts/verify-seo-static.ts",
     "verify:static-interactions": "tsx scripts/verify-static-interactions.ts",
     "verify:experience-duration": "tsx scripts/verify-experience-duration-static.ts",
-    "verify:landing-conversion-copy": "tsx scripts/verify-landing-conversion-copy.ts"
+    "verify:landing-conversion-copy": "tsx scripts/verify-landing-conversion-copy.ts",
+    "verify:experience-micro-case-studies": "tsx scripts/verify-experience-micro-case-studies.ts"
   },
   "browserslist": {
     "production": [
