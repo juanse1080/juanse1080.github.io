@@ -1,10 +1,10 @@
 export default {
-  title: "Juan Marcon | My work",
-  description: "Summary of my work as a Software Engineer",
+  title: "Juan Marcon | Project Evidence",
+  description: "Public project evidence from Juan Marcon, Software Engineer focused on web, cloud, and AI-enabled products.",
   content: {
-    title: "My work",
+    title: "Project Evidence",
     subtitle:
-      "Below, I present a selection of my most outstanding <span>public works</span>, this oriented to improve my technical skills.",
-    call_to_action: "Let's start",
+      "Selected <span>public projects</span> presented as evidence: what problem they explored, how they were built, which stack supported them, and what result or learning they show.",
+    call_to_action: "Review the evidence",
   },
 } as const;

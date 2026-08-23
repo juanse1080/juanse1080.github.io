@@ -50,9 +50,37 @@ export default {
     },
   },
   skill: {
-    title: "Habilidades",
+    title: "Capacidades",
     subtitle:
-      "Trabajo entre <span>ingeniería de producto, arquitectura frontend, servicios backend, infraestructura cloud e IA aplicada</span>. Las tecnologías siguientes soportan ese enfoque de entrega:",
+      "Evidencia de capacidades, no una lista plana de habilidades: conecto <span>ingeniería de producto web, sistemas cloud/backend, productos asistidos con IA, arquitectura frontend y calidad de testing y entrega</span> con resultados en producción.",
+    supporting_technologies: "Tecnologías de apoyo",
+    capabilities: {
+      web_product_engineering: {
+        title: "Ingeniería de producto web",
+        evidence:
+          "Convierto contexto de producto en interfaces web y mobile usables, equilibrando flujos de usuario, TypeScript mantenible e integración backend para equipos de producción.",
+      },
+      cloud_backend_systems: {
+        title: "Sistemas cloud/backend",
+        evidence:
+          "Diseño y evoluciono servicios, APIs, modelos de datos e infraestructura cloud con trade-offs pragmáticos sobre confiabilidad, ownership y velocidad de entrega.",
+      },
+      ai_assisted_products: {
+        title: "Productos asistidos con IA",
+        evidence:
+          "Construyo capacidades con LLMs y RAG como parte de sistemas de software reales, manteniendo visibles UX, evaluación, privacidad y mantenibilidad.",
+      },
+      frontend_architecture_performance: {
+        title: "Arquitectura frontend y performance",
+        evidence:
+          "Estructuro aplicaciones React y Next.js para que el contenido crítico sea indexable, las interfaces sigan siendo accesibles y el performance apoye oportunidades profesionales.",
+      },
+      testing_delivery_quality: {
+        title: "Calidad de testing y entrega",
+        evidence:
+          "Uso type safety, scripts de verificación enfocados, code review y checks compatibles con CI para reducir regresiones sin frenar la entrega práctica.",
+      },
+    },
   },
   experience: {
     title: "Experiencia",
@@ -65,21 +93,45 @@ export default {
     cloud: "Ingeniero cloud",
   },
   project: {
-    title: "Proyectos",
+    title: "Evidencia de Proyectos",
     subtitle:
-      "Proyectos <span>públicos seleccionados</span> que funcionan como evidencia secundaria de pensamiento de producto, criterio técnico y entrega práctica.",
+      "Proyectos <span>públicos seleccionados</span> que se mantienen visibles solo cuando aportan evidencia, aprendizaje, demo/repo usable o una razón técnica clara para generar confianza. La experiencia en producción sigue siendo la prueba principal.",
+    labels: {
+      problem: "Problema",
+      solution: "Solución",
+      stack: "Stack",
+      result: "Resultado / aprendizaje",
+    },
     items: {
       deeptools: {
-        description:
-          "Deeptools exploró cómo equipos de investigación podían exponer flujos de <span>modelos de IA</span> a usuarios que no eran especialistas en despliegue, combinando React con Python, Django, Celery, gRPC, Docker y MySQL.",
+        problem:
+          "Equipos de investigación y datos necesitaban exponer flujos de modelos de IA sin obligar a cada usuario a entender detalles de despliegue.",
+        solution:
+          "Construí una interfaz React apoyada en servicios Python y workers asíncronos para que los usuarios pudieran ejecutar e inspeccionar flujos orientados a modelos.",
+        stack:
+          "React, Material UI, Python, Django, Celery, gRPC, Docker y MySQL soportaron la interfaz web, el procesamiento en background y la comunicación entre servicios.",
+        result:
+          "El proyecto funciona como evidencia de pensamiento de producto con IA, límites entre servicios y aprendizaje para hacer capacidades técnicas accesibles a usuarios no especialistas.",
       },
       crowdinvestment: {
-        description:
-          "Crowdinvestment convirtió una idea de hackathon en una aplicación funcional de <span>crowdfunding</span>, usando Laravel, MySQL, jQuery y JavaScript para modelar financiación de proyectos, recompensas y participación de donantes.",
+        problem:
+          "Una idea de hackathon necesitaba convertirse en un producto funcional de crowdfunding con financiación de proyectos, recompensas y participación de donantes.",
+        solution:
+          "Implementé una aplicación Laravel usable con flujos de financiación, presentación de proyectos y mecánicas de donación enfocadas en validar la idea rápidamente.",
+        stack:
+          "PHP, Laravel, MySQL, jQuery y JavaScript dieron una base full-stack simple para el prototipo y las interacciones del producto.",
+        result:
+          "Se mantiene visible como evidencia de ejecución rápida de producto, entrega full-stack temprana y aprendizaje al convertir un concepto en software funcional.",
       },
       expense_track: {
-        description:
-          "Expense Track resuelve la coordinación de gastos compartidos en hogares, viajes y grupos mediante interfaces <span>web y mobile</span> sobre un stack con TypeScript, React, React Native, Next.js, NestJS, Prisma y MySQL.",
+        problem:
+          "Los gastos compartidos en hogares, viajes y grupos se vuelven difíciles de seguir cuando la coordinación depende de notas, chats o spreadsheets informales.",
+        solution:
+          "Construí interfaces web y mobile coordinadas sobre un backend tipado para que los grupos registren gastos y entiendan balances compartidos con mayor claridad.",
+        stack:
+          "TypeScript, React, React Native, Next.js, NestJS, Prisma, MySQL y Tailwind CSS soportan la superficie de producto cross-platform.",
+        result:
+          "El proyecto demuestra ingeniería de producto web/mobile, entrega end-to-end con TypeScript y aprendizaje práctico sobre flujos de producto con estado compartido.",
       },
     },
   },

@@ -1,10 +1,16 @@
-import { Chip, Trans, Typography } from "components/atoms";
+import { Chip } from "components/atoms";
+import {
+  ProjectEvidence,
+  ProjectEvidenceLabels,
+  ProjectEvidenceList,
+} from "components/molecules";
 import { PropsWithChildren } from "react";
 import { merge } from "utils/clsx";
 
 export type ProjectItemProps = PropsWithChildren<{
   id: string;
-  description: string;
+  evidence: ProjectEvidence;
+  labels: ProjectEvidenceLabels;
   skills: string[];
 }>;
 
@@ -12,20 +18,22 @@ const ProjectItem = ({
   id,
   skills,
   children,
-  description,
+  evidence,
+  labels,
 }: Readonly<ProjectItemProps>) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-6 gap-5">
       <div className="col-span-1 2xl:col-start-1 2xl:col-span-3">
-        <Typography variant="h6" component="h3">
-          <Trans
-            text={description}
-            tags={{ span: { className: "text-gradient font-bold" } }}
-          />
-        </Typography>
-        <div className={merge("flex gap-3 flex-wrap h-min mt-5")}>
+        <ProjectEvidenceList
+          evidence={evidence}
+          labels={labels}
+          valueVariant="h6"
+        />
+        <div className={merge("flex gap-2 flex-wrap h-min mt-5")}>
           {skills?.map((skill) => (
-            <Chip key={skill}>{skill}</Chip>
+            <Chip key={skill} className="px-2.5 py-1.5 text-sm">
+              {skill}
+            </Chip>
           ))}
         </div>
       </div>

@@ -34,7 +34,18 @@ const Project = async () => {
           <Fragment key={id}>
             <ProjectItem
               href={`projects/#${id}`}
-              description={t(`items.${id}.description`)}
+              evidence={{
+                problem: t(`items.${id}.problem`),
+                solution: t(`items.${id}.solution`),
+                stack: t(`items.${id}.stack`),
+                result: t(`items.${id}.result`),
+              }}
+              labels={{
+                problem: t("labels.problem"),
+                solution: t("labels.solution"),
+                stack: t("labels.stack"),
+                result: t("labels.result"),
+              }}
               ariaLabel={tCommon("goTo", {
                 label: `${t("title")} | ${project.title}`,
               })}

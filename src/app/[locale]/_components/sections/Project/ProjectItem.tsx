@@ -1,5 +1,10 @@
-import { Chip, Title, Trans, Typography } from "components/atoms";
+import { Chip, Title } from "components/atoms";
 import { OpenInNewIcon } from "components/icons";
+import {
+  ProjectEvidence,
+  ProjectEvidenceLabels,
+  ProjectEvidenceList,
+} from "components/molecules";
 import { PropsWithChildren } from "react";
 import { merge } from "utils/clsx";
 
@@ -8,7 +13,8 @@ export type ProjectItemProps = PropsWithChildren<{
   title: string;
   skills: string[];
   ariaLabel: string;
-  description: string;
+  evidence: ProjectEvidence;
+  labels: ProjectEvidenceLabels;
 }>;
 
 const ProjectItem = ({
@@ -17,7 +23,8 @@ const ProjectItem = ({
   skills,
   children,
   ariaLabel,
-  description,
+  evidence,
+  labels,
 }: Readonly<ProjectItemProps>) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-6 gap-5">
@@ -35,15 +42,12 @@ const ProjectItem = ({
         >
           {title}
         </Title>
-        <Typography variant="body">
-          <Trans
-            text={description}
-            tags={{ span: { className: "text-gradient font-bold" } }}
-          />
-        </Typography>
-        <div className={merge("flex gap-3 flex-wrap h-min mt-5")}>
+        <ProjectEvidenceList evidence={evidence} labels={labels} />
+        <div className={merge("flex gap-2 flex-wrap h-min mt-5")}>
           {skills?.map((skill) => (
-            <Chip key={skill}>{skill}</Chip>
+            <Chip key={skill} className="px-2.5 py-1.5 text-sm">
+              {skill}
+            </Chip>
           ))}
         </div>
       </div>

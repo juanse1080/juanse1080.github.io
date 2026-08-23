@@ -23,7 +23,8 @@
     "verify:static-interactions": "tsx scripts/verify-static-interactions.ts",
     "verify:experience-duration": "tsx scripts/verify-experience-duration-static.ts",
     "verify:landing-conversion-copy": "tsx scripts/verify-landing-conversion-copy.ts",
-    "verify:experience-micro-case-studies": "tsx scripts/verify-experience-micro-case-studies.ts"
+    "verify:experience-micro-case-studies": "tsx scripts/verify-experience-micro-case-studies.ts",
+    "verify:capability-project-evidence": "tsx scripts/verify-capability-project-evidence.ts"
   },
   "browserslist": {
     "production": [
