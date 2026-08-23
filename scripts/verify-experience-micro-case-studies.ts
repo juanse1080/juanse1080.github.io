@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { experienceIds, experiences } from "../src/const/experiences";
 import enExperience from "../src/locales/en/experience";
 import esExperience from "../src/locales/es/experience";
@@ -5,6 +6,26 @@ import esExperience from "../src/locales/es/experience";
 const fail = (message: string): never => {
   throw new Error(message);
 };
+
+
+const experienceItemSource = readFileSync(
+  "src/app/[locale]/experience/_components/ExperienceItem.tsx",
+  "utf8",
+);
+
+if (experienceItemSource.includes("rounded-2xl border border-white/10 bg-black/10 p-4")) {
+  fail("Experience micro case study fields should not render as nested mini-cards");
+}
+
+if (experienceItemSource.includes("flex gap-3 flex-wrap h-min mt-5")) {
+  fail("Experience skill tags should use compact spacing instead of the old roomy chip group");
+}
+
+for (const expected of ["featured: 10", "supporting: 7", "archive: 5"] as const) {
+  if (!experienceItemSource.includes(expected)) {
+    fail(`Experience skill tags must keep the visible density ceiling: ${expected}`);
+  }
+}
 
 const ids = experiences.map((experience) => experience.id);
 
