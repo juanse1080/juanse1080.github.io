@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { linkedInProfileUrl, publicEmailHref } from "const/profile";
 
 export const siteUrl = "https://juanse1080.github.io";
 export const socialPreviewImageUrl = `${siteUrl}/icon512_rounded.png`;
@@ -134,11 +135,11 @@ export const getPersonJsonLd = (locale: Locale) => ({
   alternateName: "juanse1080",
   jobTitle: "Senior Software Engineer",
   description: seoRoutes.home.description[locale],
-  email: "mailto:juanmarcon@gmail.com",
+  email: publicEmailHref,
   url: getCanonicalUrl(primaryLocale, "home"),
   sameAs: [
     "https://github.com/juanse1080",
-    "https://linkedin.com/in/juanmarcon",
+    linkedInProfileUrl,
   ],
   knowsAbout: [
     "Web product engineering",

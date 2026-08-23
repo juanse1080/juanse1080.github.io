@@ -1,6 +1,7 @@
 import { ArrowForwardIcon } from "components/icons";
 import { Button, Image, Trans, Typography } from "components/atoms";
-import { getScopedI18n } from "locales/server";
+import { getResumePath } from "const/profile";
+import { getCurrentLocale, getScopedI18n } from "locales/server";
 import { merge } from "utils/clsx";
 
 type CompanyLogo = {
@@ -60,7 +61,9 @@ const companies: CompanyLogo[] = [
 ];
 
 const Home = async () => {
+  const locale = getCurrentLocale();
   const t = await getScopedI18n("home.content");
+  const cvLink = getResumePath(locale);
 
   return (
     <>
@@ -87,24 +90,48 @@ const Home = async () => {
               tags={{ span: { className: "text-gradient block" } }}
             />
           </Typography>
-          <Button
-            size="large"
-            href="#about"
-            component="a"
-            className="group"
-            endAdornment={
-              <ArrowForwardIcon
-                className="animate-slide-right group-hover:animate-none group-hover:hover:-translate-x-1/4"
-                height={20}
-                width={20}
-              />
-            }
-          >
-            {t("call_to_action.contact")}
-          </Button>
+          <Typography className="max-w-2xl text-center md:text-left text-base sm:text-lg">
+            <Trans
+              text={t("description")}
+              tags={{ span: { className: "text-gradient font-bold" } }}
+            />
+          </Typography>
+          <div className="mt-4 flex flex-col sm:flex-row items-center gap-3">
+            <Button
+              size="large"
+              href="#contact"
+              component="a"
+              className="group"
+              endAdornment={
+                <ArrowForwardIcon
+                  className="animate-slide-right group-hover:animate-none group-hover:hover:-translate-x-1/4"
+                  height={20}
+                  width={20}
+                />
+              }
+            >
+              {t("call_to_action.contact")}
+            </Button>
+            <Button
+              size="large"
+              variant="outlined"
+              href={cvLink}
+              target="_blank"
+              rel="noreferrer"
+              component="a"
+            >
+              {t("call_to_action.resume")}
+            </Button>
+          </div>
         </div>
       </div>
       <div className="root px-3 pb-12">
+        <Typography className="mx-auto mb-6 max-w-3xl text-center">
+          <Trans
+            text={t("company_context")}
+            tags={{ span: { className: "text-gradient font-bold" } }}
+          />
+        </Typography>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-12 xl:grid-cols-12 2xl:grid-cols-7 gap-4">
           {companies.map(({
             name,
