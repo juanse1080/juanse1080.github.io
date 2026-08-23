@@ -17,6 +17,12 @@ if (experienceItemSource.includes("rounded-2xl border border-white/10 bg-black/1
   fail("Experience micro case study fields should not render as nested mini-cards");
 }
 
+for (const forbidden of ["rounded-2xl", "border-y border-r", "bg-white/[0.04]", "bg-white/[0.025]"] as const) {
+  if (experienceItemSource.includes(forbidden)) {
+    fail(`Experience items should use editorial rows instead of role-level cards: ${forbidden}`);
+  }
+}
+
 if (experienceItemSource.includes("flex gap-3 flex-wrap h-min mt-5")) {
   fail("Experience skill tags should use compact spacing instead of the old roomy chip group");
 }

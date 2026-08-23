@@ -27,11 +27,11 @@ export type ExperienceItemProps = PropsWithChildren<{
 
 const priorityStyles: Record<ExperiencePriority, string> = {
   featured:
-    "border-l-2 border-l-secondary-100/80 border-white/15 bg-white/[0.04] p-5 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.45fr)] md:p-7",
+    "border-l-2 border-l-secondary-100/80 pl-4 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.45fr)] md:pl-6",
   supporting:
-    "border-l border-l-white/25 border-white/10 bg-white/[0.025] p-5 md:grid-cols-[minmax(0,0.85fr)_minmax(0,1.5fr)] md:p-6",
+    "border-l border-l-white/25 pl-4 md:grid-cols-[minmax(0,0.85fr)_minmax(0,1.5fr)] md:pl-5",
   archive:
-    "border-l border-l-white/15 border-transparent bg-transparent p-4 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.55fr)]",
+    "border-l border-l-white/15 pl-4 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.55fr)] md:pl-5",
 };
 
 const summaryStyles: Record<ExperiencePriority, string> = {
@@ -80,12 +80,7 @@ const ExperienceItem = ({
   const overflowSkills = skills.slice(visibleSkillCounts[priority]);
 
   return (
-    <article
-      className={merge(
-        "grid grid-cols-1 gap-5 rounded-2xl border-y border-r",
-        priorityStyles[priority],
-      )}
-    >
+    <article className={merge("grid grid-cols-1 gap-5", priorityStyles[priority])}>
       <div className={summaryStyles[priority]}>
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
