@@ -9,3 +9,5 @@ export { default as Section } from "./Section";
 
 export * from "./CopyButton";
 export { default as CopyButton } from "./CopyButton";
+export { default as ProjectEvidenceList } from "./ProjectEvidenceList";
+export * from "./ProjectEvidenceList";

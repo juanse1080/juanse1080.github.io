@@ -26,7 +26,18 @@ const Project = async () => {
           ariaLabel={tCommon("goTo", { label: project.title })}
         >
           <ProjectItem
-            description={tSection(`items.${project.id}.description`)}
+            evidence={{
+              problem: tSection(`items.${project.id}.problem`),
+              solution: tSection(`items.${project.id}.solution`),
+              stack: tSection(`items.${project.id}.stack`),
+              result: tSection(`items.${project.id}.result`),
+            }}
+            labels={{
+              problem: tSection("labels.problem"),
+              solution: tSection("labels.solution"),
+              stack: tSection("labels.stack"),
+              result: tSection("labels.result"),
+            }}
             {...project}
           >
             <Image

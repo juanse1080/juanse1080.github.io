@@ -9,7 +9,7 @@ import About from "./_components/sections/About";
 import Education from "./_components/sections/Education";
 import Experience from "./_components/sections/Experience";
 import Project from "./_components/sections/Project";
-import Skill from "./_components/sections/Skill";
+import Capability from "./_components/sections/Capability";
 
 export function generateStaticParams() {
   return getStaticParams();
@@ -28,8 +28,8 @@ const App = ({ params: { locale } }: Params<LocaleParams>) => {
       <Divider />
       <About />
       <Experience />
+      <Capability />
       <Project />
-      <Skill />
       <Education />
     </>
   );

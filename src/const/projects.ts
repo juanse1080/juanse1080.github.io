@@ -1,30 +1,41 @@
-export const projects = [
+export const projectIds = [
+  "expense_track",
+  "deeptools",
+  "crowdinvestment",
+] as const;
+
+export type ProjectId = (typeof projectIds)[number];
+
+export const projects: Array<{
+  id: ProjectId;
+  title: string;
+  skills: string[];
+  img: string;
+  width: number;
+  height: number;
+}> = [
   {
-    id: "expense_track" as const,
-    title: "Expense track",
+    id: "expense_track",
+    title: "Expense Track",
     skills: [
-      "Javascript",
-      "Typescript",
-      "React JS",
+      "TypeScript",
+      "React",
       "React Native",
-      "Next JS",
-      "Gluestack",
-      "Tailwind",
-      "Nest JS",
+      "Next.js",
+      "NestJS",
       "Prisma",
-      "NX",
       "MySQL",
+      "Tailwind CSS",
     ],
     img: "/img/projects/expense-track/home.webp",
     width: 110,
     height: 240,
   },
   {
-    id: "deeptools" as const,
+    id: "deeptools",
     title: "Deeptools",
     skills: [
-      "Javascript",
-      "React JS",
+      "React",
       "Material UI",
       "Python",
       "Django",
@@ -38,9 +49,9 @@ export const projects = [
     height: 222,
   },
   {
-    id: "crowdinvestment" as const,
+    id: "crowdinvestment",
     title: "Crowdinvestment",
-    skills: ["PHP 7.2", "laravel 5.6", "MySQL", "JQuery", "Javascript"],
+    skills: ["PHP", "Laravel", "MySQL", "jQuery", "JavaScript"],
     img: "/img/projects/crowdinvestment/investment.webp",
     width: 471,
     height: 242,
