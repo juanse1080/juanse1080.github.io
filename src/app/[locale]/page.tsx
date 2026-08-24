@@ -24,13 +24,15 @@ const App = ({ params: { locale } }: Params<LocaleParams>) => {
   return (
     <>
       <AppBar />
-      <Home />
-      <Divider />
-      <About />
-      <Experience />
-      <Capability />
-      <Project />
-      <Education />
+      <main>
+        <Home />
+        <Divider />
+        <About />
+        <Experience />
+        <Capability />
+        <Project />
+        <Education />
+      </main>
     </>
   );
 };

@@ -83,7 +83,7 @@ const ExperienceItem = ({
     <article className={merge("grid grid-cols-1 gap-5", priorityStyles[priority])}>
       <div className={summaryStyles[priority]}>
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/60">
             {labels.priority}
           </span>
           <Typography className={merge("mb-0 text-white/75")}>{role}</Typography>
@@ -107,7 +107,7 @@ const ExperienceItem = ({
             </Chip>
           ))}
           {overflowSkills.length > 0 && (
-            <span className="text-xs leading-6 text-white/45">
+            <span className="text-xs leading-6 text-white/60">
               +{overflowSkills.length} more: {overflowSkills.join(", ")}
             </span>
           )}
@@ -119,7 +119,7 @@ const ExperienceItem = ({
             key={item.label}
             className="grid gap-2 border-t border-white/10 py-4 first:border-t-0 first:pt-0 last:pb-0 md:grid-cols-[7rem_1fr] md:gap-4"
           >
-            <dt className="text-sm font-semibold uppercase tracking-[0.18em] text-white/45">
+            <dt className="text-sm font-semibold uppercase tracking-[0.18em] text-white/60">
               {item.label}
             </dt>
             <dd className="m-0 text-base leading-7 text-white/85">

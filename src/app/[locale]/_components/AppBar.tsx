@@ -12,7 +12,7 @@ const AppBar = async ({ path = "" }: Readonly<AppBarProps>) => {
   const locale = getCurrentLocale();
 
   return (
-    <div
+    <header
       className={merge(
         "h-min backdrop-blur",
         "z-50 px-3 py-2 sm:p-3 text-white",
@@ -50,7 +50,7 @@ const AppBar = async ({ path = "" }: Readonly<AppBarProps>) => {
           <GithubIcon />
         </a>
       </div>
-    </div>
+    </header>
   );
 };
 
