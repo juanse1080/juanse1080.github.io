@@ -20,9 +20,11 @@ const App = ({ params: { locale } }: Params<LocaleParams>) => {
   return (
     <>
       <AppBar path="/experience" />
-      <Home />
-      <Divider />
-      <Experience />
+      <main>
+        <Home />
+        <Divider />
+        <Experience />
+      </main>
     </>
   );
 };
