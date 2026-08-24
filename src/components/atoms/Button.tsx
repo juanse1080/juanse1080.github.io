@@ -35,7 +35,7 @@ const Button = <Element extends HTMLElementKeys>({
         {
           "bg-gradient shadow-button text-white font-thin":
             variant === "contained",
-          "border border-solid border-divider outline-none":
+          "border border-solid border-divider outline-none bg-code":
             variant === "outlined",
         },
         {

@@ -1,7 +1,7 @@
 import { Divider, Image, Trans, Typography } from "components/atoms";
 import { Section } from "components/molecules";
 import { projects } from "const/projects";
-import { getScopedI18n } from "locales/server";
+import { getCurrentLocale, getScopedI18n } from "locales/server";
 import { Fragment } from "react";
 import { merge } from "utils/clsx";
 import ProjectItem from "./ProjectItem";
@@ -9,6 +9,7 @@ import ProjectItem from "./ProjectItem";
 const mobileProjects = ["expense_track"];
 
 const Project = async () => {
+  const locale = getCurrentLocale();
   const t = await getScopedI18n("home.project");
   const tCommon = await getScopedI18n("common");
 
@@ -33,7 +34,7 @@ const Project = async () => {
         {mainProjects.map(({ id, isMobile, ...project }, idx) => (
           <Fragment key={id}>
             <ProjectItem
-              href={`projects/#${id}`}
+              href={`/${locale}/projects#${id}`}
               evidence={{
                 problem: t(`items.${id}.problem`),
                 solution: t(`items.${id}.solution`),

@@ -1,4 +1,4 @@
-import { CodeIcon, GithubIcon, LinkedInIcon } from "components/icons";
+import { GithubIcon, LinkedInIcon, LogoMarkIcon } from "components/icons";
 import { merge } from "utils/clsx";
 import ChangeLanguage from "./ChangeLanguage";
 import { getCurrentLocale, getScopedI18n } from "locales/server";
@@ -26,7 +26,7 @@ const AppBar = async ({ path = "" }: Readonly<AppBarProps>) => {
           className="flex items-center"
           aria-label={t("appBar.ariaLabel.home")}
         >
-          <CodeIcon />
+          <LogoMarkIcon />
         </a>
         <span className="grow" />
         <ChangeLanguage locale={locale} path={path} />

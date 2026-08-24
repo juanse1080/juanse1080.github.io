@@ -18,12 +18,13 @@ const Project = async () => {
 
   return (
     <>
-      {mainProjects.map(({ isMobile, ...project }) => (
+      {mainProjects.map(({ isMobile, ...project }, index) => (
         <Section
           key={project.id}
           id={project.id}
           title={project.title}
           ariaLabel={tCommon("goTo", { label: project.title })}
+          fillViewport={index === mainProjects.length - 1}
         >
           <ProjectItem
             evidence={{

@@ -18,3 +18,5 @@ export * from "./UISIcon";
 export { default as UISIcon } from "./UISIcon";
 export * from "./CodeIcon";
 export { default as CodeIcon } from "./CodeIcon";
+export * from "./LogoMarkIcon";
+export { default as LogoMarkIcon } from "./LogoMarkIcon";

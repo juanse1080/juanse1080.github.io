@@ -11,7 +11,7 @@ const Experience = async () => {
 
   return (
     <>
-      {experiences.map((experience) => (
+      {experiences.map((experience, index) => (
         <Section
           key={experience.id}
           id={experience.id}
@@ -19,6 +19,7 @@ const Experience = async () => {
           ariaLabel={tCommon("goTo", {
             label: `${t("title")} - ${experience.company}`,
           })}
+          fillViewport={index === experiences.length - 1}
         >
           <ExperienceItem
             skills={experience.skills}

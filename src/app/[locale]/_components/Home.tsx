@@ -1,4 +1,4 @@
-import { ArrowForwardIcon } from "components/icons";
+import { ArrowForwardIcon, OpenInNewIcon } from "components/icons";
 import { Button, Image, Trans, Typography } from "components/atoms";
 import { getResumePath } from "const/profile";
 import { getCurrentLocale, getScopedI18n } from "locales/server";
@@ -7,7 +7,6 @@ import { merge } from "utils/clsx";
 type CompanyLogo = {
   image: string;
   name: string;
-  className: string;
   width?: string;
   height?: string;
   imageClassName?: string;
@@ -19,44 +18,35 @@ const companies: CompanyLogo[] = [
     name: "MAIN 12 LLC",
     width: "180",
     height: "26",
-    className: "col-span-2 sm:col-span-3 lg:col-span-4 xl:col-span-4 2xl:col-span-1",
     imageClassName: "sm:w-[180px] md:w-[220px]",
   },
   {
     image: "/img/Companies/celerik.webp",
     name: "Celerik",
-    className: "col-span-1 lg:col-span-3 xl:col-span-3 2xl:col-span-1",
   },
   {
     image: "/img/Companies/melonn.webp",
     name: "Melonn",
-    className: "col-span-1 lg:col-span-3 xl:col-span-3 2xl:col-span-1",
   },
   {
     image: "/img/Companies/bitnovo.webp",
     name: "Bitnovo",
-    className: "col-span-1 lg:col-span-3 xl:col-span-3 2xl:col-span-1",
   },
   {
     image: "/img/Companies/mayasoft.webp",
     name: "Mayasoft",
-    className: "col-span-1 lg:col-span-3 xl:col-span-3 2xl:col-span-1",
   },
   {
     image: "/img/Companies/binary.webp",
     name: "Binary Groups",
-    className: "col-span-1 lg:col-span-4 xl:col-span-4 2xl:col-span-1",
   },
   {
     image: "/img/Companies/woombat.webp",
     name: "Woombat",
-    className: "col-span-1 lg:col-span-4 xl:col-span-4 2xl:col-span-1",
   },
   {
     image: "/img/Companies/conexalab.webp",
     name: "ConexaLab",
-    className:
-      "col-span-2 sm:col-span-3 lg:col-span-4 xl:col-span-4 2xl:col-span-1",
   },
 ];
 
@@ -76,10 +66,21 @@ const Home = async () => {
           "lg:h-[calc(100dvh-60px-199px)]",
           "xl:h-[calc(100dvh-60px-201px)]",
           "2xl:h-[calc(100dvh-60px-132px)]",
-          "flex justify-center md:justify-start gap-5"
+          "flex items-center justify-center md:justify-between gap-5"
         )}
       >
         <div className="z-10 flex flex-col items-center md:items-start justify-center">
+          <div className="md:hidden mb-4 rounded-full p-[3px] bg-gradient w-fit">
+            <div className="rounded-full overflow-hidden bg-background p-[3px]">
+              <Image
+                src="/img/profile.webp"
+                alt="Juan Marcon"
+                width="112"
+                height="112"
+                className="rounded-full object-cover w-24 h-24"
+              />
+            </div>
+          </div>
           <Typography
             component="h1"
             variant="h2"
@@ -119,9 +120,23 @@ const Home = async () => {
               target="_blank"
               rel="noreferrer"
               component="a"
+              endAdornment={<OpenInNewIcon height={20} width={20} />}
             >
               {t("call_to_action.resume")}
             </Button>
+          </div>
+        </div>
+        <div className="hidden md:block shrink-0 z-10">
+          <div className="rounded-full p-[3px] bg-gradient">
+            <div className="rounded-full overflow-hidden bg-background p-[3px]">
+              <Image
+                src="/img/profile.webp"
+                alt="Juan Marcon"
+                width="288"
+                height="288"
+                className="rounded-full object-cover w-[220px] h-[220px] lg:w-[260px] lg:h-[260px]"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -132,19 +147,15 @@ const Home = async () => {
             tags={{ span: { className: "text-gradient font-bold" } }}
           />
         </Typography>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-12 xl:grid-cols-12 2xl:grid-cols-7 gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
           {companies.map(({
             name,
             image,
-            className,
             width = "150",
             height = "52",
             imageClassName = "sm:w-[150px] md:w-[180px]",
           }) => (
-            <div
-              key={name}
-              className={merge("flex items-center justify-center", className)}
-            >
+            <div key={name} className="flex items-center justify-center">
               <Image
                 src={image}
                 alt={name}

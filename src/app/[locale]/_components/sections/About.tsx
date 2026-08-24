@@ -38,7 +38,7 @@ const About = async () => {
           </Typography>
           <Typography component="span">{t("experience")}</Typography>
         </div>
-        <div id="contact" className="md:col-start-2 md:row-start-1 scroll-mt-24">
+        <div id="contact" className="md:col-start-2 md:row-start-1 scroll-mt-[52px] sm:scroll-mt-[60px]">
           <Typography variant="h6" component="h3">
             {t("query.title")}
           </Typography>
@@ -52,10 +52,11 @@ const About = async () => {
             />
             <Button
               component="a"
-              href={linkedInProfileUrl}
               target="_blank"
               rel="noreferrer"
               variant="outlined"
+              className="self-start gap-2"
+              href={linkedInProfileUrl}
               endAdornment={<LinkedInIcon height={20} width={20} />}
             >
               {t("query.linkedin")}
