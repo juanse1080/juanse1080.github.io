@@ -27,7 +27,7 @@ const Experience = async () => {
           <ExperienceItem
             key={item.id}
             id={item.id}
-            href={`experience#${item.id}`}
+            href={`/${locale}/experience#${item.id}`}
             ariaLabel={tCommon("goTo", {
               label: `${t("title")} - ${item.company}`,
             })}
