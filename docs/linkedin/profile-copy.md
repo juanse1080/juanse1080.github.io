@@ -85,14 +85,83 @@ Developed cloud and integration capabilities for e-commerce operations, focusing
 - Worked across Node.js, TypeScript, Python, GraphQL, React, microfrontends, Playwright, microservices, and AWS.
 ```
 
-### Earlier roles — keep concise
+### Earlier roles — individually optimized
 
-Use this compact framing if updating earlier LinkedIn roles. These entries should support the full history without competing with the prioritized experience above.
+Use one description per company below instead of the previous single generic block. Titles stay as the official role titles; no senior-title inflation applies to these earlier roles.
+
+#### Mayasoft — Fullstack Developer
 
 ```text
-Earlier experience includes full-stack, frontend, and platform work across scheduling systems, legal-process automation, biometric authentication, e-commerce platforms, cryptocurrency trading interfaces, and internal education/logistics tools.
+Delivered full-stack workflow platforms for scheduling optimization and business-process automation.
 
-Representative stacks: TypeScript, React, Next.js, React Native, Node.js, NestJS, MongoDB, PostgreSQL, Google Cloud, AWS, Web Components, Cypress, Redux, SWR, and Material UI.
+- Built NestJS and Node.js services with TypeScript and MongoDB to support pilot-scheduling and contract-related workflows.
+- Reduced manual coordination by turning repeated operational steps into maintainable, automated software.
+- Delivered React and Material UI interfaces alongside Docker and Jenkins-based delivery pipelines.
+- Stack: NestJS, Node.js, TypeScript, MongoDB, Docker, Jenkins, React, Material UI.
+```
+
+#### Woombat Consulting Group S.A.S — Fullstack Developer
+
+```text
+Developed web SDK capabilities for biometric authentication integrations in financial-platform contexts.
+
+- Built framework-agnostic Web Components to reduce coupling for consuming applications adopting secure authentication.
+- Implemented Angular/TypeScript delivery pieces with RxJS state handling and Cypress-based verification.
+- Worked within AWS and Azure DevOps environments to support secure, reliable SDK delivery.
+- Stack: Web Components, Angular, TypeScript, RxJS, Webpack, AWS, Azure DevOps, Cypress.
+```
+
+#### Bitnovo — Frontend Developer
+
+```text
+Improved frontend product experience for a cryptocurrency trading platform.
+
+- Built and modernized trading and purchase flows with Next.js, React, and TypeScript for clearer transaction UX.
+- Implemented state and data-fetching patterns with SWR and Redux to keep UI reliable under real-time data.
+- Delivered Figma-informed UI work with styled-components and Material UI in a trust-sensitive financial domain.
+- Stack: Next.js, React, TypeScript, SWR, Redux, styled-components, Material UI, Figma.
+```
+
+#### Binary Groups — Frontend Developer
+
+```text
+Built e-commerce and marketplace surfaces across web and mobile-oriented product work.
+
+- Led frontend-heavy delivery for multi-channel seller tools spanning Mercado Libre, Shopify, and marketplace workflows.
+- Built cross-platform experiences with Next.js, React, and React Native alongside a Laravel backend.
+- Contributed design-system-oriented UI work across AWS and Google Cloud-backed services.
+- Stack: Next.js, React, React Native, Node.js, TypeScript, Laravel, AWS, Google Cloud.
+```
+
+#### IPRED — Fullstack Developer
+
+```text
+Early full-stack work supporting academic and institutional web platforms.
+
+- Implemented PHP, JavaScript, and MySQL features for institutional information and workflow tools.
+- Built practical, maintainable web software for real academic stakeholders under real operational constraints.
+- Stack: PHP, JavaScript, MySQL, HTML, CSS.
+```
+
+#### UIS — Fullstack Developer
+
+```text
+Early university engineering work supporting research and institutional web needs.
+
+- Contributed JavaScript, PHP, and MySQL implementation work for research and information-access tools.
+- Collaborated directly with university stakeholders on small, reliable software surfaces.
+- Stack: JavaScript, PHP, MySQL, HTML, CSS.
+```
+
+#### Freelance — Fullstack Developer
+
+```text
+Long-running independent work across web product delivery for direct clients.
+
+- Managed discovery, implementation, feedback, and iteration directly with non-specialist stakeholders.
+- Delivered React, Node.js, and TypeScript solutions, prioritizing the highest-value scope first.
+- Built product judgment around ambiguous requirements and communicating technical trade-offs.
+- Stack: React, Node.js, TypeScript, JavaScript.
 ```
 
 ## Skills ordering
@@ -181,7 +250,7 @@ Do not add individual projects to Featured yet. Add a project only after separat
 - [ ] Update Celerik with the Software Engineer title and the Celerik copy above.
 - [ ] Update ConexaLab with the Cloud Engineer title and the ConexaLab copy above.
 - [ ] Update Melonn with the Cloud Engineer title and the Melonn copy above.
-- [ ] Keep earlier roles concise unless LinkedIn requires more detail for completeness.
+- [ ] Update Mayasoft, Woombat, Bitnovo, Binary Groups, IPRED, UIS, and Freelance with their individual copy above.
 - [ ] Reorder and pin skills using the skills ordering above.
 - [ ] Add Featured items in the approved order: portfolio, resume PDF, GitHub.
 - [ ] Review the final public profile manually before saving changes.
